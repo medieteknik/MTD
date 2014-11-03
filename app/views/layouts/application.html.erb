@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mtd</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title><%= t('media_technology_days') %> 2015 <%= yield(:title) %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller.controller_name %> <%= yield(:body_class) %>">
+
+<%= render 'layouts/header' %>
 
 <%= yield %>
 
+<%= render 'layouts/footer' %>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
