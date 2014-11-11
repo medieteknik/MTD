@@ -1,0 +1,32 @@
+/*
+ *= require font-awesome
+ *= require_self
+ */
+
+// settings
+@import "variables";
+@import "fonts";
+
+// libs
+@import "bourbon";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// templates
+@import "header";
+@import "footer";
+
+@import "static_pages";
+
+html,
+body,
+#yield {
+  width: 100%;
+  height: 100%;
+}
+
+#yield {
+  :first-child {
+    padding-top: $nav-height;
+  }
+}

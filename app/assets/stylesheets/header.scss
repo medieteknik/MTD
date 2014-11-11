@@ -1,0 +1,29 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &:not(.transparant) {
+    background: rgba(#fff, .4);
+    border-bottom: 1px solid rgba($gray, .4);
+  }
+}
+
+// nav
+#header > nav {
+  @extend .container;
+  text-transform: uppercase;
+
+  .menu {
+    @extend .list-unstyled;
+
+    &.right {
+      @extend .pull-right;
+    }
+  }
+}
+
+#header .menu .sponsor {
+  font-weight: bold;
+}

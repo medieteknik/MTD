@@ -1,0 +1,14 @@
+.beamer {
+  width: 100%;
+  min-height: 300px;
+  height: 80%;
+  height: calc(100% - 100px);
+
+  .content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100%;
+    text-align: center;
+  }
+}
