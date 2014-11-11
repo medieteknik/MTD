@@ -25,8 +25,6 @@ body,
   height: 100%;
 }
 
-#yield {
-  :first-child {
-    padding-top: $nav-height;
-  }
+#yield > :first-child:not(.beamer) {
+  padding-top: $header-height;
 }

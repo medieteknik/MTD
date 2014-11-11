@@ -4,6 +4,11 @@
   height: 80%;
   height: calc(100% - 100px);
 
+  .home & {
+    background: $gray;
+    color: #fff;
+  }
+
   .content {
     position: relative;
     top: 50%;
@@ -11,4 +16,8 @@
     max-width: 100%;
     text-align: center;
   }
+}
+
+.container.narrow {
+  max-width: $screen-sm-min;
 }

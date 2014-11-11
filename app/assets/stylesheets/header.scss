@@ -3,10 +3,26 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: $header-height;
+  padding: $header-padding 0;
+  background: rgba(#fff, .9);
+  border-bottom: 1px solid rgba($gray, .5);
 
-  &:not(.transparant) {
-    background: rgba(#fff, .4);
-    border-bottom: 1px solid rgba($gray, .4);
+  @include transition (all .2s ease-in-out);
+
+  .header-scroll &.transparent {
+    color: #fff;
+    background: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .brand {
+    float: left;
+
+    .name {
+      font-weight: bold;
+      padding-left: $header-padding;
+    }
   }
 }
 
@@ -14,12 +30,18 @@
 #header > nav {
   @extend .container;
   text-transform: uppercase;
+  line-height: $header-height - 2 * $header-padding;
 
   .menu {
-    @extend .list-unstyled;
+    @extend .list-inline;
+    @extend .hidden-xs;
 
     &.right {
       @extend .pull-right;
+    }
+    &.left {
+      @extend .pull-left;
+      margin-left: 4 * $header-padding;
     }
   }
 }
