@@ -3,4 +3,7 @@ jQuery ->
     scrollControl = $(".header-scroll-target").offset() and $(window).scrollTop() < ($(".header-scroll-target").offset().top) * .625
     $(".header-scroll #header").toggleClass "transparent", scrollControl
 
-  return
+$(document).ready ->
+  # control mobile menu
+  $('.togglemenu').click ->
+    $('body').toggleClass 'expand-nav'

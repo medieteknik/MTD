@@ -1,5 +1,4 @@
 /*
- *= require font-awesome
  *= require_self
  */
 
@@ -11,6 +10,8 @@
 @import "bourbon";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 // templates
 @import "header";
@@ -20,11 +21,20 @@
 
 html,
 body,
-#yield {
+body > #content{
   width: 100%;
   height: 100%;
 }
 
 #yield > :first-child:not(.beamer) {
   padding-top: $header-height;
+}
+
+// mobile
+@media only screen and (max-width: $screen-sm-max) {
+  #content {
+    position: relative;
+    left: 0;
+    @include transition(left .3s ease-in-out);
+  }
 }

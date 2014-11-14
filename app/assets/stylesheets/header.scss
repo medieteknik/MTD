@@ -5,6 +5,7 @@
   width: 100%;
   height: $header-height;
   padding: $header-padding 0;
+  font-family: $font-family-sans-serif;
   background: rgba(#fff, .9);
   border-bottom: 1px solid rgba($gray, .5);
 
@@ -43,9 +44,34 @@
       @extend .pull-left;
       margin-left: 4 * $header-padding;
     }
+
+    .sponsor {
+      font-weight: bold;
+    }
   }
 }
 
-#header .menu .sponsor {
-  font-weight: bold;
+// mobile
+#mobile-nav {
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  background: $dark-gray;
+  overflow: scroll;
+  @include transition(all .3s ease-in-out);
+
+  .expand-nav & {
+    @extend .container;
+    left: 20%;
+  }
+  nav .menu {
+    @extend .list-unstyled;
+  }
+}
+
+.expand-nav > #content,
+.expand-nav #header {
+  left: -80%;
 }

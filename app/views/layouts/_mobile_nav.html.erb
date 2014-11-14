@@ -1,0 +1,11 @@
+<header>
+  <%= link_to t('media_technology_days') + ' 2015', home_path, class: 'brand'%>
+  <%= icon 'close', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
+</header>
+<nav>
+  <ul class="menu">
+    <%= content_tag :li, link_to(t('menu_about'), '/') %>
+    <%= content_tag :li, link_to(t('menu_contact'), '/') %>
+    <%= content_tag :li, link_to(t('menu_sponsor'), sponsorship_path, class: 'sponsor') %>
+  </ul>
+</nav>

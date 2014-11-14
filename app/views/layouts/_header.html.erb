@@ -2,5 +2,16 @@
   <%= link_to image_tag('http://placekitten.com/g/50/50', alt: 'MTD') +
     content_tag(:span, t('short_name'), class: 'name'), home_path, class: 'brand'%>
 
-  <%= render 'layouts/menu' %>
+  <ul class="menu left">
+    <%= content_tag :li, link_to(t('menu_about'), '/') %>
+    <%= content_tag :li, link_to(t('menu_contact'), '/') %>
+  </ul>
+
+  <ul class="menu right">
+    <li>
+      <%= link_to t('menu_sponsor'), sponsorship_path, class: 'sponsor' %>
+    </li>
+  </ul>
+
+  <%= icon 'bars', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
 </nav>

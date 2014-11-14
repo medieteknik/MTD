@@ -17,16 +17,21 @@
   <![endif]-->
 </head>
 <body class="<%= controller.controller_name %> <%= yield(:body_class) %>">
+<section id="mobile-nav">
+  <%= render 'layouts/mobile_nav' %>
+</section>
 
-<header id="header" class="transparent">
-  <%= render 'layouts/header' %>
-</header>
-<main id="yield">
+<div id="content">
+  <header id="header" class="transparent">
+    <%= render 'layouts/header' %>
+  </header>
+
   <%= yield %>
-</main>
-<footer>
-  <%= render 'layouts/footer' %>
-</footer>
+
+  <footer>
+    <%= render 'layouts/footer' %>
+  </footer>
+</div>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>

@@ -1,8 +1,14 @@
 // bootstrap vars
-$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "PT Sans", "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-serif: "Bitter", Georgia, "Times New Roman", Times, serif;
+$font-family-base: $font-family-serif;
+
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: bold;
 
 // colors
 $gray: #7b8994;
+$dark-gray: darken($gray, 30%);
 
 // metrics
 $header-height: 60px;
