@@ -1,0 +1,23 @@
+sv:
+  # about
+  about_group: 'Gruppen'
+  about_group_text: 'Dagarna arrangeras utav tolv ideellt arbetande studenter på Medieteknikprogrammet som ligger bakom hela evenemanget. Hör jättegärna av dig till oss, vi gillar att snacka!'
+  about_group_title_manager: 'Projektledare'
+  about_group_title_economy: 'Kassör'
+  about_group_title_business: 'Företagskontakt'
+  about_group_title_fair: 'Mässansvarig'
+  about_group_title_assistant: 'Projektassistent'
+  about_group_title_lecture: 'Föreläsningsansvarig'
+  about_group_title_banquet: 'Bankettansvarig'
+  about_group_title_tech: 'Teknikansvarig'
+  about_group_title_pr: 'PR-ansvarig'
+  about_group_title_print: 'Tryckansvarig'
+  about_group_title_coordinator: 'Koordinator'
+  about_group_title_web: 'Webbansvarig'
+
+  about_lead: 'Medieteknikdagarna är ett ideellt arrangemang drivet av och för studenter. 2015 går dagarna av stapeln för femtonde gången. Syftet är att knyta kontakter mellan studenter, medietekniker ute i arbetslivet och företagen inom branschen.'
+  about_second: 'Under två dagar anordnas det en populär mässa parallellt med inspirerande föreläsningar, och evenemanget avslutas med en stor bankett.'
+  about_third: 'MTD är ett tillfälle för företag och studenter att inspirera, informera och integrera med varandra. Såväl företag som studenter får här en chans att visa det allra senaste inom medieteknik.'
+
+  # home
+  home_teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'

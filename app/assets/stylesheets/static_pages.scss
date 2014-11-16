@@ -1,6 +1,7 @@
 .beamer {
   width: 100%;
   min-height: 300px;
+  max-height: 800px;
   height: 80%;
   height: calc(100% - 100px);
 
@@ -9,15 +10,40 @@
     color: #fff;
   }
 
+  :first-child {
+    margin-top: 0;
+  }
+
   .content {
+    @extend .container;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 100%;
     text-align: center;
   }
 }
 
-.container.narrow {
+.limit-width {
   max-width: $screen-sm-min;
+}
+.info {
+  margin-bottom: 80px;
+}
+
+.person {
+  @include make-sm-column(3);
+
+  .contact {
+    @extend .list-unstyled;
+
+    li {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  img {
+    @extend .img-responsive;
+  }
 }

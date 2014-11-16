@@ -3,6 +3,8 @@ $font-family-sans-serif: "PT Sans", "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-serif: "Bitter", Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-serif;
 
+$font-size-base: 15px;
+
 $headings-font-family: $font-family-sans-serif;
 $headings-font-weight: bold;
 
@@ -13,3 +15,4 @@ $dark-gray: darken($gray, 30%);
 // metrics
 $header-height: 60px;
 $header-padding: 5px;
+$mobile-header-width: 80%;

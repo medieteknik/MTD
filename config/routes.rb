@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     # get '/sponsorship/gold' => 'static_pages#show', :page => 'sponsorship/gold'
     # get '/sponsorship/silver' => 'static_pages#show', :page => 'sponsorship/silver'
     # get '/sponsorship/bronze' => 'static_pages#show', :page => 'sponsorship/bronze'
+    get '/about' => 'static_pages#show', :page => 'about'
 
     get '*page', to: 'static_pages#show'
   end

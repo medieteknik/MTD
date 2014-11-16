@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   height: $header-height;
   padding: $header-padding 0;
@@ -15,6 +16,10 @@
     color: #fff;
     background: transparent;
     border-bottom-color: transparent;
+
+    a {
+      color: #fff;
+    }
   }
 
   .brand {
@@ -53,25 +58,44 @@
 
 // mobile
 #mobile-nav {
-  width: 80%;
+  width: $mobile-header-width;
   height: 100%;
   position: fixed;
   top: 0;
   left: 100%;
   background: $dark-gray;
+  color: darken(#fff, 5%);
+  font: $font-size-large $font-family-sans-serif;
   overflow: scroll;
   @include transition(all .3s ease-in-out);
 
   .expand-nav & {
-    @extend .container;
-    left: 20%;
+    // @extend .container;
+    left: 100% - $mobile-header-width;
   }
-  nav .menu {
-    @extend .list-unstyled;
+
+  header {
+    height: $header-height;
+    line-height: $header-height;
+    border-bottom: 1px solid $gray;
+    padding: 0 15px;
+  }
+  footer {
+    border-top: 1px solid $gray;
+    padding: 15px;
   }
 }
 
 .expand-nav > #content,
 .expand-nav #header {
-  left: -80%;
+  left: -1 * $mobile-header-width;
+}
+
+#mobile-nav .menu {
+  @extend .list-unstyled;
+  margin: 0;
+
+  li {
+    padding: 15px;
+  }
 }

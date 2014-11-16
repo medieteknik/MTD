@@ -1,11 +1,20 @@
 <header>
   <%= link_to t('media_technology_days') + ' 2015', home_path, class: 'brand'%>
-  <%= icon 'close', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
+  <%= icon 'close', '', class: 'fa-lg pull-right visible-xs-inline togglemenu' %>
 </header>
 <nav>
   <ul class="menu">
-    <%= content_tag :li, link_to(t('menu_about'), '/') %>
+    <%= content_tag :li, link_to(t('menu_about'), about_path) %>
     <%= content_tag :li, link_to(t('menu_contact'), '/') %>
     <%= content_tag :li, link_to(t('menu_sponsor'), sponsorship_path, class: 'sponsor') %>
   </ul>
 </nav>
+<footer>
+  <p class="small">
+    <%= t('short_description') %>
+  </p>
+  <%= content_tag :h5, t('follow_us') %>
+  <%= link_to(icon('facebook-square', '', class: 'fa-2x'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
+  <%= link_to(icon('twitter-square', '', class: 'fa-2x'), 'https://twitter.com/mtdagarna', target: 'blank') %>
+  <%= link_to(icon('youtube-square', '', class: 'fa-2x'), 'https://youtube.com/mtdagarna', target: 'blank') %>
+</footer>
