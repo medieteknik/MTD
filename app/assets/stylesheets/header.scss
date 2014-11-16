@@ -66,7 +66,7 @@
   background: $dark-gray;
   color: darken(#fff, 5%);
   font: $font-size-large $font-family-sans-serif;
-  overflow: scroll;
+  overflow: auto;
   @include transition(all .3s ease-in-out);
 
   .expand-nav & {

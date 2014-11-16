@@ -20,5 +20,15 @@ en:
   about_second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event is ended with a grand banquet.'
   about_third: 'MTD is an oportunity for companies and students to inspire, inform and interact with eachother. Both students and companies are given the chance to show the latest within media technology.'
 
+  # contact
+  contact_business_email: 'businesscontact@medieteknikdagarna.se'
+  contact_business_title: 'Business contact'
+  contact_business_text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till:'
+  contact_general_email: 'contact@medieteknikdagarna.se'
+  contact_general_title: 'General'
+  contact_general_text: 'Vid generella frågor, om vad som helst, kontakta oss på:'
+  contact_lead: ''
+  contact_title: 'Contact us'
+
   # home
   home_teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundred''s of students closer to the industry.'

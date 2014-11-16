@@ -1,6 +1,7 @@
 sv:
   routes:
     about: om
+    contact: kontakt
     sponsorship: sponsor
     gold: guld
     bronze: brons
