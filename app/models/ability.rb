@@ -7,5 +7,7 @@ class Ability
     if admin.role? :super_admin
       can :manage, :all
     else
+      # nothing
+    end
   end
 end
