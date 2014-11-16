@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  require 'constraint/domain_constraint'
+  constraints Constraint::DomainConstraint.new('medieteknikdagarna.se') do
+    get ':any', to: redirect(subdomain: '2014', path: '/%{any}'), any: /.*/
+  end
+
   localized do
     devise_for :admins, :path => 'admin/user'
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
