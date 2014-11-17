@@ -1,3 +1,13 @@
+// colors
+$gray: #7b8994;
+$dark-gray: darken($gray, 30%);
+$orange: #cc6400;
+
+// metrics
+$header-height: 60px;
+$header-padding: 5px;
+$mobile-header-width: 80%;
+
 // bootstrap vars
 $font-family-sans-serif: "PT Sans", "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-serif: "Bitter", Georgia, "Times New Roman", Times, serif;
@@ -8,11 +18,4 @@ $font-size-base: 15px;
 $headings-font-family: $font-family-sans-serif;
 $headings-font-weight: bold;
 
-// colors
-$gray: #7b8994;
-$dark-gray: darken($gray, 30%);
-
-// metrics
-$header-height: 60px;
-$header-padding: 5px;
-$mobile-header-width: 80%;
+$link-color: $orange;

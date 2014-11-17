@@ -42,12 +42,17 @@
     @extend .list-inline;
     @extend .hidden-xs;
 
+
     &.right {
       @extend .pull-right;
     }
+
     &.left {
       @extend .pull-left;
       margin-left: 4 * $header-padding;
+    }
+    &.left a {
+      padding: 2 * $header-padding;
     }
 
     .sponsor {
