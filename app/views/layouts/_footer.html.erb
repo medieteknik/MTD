@@ -1,9 +1,28 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
-      <%= link_to t('change_lang'), url_for(locale: (I18n.locale == :en ? 'sv' : 'en')) %>
+    <div class="col-sm-8 col-sm-push-4">
+      <div class="row">
+        <div class="col-sm-6 col-sm-push-6">
+          <%= link_to t('change_lang'), url_for(locale: (I18n.locale == :en ? 'sv' : 'en')) %>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-pull-8">
+      <div class="row">
+        <div class="col-xs-4 col-sm-5">
+          <%= image_tag "association_logo.png", alt: t('mt_association'), class: 'img-responsive' %>
+        </div>
+        <div class="col-xs-8 col-sm-7">
+          <%= content_tag :p, t('footer_arranged_by') %>
+
+          <ul>
+            <%= content_tag :li, link_to(t('contact_title'), about_contact_path) %>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
