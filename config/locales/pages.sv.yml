@@ -1,5 +1,6 @@
 sv:
   # about
+  about_about: 'Om MTD'
   about_group: 'Gruppen'
   about_group_text: 'Dagarna arrangeras utav tolv ideellt arbetande studenter på Medieteknikprogrammet som ligger bakom hela evenemanget. Hör jättegärna av dig till oss, vi gillar att snacka!'
   about_group_title_manager: 'Projektledare'
@@ -46,3 +47,11 @@ sv:
 
   # home
   home_teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
+
+  #previous years
+  previous_lead: 'Det är inte första gången MTD arrangeras. För att vara specifik blir 2015 det femtonde året. Här är lite vad som hänt de tidigare åren.'
+  previous_title: 'Tidigare år'
+
+  previous_lectures: 'Tidigare föreläsningar'
+  previous_lectures_lead: 'Varje år besöks MTD av spännande föreläsare. Några av de som besökt oss tidigare år är bland andra:'
+

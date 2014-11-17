@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     # get '/sponsorship/bronze' => 'static_pages#show', :page => 'sponsorship/bronze'
     get '/about' => 'static_pages#show', :page => 'about/about'
     get '/about/contact' => 'static_pages#show', :page => 'about/contact'
+    get '/about/previous-years' => 'static_pages#show', :page => 'about/previous', :as => :about_previous
 
     get '*page', to: 'static_pages#show'
   end

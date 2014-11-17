@@ -1,8 +1,9 @@
 sv:
   routes:
     about: om
-    contact: kontakt
-    sponsorship: sponsor
-    gold: guld
     bronze: brons
+    contact: kontakt
+    gold: guld
+    previous-years: tidigare-ar
+    sponsorship: sponsor
     user: konto

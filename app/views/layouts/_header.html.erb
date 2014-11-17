@@ -5,13 +5,14 @@
   <ul class="menu left">
     <%= content_tag :li, link_to(t('menu_about'), about_path) %>
     <%= content_tag :li, link_to(t('menu_contact'), about_contact_path) %>
+    <%= content_tag :li, link_to(t('menu_previous'), about_previous_path) %>
   </ul>
 
   <ul class="menu right">
     <%= content_tag :li, link_to(t('menu_sponsor'), sponsorship_path, class: 'sponsor') %>
-    <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-2x'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
-    <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-2x'), 'https://twitter.com/mtdagarna', target: 'blank') %>
-    <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-2x'), 'https://youtube.com/mtdagarna', target: 'blank') %>
+    <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-lg'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
+    <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-lg'), 'https://twitter.com/mtdagarna', target: 'blank') %>
+    <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-lg'), 'https://youtube.com/mtdagarna', target: 'blank') %>
   </ul>
 
   <%= icon 'bars', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
