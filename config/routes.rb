@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
 
     # in order to have translated routes, these are needed
-    get '/sponsorship' => 'static_pages#show', :page => 'sponsorship'
+    get '/sponsorship' => 'static_pages#show', :page => 'sponsor'
     # get '/sponsorship/gold' => 'static_pages#show', :page => 'sponsorship/gold'
     # get '/sponsorship/silver' => 'static_pages#show', :page => 'sponsorship/silver'
     # get '/sponsorship/bronze' => 'static_pages#show', :page => 'sponsorship/bronze'

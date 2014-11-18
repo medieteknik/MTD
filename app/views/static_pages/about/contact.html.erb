@@ -1,45 +1,45 @@
-<% title(' – ' + t('contact_title')) %>
+<% title(' – ' + t('.title')) %>
 <div class="container">
   <section class="info limit-width">
-    <%= content_tag :h1, t('contact_title') %>
-    <%= content_tag :p, t('contact_lead'), class: 'lead' %>
+    <%= content_tag :h1, t('.title') %>
+    <%= content_tag :p, t('.lead'), class: 'lead' %>
   </section>
   <section class="info">
     <section class="row">
       <div class="col-sm-4">
-        <%= content_tag :h3, t('contact_general_title') %>
-        <%= content_tag :p, t('contact_general_text') %>
-        <%= content_tag :p, link_to(t('contact_general_email'), 'mailto:'+t('contact_general_email')) %>
+        <%= content_tag :h3, t('.general.title') %>
+        <%= content_tag :p, t('.general.text') %>
+        <%= content_tag :p, link_to(t('.general.email'), 'mailto:'+t('.general.email')) %>
       </div>
       <div class="col-sm-4">
-        <%= content_tag :h3, t('contact_business_title') %>
-        <%= content_tag :p, t('contact_business_text') %>
-        <%= content_tag :p, link_to(t('contact_business_email'), 'mailto:'+t('contact_business_email')) %>
+        <%= content_tag :h3, t('.business.title') %>
+        <%= content_tag :p, t('.business.text') %>
+        <%= content_tag :p, link_to(t('.business.email'), 'mailto:'+t('.business.email')) %>
       </div>
       <div class="col-sm-4">
-        <%= content_tag :h3, t('contact_press_title') %>
-        <%= content_tag :p, t('contact_press_text') %>
-        <%= content_tag :p, link_to(t('contact_press_email'), 'mailto:'+t('contact_press_email')) %>
+        <%= content_tag :h3, t('.press.title') %>
+        <%= content_tag :p, t('.press.text') %>
+        <%= content_tag :p, link_to(t('.press.email'), 'mailto:'+t('.press.email')) %>
       </div>
     </section>
     <section class="row">
       <div class="col-sm-4">
-        <%= content_tag :h3, t('contact_webb_title') %>
-        <%= content_tag :p, t('contact_webb_text') %>
-        <%= content_tag :p, link_to(t('contact_webb_email'), 'mailto:'+t('contact_webb_email')) %>
+        <%= content_tag :h3, t('.webb.title') %>
+        <%= content_tag :p, t('.webb.text') %>
+        <%= content_tag :p, link_to(t('.webb.email'), 'mailto:'+t('.webb.email')) %>
       </div>
     </section>
   </section>
 
   <section class="info">
-    <%= content_tag :h2, t('contact_physical') %>
+    <%= content_tag :h2, t('.physical.title') %>
     <div class="row">
       <div class="col-sm-4">
         <div class="embed-responsive embed-responsive-4by3">
           <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/place?q=Campus%20Norrk%C3%B6ping%2C%20Bredgatan%2C%20Norrk%C3%B6ping%2C%20Sverige&key=AIzaSyC3M7Wg3cPOcXdyXaignOy-68PUDyWBCRQ"></iframe>
         </div>
-        <%= content_tag :h3, t('contact_physical_visit') %>
-        <%= content_tag :p, t('contact_physical_visit_text') %>
+        <%= content_tag :h3, t('.physical.visit') %>
+        <%= content_tag :p, t('.physical.visit_text') %>
         <address>
           Kåkenhus, Campus Norrköping <br>
           Kungsgatan 40 <br>
@@ -50,7 +50,7 @@
         <div class="embed-responsive embed-responsive-4by3">
           <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5rhuset%20Trappan%2C%20V%C3%A4stg%C3%B6tegatan%2C%20Norrk%C3%B6ping%2C%20Sweden&key=AIzaSyC3M7Wg3cPOcXdyXaignOy-68PUDyWBCRQ"></iframe>
         </div>
-        <%= content_tag :h3, t('contact_physical_mail') %>
+        <%= content_tag :h3, t('.physical.mail') %>
         <address>
           Medieteknikdagarna, MT-sektionen <br>
           Kårhuset Trappan <br>
@@ -63,7 +63,7 @@
         <div class="embed-responsive embed-responsive-4by3">
           <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/place?q=Sandgatan%2031%2C%20Norrk%C3%B6ping%2C%20Sverige&key=AIzaSyC3M7Wg3cPOcXdyXaignOy-68PUDyWBCRQ"></iframe>
         </div>
-        <%= content_tag :h3, t('contact_physical_goods') %>
+        <%= content_tag :h3, t('.physical.goods') %>
         <address>
           Medieteknikdagarna Gods, MT-sektionen <br>
           Sandgatan 31 <br>
@@ -75,15 +75,15 @@
   </section>
 
   <section class="info">
-    <%= content_tag :h2, t('contact_pressinfo_title') %>
+    <%= content_tag :h2, t('.pressinfo.title') %>
     <div class="row">
       <div class="col-sm-8">
         <%= render 'static_pages/about/press_info' %>
       </div>
       <div class="col-sm-4">
-        <%= content_tag :h4, t('contact_pressinfo_contact') %>
+        <%= content_tag :h4, t('.pressinfo.contact') %>
         <p>
-          Mattias Palmgren, <%= t('about_group_title_pr') %> MTD 2015 <br>
+          Mattias Palmgren, <%= t('static_pages.about.about.group.pr') %> MTD 2015 <br>
           <%= link_to(icon('paper-plane') + ' mattias@medieteknikdagarna.se', 'mailto:mattias@medieteknikdagarna.se') %> <br>
           <%= link_to(icon('phone') + ' +4670-725 78 09', 'tel:+46707257809') %>
         </p>
@@ -92,15 +92,15 @@
   </section>
 
   <section class="info">
-    <%= content_tag :h2, t('contact_gymn_title') %>
+    <%= content_tag :h2, t('.gymn.title') %>
     <div class="row">
       <div class="col-sm-8">
         <%= render 'static_pages/about/gymn' %>
       </div>
       <div class="col-sm-4">
-        <%= content_tag :h4, t('contact_gymn_contact') %>
+        <%= content_tag :h4, t('.gymn.contact') %>
         <p>
-          Karin Reidarmann, <%= t('about_group_title_coordinator') %> MTD 2015 <br>
+          Karin Reidarmann, <%= t('static_pages.about.about.group.coordinator') %> MTD 2015 <br>
           <%= link_to(icon('paper-plane') + ' karin@medieteknikdagarna.se', 'mailto:karin@medieteknikdagarna.se') %> <br>
           <%= link_to(icon('phone') + ' +4670-740 30 65', 'tel:+46707403065') %>
         </p>

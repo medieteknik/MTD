@@ -3,21 +3,21 @@
   <section class="info">
     <%= content_tag :h1, t('media_technology_days') + ' 2015' %>
     <div class="limit-width">
-      <%= content_tag :p, t('about_lead'), class: 'lead' %>
-      <%= content_tag :p, t('about_second') %>
-      <%= content_tag :p, t('about_third') %>
+      <%= content_tag :p, t('.lead'), class: 'lead' %>
+      <%= content_tag :p, t('.second') %>
+      <%= content_tag :p, t('.third') %>
     </div>
   </section>
   <section class="info">
     <div class="limit-width">
-      <%= content_tag :h2, t('about_group') %>
-      <%= content_tag :p, t('about_group_text'), class: 'lead' %>
+      <%= content_tag :h2, t('.group.title') %>
+      <%= content_tag :p, t('.group.text'), class: 'lead' %>
     </div>
     <div class="row">
       <div class="person">
         <%= image_tag 'group/philip@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Philip Burrigde'), 'mailto:philip@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_manager') %>
+        <%= content_tag :h4, t('.group.manager') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' philip@medieteknikdagarna.se', 'mailto:philip@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-561 56 26', 'tel:+46705615626') %>
@@ -26,7 +26,7 @@
       <div class="person">
         <%= image_tag 'group/kristina@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Kristina Engström'), 'mailto:kristina@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_economy') %>
+        <%= content_tag :h4, t('.group.economy') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' kristina@medieteknikdagarna.se', 'mailto:kristina@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-871 65 69', 'tel:+46708716569') %>
@@ -35,7 +35,7 @@
       <div class="person">
         <%= image_tag 'group/emma@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Emmma Edvardsson'), 'mailto:emma@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_business') %>
+        <%= content_tag :h4, t('.group.business') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' emma@medieteknikdagarna.se', 'mailto:emma@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-311 69 21', 'tel:+46703116921') %>
@@ -44,7 +44,7 @@
       <div class="person">
         <%= image_tag 'group/fredrik@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Fredrik Johnson'), 'mailto:fredrik@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_fair') %>
+        <%= content_tag :h4, t('.group.fair') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' fredrik@medieteknikdagarna.se', 'mailto:fredrik@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-465 51 23', 'tel:+46704655123') %>
@@ -55,7 +55,7 @@
       <div class="person">
         <%= image_tag 'group/cecilia@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Cecilia Lagerwall'), 'mailto:cecilia@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_assistant') %>
+        <%= content_tag :h4, t('.group.assistant') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' cecilia@medieteknikdagarna.se', 'mailto:cecilia@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4673-595 69 22', 'tel:+46735956922') %>
@@ -64,7 +64,7 @@
       <div class="person">
         <%= image_tag 'group/therese@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Therése Komstadius'), 'mailto:therese@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_lecture') %>
+        <%= content_tag :h4, t('.group.lecture') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' therese@medieteknikdagarna.se', 'mailto:therese@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4673-940 42 28', 'tel:+46739404228') %>
@@ -73,7 +73,7 @@
       <div class="person">
         <%= image_tag 'group/max@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Max Jonsson'), 'mailto:max@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_banquet') %>
+        <%= content_tag :h4, t('.group.banquet') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' max@medieteknikdagarna.se', 'mailto:max@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-920 41 23', 'tel:+46709204123') %>
@@ -82,7 +82,7 @@
       <div class="person">
         <%= image_tag 'group/johan@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Johan Sylvan'), 'mailto:johan@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_tech') %>
+        <%= content_tag :h4, t('.group.tech') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' johan@medieteknikdagarna.se', 'mailto:johan@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4673-366 55 08', 'tel:+46733665508') %>
@@ -93,7 +93,7 @@
       <div class="person">
         <%= image_tag 'group/mattias@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Mattias Palmgren'), 'mailto:mattias@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_pr') %>
+        <%= content_tag :h4, t('.group.pr') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' mattias@medieteknikdagarna.se', 'mailto:mattias@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-725 78 09', 'tel:+46707257809') %>
@@ -102,7 +102,7 @@
       <div class="person">
         <%= image_tag 'group/alexander@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Alexander Cederblad'), 'mailto:alexander@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_print') %>
+        <%= content_tag :h4, t('.group.print') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' alexander@medieteknikdagarna.se', 'mailto:alexander@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4673-060 72 75', 'tel:+46730607275') %>
@@ -111,7 +111,7 @@
       <div class="person">
         <%= image_tag 'group/karin@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Karin Reidarmann'), 'mailto:karin@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_coordinator') %>
+        <%= content_tag :h4, t('.group.coordinator') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' karin@medieteknikdagarna.se', 'mailto:karin@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4670-740 30 65', 'tel:+46707403065') %>
@@ -120,7 +120,7 @@
       <div class="person">
         <%= image_tag 'group/klas@2x.jpg', class: 'responsive-image' %>
         <%= link_to content_tag(:h3, 'Klas Eskilson'), 'mailto:klas@medieteknikdagarna.se' %>
-        <%= content_tag :h4, t('about_group_title_web') %>
+        <%= content_tag :h4, t('.group.web') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' klas@medieteknikdagarna.se', 'mailto:klas@medieteknikdagarna.se') %>
           <%= content_tag :li, link_to(icon('phone') + ' +4673-730 73 56', 'tel:+46737307356') %>

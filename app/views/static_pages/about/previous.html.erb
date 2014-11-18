@@ -1,33 +1,35 @@
 <% title(' – ' + t('previous_title')) %>
 <div class="container">
   <section class="info limit-width">
-    <%= content_tag :h1, t('previous_title') %>
-    <%= content_tag :p, t('previous_lead'), class: 'lead' %>
+    <%= content_tag :h1, t('.title')%>
+    <%= content_tag :p, t('.lead'), class: 'lead' %>
   </section>
 
   <section class="info">
     <div class="limit-width">
-      <%= content_tag :h2, t('previous_lectures') %>
-      <%= content_tag :p, t('previous_lectures_lead'), class: 'lead' %>
+      <%= content_tag :h2, t('.lectures.title') %>
+      <%= content_tag :p, t('.lectures.lead'), class: 'lead' %>
+      <%= content_tag :p, t('.lectures.more')%>
     </div>
 
     <div class="row">
       <div class="col-sm-4">
         <%= image_tag 'previous/lectures/nafees.jpg', alt: 'Nafees Bin Zafar', class: 'img-responsive' %>
         <%= content_tag :h3, 'Nafees Bin Zafar' %>
-        <%= content_tag :p, t('previous_lectures_nafees') %>
+        <%= content_tag :p, t('.lectures.nafees') %>
       </div>
       <div class="col-sm-4">
         <%= image_tag 'previous/lectures/iris.jpg', alt: 'Iris Classon', class: 'img-responsive' %>
         <%= content_tag :h3, 'Iris Classon' %>
-        <%= content_tag :p, t('previous_lectures_iris') %>
+        <%= content_tag :p, t('.lectures.iris') %>
       </div>
       <div class="col-sm-4">
         <%= image_tag 'previous/lectures/anton.jpg', alt: 'Anton Johansson', class: 'img-responsive' %>
         <%= content_tag :h3, 'Anton Johansson' %>
-        <%= content_tag :p, t('previous_lectures_anton') %>
+        <%= content_tag :p, t('.lectures.anton') %>
       </div>
     </div>
+
   </section>
 
   <section class="info">
