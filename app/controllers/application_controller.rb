@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   # make sure we dont need to set the locale each time we create a link
   def default_url_options(options={})
-    logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { locale: I18n.locale }
   end
 end
