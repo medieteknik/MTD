@@ -68,11 +68,67 @@ sv:
         lectures:
           title: 'Föreläsningar'
           lead: 'Varje år besöks MTD av spännande föreläsare. Här är några av de som besökt oss tidigare år.'
-          more: 'Detta är bara ett urval. Vi har även haft besök utav Rasmus Andersson (Dropbox, tidigare Facebook & Spotify), Mattias Bergbom (tidigare Digital Domain), Oskar Burman (Rovio) med flera. Listan kan göras längre än vad som får plats här!'
+          more: 'Detta är bara ett urval. Vi har även haft besök utav Rasmus Andersson (Dropbox, tidigare Facebook & Spotify), Mattias Bergbom (tidigare Digital Domain) med flera. Listan kan göras längre än vad som får plats här!'
 
           nafees: 'Nafees från Dreamworks Animations besökte oss 2014. Han pratade om hur de tio senaste åren inom visuella effekter förändrats, och hur utveckligen går mer mot avancerade fysiska simuleringar.'
           iris: 'Iris från Dotnet Mentor besökte oss 2013. Hon pratade om på vilket sätt jämnstäldhet inom IT-branschen spelar roll, hur jämnställdhet sett ut historiskt sett inom branschen samt hur hon fastnade för C#.'
           anton: 'Anton som grundat Osom, Alltid.se och Headler besökte oss 2013. Han pratade om trender inom IT och vad som avgör vad som blir nästa stora grej. Anton talade även lite om hur han vid 23 års ålder varit med och grundat flera lyckade företag.'
 
-  # home
-  home_teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
+    # route: sv/
+    home:
+      teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
+
+    # map: views/static_pages/sponsor
+    sponsor:
+      # route: sv/sponsor
+      sponsor:
+        title: 'Bli sponsor'
+        lead: 'Vill du komma i kontakt med studenter från en av Sveriges bästa utbildningar? Bli en av våra sponsorer!'
+        second: 'Som en utav våra sponsorer ser du till att göra MTD möjligt, och ditt företag hamnar i en unik och nära position till studenterna. Vi har här satt ihop ett antal attraktiva paket att välja från.'
+
+        common: 'Samtliga paket innehåller bland annat mässplats båda dagarna, företagsprofil på hemsidan mm. Har du någon idé om hur vi kan samarbeta, som inte tas upp här? Tveka inte att höra av dig! Vi kommer gärna fram till något som fungerar för oss båda.'
+
+        deals:
+          title: 'Våra paket'
+          intro: 'För dig som vill synas...'
+          readmore: 'Läs mer!'
+
+          bronze:
+            title: 'Mycket'
+            price: '10 000 kr'
+
+            one: 'Logotyp på affischer, stream och i broschyr'
+            two: 'Prioriterad plats på hemsidan'
+            three: 'Företräde till att välja mässplats'
+            four: 'Intervju på hemsidan'
+          silver:
+            title: 'Mer'
+            price: '20 000 kr'
+
+            one: 'Mycket-paketet inklusive'
+            two: 'Logotyp på flyers och på startsidan'
+            three: 'Film på streamen'
+            four: 'Utökad info på MTDs hemsida'
+          gold:
+            title: 'Mest'
+            price: '30 000 kr'
+
+            one: 'Mer-paketet inklusive'
+            two: 'Logotyp på Goodiebags, Facebook och värdtröjor'
+            three: 'Hemma hos-reportage'
+            four: 'Först att välja mässplats'
+          fair:
+            title: 'Mässplats'
+            text: 'Vi erbjuder även mässplatser. Mer info kommer snart!'
+
+      # route: sv/sponsor/mycket
+      alot:
+        title: 'Sponsra oss mycket'
+
+      # route: sv/sponsor/mer
+      more:
+        title: 'Sponsra oss mer'
+
+      # route: sv/sponsor/mest
+      themost:
+        title: 'Sponsra oss mest'

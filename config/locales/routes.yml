@@ -1,9 +1,12 @@
 sv:
   routes:
     about: om
+    a-lot: 'mycket'
     bronze: brons
     contact: kontakt
     gold: guld
-    previous-years: tidigare-ar
+    more: 'mer'
+    previous-years: 'tidigare-ar'
     sponsorship: sponsor
     user: konto
+    the-most: mest

@@ -28,6 +28,39 @@ en:
 
       # route en/about/contact
       contact:
+        title: 'Contact us'
+        lead: ''
+
+        business:
+          email: 'businesscontact@medieteknikdagarna.se'
+          title: 'Business contact'
+          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till:'
+          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our sponsors? Contact:'
+        general:
+          email: 'contact@medieteknikdagarna.se'
+          title: 'General inquiries'
+          text: 'For general inquiries, contact: '
+        gymn:
+          title: 'High School'
+          contact: 'Contact'
+        physical:
+          title: 'Physical addresses'
+          mail: 'Mail address'
+          goods: 'Goods'
+          visit: 'Visiting address'
+          visit_text: 'This is where MTM will be held!'
+        press:
+          email: 'pr@medieteknikdagarna.se'
+          title: 'Press and media'
+          text: 'Are you representing press or other media, and want to know something about MTD? Contact Mattias at:'
+        pressinfo:
+          title: 'Press information'
+          contact: 'Press contact'
+        webb:
+          email: 'web@medieteknikdagarna.se'
+          title: 'Web'
+          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Klas på:'
+          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit wierd? Contact Klas at:'
 
       # route: en/about/previous
       previous:
@@ -37,32 +70,17 @@ en:
         lectures:
           title: 'Lectures'
           lead: 'Varje år besöks MTD av spännande föreläsare. Några av de som besökt oss tidigare år är bland andra:'
-          more: ''
+          more: 'These examples are only a few of the guests we''ve hade throughout the years. Rasmus Andersson (Dropbox, Facebook & Spotify), Mattias Bergbom (previously Digital Domain) are only a few of the ones that didn''t fit here.'
 
           nafees:
           iris:
           anton:
 
+    # home
+    home:
+      teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundred''s of students closer to the industry.'
 
     # route: en/sponsorship
     sponsor:
       title: 'Become a sponsor!'
       lead: 'Do you want to get in touch with students from one of the best educations in Sweden?'
-
-
-  # contact
-  contact_business_email: 'businesscontact@medieteknikdagarna.se'
-  contact_business_title: 'Business contact'
-  contact_business_text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till:'
-  contact_general_email: 'contact@medieteknikdagarna.se'
-  contact_general_title: 'General'
-  contact_general_text: 'Vid generella frågor, om vad som helst, kontakta oss på:'
-  contact_lead: ''
-  contact_title: 'Contact us'
-
-  # home
-  home_teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundred''s of students closer to the industry.'
-
-  #previous years
-  previous_lead: ''
-  previous_title: 'Previous years'

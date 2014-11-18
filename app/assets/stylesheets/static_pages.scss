@@ -27,7 +27,7 @@
   max-width: $screen-sm-min;
 }
 .info {
-  margin-bottom: 80px;
+  margin: 40px 0;
 }
 
 .person {
@@ -45,5 +45,50 @@
 
   img {
     @extend .img-responsive;
+  }
+}
+
+// TODO clean this up
+#deals {
+  padding: 40px 0 10px;
+  background: $gray;
+
+  h3 {
+    border-bottom: 1px solid lighten($gray, 10%);
+  }
+}
+
+.deals {
+  @include make-row();
+  margin-bottom: 30px;
+
+  .deal {
+    @include make-sm-column(4);
+    margin-bottom: 30px;
+
+    .button {
+      margin-top: 20px;
+      padding: 10px 18px;
+    }
+
+    // TODO: make these pritty
+    // &.bronze .button {
+    // }
+    // &.silver .button {
+    // }
+    // &.gold .button {
+    // }
+  }
+}
+
+.deals .deal ul {
+  @extend .list-unstyled;
+
+  li {
+    margin-bottom: 7px;
+
+    &.strong {
+      font-weight: bold;
+    }
   }
 }
