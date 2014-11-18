@@ -1,0 +1,78 @@
+sv:
+  static_pages:
+    # views/about/
+    about:
+      # route: sv/om
+      about:
+        title: 'Om MTD'
+        lead: 'Medieteknikdagarna är ett ideellt arrangemang drivet av och för studenter. 2015 går dagarna av stapeln för femtonde gången. Syftet är att knyta kontakter mellan studenter, medietekniker ute i arbetslivet och företagen inom branschen.'
+        second: 'Under två dagar anordnas det en populär mässa parallellt med inspirerande föreläsningar, och evenemanget avslutas med en stor bankett.'
+        third: 'MTD är ett tillfälle för företag och studenter att inspirera, informera och integrera med varandra. Såväl företag som studenter får här en chans att visa det allra senaste inom medieteknik.'
+
+        group:
+          title: 'Gruppen'
+          text: 'Dagarna arrangeras utav tolv ideellt arbetande studenter på Medieteknikprogrammet som ligger bakom hela evenemanget. Hör jättegärna av dig till oss, vi gillar att snacka!'
+
+          manager: 'Projektledare'
+          economy: 'Kassör'
+          business: 'Företagskontakt'
+          fair: 'Mässansvarig'
+          assistant: 'Projektassistent'
+          lecture: 'Föreläsningsansvarig'
+          banquet: 'Bankettansvarig'
+          tech: 'Teknikansvarig'
+          pr: 'PR-ansvarig'
+          print: 'Tryckansvarig'
+          coordinator: 'Koordinator'
+          web: 'Webbansvarig'
+
+      # route: sv/om/kontakt
+      contact:
+        title: 'Kontakta oss'
+        lead: 'Vi gillar att snacka! Så enkelt är det. Om du har minsta lilla fråga eller fundering, tveka inte alls att höra av dig till oss. Kika nedan vem som är rätt person för dig att snacka med.'
+
+        business:
+          email: 'foretag@medieteknikdagarna.se'
+          title: 'Företagskontakt'
+          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till Emma på:'
+        general:
+          email: 'kontakt@medieteknikdagarna.se'
+          title: 'Generella frågor'
+          text: 'Vid generella frågor, om vad som helst, kontakta oss på:'
+        gymn:
+          title: 'Gymnasie'
+          contact: 'Gymnasiekontakt'
+        physical:
+          title: 'Fysiska adresser'
+          mail: 'Postadress'
+          goods: 'Leveransadress'
+          visit: 'Besöksadress'
+          visit_text: 'Platsen där det händer!'
+        press:
+          email: 'pr@medieteknikdagarna.se'
+          title: 'Press och media'
+          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av till till Mattias på:'
+        pressinfo:
+          title: 'Pressinformation'
+          contact: 'Presskontakt'
+        webb:
+          email: 'webb@medieteknikdagarna.se'
+          title: 'Webb'
+          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Klas på:'
+
+      # route: sv/om/tidigare-ar
+      previous:
+        title: 'Tidigare år'
+        lead: '2015 blir det femtonde året som MTD arrangeras. Här är några höjdpunkter från de gågna åren.'
+
+        lectures:
+          title: 'Föreläsningar'
+          lead: 'Varje år besöks MTD av spännande föreläsare. Här är några av de som besökt oss tidigare år.'
+          more: 'Detta är bara ett urval. Vi har även haft besök utav Rasmus Andersson (Dropbox, tidigare Facebook & Spotify), Mattias Bergbom (tidigare Digital Domain), Oskar Burman (Rovio) med flera. Listan kan göras längre än vad som får plats här!'
+
+          nafees: 'Nafees från Dreamworks Animations besökte oss 2014. Han pratade om hur de tio senaste åren inom visuella effekter förändrats, och hur utveckligen går mer mot avancerade fysiska simuleringar.'
+          iris: 'Iris från Dotnet Mentor besökte oss 2013. Hon pratade om på vilket sätt jämnstäldhet inom IT-branschen spelar roll, hur jämnställdhet sett ut historiskt sett inom branschen samt hur hon fastnade för C#.'
+          anton: 'Anton som grundat Osom, Alltid.se och Headler besökte oss 2013. Han pratade om trender inom IT och vad som avgör vad som blir nästa stora grej. Anton talade även lite om hur han vid 23 års ålder varit med och grundat flera lyckade företag.'
+
+  # home
+  home_teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'

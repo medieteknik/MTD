@@ -1,0 +1,68 @@
+en:
+  static_pages:
+    # about folder
+    about:
+      # route: en/about
+      about:
+        title: 'About MTD'
+        lead: 'The Media Technology Days is a non-profit event arranged by students, conecting students, working media technicians and companies in the industry. 2015 the event is held for the 15th time.'
+        second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event is ended with a grand banquet.'
+        third: 'MTD is an oportunity for companies and students to inspire, inform and interact with eachother. Both students and companies are given the chance to show the latest within media technology.'
+
+        group:
+          title: 'The group'
+          text: 'The days are arranged by twelve media technology students working as volonteers. We''d love to talk to you, so give us a call or drop us an email!'
+
+          manager: 'Project manager'
+          economy: 'Economy manager'
+          business: 'Business contact'
+          fair: 'Fair manager'
+          assistant: 'Project assistant'
+          lecture: 'Lecture coordinator'
+          banquet: 'Banquet manager'
+          tech: 'Technical coordinator'
+          pr: 'PR manager'
+          print: 'Print manager'
+          coordinator: 'Coordinator'
+          web: 'Web manager'
+
+      # route en/about/contact
+      contact:
+
+      # route: en/about/previous
+      previous:
+        title: 'Previous years'
+        lead: '2015 will be the 15th year the days is arranged. Here are some highlights from the previous years.'
+
+        lectures:
+          title: 'Lectures'
+          lead: 'Varje år besöks MTD av spännande föreläsare. Några av de som besökt oss tidigare år är bland andra:'
+          more: ''
+
+          nafees:
+          iris:
+          anton:
+
+
+    # route: en/sponsorship
+    sponsor:
+      title: 'Become a sponsor!'
+      lead: 'Do you want to get in touch with students from one of the best educations in Sweden?'
+
+
+  # contact
+  contact_business_email: 'businesscontact@medieteknikdagarna.se'
+  contact_business_title: 'Business contact'
+  contact_business_text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till:'
+  contact_general_email: 'contact@medieteknikdagarna.se'
+  contact_general_title: 'General'
+  contact_general_text: 'Vid generella frågor, om vad som helst, kontakta oss på:'
+  contact_lead: ''
+  contact_title: 'Contact us'
+
+  # home
+  home_teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundred''s of students closer to the industry.'
+
+  #previous years
+  previous_lead: ''
+  previous_title: 'Previous years'
