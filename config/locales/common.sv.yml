@@ -3,14 +3,26 @@ sv:
   change_lang_opposite: 'Change language'
   english: 'engelska'
   follow_us: 'Följ oss'
-  footer_arranged_by: 'MTD arrangeras utav Medietekniksektionen vid Linköpings Universitet.'
+  liu: 'Linköpings Universitet'
   media_technology_days: 'Medieteknikdagarna'
   menu_sponsor: 'Bli sponsor'
   menu_about: 'Om'
   menu_contact: 'Kontakt'
   menu_previous: 'Tidigare år'
+  meta_description: 'Medieteknikdagarna 2015 (MTD2015), Arbetsmarknadsdagarna för civilingenjörer i Medieteknik på Linköpings Universitet'
   mt_association: 'Medietekniksektionen'
   short_description: 'Medieteknikdagarna är ett ideelt drivet arrangemang för studenter på Linköpings Universitet.'
   short_name: 'MTD2015'
   swedish: 'svenska'
   the_date: '25 – 26 mars'
+
+  layouts:
+    footer:
+      arranged_by: 'MTD arrangeras utav Medietekniksektionen vid Linköpings Universitet.'
+      contact: 'Kontakta oss!'
+
+    header:
+      sponsor: 'Bli sponsor'
+      about: 'Om'
+      contact: 'Kontakt'
+      previous: 'Tidigare år'
