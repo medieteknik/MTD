@@ -1,4 +1,4 @@
-<% title(' – ' + t('.title')) %>
+<% title('– ' + t('.title')) %>
 <div class="container">
   <section class="info limit-width">
     <%= content_tag :h1, t('.title') %>
@@ -9,24 +9,24 @@
       <div class="col-sm-4">
         <%= content_tag :h3, t('.general.title') %>
         <%= content_tag :p, t('.general.text') %>
-        <%= content_tag :p, link_to(t('.general.email'), 'mailto:'+t('.general.email')) %>
+        <%= content_tag :p, link_to(t('.general.email'), 'mailto:' + t('.general.email')) %>
       </div>
       <div class="col-sm-4">
         <%= content_tag :h3, t('.business.title') %>
         <%= content_tag :p, t('.business.text') %>
-        <%= content_tag :p, link_to(t('.business.email'), 'mailto:'+t('.business.email')) %>
+        <%= content_tag :p, link_to(t('.business.email'), 'mailto:' + t('.business.email')) %>
       </div>
       <div class="col-sm-4">
         <%= content_tag :h3, t('.press.title') %>
         <%= content_tag :p, t('.press.text') %>
-        <%= content_tag :p, link_to(t('.press.email'), 'mailto:'+t('.press.email')) %>
+        <%= content_tag :p, link_to(t('.press.email'), 'mailto:' + t('.press.email')) %>
       </div>
     </section>
     <section class="row">
       <div class="col-sm-4">
         <%= content_tag :h3, t('.webb.title') %>
         <%= content_tag :p, t('.webb.text') %>
-        <%= content_tag :p, link_to(t('.webb.email'), 'mailto:'+t('.webb.email')) %>
+        <%= content_tag :p, link_to(t('.webb.email'), 'mailto:' + t('.webb.email')) %>
       </div>
     </section>
   </section>
@@ -100,7 +100,7 @@
       <div class="col-sm-4">
         <%= content_tag :h4, t('.gymn.contact') %>
         <p>
-          Karin Reidarmann, <%= t('static_pages.about.about.group.coordinator') %> MTD 2015 <br>
+          Karin Reidarman, <%= t('static_pages.about.about.group.coordinator') %> MTD 2015 <br>
           <%= link_to(icon('paper-plane') + ' karin@medieteknikdagarna.se', 'mailto:karin@medieteknikdagarna.se') %> <br>
           <%= link_to(icon('phone') + ' +4670-740 30 65', 'tel:+46707403065') %>
         </p>

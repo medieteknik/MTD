@@ -26,6 +26,9 @@ en:
           coordinator: 'Coordinator'
           web: 'Web manager'
 
+        programme:
+          title: 'The media technology program at Linköping University'
+
       # route en/about/contact
       contact:
         title: 'Contact us'

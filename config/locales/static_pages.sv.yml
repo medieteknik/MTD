@@ -26,6 +26,9 @@ sv:
           coordinator: 'Koordinator'
           web: 'Webbansvarig'
 
+        programme:
+          title: 'Medieteknikprogrammet på Linköpings Universitet'
+
       # route: sv/om/kontakt
       contact:
         title: 'Kontakta oss'

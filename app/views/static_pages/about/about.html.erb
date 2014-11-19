@@ -8,6 +8,13 @@
       <%= content_tag :p, t('.third') %>
     </div>
   </section>
+
+  <div class="info limit-width">
+    <%= content_tag :h2, t('.programme.title') %>
+
+    <%= render 'static_pages/about/program' %>
+  </div>
+
   <section class="info">
     <div class="limit-width">
       <%= content_tag :h2, t('.group.title') %>
@@ -34,7 +41,7 @@
       </div>
       <div class="person">
         <%= image_tag 'group/emma@2x.jpg', class: 'responsive-image' %>
-        <%= link_to content_tag(:h3, 'Emmma Edvardsson'), 'mailto:emma@medieteknikdagarna.se' %>
+        <%= link_to content_tag(:h3, 'Emma Edvardsson'), 'mailto:emma@medieteknikdagarna.se' %>
         <%= content_tag :h4, t('.group.business') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' emma@medieteknikdagarna.se', 'mailto:emma@medieteknikdagarna.se') %>
@@ -110,7 +117,7 @@
       </div>
       <div class="person">
         <%= image_tag 'group/karin@2x.jpg', class: 'responsive-image' %>
-        <%= link_to content_tag(:h3, 'Karin Reidarmann'), 'mailto:karin@medieteknikdagarna.se' %>
+        <%= link_to content_tag(:h3, 'Karin Reidarman'), 'mailto:karin@medieteknikdagarna.se' %>
         <%= content_tag :h4, t('.group.coordinator') %>
         <ul class="contact">
           <%= content_tag :li, link_to(icon('paper-plane') + ' karin@medieteknikdagarna.se', 'mailto:karin@medieteknikdagarna.se') %>
