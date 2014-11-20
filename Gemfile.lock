@@ -85,6 +85,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.4.2)
     multi_json (1.10.1)
+    nprogress-rails (0.1.6.3)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
@@ -176,6 +177,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   letter_opener
+  nprogress-rails (~> 0.1.6.3)
   pg
   rails (= 4.1.1)
   rails_12factor

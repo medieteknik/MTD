@@ -1,7 +1,12 @@
 // colors
 $gray: #7b8994;
-$dark-gray: darken($gray, 30%);
-$orange: #cc6400;
+$gray-light: #CDD0D2;
+$gray-dark: darken($gray, 30%);
+$orange: #F58223;
+
+$footer-background: #323133;
+
+$nprogress-color: darken($orange, 20%);
 
 // metrics
 $header-height: 60px;

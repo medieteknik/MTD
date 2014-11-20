@@ -50,8 +50,8 @@
 
 // TODO clean this up
 #deals {
-  padding: 40px 0 10px;
-  background: $gray;
+  padding: 40px 0;
+  background: $gray-light;
 
   h3 {
     border-bottom: 1px solid lighten($gray, 10%);
@@ -69,6 +69,11 @@
     .button {
       margin-top: 20px;
       padding: 10px 18px;
+      background: $orange;
+    }
+
+    .button:hover {
+      background: darken($orange, 10%);
     }
 
     // TODO: make these pritty

@@ -97,7 +97,7 @@ sv:
           readmore: 'Läs mer!'
 
           bronze:
-            title: 'Mycket'
+            title: 'Mycket – Brons'
             price: '10 000 kr'
 
             one: 'Logotyp på affischer, stream och i broschyr'
@@ -105,18 +105,18 @@ sv:
             three: 'Företräde till att välja mässplats'
             four: 'Intervju på hemsidan'
           silver:
-            title: 'Mer'
+            title: 'Mer – Silver'
             price: '20 000 kr'
 
-            one: 'Mycket-paketet inklusive'
+            one: 'Brons-paketet inklusive'
             two: 'Logotyp på flyers och på startsidan'
             three: 'Film på streamen'
             four: 'Utökad info på MTDs hemsida'
           gold:
-            title: 'Mest'
+            title: 'Mest – Guld'
             price: '30 000 kr'
 
-            one: 'Mer-paketet inklusive'
+            one: 'Silver-paketet inklusive'
             two: 'Logotyp på Goodiebags, Facebook och värdtröjor'
             three: 'Hemma hos-reportage'
             four: 'Först att välja mässplats'
