@@ -13,6 +13,7 @@
 #= require jquery
 #= require jquery.turbolinks
 #= require jquery_ujs
+#= require modernizr
 #= require nprogress
 #= require nprogress-turbolinks
 #= require_tree .
