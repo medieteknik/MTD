@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g id="gray_upper">
+	<rect id="_x31__2_" x="7.228" y="9.794" fill="#9F9F9F" width="4.402" height="35.224"/>
+	<rect id="_x32__2_" x="13.39" y="9.803" fill="#9F9F9F" width="4.403" height="35.214"/>
+	<rect id="_x33__2_" x="19.553" y="9.803" fill="#9F9F9F" width="4.401" height="35.214"/>
+</g>
+<g id="gray_lower">
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="5.548" y="21.444" width="19.734" height="34.022"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<rect id="_x31__1_" x="7.228" y="9.755" clip-path="url(#SVGID_2_)" fill="#717171" width="4.402" height="35.215"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="5.548" y="21.444" width="19.734" height="34.022"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<rect id="_x32__1_" x="13.39" y="9.755" clip-path="url(#SVGID_4_)" fill="#717171" width="4.403" height="35.215"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_5_" x="5.548" y="21.444" width="19.734" height="34.022"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  overflow="visible"/>
+		</clipPath>
+		<rect id="_x33__1_" x="19.553" y="9.755" clip-path="url(#SVGID_6_)" fill="#717171" width="4.401" height="35.215"/>
+	</g>
+</g>
+<g id="orange_upper_1_">
+	<path id="_x31__3_" fill="#F6A22D" d="M30.117,47.218c0,0,0,2.2-2.201,2.2s-2.201-2.2-2.201-2.2V3.201c0,0,0-2.201,2.201-2.201
+		s2.201,2.201,2.201,2.201V47.218z"/>
+	<path id="_x32__3_" fill="#F6A22D" d="M36.279,45.018c0,0,0,2.2-2.2,2.2c-2.201,0-2.201-2.2-2.201-2.2V7.603
+		c0,0,0-2.202,2.201-2.202c2.2,0,2.2,2.202,2.2,2.202V45.018z"/>
+	<path id="_x33__3_" fill="#F6A22D" d="M42.44,42.815c0,0,0,2.202-2.2,2.202c-2.199,0-2.199-2.202-2.199-2.202V12.004
+		c0,0,0-2.201,2.199-2.201c2.2,0,2.2,2.201,2.2,2.201V42.815z"/>
+</g>
+<g id="orange_lower_1_">
+	<g>
+		<defs>
+			<polygon id="SVGID_7_" points="24.836,20.807 30.998,25.209 37.16,29.61 43.323,34.014 43.323,67.746 24.836,60.423 			"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+		</clipPath>
+		<path id="_x31_" clip-path="url(#SVGID_8_)" fill="#EF7D0A" d="M30.117,47.218c0,0,0,2.2-2.201,2.2s-2.201-2.2-2.201-2.2V3.201
+			c0,0,0-2.201,2.201-2.201s2.201,2.201,2.201,2.201V47.218z"/>
+	</g>
+	<g>
+		<defs>
+			<polygon id="SVGID_9_" points="24.836,20.807 30.998,25.209 37.16,29.61 43.323,34.014 43.323,67.746 24.836,60.423 			"/>
+		</defs>
+		<clipPath id="SVGID_10_">
+			<use xlink:href="#SVGID_9_"  overflow="visible"/>
+		</clipPath>
+		<path id="_x32_" clip-path="url(#SVGID_10_)" fill="#EF7D0A" d="M36.279,45.018c0,0,0,2.2-2.2,2.2c-2.201,0-2.201-2.2-2.201-2.2
+			V7.603c0,0,0-2.202,2.201-2.202c2.2,0,2.2,2.202,2.2,2.202V45.018z"/>
+	</g>
+	<g>
+		<defs>
+			<polygon id="SVGID_11_" points="24.836,20.807 30.998,25.209 37.16,29.61 43.323,34.014 43.323,67.746 24.836,60.423 			"/>
+		</defs>
+		<clipPath id="SVGID_12_">
+			<use xlink:href="#SVGID_11_"  overflow="visible"/>
+		</clipPath>
+		<path id="_x33_" clip-path="url(#SVGID_12_)" fill="#EF7D0A" d="M42.44,42.815c0,0,0,2.202-2.2,2.202
+			c-2.199,0-2.199-2.202-2.199-2.202V12.004c0,0,0-2.201,2.199-2.201c2.2,0,2.2,2.201,2.2,2.201V42.815z"/>
+	</g>
+</g>
+</svg>
