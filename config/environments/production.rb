@@ -35,6 +35,23 @@ Rails.application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
+  # config html compression
+  compressor_options = {
+    :remove_quotes => false,
+    :remove_script_attributes => false,
+    :remove_style_attributes => false,
+    :remove_link_attributes => false,
+    :remove_form_attributes => false,
+    :remove_input_attributes => false,
+    :remove_javascript_protocol => false,
+    :remove_http_protocol => false,
+    :remove_https_protocol => false,
+    :preserve_line_breaks => false,
+    :simple_boolean_attributes => false
+  }
+
+  config.middleware.use HtmlCompressor::Rack, compressor_options
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
