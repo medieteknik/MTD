@@ -16,6 +16,11 @@ sv:
   swedish: 'svenska'
   the_date: '25 – 26 mars'
 
+  first: 'först'
+  second: 'andra'
+  third: 'tredje'
+  fourth: 'fjärde'
+
   layouts:
     footer:
       arranged_by: 'MTD arrangeras utav Medietekniksektionen vid Linköpings Universitet.'

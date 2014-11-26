@@ -1,11 +1,11 @@
 sv:
   routes:
     about: om
-    bronze: brons
+    compare: jamfor
     bronze: brons
     contact: kontakt
     gold: guld
     previous-years: 'tidigare-ar'
     sponsorship: sponsor
     user: konto
-    gold: gold
+    gold: guld

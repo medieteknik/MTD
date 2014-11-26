@@ -9,6 +9,9 @@
 <div id="deals">
   <div class="container">
     <section class="info text-center">
+      <h2>
+        <%= t('.deals.title') %> – <%= link_to t('.deals.compare'), sponsorship_compare_path %>
+      </h2>
       <%= content_tag :h2, t('.deals.title') %>
       <%= content_tag :p, t('.deals.intro'), class: 'lead' %>
 

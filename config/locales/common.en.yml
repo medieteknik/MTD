@@ -16,6 +16,11 @@ en:
   swedish: 'swedish'
   the_date: '25 – 26 March'
 
+  first: 'first'
+  second: 'second'
+  third: 'third'
+  fourth: 'fourth'
+
   layouts:
     footer:
       arranged_by: 'MTD is arranged by the Media Technology Association at Linköping University.'

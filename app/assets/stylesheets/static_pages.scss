@@ -97,3 +97,63 @@
     }
   }
 }
+
+.comparision .perk {
+  padding: 10px 0;
+  @include make-row();
+
+  &:nth-child(even) {
+    background: $gray-light;
+  }
+
+  .text {
+    @include make-sm-column(6);
+  }
+  .cross {
+    @extend .text-center;
+    @include make-sm-column(2);
+    @include make-xs-column(4);
+  }
+  .cross .marked {
+    background: asset-url('medals/cross.png');
+    background-repeat: no-repeat;
+    background-size: contain !important;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+  }
+  .deal {
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: contain !important;
+    display: inline-block;
+    &.gold {
+      background: asset-url('medals/gold.png');
+    }
+    &.silver {
+      background: asset-url('medals/silver.png');
+    }
+    &.bronze {
+      background: asset-url('medals/bronze.png');
+    }
+  }
+}
+@media screen and (max-width: $screen-sm-min) {
+  .comparision .perk .cross {
+    .marked {
+      margin-top: 5px;
+      height: 35px;
+      width: 35px;
+    }
+    &:nth-child(2) .marked {
+      background: asset-url('medals/gold.png');
+    }
+    &:nth-child(3) .marked {
+      background: asset-url('medals/silver.png');
+    }
+    &:nth-child(4) .marked {
+      background: asset-url('medals/bronze.png');
+    }
+  }
+}

@@ -1,7 +1,16 @@
 <div class="container">
-  <section class="info limit-width">
-    <%= content_tag :h1, t('.title') %>
+  <%= content_tag :h1, t('.title') %>
+  <div class="row">
+    <div class="col-sm-8">
+      <%= content_tag :p, t('.lead'), class: 'lead' %>
 
+      <%= render 'static_pages/sponsor/gold_content' %>
+    </div>
+    <div class="col-sm-4">
+      <%= render 'static_pages/sponsor/packages' %>
+    </div>
+  </div>
+  <section class="info limit-width">
     <%= render 'static_pages/sponsor/contact' %>
   </section>
 </div>

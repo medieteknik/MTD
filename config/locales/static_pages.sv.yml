@@ -32,7 +32,7 @@ sv:
       # route: sv/om/kontakt
       contact:
         title: 'Kontakta oss'
-        lead: 'Vi gillar att snacka! Så enkelt är det. Om du har minsta lilla fråga eller fundering, tveka inte alls att höra av dig till oss. Kika nedan vem som är rätt person för dig att snacka med.'
+        lead: 'Vi gillar att snacka! Så enkelt är det. Om du har minsta lilla fråga eller fundering, tveka inte alls att höra av dig till oss.'
 
         business:
           email: 'foretag@medieteknikdagarna.se'
@@ -83,13 +83,69 @@ sv:
 
     # map: views/static_pages/sponsor
     sponsor:
+      # route: sv/jamfor
+      compare:
+        title: 'Jämför sponsorpaket'
+        lead: ''
+
+        bronze: 'Brons'
+        silver: 'Silver'
+        gold: 'Guld'
+
+        logo:
+          title: 'Er logotyp kommer synas på...'
+          perk_1: 'Broschyrer'
+          perk_2: 'Marknadsföringsaffischer'
+          perk_3: 'Bildspel'
+          perk_4: 'Marknadsföringsflyers'
+          perk_5: 'Förstasidan av medieteknikdagarna.se'
+          perk_6: 'Goodiebags'
+          perk_7: 'Header på medieteknikdagarna.se'
+          perk_8: 'Vår Cover Photo på Facebook'
+          perk_9: 'Bumper i videomaterial'
+          perk_10: 'Våra rollups under mässan'
+          perk_11: 'Värdtröjor'
+
+        information:
+          title: 'Information om ert företag kommer synas på..'
+          perk_1: 'Prioriterad plats på medieteknikdagarna.se'
+          perk_2: 'Startsidan av medieteknikdagarna.se'
+
+        benefits:
+          title: 'Ni kommer också få..'
+          perk_1: 'Välja mässplats'
+          perk_2:
+            title: 'Synas på livestream'
+            gold: 'Reklamfilm<br><small>Max två minuter</small>'
+            silver: 'Bildmaterial<br><small>Max 30 s</small>'
+            bronze: 'Egen bild'
+          perk_3:
+            title: 'MTD-intervju som publiceras på våra sociala flöden'
+            gold: 'hemma hos'
+            silver: 'e-mailintervju'
+            bronze: 'tre snabba frågor'
+          perk_4:
+            title: 'En hälsning via våra sociala flöden'
+            gold: '1 gång/mån'
+            silver: '1 gång'
+          perk_5: 'Publicera innehåll på medieteknikdagarna.se'
+          perk_6: 'Egna rollups med på MTD-event'
+
+        services:
+          title: 'Väl framme får ni..'
+          perk_1: 'Mässplats 2 dagar'
+          perk_2: 'Bidra till goodiebags'
+          perk_3: 'Stöd & marknadsföring vid era event'
+          perk_4: 'Företagsvärd'
+          perk_5: 'En presentation i samband med föreläsning'
+
       # route: sv/sponsor
       sponsor:
         title: 'Bli sponsor'
         lead: 'Vill du komma i kontakt med studenter från en av Sveriges bästa utbildningar? Bli en av våra sponsorer!'
         second: 'Som en utav våra sponsorer ser du till att göra MTD möjligt, och ditt företag hamnar i en unik och nära position till studenterna. Vi har här satt ihop ett antal attraktiva paket att välja från.'
 
-        common: 'Samtliga paket innehåller bland annat mässplats båda dagarna, företagsprofil på hemsidan mm. Har du någon idé om hur vi kan samarbeta, som inte tas upp här? Tveka inte att höra av dig! Vi kommer gärna fram till något som fungerar för oss båda.'
+        common: 'Samtliga paket innehåller bland annat mässplats båda dagarna, företagsprofil på hemsidan mm. Har du någon idé om hur vi kan samarbeta, som inte tas upp här? Tveka inte att höra av dig! Vi hjälper er gärna komma fram till något som passar er.'
 
         deals:
           title: 'Våra paket'
@@ -98,7 +154,7 @@ sv:
 
           bronze:
             title: 'Mycket – Brons'
-            price: '10 000 kr'
+            price: '10 000 SEK'
 
             one: 'Logotyp på affischer, stream och i broschyr'
             two: 'Prioriterad plats på hemsidan'
@@ -106,7 +162,7 @@ sv:
             four: 'Intervju på hemsidan'
           silver:
             title: 'Mer – Silver'
-            price: '20 000 kr'
+            price: '20 000 SEK'
 
             one: 'Brons-paketet inklusive'
             two: 'Logotyp på flyers och på startsidan'
@@ -114,7 +170,7 @@ sv:
             four: 'Utökad info på MTDs hemsida'
           gold:
             title: 'Mest – Guld'
-            price: '30 000 kr'
+            price: '30 000 SEK'
 
             one: 'Silver-paketet inklusive'
             two: 'Logotyp på Goodiebags, Facebook och värdtröjor'
@@ -124,14 +180,15 @@ sv:
             title: 'Mässplats'
             text: 'Vi erbjuder även mässplatser. Mer info kommer snart!'
 
-      # route: sv/sponsor/mycket
-      alot:
-        title: 'Sponsra oss mycket'
+      # route: sv/sponsor/brons
+      bronze:
+        title: 'Bli bronssponsor'
 
-      # route: sv/sponsor/mer
-      more:
-        title: 'Sponsra oss mer'
+      # route: sv/sponsor/silver
+      silver:
+        title: 'Bli silversponsor'
 
-      # route: sv/sponsor/mest
-      themost:
-        title: 'Sponsra oss mest'
+      # route: sv/sponsor/guld
+      gold:
+        lead: 'Som guldsponsor blir du en av våra huvudsponsorer. Vi ser till att ni är några av de som syns mest och ni får flera fördelar över de andra företagen.'
+        title: 'Bli guldsponsor'
