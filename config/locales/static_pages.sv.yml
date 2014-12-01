@@ -1,6 +1,6 @@
 sv:
   static_pages:
-    # views/about/
+    # folder: views/about/
     about:
       # route: sv/om
       about:
@@ -81,12 +81,12 @@ sv:
     home:
       teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
 
-    # map: views/static_pages/sponsor
+    # folder: views/static_pages/sponsor
     sponsor:
-      # route: sv/jamfor
+      # route: sv/sponsor/jamfor
       compare:
         title: 'Jämför sponsorpaket'
-        lead: ''
+        lead: 'Här ser du en jämförelse mellan våra sponsorpaket.'
 
         bronze: 'Brons'
         silver: 'Silver'
@@ -148,6 +148,7 @@ sv:
         common: 'Samtliga paket innehåller bland annat mässplats båda dagarna, företagsprofil på hemsidan mm. Har du någon idé om hur vi kan samarbeta, som inte tas upp här? Tveka inte att höra av dig! Vi hjälper er gärna komma fram till något som passar er.'
 
         deals:
+          compare: 'Jämför'
           title: 'Våra paket'
           intro: 'För dig som vill synas...'
           readmore: 'Läs mer!'
@@ -180,15 +181,17 @@ sv:
             title: 'Mässplats'
             text: 'Vi erbjuder även mässplatser. Mer info kommer snart!'
 
-      # route: sv/sponsor/brons
+      # route: sv/sponsor/jamfor/brons
       bronze:
+        lead: 'Vårt bronssponsorpaket är utmärkt för dig som vill ha lite mer än en vanlig mässplats.'
         title: 'Bli bronssponsor'
 
-      # route: sv/sponsor/silver
+      # route: sv/sponsor/jamfor/silver
       silver:
+        lead: 'Som silversponsor blir du en av nyckelkomponenterna i det som verkliggör MTD. Du får en tydligt framträdande roll och kommer nära studenterna.'
         title: 'Bli silversponsor'
 
-      # route: sv/sponsor/guld
+      # route: sv/sponsor/jamfor/guld
       gold:
         lead: 'Som guldsponsor blir du en av våra huvudsponsorer. Vi ser till att ni är några av de som syns mest och ni får flera fördelar över de andra företagen.'
         title: 'Bli guldsponsor'

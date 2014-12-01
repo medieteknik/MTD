@@ -4,22 +4,29 @@
     <%= content_tag :p, t('.lead'), class: 'lead' %>
   </section>
   <section class="info comparision">
-    <article class="perk hidden-xs">
-      <div class="text"></div>
-      <div class="cross">
-        <div class="deal gold"></div>
-        <%= content_tag :h4, t('.gold') %>
-        <%= content_tag :h5, t('static_pages.sponsor.sponsor.deals.gold.price') %>
+    <article class="perk">
+      <div class="text">
       </div>
-      <div class="cross">
-        <div class="deal silver"></div>
-        <%= content_tag :h4, t('.silver') %>
-        <%= content_tag :h5, t('static_pages.sponsor.sponsor.deals.silver.price') %>
+      <div class="cross hidden-xs">
+        <%= link_to sponsorship_gold_path do %>
+          <div class="deal gold"></div>
+          <%= content_tag :h4, t('.gold') %>
+          <%= content_tag :h5, t('static_pages.sponsor.sponsor.deals.gold.price') %>
+        <% end %>
       </div>
-      <div class="cross">
-        <div class="deal bronze"></div>
-        <%= content_tag :h4, t('.bronze') %>
-        <%= content_tag :h5, t('static_pages.sponsor.sponsor.deals.bronze.price') %>
+      <div class="cross hidden-xs">
+        <%= link_to sponsorship_silver_path do %>
+          <div class="deal silver"></div>
+          <%= content_tag :h4, t('.silver') %>
+          <%= content_tag :h5, t('static_pages.sponsor.sponsor.deals.silver.price') %>
+        <% end %>
+      </div>
+      <div class="cross hidden-xs">
+        <%= link_to sponsorship_bronze_path do %>
+          <div class="deal bronze"></div>
+          <%= content_tag :h4, t('.bronze') %>
+          <%= content_tag :h5, t('static_pages.sponsor.sponsor.deals.bronze.price') %>
+        <% end %>
       </div>
     </article>
     <%= content_tag :h4, t('.logo.title') %>

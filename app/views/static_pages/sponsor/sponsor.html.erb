@@ -10,15 +10,14 @@
   <div class="container">
     <section class="info text-center">
       <h2>
-        <%= t('.deals.title') %> – <%= link_to t('.deals.compare'), sponsorship_compare_path %>
+        <%= t('.deals.title') %> &ndash; <%= link_to t('.deals.compare'), sponsorship_compare_path%>
       </h2>
-      <%= content_tag :h2, t('.deals.title') %>
       <%= content_tag :p, t('.deals.intro'), class: 'lead' %>
 
       <div class="deals">
         <div class="deal bronze">
           <%= content_tag :h3, t('.deals.bronze.title') %>
-          <!-- <%= content_tag :h4, t('.deals.bronze.price') %> -->
+          <%= content_tag :h4, t('.deals.bronze.price') %>
           <ul>
             <%= content_tag :li, t('.deals.bronze.one') %>
             <%= content_tag :li, t('.deals.bronze.two') %>
@@ -29,7 +28,7 @@
         </div>
         <div class="deal silver">
           <%= content_tag :h3, t('.deals.silver.title') %>
-          <!-- <%= content_tag :h4, t('.deals.silver.price') %> -->
+          <%= content_tag :h4, t('.deals.silver.price') %>
           <ul>
             <%= content_tag :li, t('.deals.silver.one'), class: 'strong' %>
             <%= content_tag :li, t('.deals.silver.two') %>
@@ -40,7 +39,7 @@
         </div>
         <div class="deal gold">
           <%= content_tag :h3, t('.deals.gold.title') %>
-          <!-- <%= content_tag :h4, t('.deals.gold.price') %> -->
+          <%= content_tag :h4, t('.deals.gold.price') %>
           <ul>
             <%= content_tag :li, t('.deals.gold.one'), class: 'strong' %>
             <%= content_tag :li, t('.deals.gold.two') %>
