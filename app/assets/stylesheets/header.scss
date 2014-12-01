@@ -20,6 +20,9 @@
     a {
       color: #fff;
     }
+    .brand .logo {
+      @include background-img('header/white', contain);
+    }
   }
 
   .brand {
@@ -28,6 +31,14 @@
     .name {
       font-weight: bold;
       padding-left: $header-padding;
+    }
+    .logo {
+      display: inline-block;
+      float: left;
+      height: $header-height - 2*$header-padding;
+      width: $header-height - 2*$header-padding;
+      background-repeat: no-repeat;
+      @include background-img('header/logo', contain);
     }
   }
 }

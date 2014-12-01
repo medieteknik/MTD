@@ -1,0 +1,35 @@
+//
+// This adds a fallback alternativ when modernizr detects that SVG is not supported.
+// $name    the file name
+// $size    if background size should be used
+//
+@mixin background-img($name, $size: false, $fallback-extension: '.png', $retina-suffix: '@2x'){
+  background-image: asset-url('#{$name}.svg');
+  @if($size){
+    background-size: $size;
+  }
+  .no-svg & {
+    background-image: asset-url('#{$name}.#{$fallback-extension}');
+
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      background-image: asset-url('#{$name}#{$retina-suffix}.#{$fallback-extension}');
+    }
+  }
+}
+
+//
+// retina-sensitive background photo mixin
+// $name        file name in assets folder
+// $size        background size-element [optional]
+// $break-point at what width should the retina-res image replace the other [optional]
+//
+@mixin background-photo($name, $size: false, $break-point: 1000px, $extension: 'jpg', $retina-suffix: '@2x') {
+  background-image: asset-url('#{$name}.#{$extension}');
+  @media only screen and (min-width: $break-point), only screen and(min-width: $break-point/2) and (-moz-min-device-pixel-ratio: 1.5), only screen and(min-width: $break-point/1.5) and (-o-min-device-pixel-ratio: 3/2), only screen and(min-width: $break-point/1.5) and (-webkit-min-device-pixel-ratio: 1.5), only screen and(min-width: $break-point/1.5) and (min-device-pixel-ratio: 1.5) {
+    background-image: asset-url('#{$name}#{$retina-suffix}.#{$extension}');
+  }
+  @if ($size) {
+    background-size: $size;
+  }
+  background-position: center;
+}
