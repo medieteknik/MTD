@@ -5,13 +5,13 @@ en:
       # route: en/about
       about:
         title: 'About MTD'
-        lead: 'The Media Technology Days is a non-profit event arranged by students, conecting students, working media technicians and companies in the industry. 2015 the event is held for the 15th time.'
-        second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event is ended with a grand banquet.'
+        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2015 the event is held for the 15th time.'
+        second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event ends with a grand banquet.'
         third: 'MTD is an oportunity for companies and students to inspire, inform and interact with eachother. Both students and companies are given the chance to show the latest within media technology.'
 
         group:
           title: 'The group'
-          text: 'The days are arranged by twelve media technology students working as volonteers. We''d love to talk to you, so give us a call or drop us an email!'
+          text: 'The days are arranged by twelve media technology students working as volunteers. We''d love to talk to you, so give us a call or drop us an email!'
 
           manager: 'Project manager'
           economy: 'Economy manager'
@@ -27,7 +27,7 @@ en:
           web: 'Web manager'
 
         programme:
-          title: 'The media technology program at Linköping University'
+          title: 'The media technology programme at Linköping University'
 
       # route en/about/contact
       contact:
@@ -50,7 +50,7 @@ en:
           mail: 'Mail address'
           goods: 'Goods'
           visit: 'Visiting address'
-          visit_text: 'This is where MTM will be held!'
+          visit_text: 'This is where MTD will be held!'
         press:
           email: 'pr@medieteknikdagarna.se'
           title: 'Press and media'
@@ -61,7 +61,7 @@ en:
         webb:
           email: 'web@medieteknikdagarna.se'
           title: 'Web'
-          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit wierd? Contact Klas at:'
+          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Klas at:'
 
       # route: en/about/previous
       previous:
@@ -73,13 +73,13 @@ en:
           lead: 'Each year, MTD is visited by exciting lecturers. Here are some examples of our previous visits.'
           more: 'These examples are only a few of the guests we''ve hade throughout the years. Rasmus Andersson (Dropbox, Facebook & Spotify), Mattias Bergbom (previously Digital Domain) are only a few of the ones that didn''t fit here.'
 
-          # nafees:
-          # iris:
-          # anton:
+          nafees: 'Nafees from Dreamworks Animations visited us 2014. He talked about the change in VFX during the last ten years, and how the trend is heading towards more advanced physical simulations.'
+          iris: 'Iris from Dotnet Mentor visited us in 2013. She talked about how equality in IT matters, how equality in the industry has changed over the years and how she got into C#.'
+          anton: 'Anton, who founded Osom, Alltid.se and Headler, visited us in 2013. He talked about trends in IT and the factors that determine what will be a future success.'
 
     # route: /en
     home:
-      teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundred''s of students closer to the industry.'
+      teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
 
     # folder: views/static_pages/sponsor
     sponsor:
@@ -104,7 +104,7 @@ en:
           perk_8: 'On our cover photo on Facebook'
           perk_9: 'All our video material'
           perk_10: 'On our rollups during the fair'
-          perk_11: 'On our volonteers'' shirts during the fair'
+          perk_11: 'On our volunteers'' shirts during the fair'
 
         information:
           title: 'Informatoin about your company will be shown...'

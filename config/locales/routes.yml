@@ -9,3 +9,14 @@ sv:
     sponsorship: sponsor
     user: konto
     gold: guld
+en:
+  routes:
+    about: about
+    compare: compare
+    bronze: bronze
+    contact: contact
+    gold: gold
+    previous-years: 'previous-years'
+    sponsorship: sponsorship
+    user: user
+    gold: gold
