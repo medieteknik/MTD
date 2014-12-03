@@ -52,6 +52,14 @@ body > #content{
   border: 0;
   transition: all .2s ease;
 }
+
+.cross-icon {
+  background-repeat: no-repeat;
+  @include background-img('icons/white_cross', contain);
+}
+
+
 .translation_missing {
   background: red !important;
 }
+
