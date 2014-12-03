@@ -13,6 +13,7 @@
   @include transition (all .2s ease-in-out);
 
   .header-scroll &.transparent {
+    position: absolute;
     color: #fff;
     background: transparent;
     border-bottom-color: transparent;
