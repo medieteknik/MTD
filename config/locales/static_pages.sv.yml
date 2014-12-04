@@ -38,6 +38,10 @@ sv:
           email: 'foretag@medieteknikdagarna.se'
           title: 'Företagskontakt'
           text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till Emma på:'
+        fair:
+          email: 'massa@medieteknikdagarna.se'
+          title: 'Mässan'
+          text: 'Har du någon fråga kring mässan? Kontakta Fredrik på: '
         general:
           email: 'kontakt@medieteknikdagarna.se'
           title: 'Generella frågor'
@@ -79,7 +83,20 @@ sv:
 
     # route: sv/
     home:
-      teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
+      lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet. För femtonde året i rad förenar vi hundratals studenter och medietekniker redan ute i industrin. Här hittar du all information och alla kontaktuppgifter du kan tänkas behöva.'
+      # teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
+      quote: 'Medieteknik i Norrköping är en utav de bästa programeringsutbildningarna som finns i Sverige'
+      welcome: 'Välkommen'
+
+      contacts:
+        title: 'Knyt kontakter'
+        text: 'Vi förenar studenter med företag och företag med studenter. En utmärkt chans för alla att knyta kontakter inför framtiden.'
+
+      inspiration:
+        title: 'Bli inspirerad'
+        text: 'Inspirerande och spännande föreläsningar har varit ett stående inslag på MTD de senaste åren.'
+
+
 
     # folder: views/static_pages/sponsor
     sponsor:

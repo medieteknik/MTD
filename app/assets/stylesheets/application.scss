@@ -53,9 +53,15 @@ body > #content{
   transition: all .2s ease;
 }
 
+// icons and such
 .cross-icon {
   background-repeat: no-repeat;
   @include background-img('icons/white_cross', contain);
+}
+@for $i from 6 through 10 {
+  .fa.fa-#{$i}x {
+    font-size: #{$i}em;
+  }
 }
 
 

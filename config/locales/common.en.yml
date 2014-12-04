@@ -13,8 +13,9 @@ en:
   mt_association: 'The Media Technology Association'
   short_description: 'The Media Technology Days is a non-profit event for students at Linköping''s University.'
   short_name: 'MTD2015'
+  sweden: 'Sweden'
   swedish: 'swedish'
-  the_date: '25 – 26 March'
+  the_date: 'March 25 – 26'
 
   first: 'first'
   second: 'second'

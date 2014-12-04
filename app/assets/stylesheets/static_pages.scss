@@ -1,14 +1,25 @@
 .beamer {
+  position: relative;
   width: 100%;
   min-height: 300px;
-  max-height: 800px;
-  height: 80%;
-  height: calc(100% - 100px);
+  max-height: 1000px;
+  height: 100%;
+  // height: calc(100% - 100px);
 
   .home & {
     background: $gray;
     color: #fff;
     @include background-photo('beamer/fair-2', cover);
+
+    h1 {
+      font-size: 57px;
+    }
+    h2 {
+      font-size: floor($font-size-base * 1.6);
+      font-weight: 300;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
   }
 
   :first-child {
@@ -22,13 +33,38 @@
     transform: translateY(-50%);
     text-align: center;
   }
+  footer {
+    @extend .hidden-xs;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+
+    ul {
+      @extend .list-inline, .text-center;
+    }
+    a {
+      color: #fff;
+    }
+  }
 }
 
 .limit-width {
   max-width: $screen-sm-min;
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.narrow {
+    max-width: .7*$screen-sm-min;
+  }
 }
+
 .info {
-  margin: 40px 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .person {
@@ -50,7 +86,7 @@
 }
 
 // TODO clean this up
-#deals {
+.ribbon {
   padding: 40px 0;
   background: $gray-light;
 

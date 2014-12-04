@@ -2,41 +2,42 @@
 <% title '– ' + t('the_date') + ', Norrköping' %>
 <div class="beamer">
   <div class="content header-scroll-target">
-    <h1>
-      <%= t('the_date') %> 2015, Norrköping
-    </h1>
-    <p class="lead">
-      <%= t('.teaser') %>
-    </p>
+    <%= content_tag :h2, t('media_technology_days') + ' 2015' %>
+    <%= content_tag :h1, t('the_date'), class: 'date' %>
+    <%= content_tag :h2, 'Campus Norrköping' %>
+  </div>
+  <footer>
+    <ul>
+      <%= content_tag :li, t('follow_us') + ':' %>
+      <%= content_tag :li, link_to(icon('facebook', '', class: 'fa-lg') + ' Facebook', 'https://facebook.com/medieteknikdagarna') %>
+      <%= content_tag :li, link_to(icon('twitter', '', class: 'fa-lg') + ' Twitter', 'https://twitter.com/mtdagarna') %>
+      <%= content_tag :li, link_to(icon('youtube', '', class: 'fa-lg') + ' YouTube', 'https://youtube.com/mtdagarna') %>
+    </ul>
+  </footer>
+</div>
+
+<div class="container limit-width narrow center">
+  <div class="info">
+    <%= content_tag :h3, t('.welcome') + '!' %>
+    <%= content_tag :p, t('.lead'), class: 'lead' %>
   </div>
 </div>
 
-<div class="container">
-  <%= t('hello') %>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi illo culpa minus hic, quas quia ullam voluptatum nisi laudantium asperiores dolorum totam officia aliquam eum, nostrum deleniti provident distinctio!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi illo culpa minus hic, quas quia ullam voluptatum nisi laudantium asperiores dolorum totam officia aliquam eum, nostrum deleniti provident distinctio!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi illo culpa minus hic, quas quia ullam voluptatum nisi laudantium asperiores dolorum totam officia aliquam eum, nostrum deleniti provident distinctio!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi illo culpa minus hic, quas quia ullam voluptatum nisi laudantium asperiores dolorum totam officia aliquam eum, nostrum deleniti provident distinctio!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi illo culpa minus hic, quas quia ullam voluptatum nisi laudantium asperiores dolorum totam officia aliquam eum, nostrum deleniti provident distinctio!</p>
-  <p>Quasi facilis ullam est possimus dolorum vel, exercitationem? Doloremque optio maiores quasi error quaerat fugit minima, nisi laborum, voluptatem animi nulla harum cum, et molestias aperiam nam? Dolor, tempora, soluta!</p>
-  <p>Quasi facilis ullam est possimus dolorum vel, exercitationem? Doloremque optio maiores quasi error quaerat fugit minima, nisi laborum, voluptatem animi nulla harum cum, et molestias aperiam nam? Dolor, tempora, soluta!</p>
-  <p>Quasi facilis ullam est possimus dolorum vel, exercitationem? Doloremque optio maiores quasi error quaerat fugit minima, nisi laborum, voluptatem animi nulla harum cum, et molestias aperiam nam? Dolor, tempora, soluta!</p>
-  <p>Quasi facilis ullam est possimus dolorum vel, exercitationem? Doloremque optio maiores quasi error quaerat fugit minima, nisi laborum, voluptatem animi nulla harum cum, et molestias aperiam nam? Dolor, tempora, soluta!</p>
-  <p>Quasi facilis ullam est possimus dolorum vel, exercitationem? Doloremque optio maiores quasi error quaerat fugit minima, nisi laborum, voluptatem animi nulla harum cum, et molestias aperiam nam? Dolor, tempora, soluta!</p>
-  <p>Quod quaerat, corrupti ut laborum magni amet porro quos deserunt id, magnam rem velit obcaecati similique assumenda necessitatibus molestias cupiditate possimus explicabo laboriosam. Debitis veniam nesciunt hic minus aliquid blanditiis.</p>
-  <p>Quod quaerat, corrupti ut laborum magni amet porro quos deserunt id, magnam rem velit obcaecati similique assumenda necessitatibus molestias cupiditate possimus explicabo laboriosam. Debitis veniam nesciunt hic minus aliquid blanditiis.</p>
-  <p>Quod quaerat, corrupti ut laborum magni amet porro quos deserunt id, magnam rem velit obcaecati similique assumenda necessitatibus molestias cupiditate possimus explicabo laboriosam. Debitis veniam nesciunt hic minus aliquid blanditiis.</p>
-  <p>Quod quaerat, corrupti ut laborum magni amet porro quos deserunt id, magnam rem velit obcaecati similique assumenda necessitatibus molestias cupiditate possimus explicabo laboriosam. Debitis veniam nesciunt hic minus aliquid blanditiis.</p>
-  <p>Quod quaerat, corrupti ut laborum magni amet porro quos deserunt id, magnam rem velit obcaecati similique assumenda necessitatibus molestias cupiditate possimus explicabo laboriosam. Debitis veniam nesciunt hic minus aliquid blanditiis.</p>
-  <p>Fugiat perferendis ipsam eaque quae unde rem vitae cupiditate tempore tempora neque, autem nostrum dicta laboriosam. Nihil omnis dicta repellat esse reprehenderit nemo cumque eum, consequuntur labore, laboriosam tempore dolore.</p>
-  <p>Fugiat perferendis ipsam eaque quae unde rem vitae cupiditate tempore tempora neque, autem nostrum dicta laboriosam. Nihil omnis dicta repellat esse reprehenderit nemo cumque eum, consequuntur labore, laboriosam tempore dolore.</p>
-  <p>Fugiat perferendis ipsam eaque quae unde rem vitae cupiditate tempore tempora neque, autem nostrum dicta laboriosam. Nihil omnis dicta repellat esse reprehenderit nemo cumque eum, consequuntur labore, laboriosam tempore dolore.</p>
-  <p>Fugiat perferendis ipsam eaque quae unde rem vitae cupiditate tempore tempora neque, autem nostrum dicta laboriosam. Nihil omnis dicta repellat esse reprehenderit nemo cumque eum, consequuntur labore, laboriosam tempore dolore.</p>
-  <p>Fugiat perferendis ipsam eaque quae unde rem vitae cupiditate tempore tempora neque, autem nostrum dicta laboriosam. Nihil omnis dicta repellat esse reprehenderit nemo cumque eum, consequuntur labore, laboriosam tempore dolore.</p>
-  <p>Perferendis autem atque adipisci tempora hic. Rem, officiis qui amet nisi maxime laborum culpa necessitatibus. Sequi dolore aut, dolores dolorum velit, vero eos ab delectus libero, unde, facilis quibusdam voluptas?</p>
-  <p>Perferendis autem atque adipisci tempora hic. Rem, officiis qui amet nisi maxime laborum culpa necessitatibus. Sequi dolore aut, dolores dolorum velit, vero eos ab delectus libero, unde, facilis quibusdam voluptas?</p>
-  <p>Perferendis autem atque adipisci tempora hic. Rem, officiis qui amet nisi maxime laborum culpa necessitatibus. Sequi dolore aut, dolores dolorum velit, vero eos ab delectus libero, unde, facilis quibusdam voluptas?</p>
-  <p>Perferendis autem atque adipisci tempora hic. Rem, officiis qui amet nisi maxime laborum culpa necessitatibus. Sequi dolore aut, dolores dolorum velit, vero eos ab delectus libero, unde, facilis quibusdam voluptas?</p>
-  <p>Perferendis autem atque adipisci tempora hic. Rem, officiis qui amet nisi maxime laborum culpa necessitatibus. Sequi dolore aut, dolores dolorum velit, vero eos ab delectus libero, unde, facilis quibusdam voluptas?</p>
-</div>
+<section class="ribbon">
+  <div class="container">
+    <div class="info text-center">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2">
+          <%= icon 'comments', '', class: 'fa-7x' %>
+          <%= content_tag :h4, t('.contacts.title') %>
+          <%= content_tag :p, t('.contacts.text') %>
+        </div>
+        <div class="col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-2">
+          <%= icon 'lightbulb-o', '', class: 'fa-7x' %>
+          <%= content_tag :h4, t('.inspiration.title') %>
+          <%= content_tag :p, t('.inspiration.text') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

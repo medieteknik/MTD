@@ -32,12 +32,16 @@ en:
       # route en/about/contact
       contact:
         title: 'Contact us'
-        # lead: ''
+        lead: 'We''d love to talk to you! No matter what it is, please share your questions and wonderings with us.'
 
         business:
           email: 'businesscontact@medieteknikdagarna.se'
           title: 'Business contact'
           text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our sponsors? Contact:'
+        fair:
+          email: 'fair@medieteknikdagarna.se'
+          title: 'Fair information'
+          text: 'Do you have any questions about the fair? Contact Fredrik at: '
         general:
           email: 'contact@medieteknikdagarna.se'
           title: 'General inquiries'
@@ -66,11 +70,11 @@ en:
       # route: en/about/previous
       previous:
         title: 'Previous years'
-        lead: '2015 will be the 15th year the days is arranged. Here are some highlights from the previous years.'
+        lead: '2015 will be the 15th year the days are arranged. Here are some highlights from the previous years.'
 
         lectures:
           title: 'Lectures'
-          lead: 'Each year, MTD is visited by exciting lecturers. Here are some examples of our previous visits.'
+          lead: 'Each year, MTD is visited by exciting lecturers. Below are some examples of our previous visits.'
           more: 'These examples are only a few of the guests we''ve hade throughout the years. Rasmus Andersson (Dropbox, Facebook & Spotify), Mattias Bergbom (previously Digital Domain) are only a few of the ones that didn''t fit here.'
 
           nafees: 'Nafees from Dreamworks Animations visited us 2014. He talked about the change in VFX during the last ten years, and how the trend is heading towards more advanced physical simulations.'
@@ -79,7 +83,20 @@ en:
 
     # route: /en
     home:
+      lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet.'
+      lead: 'The Media Technology Days are two days with inspiration, a fair, hundreds of students and companies from the industry. Here, you''ll find everything you need to know about the days.'
       teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
+      quote: 'Media Technology in Norrköping is one of Sweden''s best programming educations'
+      welcome: 'Welcome'
+
+      contacts:
+        title: 'Meet People'
+        text: 'We bring students and companies closer together. An excellent chance for everyone to meet new people and network with each other.'
+
+      inspiration:
+        title: 'Get Inspired'
+        text: 'Throughout the years we''ve hade many exciting and inspiring lecturers, talking about the future, present and past of media technology.'
+
 
     # folder: views/static_pages/sponsor
     sponsor:
