@@ -11,7 +11,7 @@
 
   <%= csrf_meta_tags %>
 
-  <meta name="keywords" content="MTD2015, MTD, Medieteknikdagarna 2015, The Media Technology Days 2015, Norrköping, Medieteknik, Linköpings Universitet, LiU, 25 mars, 26 mars">
+  <meta name="keywords" content="MTD2015, MTD, Medieteknikdagarna 2015, Media Technology Days 2015, Norrköping, Medieteknik, Linköpings Universitet, LiU, 25 mars, 26 mars">
   <meta name="description" content="<%= t('meta_description') %>">
   <meta name="author" content="<%= t('media_technology_days') %>, Klas Eskilson">
   <link rel="icon" href="<%= image_url 'favicon.png' %>">
@@ -30,7 +30,7 @@
   <meta name="twitter:site" content="@mtdagarna" />
   <meta name="twitter:title" content="<%= t('media_technology_days') %> 2015 <%= yield(:title) %>" />
   <meta name="twitter:description" content="<%= yield(:description).blank? ? t('meta_description') : yield(:description) %>" />
-  <meta name="twitter:image" content="" />
+  <meta name="twitter:image" content="<%= image_url 'favicon.png' %>" />
   <meta name="twitter:url" content="<%= request.original_url %>" />
 
   <!--[if lt IE 9]>

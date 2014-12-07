@@ -103,12 +103,15 @@
     @include make-sm-column(4);
     margin-bottom: 30px;
 
+    @media screen and (max-width: $screen-xs-max) {
+      margin-bottom: 80px;
+    }
+
     .button {
       margin-top: 20px;
       padding: 10px 18px;
       background: $orange;
     }
-
     .button:hover {
       background: darken($orange, 10%);
     }

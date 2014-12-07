@@ -70,7 +70,7 @@ sv:
       # route: sv/om/tidigare-ar
       previous:
         title: 'Tidigare år'
-        lead: '2015 blir det femtonde året som MTD arrangeras. Här är några höjdpunkter från de gågna åren.'
+        lead: '2015 blir det femtonde året som MTD arrangeras. Här är några höjdpunkter från de gångna åren.'
 
         lectures:
           title: 'Föreläsningar'
@@ -83,7 +83,7 @@ sv:
 
     # route: sv/
     home:
-      lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet. För femtonde året i rad förenar vi hundratals studenter och medietekniker redan ute i industrin. Här hittar du all information och alla kontaktuppgifter du kan tänkas behöva.'
+      lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet. För femtonde året i rad förenar vi hundratals studenter och företag i industrin. Här hittar du all information och alla kontaktuppgifter du kan tänkas behöva.'
       # teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
       quote: 'Medieteknik i Norrköping är en utav de bästa programeringsutbildningarna som finns i Sverige'
       welcome: 'Välkommen'
