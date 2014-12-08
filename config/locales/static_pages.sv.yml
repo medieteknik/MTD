@@ -196,7 +196,6 @@ sv:
             four: 'Först att välja mässplats'
           fair:
             title: 'Mässplats'
-            text: 'Vi erbjuder även mässplatser. Mer info kommer snart!'
 
       # route: sv/sponsor/jamfor/brons
       bronze:

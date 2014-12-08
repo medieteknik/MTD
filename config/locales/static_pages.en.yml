@@ -189,7 +189,7 @@ en:
             four: 'Extended information on our website'
 
           gold:
-            title: 'The most – Guld'
+            title: 'The most – Gold'
             price: '30 000 SEK'
 
             one: 'The Silver package including'
@@ -198,7 +198,6 @@ en:
             four: 'First access to choose fair both'
           fair:
             title: 'Fair booth'
-            text: 'We also offer fair booths without the sponsorship packages. We''ll share more information about this soon.'
 
       # route: sv/sponsor/jamfor/brons
       bronze:
