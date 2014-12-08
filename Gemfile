@@ -44,6 +44,10 @@ gem 'cancan', '~> 1.6.10'
 
 # International urls
 gem 'route_translator'
+# setup simple sitemap handeling
+gem 'sitemap_generator'
+# use whenever to schedule sitemap refreshing
+gem 'whenever', :require => false
 # render pages and news with github flavored markdown
 gem 'github-markdown', '~> 0.6.7'
 

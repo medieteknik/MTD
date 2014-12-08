@@ -40,6 +40,7 @@ GEM
       thor
     builder (3.2.2)
     cancan (1.6.10)
+    chronic (0.10.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -128,6 +129,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sitemap_generator (5.0.5)
+      builder
     spring (1.1.3)
     sprockets (2.11.3)
       hike (~> 1.2)
@@ -157,6 +160,8 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -184,7 +189,9 @@ DEPENDENCIES
   route_translator
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  sitemap_generator
   spring
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
+  whenever

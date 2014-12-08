@@ -15,4 +15,8 @@
 /log/*.log
 /tmp
 
+# finder thingies
 *.DS_Store
+
+# generated sitemaps
+/public/sitemap
