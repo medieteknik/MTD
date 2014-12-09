@@ -3,4 +3,4 @@
 User-agent: *
 Disallow: /admin
 
-Sitemap: http://www.medieteknikdagarna.se/sitemap/sitemap.xml.gz
+Sitemap: http://www.medieteknikdagarna.se/sitemap.xml.gz
