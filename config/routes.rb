@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # end
 
   localized do
+    devise_for :users, :path => 'admin/user'
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
 
     # in order to have translated routes, these are needed
