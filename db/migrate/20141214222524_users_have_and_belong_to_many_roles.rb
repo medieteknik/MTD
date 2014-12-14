@@ -1,5 +1,7 @@
 class UsersHaveAndBelongToManyRoles < ActiveRecord::Migration
   def change
-    t.references :role, :user
+    create_table :roles_users, :id => false do |t|
+      t.references :role, :user
+    end
   end
 end
