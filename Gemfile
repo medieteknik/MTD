@@ -22,6 +22,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.0.1'
 gem 'font-awesome-sass'
 gem 'bourbon'
+# setup font assets origin control without hassle
+gem 'font_assets'
 # turbolinks creates the need for a loading indicator
 gem 'nprogress-rails', '~> 0.1.6.3'
 

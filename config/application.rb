@@ -19,5 +19,8 @@ module Mtd
     # The default locale is :sv and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :sv
+
+    # font cors fix
+    config.font_assets.origin = '*'
   end
 end
