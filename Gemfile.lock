@@ -57,6 +57,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
+    figaro (1.0.0)
+      thor (~> 0.14)
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
     github-markdown (0.6.8)
@@ -86,6 +88,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.4.3)
     multi_json (1.10.1)
+    newrelic_rpm (3.9.8.273)
     nprogress-rails (0.1.6.3)
     orm_adapter (0.5.0)
     pg (0.17.1)
@@ -174,6 +177,7 @@ DEPENDENCIES
   cancan (~> 1.6.10)
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.1)
+  figaro
   font-awesome-sass
   github-markdown (~> 0.6.7)
   heroku-deflater
@@ -182,6 +186,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   letter_opener
+  newrelic_rpm
   nprogress-rails (~> 0.1.6.3)
   pg
   rails (= 4.1.1)
