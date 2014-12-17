@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   # end
 
   localized do
-    devise_for :users, :path => 'admin/user', :controllers => { :registrations => 'users/registrations' }
+    as :user do
+      patch 'admin/user/confirmation' => 'confirmations#update', :via => :patch, :as => :update_user_confirmation
+    end
+    devise_for :users, :path => 'admin/user', :controllers => { :registrations => 'users/registrations',
+                                                                :confirmations => 'users/confirmations' }
+
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
 
     # in order to have translated routes, these are needed
