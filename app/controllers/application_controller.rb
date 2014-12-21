@@ -3,8 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # determine when to check auth
   check_authorization :unless => :do_not_check_authorization?
 
+  # catch nasty access denied-messages
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = exception.message
     redirect_to root_url
@@ -17,7 +19,6 @@ class ApplicationController < ActionController::Base
 
   private
     def do_not_check_authorization?
-      logger.debug "Matching request for auth check: " + request.original_url.downcase
       respond_to?(:devise_controller?) or !request.original_url.downcase.include? "/admin"
     end
 end

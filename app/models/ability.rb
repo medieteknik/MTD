@@ -7,8 +7,8 @@ class Ability
     if user.role? :super_admin
       can :manage, :all
     else
-      can :update, User do |user|
-        user.try(:user) == user
+      can :update, User do |u|
+        u.try(:user) == user
       end
     end
   end
