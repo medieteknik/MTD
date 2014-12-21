@@ -22,6 +22,11 @@ en:
   third: 'third'
   fourth: 'fourth'
 
+  user:
+    edit: 'Edit account'
+    log_in: 'Log in'
+    log_out: 'Log out'
+
   layouts:
     footer:
       arranged_by: 'MTD is arranged by the Media Technology Association at Linköping University.'

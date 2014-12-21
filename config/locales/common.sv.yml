@@ -22,6 +22,11 @@ sv:
   third: 'tredje'
   fourth: 'fjärde'
 
+  user:
+    edit: 'Redigera konto'
+    log_in: 'Logga in'
+    log_out: 'Logga ut'
+
   layouts:
     footer:
       arranged_by: 'MTD arrangeras utav Medietekniksektionen vid Linköpings Universitet.'

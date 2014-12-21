@@ -7,8 +7,18 @@ sv:
     gold: guld
     previous-years: 'tidigare-ar'
     sponsorship: sponsor
-    user: konto
     gold: guld
+
+    # devise routes
+    cancel: ta_bort
+    confirmation: bekrafta
+    edit: redigera
+    password: losenord
+    sign_in: logga_in
+    sign_out: logga_ut
+    sign_up: registrera
+    user: konto
+
 en:
   routes:
     about: about
@@ -20,3 +30,13 @@ en:
     sponsorship: sponsorship
     user: user
     gold: gold
+
+    # devise routes
+    cancel: cancel
+    confirmation: confirmation
+    edit: edit
+    password: password
+    sign_in: sign_in
+    sign_out: sign_out
+    sign_up: sign_up
+    user: user
