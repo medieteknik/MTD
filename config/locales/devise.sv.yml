@@ -54,5 +54,5 @@ sv:
       not_found: "hittades inte"
       not_locked: "var inte låst"
       not_saved:
-        one: "Ett fel hindrade denna %{resource} från att sparas:"
-        other: "%{count} fel hindrade denna %{resource} från att sparas:"
+        one: "Uh-oh! Vi kunde inte spara den infon. Rätta till detta:"
+        other: "Uh-oh! Några grejer hindrade oss från att spara infon. Rätta till detta:"

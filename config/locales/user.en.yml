@@ -8,12 +8,15 @@ en:
       activate: 'Activate'
       activation: 'Account Activation'
       didnt: 'Didn''t receive confirmation instructions?'
-      choose: 'Choose a password:'
-      confirm: 'Confirm your password:'
+      choose: 'Choose a password'
+      confirm: 'Confirm your password'
+      explain: 'Save your password by clicking "Activate" below. You will then be logged in.'
+      explain_resend: 'If you know you have an account, but have not yet received instructions on how to activate your account, enter your email below and we''ll send you instructions on how to proceed.'
       resend: 'Resend confirmation instructions'
 
     passwords:
       change: 'Change my password'
+      explain: 'Choose a new password.'
       forgot: 'Forgot your password?'
       instructions: 'Send me reset password instructions'
       new: 'New password'

@@ -10,10 +10,13 @@ sv:
       didnt: 'Har du inte fått aktiveringsmailet?'
       choose: 'Välj ett lösenord'
       confirm: 'Bekräfta lösenord'
-      resend: 'Skicka bekräftelseinstruktioner'
+      explain: 'Spara ditt lösenord genom att klicka på "Aktivera" nedan. Du kommer då loggas in.'
+      explain_resend: 'Om du behöver få nya instruktioner för att aktivera ditt konto, fyll i din e-postadress nedan, så skickar vi instruktioner för hur du ska gå tillväga.'
+      resend: 'Skicka aktiveringsinstruktioner'
 
     passwords:
       change: 'Ändra lösenord'
+      explain: 'Välj ett nytt lösenord.'
       forgot: 'Glömt ditt lösenord?'
       instructions: 'Skicka instruktioner'
       new: 'Nytt lösenord'
@@ -59,3 +62,4 @@ sv:
               confirmation: 'stämmer inte överens. Var god försök igen.'
             current_password:
               invalid: 'stämmer inte. Försök igen.'
+              blank: 'måste anges.'

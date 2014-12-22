@@ -1,4 +1,4 @@
-# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+  # Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 
 en:
   devise:
@@ -56,5 +56,5 @@ en:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "Uh-oh! We could not save your new information. Take a look at this:"
+        other: "Uh-oh! A couple of errors prevented us from saving that information. Take a look at this:"

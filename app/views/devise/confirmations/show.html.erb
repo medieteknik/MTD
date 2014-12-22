@@ -1,14 +1,33 @@
 <% # app/views/confirmations/show.html.erb %>
-<h2><%= t('user.confirmations.activation') %></h2>
+<div class="container">
+  <h1><%= t('user.confirmations.activation') %></h1>
 
-<%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'patch'}, :id => 'activation-form' do |f| %>
-  <%= devise_error_messages! %>
-  <fieldset>
+  <%= form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'patch'}, :id => 'activation-form' do |f| %>
+    <%= devise_error_messages! %>
     <% if @requires_password %>
-        <p><%= f.label :password, t('user.confirmations.choose') %> <%= f.password_field :password %></p>
-        <p><%= f.label :password_confirmation, t('user.confirmations.confirm') %> <%= f.password_field :password_confirmation %></p>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= f.label :password, t('user.confirmations.choose') %>
+          <%= f.password_field :password, placeholder: t('user.confirmations.choose') %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= f.label :password_confirmation, t('user.confirmations.confirm') %>
+          <%= f.password_field :password_confirmation, placeholder: t('user.confirmations.confirm') %>
+        </div>
+      </div>
+    </div>
     <% end %>
-    <%= hidden_field_tag :confirmation_token, @confirmation_token %>
-    <p><%= f.submit t('user.confirmations.activate') %></p>
-  </fieldset>
-<% end %>
+
+    <p>
+      <%= t('user.confirmations.explain') %>
+    </p>
+    <div class="form-group actions">
+      <%= hidden_field_tag :confirmation_token, @confirmation_token %>
+      <%= f.submit t('user.confirmations.activate') %>
+    </div>
+  <% end %>
+</div>
+
