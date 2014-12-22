@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body {
+    width: 100%;
+    background-color: #EFEFEF;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #555555;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  #content {
+    clear: both;
+    background-color: white;
+    border: 1px solid #cbcbcb;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  a {
+    color: #f58223;
+    text-decoration: none;
+  }
+  a.button {
+    background: #f58223;
+    border: 0;
+    color: white;
+    display: inline-block;
+    font-size: .9em;
+    letter-spacing: .15em;
+    margin-bottom: 0;
+    padding: 10px 18px;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 0 0 15px;
+  }
+  header {
+    height: 39px;
+  }
+  header img {
+    float: left;
+    width: 36px;
+    height: 49px;
+    margin-right: 10px;
+  }
+  header h1 {
+    float: left;
+    font-size: 20px;
+    line-height: 49px;
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    text-align: center;
+  }
+  </style>
+</head>
+<body style="width: 100%;background-color: #EFEFEF;font-family: 'Open Sans', Helvetica, Arial, sans-serif;color: #555555;margin: 0;padding: 0;">
+  <div class="container" style="width: 100%;max-width: 500px;margin: 20px auto;">
+    <header style="height: 39px;">
+      <img alt="MTD" src="<%= image_url 'header/logo@2x.png' %>" style="float: left;width: 36px;height: 49px;margin-right: 10px;">
+      <h1 style="float: left;font-size: 20px;line-height: 49px;margin: 0;padding: 0;">
+        <%= t('media_technology_days') %>
+      </h1>
+    </header>
+    <div id="content" style="clear: both;background-color: white;border: 1px solid #cbcbcb;padding: 20px;margin: 20px 0;">
