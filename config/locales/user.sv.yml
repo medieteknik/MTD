@@ -1,0 +1,61 @@
+sv:
+  user:
+    edit: 'Redigera konto'
+    log_in: 'Logga in'
+    log_out: 'Logga ut'
+
+    confirmations:
+      activate: 'Aktivera'
+      activation: 'Aktivera konto'
+      didnt: 'Har du inte fått aktiveringsmailet?'
+      choose: 'Välj ett lösenord'
+      confirm: 'Bekräfta lösenord'
+      resend: 'Skicka bekräftelseinstruktioner'
+
+    passwords:
+      change: 'Ändra lösenord'
+      forgot: 'Glömt ditt lösenord?'
+      instructions: 'Skicka instruktioner'
+      new: 'Nytt lösenord'
+      new_confirm: 'Bekräfta nytt lösenord'
+      no_worries: 'Oroa dig inte, det kan hända den bästa. Fyll i din e-postadress nedan, så skickar vi instruktioner för hur du skall gå till väga till dig.'
+
+    registrations:
+      current: 'Nuvarande lösenord'
+      current_reason: 'vi behöver ditt nuvarande lösenord för att bekräfta ändringarna'
+      edit: 'Redigera konto'
+      leave_blank: 'lämna tomt om du inte vill ändra'
+
+    sessions:
+      log_in: 'Logga in'
+
+  # form helpers
+  helpers:
+    label:
+      user:
+        email: 'E-post'
+        password: 'Lösenord'
+        remember_me: 'Kom ihåg mig'
+
+  # active record translations
+  activerecord:
+    attributes:
+      user:
+        confirmation_token: 'Aktiveringsnyckeln'
+        email: 'E-postadressen'
+        password: 'Lösenordet'
+        password_confirmation: 'Lösenorden'
+        current_password: 'Nuvarande lösenord'
+    errors:
+      models:
+        user:
+          attributes:
+            confirmation_token:
+              blank: 'saknas. Var god begär en ny nedan.'
+              invalid: 'är felaktig. Var god begär en ny nedan.'
+            password:
+              too_short: 'är för kort. Välj ett som är minst %{count} tecken långt.'
+            password_confirmation:
+              confirmation: 'stämmer inte överens. Var god försök igen.'
+            current_password:
+              invalid: 'stämmer inte. Försök igen.'
