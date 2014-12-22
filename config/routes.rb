@@ -6,10 +6,10 @@ Rails.application.routes.draw do
 
   localized do
     as :user do
-      patch 'admin/user/confirmation' => 'users/confirmations#update', :via => :patch, :as => :update_user_confirmation
+      patch 'user/confirmation' => 'users/confirmations#update', :via => :patch, :as => :update_user_confirmation
     end
-    devise_for :users, :path => 'admin/user', :controllers => { :registrations => 'users/registrations',
-                                                                :confirmations => 'users/confirmations' }
+    devise_for :users, :controllers => { :registrations => 'users/registrations',
+                                         :confirmations => 'users/confirmations' }
 
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
 

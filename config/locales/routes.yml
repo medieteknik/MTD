@@ -17,7 +17,7 @@ sv:
     sign_in: logga_in
     sign_out: logga_ut
     sign_up: registrera
-    user: konto
+    users: konto
 
 en:
   routes:
