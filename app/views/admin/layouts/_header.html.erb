@@ -1,0 +1,23 @@
+<div class="ui top fixed inverted main menu">
+  <div class="container">
+    <div class="item">
+      MTD Admin
+    </div>
+    <% if can? :read, User %>
+      <a href="<%= admin_users_path %>" class="item <%= 'active' if controller_name == 'users' %>">
+        <%= semantic_icon('users') %> Users
+      </a>
+    <% end %>
+    <div class="right menu">
+      <div class="item">
+        <%= semantic_icon 'user' %>
+        <%= current_user.name.split[0].humanize %>
+      </div>
+      <a href="<%= root_path %>" class="item">
+        <%= semantic_icon 'world' %>
+        Public page
+      </a>
+      <%= link_to(semantic_icon('road') + 'Log out', destroy_user_session_path, method: :delete, class: 'item') %>
+    </div>
+  </div>
+</div>
