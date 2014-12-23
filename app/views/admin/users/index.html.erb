@@ -1,0 +1,46 @@
+<%= render 'common' %>
+<div class="container">
+  <h2>
+    All users
+  </h2>
+  <%= link_to_if can?(:create, User), semantic_icon('plus') + "Create new", new_admin_user_path, class: 'ui green labeled icon button' %>
+  <table class="ui unstackable table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Confirmation date</th>
+        <% if current_user.role?(:SuperAdmin) %>
+          <th>Roles</th>
+        <% end %>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td <%= 'class=warning' if user.confirmed_at.nil? %>>
+            <% if user.confirmed_at.nil? %>
+              <%= semantic_icon('attention') %>
+              Not confirmed
+            <% else %>
+              <%= user.confirmed_at %>
+            <% end %>
+          </td>
+          <% if current_user.role?(:SuperAdmin) %>
+            <td><%= user.roles.to_a.map(&:name).join(', ') %></td>
+          <% end %>
+          <td>
+            <%= link_to(semantic_icon('write') + 'Edit', edit_admin_user_path(user)) if can? :edit, user %>
+            <%= link_to(semantic_icon('user') + 'Show', admin_user_path(user)) if can? :read, user %>
+            <%= link_to_if can?(:delete, user), semantic_icon('trash') + 'Delete', admin_user_path(user), data: {confirm: "Are you sure?"}, method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

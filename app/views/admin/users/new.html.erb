@@ -1,0 +1,34 @@
+<%= render 'common' %>
+<div class="container">
+  <h2>
+    Create new user
+  </h2>
+  <%
+  classes = 'ui form segment'
+  classes = classes + ' warning' if @user.errors.any?
+  %>
+  <%= form_for(@user, url: admin_users_path, html: { method: :post, class: classes }) do |f|%>
+    <% if @user.errors.any? %>
+      <div class="ui warning message">
+        <div class="header">Could not create user!</div>
+        <ul class="list">
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="two required fields">
+      <div class="field">
+        <%= f.label :name, 'Real name' %>
+        <%= f.text_field :name, placeholder: 'Mtd Mtdson', autofocus: true, required: true %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "Email" %>
+        <%= f.email_field :email, placeholder: 'name@example.com...', required: true %>
+      </div>
+    </div>
+    <%= f.submit "Create user", disable_with: 'Createing...', class: 'ui submit button' %>
+  <% end %>
+
+</div>

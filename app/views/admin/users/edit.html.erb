@@ -1,0 +1,71 @@
+<%= render 'common' %>
+<div class="container">
+  <h2>
+    Edit <em><%= @user.name %></em>
+  </h2>
+  <%
+  classes = 'ui form segment'
+  classes = classes + ' warning' if @user.errors.any?
+  %>
+  <%= form_for(@user, url: admin_user_path(@user), html: { method: :patch, class: classes }) do |f|%>
+    <% if @user.errors.any? %>
+      <div class="ui warning message">
+        <div class="header">Could not save user!</div>
+        <ul class="list">
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="two required fields">
+      <div class="field">
+        <%= f.label :name, 'Real name' %>
+        <%= f.text_field :name, placeholder: 'Mtd Mtdson', autofocus: true, required: true %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "Email" %>
+        <%= f.email_field :email, placeholder: 'name@example.com...', required: true %>
+      </div>
+    </div>
+    <div class="ui segment">
+      <strong>New password</strong>
+      <p>Leave blank if you do not wish to change the user's password.</p>
+      <div class="two fields">
+        <div class="field">
+          <%= f.label :password, "New password" %>
+          <div class="ui icon input">
+            <%= semantic_icon 'lock' %>
+            <%= f.password_field :password, autocomplete: 'off' %>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation, "Confirm new password" %>
+          <div class="ui icon input">
+            <%= semantic_icon 'lock' %>
+            <%= f.password_field :password_confirmation, autocomplete: 'off' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% if can? :read, Role %>
+      <h4 class="ui block top attached header">Privileges</h4>
+      <div class="ui bottom attached secondary segment">
+        <p>
+          <%= f.label :role, "The privileges to apply to the user" %>
+        </p>
+        <% Role.all.each do |r| %>
+          <div class="inline field">
+            <div class="ui checkbox">
+              <%= check_box_tag "user[role_ids][]", r.id, @user.roles.include?(r) %>
+              <label><%= r.name %></label>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <%= f.submit "Save user", disable_with: 'Createing...', class: 'ui submit button' %>
+  <% end %>
+
+</div>

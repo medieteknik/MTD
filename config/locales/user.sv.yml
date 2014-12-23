@@ -56,10 +56,13 @@ sv:
             confirmation_token:
               blank: 'saknas. Var god begär en ny nedan.'
               invalid: 'är felaktig. Var god begär en ny nedan.'
+            current_password:
+              blank: 'måste anges.'
+              invalid: 'stämmer inte. Försök igen.'
+            email:
+              invalid: 'är inte giltig.'
+              taken: 'är redan använd av ett annat konto.'
             password:
               too_short: 'är för kort. Välj ett som är minst %{count} tecken långt.'
             password_confirmation:
               confirmation: 'stämmer inte överens. Var god försök igen.'
-            current_password:
-              invalid: 'stämmer inte. Försök igen.'
-              blank: 'måste anges.'
