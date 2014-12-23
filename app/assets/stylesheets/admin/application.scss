@@ -1,0 +1,31 @@
+// assets/stylesheets/admin/application.scss
+//
+// Admin interface!
+
+
+@import "semantic-ui";
+
+#content > :first-child:not(.page-title) {
+  margin-top: 50px;
+}
+
+.page-title {
+  background: white;
+  width: 100%;
+  // menu height + style padding
+  padding: 35px+20px 0 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid darken(white, 5%);
+  box-shadow: 0 3px 5px -2px rgba(35, 35, 35, 0.21);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+
+.field-with-errors {
+  @extend .field, .error;
+}

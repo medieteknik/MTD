@@ -1,0 +1,12 @@
+input:not([type="checkbox"]), form button {
+  @extend .form-control;
+}
+.field_with_errors {
+  @extend .has-error;
+}
+.form-group {
+  max-width: 360px;
+}
+form input[type="submit"] {
+  @extend .btn-success;
+}

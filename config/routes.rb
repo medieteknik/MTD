@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  # require 'constraint/domain_constraint'
-  # constraints Constraint::DomainConstraint.new('medieteknikdagarna.se') do
-  #   get ':any', to: redirect(subdomain: '2014', path: '/%{any}'), any: /.*/
-  # end
+  namespace :admin do
+    resources :users
+  end
 
   localized do
-    devise_for :admins, :path => 'admin/user'
+    as :user do
+      patch 'user/confirmation' => 'users/confirmations#update', :via => :patch, :as => :update_user_confirmation
+    end
+    devise_for :users, :controllers => { :registrations => 'users/registrations',
+                                         :confirmations => 'users/confirmations' }
+
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
 
     # in order to have translated routes, these are needed

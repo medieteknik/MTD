@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '37d49a28bc0181f0e860311c96b5184878dc1371ce6fc6f34f4be6fa0e5d655b3f229ff22df0a6423b96383cbab89c170faee3d3077605d0b376e89b66b09ae7'
+  # config.secret_key = '2c011a1bd32d576bdda16d2b3f4894d92561b1e7c2271f2dc5ab0d80d29b34c01cdb5fd89b06a528dcd662c01d2c7322e9126bf449d30a6b7c3f78d879cecaba'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'web@medieteknikdagarna.se'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'b0f6b8f047927755e1f23db5b4a1a1a8239c85cc27b00339a389e9077d4f4fb3b726351c18012c48d8a7aad1c5e9442180cac3809925e5f7368531a92bef086b'
+  # config.pepper = 'db22ad658ee902fe11c4d3f4c08bb209e8aad98d5bb7101f3f68bf82d45a65ad24a7cb7d25f9ffff9727ebeeec270fcd1ae076153928999c725c49d37eea3819'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -105,7 +105,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming their account.
-  # config.allow_unconfirmed_access_for = 2.days
+  config.allow_unconfirmed_access_for = 0
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm

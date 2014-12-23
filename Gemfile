@@ -30,6 +30,9 @@ gem 'nprogress-rails', '~> 0.1.6.3'
 # add vendor prefixes without hassle
 gem 'autoprefixer-rails'
 
+# use semantic ui > 1.0 for admin interface
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # make sure events jquery rely on works
@@ -41,8 +44,8 @@ gem 'angularjs-rails', '~> 1.2.25'
 
 # user handeling with devise
 gem 'devise', '~> 3.4.1'
-# user level handeling
-gem 'cancan', '~> 1.6.10'
+# user level handeling with the not-dead CanCanCan clone of CanCan
+gem 'cancancan', '~> 1.9'
 
 # International urls
 gem 'route_translator'
