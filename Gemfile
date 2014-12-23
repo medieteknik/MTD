@@ -6,6 +6,9 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# handle secrets nicely
+gem 'figaro'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
@@ -63,7 +66,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring', group: :development
 
-## Heroku stuff
+## Heroku/deployment stuff
 # Use unicorn as the app server
 gem 'unicorn'
 # heroku wants this to be here
@@ -72,3 +75,6 @@ gem 'rails_12factor', group: :production
 gem 'heroku-deflater', group: :production
 # minify dat html
 gem 'htmlcompressor', group: :production
+
+# use newrelic to measure performance
+gem 'newrelic_rpm'

@@ -20,3 +20,6 @@
 
 # generated sitemaps
 /public/sitemap
+
+# Ignore application configuration
+/config/application.yml

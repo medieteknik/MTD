@@ -1,0 +1,3 @@
+# Add configuration values here and remove '.example' from the file name.
+
+NEW_RELIC_LICENSE_KEY: #put the new relic license key here

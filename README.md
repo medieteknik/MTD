@@ -44,3 +44,7 @@ To add an user for development purposes and give it super admin rights, do this:
 To deploy to Heroku, simply add the remote reference, and enter `git push heroku master` into your terminal. This will push the the local master branch to the corresponding remote branch.
 
 When deployed, you might want to create the sitemap, since we don't wan't that tracked by git. So, with Heroku toolbelt installed, run `heroku run rake sitemap:refresh`. (This should be done automatically each night at 5:00 am, but you can never be sure enough, can you?)
+
+## Environment variables
+
+Make sure that the system has access to the variables stated in [`application.example.yml`](config/application.example.yml), and remove `.example` from the file name.
