@@ -1,2 +1,40 @@
 en:
-  hello: "Hello world"
+  datetime:
+    future_time_in_words:
+      about_x_hours:
+        one: in one hour
+        other: in a couple of hours
+      about_x_months:
+        one: in about one month
+        other: in about %{count} months
+      about_x_years:
+        one: in about one year
+        other: in about %{count} years
+      almost_x_years:
+        one: in almost one year
+        other: in almost %{count} years
+      half_a_minute: in a half minute
+      less_than_x_minutes:
+        one: in less than one minute
+        other: in less than %{count} minutes
+      less_than_x_seconds:
+        one: in less than one second
+        other: in less than %{count} seconds
+      over_x_years:
+        one: in mer än one year
+        other: in mer än %{count} years
+      x_days:
+        one: in one dag
+        other: ! 'in a couple of days'
+      x_hours:
+        one: in one hour
+        other: ! 'in a couple of hours'
+      x_minutes:
+        one: in one stund
+        other: ! 'in one stund'
+      x_months:
+        one: in one month
+        other: ! 'in %{count} months'
+      x_seconds:
+        one: in one second
+        other: ! 'in a couple of seconds'

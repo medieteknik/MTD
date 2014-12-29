@@ -106,6 +106,44 @@ sv:
       x_seconds:
         one: en sekund
         other: ! 'för en stund sen'
+    future_time_in_words:
+      about_x_hours:
+        one: om någon timme
+        other: om några timmar
+      about_x_months:
+        one: om ungefär en månad
+        other: om ungefär %{count} månader
+      about_x_years:
+        one: om ungefär ett år
+        other: om ungefär %{count} år
+      almost_x_years:
+        one: om nästan ett år
+        other: om nästan %{count} år
+      half_a_minute: en halv minut
+      less_than_x_minutes:
+        one: om mindre än en minut
+        other: om mindre än %{count} minuter
+      less_than_x_seconds:
+        one: om mindre än en sekund
+        other: om mindre än %{count} sekunder
+      over_x_years:
+        one: om mer än ett år
+        other: om mer än %{count} år
+      x_days:
+        one: om en dag
+        other: ! 'om några dagar'
+      x_hours:
+        one: om en timme
+        other: ! 'om några timmar'
+      x_minutes:
+        one: om en stund
+        other: ! 'om en stund'
+      x_months:
+        one: om en månad
+        other: ! 'om %{count} månader'
+      x_seconds:
+        one: om en sekund
+        other: ! 'om några sekunder'
     prompts:
       day: Dag
       hour: Timme

@@ -12,7 +12,10 @@
           #
         </th>
         <th>
-          Title
+          Swedish title
+        </th>
+        <th>
+          English title
         </th>
         <th>
           Status
@@ -32,10 +35,17 @@
             <%= n.id %>
           </td>
           <td>
-            <%= n.title %>
+            <%= n.title_sv || semantic_icon('warning sign') + 'Missing' %>
           </td>
-          <td <%= 'class=positive' if n.published_at > DateTime.now and n.status = 'public' %>>
-            <%= n.status %>
+          <td>
+            <%= n.title_en || semantic_icon('warning sign') + 'Missing' %>
+          </td>
+          <td <%= 'class=positive' if n.published_at > DateTime.now and n.status == 'public' %>>
+            <% if n.published_at > DateTime.now and n.status == 'public' %>
+              scheduled, published <%= distance_of_time_in_words n.published_at, Time.now, scope: :'datetime.future_time_in_words' %>
+            <% else %>
+              <%= n.status %>
+            <% end %>
           </td>
           <td>
             <%= n.published_at %>

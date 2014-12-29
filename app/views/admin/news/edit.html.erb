@@ -2,6 +2,7 @@
 <div class="container">
   <h2>
     Edit news entry #<%= @news.id %>
+    – <%= link_to 'View', @news %>
   </h2>
 
   <%= render 'form' %>
