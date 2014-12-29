@@ -6,6 +6,8 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# handle internationalization of db
+gem 'globalize', '~> 4.0.2'
 # handle secrets nicely
 gem 'figaro'
 

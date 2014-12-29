@@ -35,7 +35,7 @@ To add an user for development purposes and give it super admin rights, do this:
 
 1. When in the root of this app, run `rake db:migrate` and `rake db:seed` to make sure you have the latest version of the database and the seeds.
 2. Enter the Rails console by typing `rails console` into your console when in the root of this app.
-3. Create the admin by typing `my_admin = User.create(:email => 'admin@localhost')`. This should pop open a [Letter Opener](https://rubygems.org/gems/letter_opener) email. You can replace the email with whatever you want.
+3. Create the admin by typing `my_admin = User.create(:email => 'admin@localhost', :name => 'Name Nameson')`. This should pop open a [Letter Opener](https://rubygems.org/gems/letter_opener) email. You can replace the email with whatever you want.
 4. Then, append the `SuperAdmin` role to the user by typing `my_admin.roles.append(Role.find_by(name: 'SuperAdmin'))`. The `append` method is an alias to the `<<` method of the [ActiveRecord `CollectionProxy`](http://edgeapi.rubyonrails.org/classes/ActiveRecord/Associations/CollectionProxy.html) class.
 5. Done!
 

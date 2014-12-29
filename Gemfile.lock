@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/doabit/semantic-ui-sass.git
-  revision: 06a56b587efd615d256db5a499c4cee466d33871
+  revision: f745edee5c12e2cf1069a0400883abc877335337
   branch: v1.0beta
   specs:
-    semantic-ui-sass (1.2.0.0)
+    semantic-ui-sass (1.4.1.0)
       sass (~> 3.2)
 
 GEM
@@ -38,7 +38,7 @@ GEM
     addressable (2.3.6)
     angularjs-rails (1.2.26)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (4.0.2.1)
+    autoprefixer-rails (4.0.2.2)
       execjs
     bcrypt (3.1.9)
     bootstrap-sass (3.3.0.1)
@@ -72,6 +72,9 @@ GEM
     font_assets (0.1.11)
       rack
     github-markdown (0.6.8)
+    globalize (4.0.3)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -99,7 +102,7 @@ GEM
     minitest (5.5.0)
     multi_json (1.10.1)
     newrelic_rpm (3.9.8.273)
-    nprogress-rails (0.1.6.4)
+    nprogress-rails (0.1.6.5)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
@@ -193,6 +196,7 @@ DEPENDENCIES
   font-awesome-sass
   font_assets
   github-markdown (~> 0.6.7)
+  globalize (~> 4.0.2)
   heroku-deflater
   htmlcompressor
   jbuilder (~> 2.0)

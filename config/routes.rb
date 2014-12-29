@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :admin do
     resources :users
   end
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
     end
     devise_for :users, :controllers => { :registrations => 'users/registrations',
                                          :confirmations => 'users/confirmations' }
+
+    resources :news, only: [:index, :show]
 
     get '/' => 'static_pages#show', :as => :home, :page => 'home'
 
