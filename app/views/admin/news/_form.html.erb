@@ -22,19 +22,33 @@ end
   <% end %>
 
   <div class="ui grid">
-    <div class="eleven wide column">
+    <div class="six wide column">
       <div class="segment">
+        <h4 class="ui dividing header"><i class="se flag"></i> Swedish</h4>
         <div class="required field">
-          <%= f.label :title, "Title" %>
-          <%= f.text_field :title, placeholder: 'Title of the news entry' %>
+          <%= f.label :title_sv, "Swedish title" %>
+          <%= f.text_field :title_sv, placeholder: 'Title of the news entry' %>
         </div>
         <div class="required field">
-          <%= f.label :content %>
-          <%= f.text_area :content %>
+          <%= f.label :content_sv, "Content" %>
+          <%= f.text_area :content_sv %>
         </div>
       </div>
     </div>
-    <div class="five wide column">
+    <div class="six wide column">
+      <div class="segment">
+        <h4 class="ui dividing header"><i class="gb flag"></i> English</h4>
+        <div class="required field">
+          <%= f.label :title_en, "English title" %>
+          <%= f.text_field :title_en, placeholder: 'Title of the news entry' %>
+        </div>
+        <div class="required field">
+          <%= f.label :content_en, "Content" %>
+          <%= f.text_area :content_en %>
+        </div>
+      </div>
+    </div>
+    <div class="four wide column">
       <div class="ui segment">
         <h4 class="ui dividing header">Save</h4>
         <div class="ui accordion">

@@ -75,6 +75,11 @@ GEM
     globalize (4.0.3)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
+    globalize-accessors (0.1.5)
+      globalize (>= 3)
+    globalize-versioning (0.1.0.alpha.1)
+      globalize (>= 3, < 5)
+      paper_trail (~> 3.0.0)
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -104,6 +109,9 @@ GEM
     newrelic_rpm (3.9.8.273)
     nprogress-rails (0.1.6.5)
     orm_adapter (0.5.0)
+    paper_trail (3.0.6)
+      activerecord (>= 3.0, < 5.0)
+      activesupport (>= 3.0, < 5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -197,6 +205,8 @@ DEPENDENCIES
   font_assets
   github-markdown (~> 0.6.7)
   globalize (~> 4.0.2)
+  globalize-accessors
+  globalize-versioning (~> 0.1.0.alpha.1)
   heroku-deflater
   htmlcompressor
   jbuilder (~> 2.0)
@@ -205,6 +215,7 @@ DEPENDENCIES
   letter_opener
   newrelic_rpm
   nprogress-rails (~> 0.1.6.3)
+  paper_trail (~> 3.0.6)
   pg
   rails (= 4.1.1)
   rails_12factor

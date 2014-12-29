@@ -8,6 +8,11 @@ gem 'rails', '4.1.1'
 gem 'pg'
 # handle internationalization of db
 gem 'globalize', '~> 4.0.2'
+gem 'globalize-versioning', '~> 0.1.0.alpha.1' # so we can use paper_trail!
+gem 'globalize-accessors' # edit multiple locales at the same time
+# handle news version
+gem 'paper_trail', '~> 3.0.6'
+
 # handle secrets nicely
 gem 'figaro'
 

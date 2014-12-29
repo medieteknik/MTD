@@ -56,6 +56,7 @@ class Admin::NewsController < Admin::AdminController
     end
 
     def news_params
-      params.require(:news).permit(:id, :published_at, :status, :title, :content, {user_ids: []})
+      permitted = News.globalize_attribute_names + [:id, :published_at, :status, {user_ids: []}]
+      params.require(:news).permit(*permitted)
     end
 end
