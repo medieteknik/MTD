@@ -1,0 +1,83 @@
+<%
+classes = 'ui form'
+classes << ' warning' if @news.errors.any?
+if action_name == 'edit'
+  form_path = admin_news_path(@news)
+  form_method = :patch
+else
+  form_path = admin_news_index_path
+  form_method = :post
+end
+%>
+<%= form_for(@news, url: form_path, html: { method: form_method, class: classes }) do |f| %>
+  <% if @news.errors.any? %>
+    <div class="ui warning message">
+      <div class="header">Could not create news entry!</div>
+      <ul class="list">
+        <% @news.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui grid">
+    <div class="eleven wide column">
+      <div class="segment">
+        <div class="required field">
+          <%= f.label :title, "Title" %>
+          <%= f.text_field :title, placeholder: 'Title of the news entry' %>
+        </div>
+        <div class="required field">
+          <%= f.label :content %>
+          <%= f.text_area :content %>
+        </div>
+      </div>
+    </div>
+    <div class="five wide column">
+      <div class="ui segment">
+        <h4 class="ui dividing header">Save</h4>
+        <div class="ui accordion">
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Optional settings
+          </div>
+          <div class="content">
+            <div class="field">
+              <label>News status</label>
+              <%= select('news', 'status', options_for_select([['Trash', 'trash'], ['Draft', 'draft'], ['Published / scheduled', 'public']], @news.status), {}, class: 'ui dropdown') %>
+            </div>
+            <div class="field">
+              <%= f.label :published_at, "Publishing date" %>
+              <%= f.datetime_local_field :published_at %>
+            </div>
+          </div>
+        </div>
+        <div class="ui accordion">
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Authors
+          </div>
+          <div class="content">
+            <div class="field">
+              <div class="ui relaxed list">
+                <% User.all.order(:name).each do |u| %>
+                  <div class="item">
+                    <div class="ui checkbox">
+                      <%= check_box_tag "news[user_ids][]", u.id, @news.users.include?(u) %>
+                      <label><%= u.name %></label>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui divider"></div>
+        <%= f.submit "Save", :disable_with => 'Saveing...', class: 'ui primary fluid submit button' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<%= debug @news %>
+

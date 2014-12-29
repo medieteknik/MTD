@@ -8,6 +8,11 @@
         <%= semantic_icon('users') %> Users
       </a>
     <% end %>
+    <% if can? :read, News %>
+      <a href="<%= admin_news_index_path %>" class="item <%= 'active' if controller_name == 'news' %>">
+        <%= semantic_icon('file text') %> News
+      </a>
+    <% end %>
     <div class="right menu">
       <div class="item">
         <%= semantic_icon 'user' %>

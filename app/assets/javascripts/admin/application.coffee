@@ -13,3 +13,4 @@
 $(document).ready ->
   $('.ui.accordion').accordion()
   $('.ui.checkbox').checkbox()
+  $('select.dropdown').dropdown()
