@@ -2,7 +2,10 @@
 //
 // Admin interface!
 
+$nprogress-color: #aa5108;
 
+@import "nprogress";
+@import "nprogress-bootstrap";
 @import "semantic-ui";
 
 #content > :first-child:not(.page-title) {

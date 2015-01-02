@@ -39,10 +39,18 @@
             <%= n.id %>
           </td>
           <td>
-            <%= n.title_sv || semantic_icon('warning sign') + 'Missing' %>
+            <% if !n.title_sv or n.title_sv.blank? %>
+              <%= semantic_icon('warning sign') + 'Missing' %>
+            <% else %>
+              <%= n.title_sv %>
+            <% end %>
           </td>
           <td>
-            <%= n.title_en || semantic_icon('warning sign') + 'Missing' %>
+            <% if !n.title_en or n.title_en.blank? %>
+              <%= semantic_icon('warning sign') + 'Missing' %>
+            <% else %>
+              <%= n.title_en %>
+            <% end %>
           </td>
           <td>
             <%= n.users.to_a.map(&:name).join(', ') %>

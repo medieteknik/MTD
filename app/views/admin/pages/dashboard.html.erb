@@ -1,0 +1,52 @@
+<div class="page-title">
+  <div class="container">
+    <h1 class="ui header">
+      <%= semantic_icon 'dashboard' %>
+      <div class="content">
+        Admin panel
+        <div class="sub header">
+          Handle the MTD website.
+        </div>
+      </div>
+    </h1>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "ui message #{key}" %>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <%= render_breadcrumbs %>
+</div>
+
+<div class="container">
+  <div class="ui stackable two column grid">
+    <div class="column">
+      <h2>In numbers</h2>
+      <div class="ui statistics">
+        <div class="statistic">
+          <div class="value">
+            <%= @news_draft.count %>
+          </div>
+          <div class="label">
+            News <%= 'draft'.pluralize(@news_draft.count) %>
+          </div>
+        </div>
+        <div class="statistic">
+          <div class="value">
+            <%= @unconfirmed_users.count %>
+          </div>
+          <div class="label">
+            Unconfirmed <%= 'user'.pluralize(@unconfirmed_users.count) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h2>Quick actions</h2>
+      <p>
+        <%= link_to 'Create user', new_admin_user_path, class: 'ui button' %>
+        <%= link_to 'New news entry', new_admin_news_path, class: 'ui button' %>
+      </p>
+    </div>
+  </div>
+</div>

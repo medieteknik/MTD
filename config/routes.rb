@@ -2,6 +2,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    get '/' => 'pages#dashboard'
     resources :users
     resources :news, except: [:show]
   end

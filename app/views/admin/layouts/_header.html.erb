@@ -1,8 +1,8 @@
 <div class="ui top fixed inverted main menu">
   <div class="container">
-    <div class="item">
+    <a href="<%= admin_path %>" class="item <%= 'active' if controller_name == 'pages' and action_name == 'dashboard' %>">
       MTD Admin
-    </div>
+    </a>
     <% if can? :read, User %>
       <a href="<%= admin_users_path %>" class="item <%= 'active' if controller_name == 'users' %>">
         <%= semantic_icon('users') %> Users
