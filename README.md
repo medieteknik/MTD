@@ -29,7 +29,7 @@ Our roles are in [`db/seeds.rb`](db/seeds.rb), and to install them simply run `r
 
 Without a role, an user can't do anything but edit their own information.
 
-#### Adding a user
+#### Adding an user
 
 To add an user for development purposes and give it super admin rights, do this:
 
