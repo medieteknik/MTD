@@ -1,0 +1,20 @@
+<div class="ui left vertical inverted labeled sidebar menu">
+  <a href="<%= admin_path %>" class="item <%= 'active' if controller_name == 'pages' and action_name == 'dashboard' %>">
+    MTD Admin
+  </a>
+  <% if can? :read, User %>
+    <a href="<%= admin_users_path %>" class="item <%= 'active' if controller_name == 'users' %>">
+      <%= semantic_icon('users') %> Users
+    </a>
+  <% end %>
+  <% if can? :read, News %>
+    <a href="<%= admin_news_index_path %>" class="item <%= 'active' if controller_name == 'news' %>">
+      <%= semantic_icon('file text') %> News
+    </a>
+  <% end %>
+  <a href="<%= root_path %>" class="item">
+    <%= semantic_icon 'world' %>
+    Public page
+  </a>
+  <%= link_to(semantic_icon('road') + 'Log out', destroy_user_session_path, method: :delete, class: 'item') %>
+</div>

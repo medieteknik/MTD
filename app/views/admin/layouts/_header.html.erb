@@ -1,5 +1,5 @@
-<div class="ui top fixed inverted main menu">
-  <div class="container">
+<div class="ui top fixed inverted menu grid">
+  <div class="computer tablet only row container">
     <a href="<%= admin_path %>" class="item <%= 'active' if controller_name == 'pages' and action_name == 'dashboard' %>">
       MTD Admin
     </a>
@@ -23,6 +23,20 @@
         Public page
       </a>
       <%= link_to(semantic_icon('road') + 'Log out', destroy_user_session_path, method: :delete, class: 'item') %>
+    </div>
+  </div>
+  <div class="mobile only row container">
+    <a href="<%= admin_path %>" class="item <%= 'active' if controller_name == 'pages' and action_name == 'dashboard' %>">
+      MTD Admin
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <%= semantic_icon 'user' %>
+        <%= current_user.name.split[0].humanize %>
+      </div>
+      <div class="item">
+        <%= semantic_icon 'content toggle-menu' %>
+      </div>
     </div>
   </div>
 </div>

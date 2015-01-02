@@ -14,3 +14,6 @@ $(document).ready ->
   $('.ui.accordion').accordion()
   $('.ui.checkbox').checkbox()
   $('select.dropdown').dropdown()
+
+  $('.toggle-menu').click ->
+    $('.menu.sidebar').sidebar('toggle')

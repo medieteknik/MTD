@@ -4,7 +4,7 @@
     All users
   </h2>
   <%= link_to_if can?(:create, User), semantic_icon('plus') + "Create new", new_admin_user_path, class: 'ui green labeled icon button' %>
-  <table class="ui unstackable table">
+  <table class="ui table">
     <thead>
       <tr>
         <th>#</th>
