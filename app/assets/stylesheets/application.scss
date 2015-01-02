@@ -69,3 +69,22 @@ body > #content{
   background: red !important;
 }
 
+.pagination {
+  em.current {
+    @extend .btn;
+    font-style: normal;
+    font-weight: bold;
+  }
+  a, span {
+    @extend .btn, .btn-default;
+    text-decoration: none;
+
+    &.previous_page,
+    &.next_page {
+
+    }
+    &.disabled {
+
+    }
+  }
+}

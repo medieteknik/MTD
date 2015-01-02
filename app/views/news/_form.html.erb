@@ -11,15 +11,43 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :published_at %><br>
-    <%= f.datetime_select :published_at %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row info">
+    <div class="col-sm-4">
+      <h3><%= t('swedish').titleize %></h3>
+      <div class="form-group">
+        <%= f.label :title_sv %>
+        <%= f.text_field :title_sv, placeholder: 'Senaste nytt från...' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :content_sv %>
+        <%= f.text_area :content_sv, placeholder: '', class: 'form-control', rows: 10 %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h3><%= t('english').titleize %></h3>
+      <div class="form-group">
+        <%= f.label :title_en %>
+        <%= f.text_field :title_en, placeholder: 'Latest news from...' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :content_en %>
+        <%= f.text_area :content_en, placeholder: '', class: 'form-control', rows: 10 %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h3><%= t('save').titleize %></h3>
+      <div class="field">
+        <p>
+          <%= f.label :published_at %><br>
+          <%= f.datetime_select :published_at %>
+        </p>
+      </div>
+      <div class="actions">
+        <p>
+          <%= f.submit %>
+        </p>
+      </div>
+
+    </div>
   </div>
 <% end %>

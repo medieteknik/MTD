@@ -11,4 +11,11 @@ module ApplicationHelper
   def i18n_opposite
     I18n.locale == :en ? 'sv' : 'en'
   end
+  def access_denied_redir
+    if user_signed_in?
+      edit_user_registration_path
+    else
+      new_user_session_path
+    end
+  end
 end

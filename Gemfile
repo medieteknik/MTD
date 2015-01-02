@@ -12,6 +12,8 @@ gem 'globalize-versioning', '~> 0.1.0.alpha.1' # so we can use paper_trail!
 gem 'globalize-accessors' # edit multiple locales at the same time
 # handle news version
 gem 'paper_trail', '~> 3.0.6'
+# pagination!
+gem 'will_paginate', '~> 3.0.6'
 
 # handle secrets nicely
 gem 'figaro'

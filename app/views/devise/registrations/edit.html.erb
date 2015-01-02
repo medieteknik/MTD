@@ -1,6 +1,10 @@
 <div class="container">
   <h1><%= t('user.registrations.edit') %></h1>
 
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "alert alert-info #{key}" %>
+  <% end %>
+
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
 

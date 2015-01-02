@@ -1,0 +1,30 @@
+sv:
+  news:
+    deleted: 'Inlägget har tagis bort.'
+    edit:
+      title: 'Redigera nyhetsinlägg'
+    index:
+      title: 'Nyhetsarkiv'
+      your_entries: 'Dina inlägg'
+    new:
+      back: 'Tillbaka till arkiv'
+      explain: 'Här kan du skapa nyheter som kommer synas här på MTD:s hemsida. Skriv gärna åtminstone en kort version av nyheten på båda språken. Nyheten kommer granskas innan den publiceras.'
+      title: 'Nytt nyhetsinlägg'
+  helpers:
+    submit:
+      news:
+        create: 'Skapa nyhetsinlägg'
+        update: 'Uppdatera nyhetsinlägg'
+  # active record translations
+  activerecord:
+    attributes:
+      news:
+        content_en: 'Engelsk text'
+        content_sv: 'Svensk text'
+        published_at: 'Publiceringsdatum'
+        title_en: 'Engelsk rubrik'
+        title_sv: 'Svensk rubrik'
+    errors:
+      models:
+        news:
+          attributes:

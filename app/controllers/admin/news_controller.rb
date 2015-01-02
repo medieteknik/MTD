@@ -6,7 +6,7 @@ class Admin::NewsController < Admin::AdminController
   load_and_authorize_resource
 
   def index
-    @news = @news.all.order(:published_at)
+    @news = @news.all.order(published_at: :desc, id: :desc)
   end
 
   def new

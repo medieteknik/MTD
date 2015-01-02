@@ -18,10 +18,14 @@
           English title
         </th>
         <th>
+          Authors
+        </th>
+        <th>
           Status
         </th>
         <th>
           Publishing date
+          <%= semantic_icon('caret down') %>
         </th>
         <th>
           &nbsp;
@@ -40,19 +44,23 @@
           <td>
             <%= n.title_en || semantic_icon('warning sign') + 'Missing' %>
           </td>
+          <td>
+            <%= n.users.to_a.map(&:name).join(', ') %>
+          </td>
           <td <%= 'class=positive' if n.published_at > DateTime.now and n.status == 'public' %>>
             <% if n.published_at > DateTime.now and n.status == 'public' %>
-              scheduled, published <%= distance_of_time_in_words n.published_at, Time.now, scope: :'datetime.future_time_in_words' %>
+              Scheduled, published <%= distance_of_time_in_words n.published_at, Time.now, scope: :'datetime.future_time_in_words' %>
             <% else %>
-              <%= n.status %>
+              <%= n.status.humanize %>
             <% end %>
           </td>
           <td>
-            <%= n.published_at %>
+            <%= n.published_at.strftime('%a %d %b %Y, %H:%M') %>
           </td>
           <td>
             <%= link_to_if can?(:update, n), semantic_icon('write') + "Edit", edit_admin_news_path(n) %>
-            <%= link_to_if can?(:destroy, n), semantic_icon('trash') + "Trash", admin_news_path(n), data: {confirm: "Are you sure?"}, method: :delete %>
+            <%= link_to_if can?(:destroy, n), semantic_icon('trash') + "Delete", admin_news_path(n), data: {confirm: "Are you sure?"}, method: :delete %>
+            <%= link_to semantic_icon('eye') + 'Show', n %>
           </td>
         </tr>
       <% end %>

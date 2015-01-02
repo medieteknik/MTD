@@ -23,6 +23,7 @@
           <% if user_signed_in? %>
             <%= content_tag :li, link_to(t('user.edit'), edit_user_registration_path) %>
             <%= content_tag :li, link_to(t('user.log_out'), destroy_user_session_path, method: :delete) %>
+            <%= content_tag :li, link_to_if(can?(:access_panel, User), "Admin panel", "/admin"){} %>
           <% else %>
             <%= content_tag :li, link_to(t('user.log_in'), new_user_session_path) %>
           <% end %>

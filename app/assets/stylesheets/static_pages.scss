@@ -98,6 +98,18 @@
   }
 }
 
+.gray-box {
+  padding: 20px;
+  background: $gray-light;
+
+  &>:first-child {
+    margin-top: 0;
+  }
+  &>:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .deals {
   @include make-row();
   margin-bottom: 30px;

@@ -1,27 +1,45 @@
-<h1>Listing news</h1>
+<div class="container">
+  <h1>
+    <%= t('.title') %>
+    <small>
+      <%= link_to_if(can?(:create, News), t('helpers.submit.news.create'), new_news_path){} %>
+    </small>
+  </h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Published at</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "alert alert-info #{key}" %>
+  <% end %>
 
-  <tbody>
-    <% @news.each do |news| %>
-      <tr>
-        <td><%= news.status %></td>
-        <td><%= news.published_at %></td>
-        <td><%= link_to 'Show', news %></td>
-        <td><%= link_to 'Edit', edit_news_path(news) %></td>
-        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% @news.each do |n| %>
+    <div class="info limit-width">
+      <%= content_tag :h2, link_to(n.title, n) %>
+      <p>
+        <%= t('published').titleize %> <%= time_ago_in_words n.published_at %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
+        <%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
+      </p>
+      <p>
+        <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), n } %>
+      </p>
+    </div>
+  <% end %>
+
+  <%= will_paginate @news %>
+
+  <% if can? :create, News %>
+    <h2><%= t('.your_entries') %></h2>
+
+    <% current_user.news.each do |n| %>
+      <div class="info limit-width">
+        <%= content_tag :h3, link_to(n.title, n) %>
+        <p>
+          <%= t('published').titleize %> <%= time_ago_in_words n.published_at %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
+          <%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
+          <%= link_to_if(can?(:destroy, n), t('delete').humanize, n, data: {confirm: t('are_you_sure')}, method: :delete){} %>
+        </p>
+        <p>
+          <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), n } %>
+        </p>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New News', new_news_path %>
+  <% end %>
+</div>

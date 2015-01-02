@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
 
   namespace :admin do
@@ -12,9 +13,9 @@ Rails.application.routes.draw do
     devise_for :users, :controllers => { :registrations => 'users/registrations',
                                          :confirmations => 'users/confirmations' }
 
-    resources :news, only: [:index, :show]
+    resources :news
 
-    get '/' => 'static_pages#show', :as => :home, :page => 'home'
+    get '/' => 'static_pages#home', :as => :home
 
     # in order to have translated routes, these are needed
     get '/sponsorship' => 'static_pages#show', :page => 'sponsor/sponsor'
@@ -30,5 +31,5 @@ Rails.application.routes.draw do
     get '*page', to: 'static_pages#show'
   end
 
-  root to: 'static_pages#show', :page => 'home'
+  root to: 'static_pages#home'
 end

@@ -1,5 +1,12 @@
-<h1>New news</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', news_index_path %>
+<div class="container">
+  <div class="info limit-width">
+    <h1>
+      <%= t('.title') %>
+      <small>
+        <%= link_to t('.back'), news_index_path %>
+      </small>
+    </h1>
+    <%= content_tag :p, t('.explain'), class: 'lead' %>
+  </div>
+  <%= render 'form' %>
+</div>

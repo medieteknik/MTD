@@ -15,11 +15,31 @@
     </ul>
   </footer>
 </div>
-
-<div class="container limit-width narrow center">
-  <div class="info">
-    <%= content_tag :h3, t('.welcome') + '!' %>
-    <%= content_tag :p, t('.lead'), class: 'lead' %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-push-8">
+      <div class="info gray-box">
+        <%= content_tag :h3, t('.welcome') + '!' %>
+        <%= content_tag :p, t('.lead') %>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-pull-4">
+      <% @news.each do |n| %>
+        <div class="info">
+          <%= content_tag :h2, link_to(n.title, n) %>
+          <p>
+            <%= t('published').titleize %> <%= time_ago_in_words n.published_at %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
+            <%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
+          </p>
+          <p>
+            <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), n } %>
+          </p>
+        </div>
+      <% end %>
+      <div class="info">
+        <%= link_to t('.all_news'), news_index_path %>
+      </div>
+    </div>
   </div>
 </div>
 

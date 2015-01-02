@@ -1,0 +1,30 @@
+en:
+  news:
+    deleted: 'News entry deleted.'
+    edit:
+      title: 'Edit news entry'
+    index:
+      title: 'News archive'
+      your_entries: 'Your news entries'
+    new:
+      back: 'Back to news archive'
+      explain: 'Here you can create news entries that will be shown on MTD''s website. Kindly translate you news entry. Your entry will be reviewed before publishing.'
+      title: 'New news entry'
+  helpers:
+    submit:
+      news:
+        create: 'Create news entry'
+        update: 'Update news entry'
+  # active record translations
+  activerecord:
+    attributes:
+      news:
+        content_en: 'English text'
+        content_sv: 'Swedish text'
+        published_at: 'Publishing date'
+        title_en: 'English title'
+        title_sv: 'Swedish rubrik'
+    errors:
+      models:
+        news:
+          attributes:

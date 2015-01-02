@@ -1,6 +1,9 @@
-<h1>Editing news</h1>
+<div class="container">
+  <div class="info limit-width">
+    <h1>
+      <%= t('.title') %>
+    </h1>
+  </div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @news %> |
-<%= link_to 'Back', news_index_path %>
+  <%= render 'form' %>
+</div>

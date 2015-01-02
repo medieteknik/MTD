@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @news.status %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @news.published_at %>
-</p>
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<div class="container limit-width">
+  <div class="info">
+    <%= content_tag :h1, link_to(@news.title, @news) %>
+    <p>
+      <%= t('published').titleize %> <%= time_ago_in_words @news.published_at %> <%= t('by') %> <%= @news.users.to_a.map(&:name).join(', ') %>.
+      <%= link_to_if(can?(:update, @news), t('edit').titleize, edit_news_path(@news)){} %>
+    </p>
+  </div>
+  <div class="info">
+    <%= GitHub::Markdown.render_gfm(@news.content).html_safe %>
+  </div>
+</div>

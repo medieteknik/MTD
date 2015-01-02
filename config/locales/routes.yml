@@ -5,6 +5,9 @@ sv:
     bronze: brons
     contact: kontakt
     gold: guld
+    new: ny
+    news: nyheter
+    page: sida
     previous-years: 'tidigare-ar'
     sponsorship: sponsor
     gold: guld
@@ -26,6 +29,9 @@ en:
     bronze: bronze
     contact: contact
     gold: gold
+    new: new
+    news: news
+    page: page
     previous-years: 'previous-years'
     sponsorship: sponsorship
     user: user

@@ -1,10 +1,12 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
 
   respond_to :html
 
   def index
-    @news = News.all
+    @news = News.where('status = :status AND published_at <= :right_now', {status: 'public', right_now: DateTime.now}).order(published_at: :desc).paginate(:page => params[:page], :per_page => 10)
     respond_with(@news)
   end
 
@@ -22,6 +24,8 @@ class NewsController < ApplicationController
 
   def create
     @news = News.new(news_params)
+    @news.users << current_user
+    @news.status = 'draft'
     @news.save
     respond_with(@news)
   end
@@ -32,8 +36,10 @@ class NewsController < ApplicationController
   end
 
   def destroy
-    @news.destroy
-    respond_with(@news)
+    if @news.destroy
+      flash[:notice] = t('news.deleted')
+      redirect_to news_index_path
+    end
   end
 
   private
@@ -42,6 +48,7 @@ class NewsController < ApplicationController
     end
 
     def news_params
-      params.require(:news).permit(:status, :published_at)
+      permitted = News.globalize_attribute_names + [:published_at]
+      params.require(:news).permit(*permitted)
     end
 end
