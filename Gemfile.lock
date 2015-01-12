@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/doabit/semantic-ui-sass.git
-  revision: f745edee5c12e2cf1069a0400883abc877335337
+  revision: 0c4dbb3b86572cf9996edc9955fb912bd675c86d
   branch: v1.0beta
   specs:
-    semantic-ui-sass (1.4.1.0)
+    semantic-ui-sass (1.6.2.0)
       sass (~> 3.2)
 
 GEM
@@ -47,7 +47,7 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
-    cancancan (1.9.2)
+    cancancan (1.10.0)
     chronic (0.10.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -106,13 +106,13 @@ GEM
     mime-types (1.25.1)
     minitest (5.5.0)
     multi_json (1.10.1)
-    newrelic_rpm (3.9.8.273)
+    newrelic_rpm (3.9.9.275)
     nprogress-rails (0.1.6.5)
     orm_adapter (0.5.0)
     paper_trail (3.0.6)
       activerecord (>= 3.0, < 5.0)
       activesupport (>= 3.0, < 5.0)
-    pg (0.17.1)
+    pg (0.18.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -177,7 +177,7 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.6.0)
+    uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.8.3)
