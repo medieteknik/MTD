@@ -1,0 +1,9 @@
+<% title(t('.title')) %>
+<div class="container">
+  <section class="info limit-width">
+    <%= content_tag :h1, t('.title') %>
+    <%= content_tag :p, t('.lead'), class: 'lead' %>
+    <%= content_tag :p, t('.info') %>
+  </section>
+  <%= render 'host_positions' %>
+</div>

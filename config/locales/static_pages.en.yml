@@ -98,6 +98,11 @@ en:
         title: 'Get Inspired'
         text: 'Throughout the years we''ve hade many exciting and inspiring lecturers, talking about the future, present and past of media technology.'
 
+    # route: en/host
+    host:
+      info: 'For more information about the different positions, please contact our coordinator at koordinator@medieteknikdagarna.se.'
+      lead: 'MTD 2015 is just around the corner, and to make it as good as it''s ever possible we need your help!'
+      title: 'MTD host'
 
     # folder: views/static_pages/sponsor
     sponsor:

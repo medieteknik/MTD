@@ -39,7 +39,8 @@ sv:
       contact: 'Kontakta oss!'
 
     header:
-      sponsor: 'Bli sponsor'
       about: 'Om'
       contact: 'Kontakt'
+      host: 'Bli värd'
       previous: 'Tidigare år'
+      sponsor: 'Bli sponsor'

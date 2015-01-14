@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/doabit/semantic-ui-sass.git
-  revision: f745edee5c12e2cf1069a0400883abc877335337
+  revision: 0c4dbb3b86572cf9996edc9955fb912bd675c86d
   branch: v1.0beta
   specs:
-    semantic-ui-sass (1.4.1.0)
+    semantic-ui-sass (1.6.2.0)
       sass (~> 3.2)
 
 GEM
@@ -41,14 +41,21 @@ GEM
     autoprefixer-rails (4.0.2.2)
       execjs
     bcrypt (3.1.9)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.0.1)
       sass (~> 3.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
     builder (3.2.2)
-    cancancan (1.9.2)
+    cancancan (1.10.0)
     chronic (0.10.2)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -56,6 +63,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    debug_inspector (0.0.2)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -94,8 +102,8 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
-    json (1.8.1)
-    kgio (2.9.2)
+    json (1.8.2)
+    kgio (2.9.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.3.0)
@@ -104,18 +112,18 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    minitest (5.5.0)
+    minitest (5.5.1)
     multi_json (1.10.1)
-    newrelic_rpm (3.9.8.273)
+    newrelic_rpm (3.9.9.275)
     nprogress-rails (0.1.6.5)
     orm_adapter (0.5.0)
     paper_trail (3.0.6)
       activerecord (>= 3.0, < 5.0)
       activesupport (>= 3.0, < 5.0)
-    pg (0.17.1)
+    pg (0.18.1)
     polyglot (0.3.5)
     rack (1.5.2)
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.1)
       actionmailer (= 4.1.1)
@@ -177,7 +185,7 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.6.0)
+    uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.8.3)
@@ -186,6 +194,11 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    web-console (2.0.0)
+      activemodel (~> 4.0)
+      binding_of_caller (>= 0.7.2)
+      railties (~> 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
     whenever (0.9.4)
       chronic (>= 0.6.3)
     will_paginate (3.0.7)
@@ -196,6 +209,7 @@ PLATFORMS
 DEPENDENCIES
   angularjs-rails (~> 1.2.25)
   autoprefixer-rails
+  better_errors
   bootstrap-sass (~> 3.3.0.1)
   bourbon
   cancancan (~> 1.9)
@@ -229,5 +243,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
+  web-console (~> 2.0)
   whenever
   will_paginate (~> 3.0.6)

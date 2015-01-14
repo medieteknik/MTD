@@ -68,12 +68,20 @@ gem 'whenever', :require => false
 # render pages and news with github flavored markdown
 gem 'github-markdown', '~> 0.6.7'
 
-# Intercept email sending and show email in browser
-gem 'letter_opener', group: :development
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring', group: :development
+
+## DEVELOPMENT TOOLS
+group :development do
+  # a set of debugging tools for your Rails application
+  gem 'web-console', '~> 2.0'
+  # replaces the standard Rails error page with a much better and more useful error page
+  gem 'better_errors'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  # Intercept email sending and show email in browser
+  gem 'letter_opener'
+end
 
 ## Heroku/deployment stuff
 # Use unicorn as the app server

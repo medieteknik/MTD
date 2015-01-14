@@ -39,7 +39,8 @@ en:
       contact: 'Contact us!'
 
     header:
-      sponsor: 'Become a Sponsor'
       about: 'About'
       contact: 'Contact'
+      host: 'Host'
       previous: 'Previous years'
+      sponsor: 'Become a Sponsor'

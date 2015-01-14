@@ -5,6 +5,7 @@ sv:
     bronze: brons
     contact: kontakt
     gold: guld
+    host: vard
     new: ny
     news: nyheter
     page: sida
@@ -29,6 +30,7 @@ en:
     bronze: bronze
     contact: contact
     gold: gold
+    host: host
     new: new
     news: news
     page: page
