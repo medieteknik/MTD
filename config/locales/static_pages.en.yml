@@ -52,7 +52,9 @@ en:
         physical:
           title: 'Physical addresses'
           mail: 'Mail address'
-          goods: 'Goods'
+          goods:
+            title: 'Goods'
+            text: 'Before sending goods to the fair, please contact us and we''ll make sure that it gets where it should.'
           visit: 'Visiting address'
           visit_text: 'This is where MTD will be held!'
         press:

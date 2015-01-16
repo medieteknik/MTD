@@ -52,7 +52,9 @@ sv:
         physical:
           title: 'Fysiska adresser'
           mail: 'Postadress'
-          goods: 'Leveransadress'
+          goods:
+            title: 'Leveransadress'
+            text: 'Kontakta oss innan ni skickar något, så ser vi till att det hamnar rätt.'
           visit: 'Besöksadress'
           visit_text: 'Platsen där det händer!'
         press:
