@@ -1,0 +1,41 @@
+<section class="container limit-width">
+  <h1><%= t('.title') %></h1>
+  <% flash.each do |key, value| %>
+    <%= content_tag :p, value, class: "ui message #{key}" %>
+  <% end %>
+  <%= form_for @suggestion do |f| %>
+    <% if @suggestion.errors.any? %>
+      <div class="info">
+        <h5>
+          <%= t('.error') %>
+        </h5>
+        <ul>
+        <% @suggestion.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="row info">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <%= f.label :content, t('.content.label') %>
+          <%= f.text_area :content, class: 'form-control', rows: 10, placeholder: t('.content.placeholder'), required: true, autofocus: true %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email, placeholder: t('.email.placeholder') %>
+          <p>
+            <%= t('.email.explain') %>
+          </p>
+        </div>
+        <div class="form-group">
+          <%= f.submit t('send'), :disable_with => 'Submiting...' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</section>

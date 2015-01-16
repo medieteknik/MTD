@@ -22,6 +22,11 @@
         <%= content_tag :h3, t('.welcome') + '!' %>
         <%= content_tag :p, t('.lead') %>
       </div>
+      <h5><%= t('suggestions.home.title') %></h5>
+      <p>
+        <%= t('suggestions.home.info') %>
+        <%= link_to t('suggestions.home.link'), new_suggestion_path %>
+      </p>
     </div>
     <div class="col-sm-8 col-sm-pull-4">
       <% @news.each do |n| %>

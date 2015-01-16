@@ -1,0 +1,30 @@
+sv:
+  suggestions:
+    home:
+      title: 'Tips eller förslag?'
+      link: 'Använd vår förslags-låda!'
+      info: 'Har du ett tips eller ett förslag? Då vill vi hemskt gärna höra det.'
+
+    new:
+      title: 'Nytt förslag'
+      error: 'Kunde inte spara förslaget'
+      created: 'Vi har sparat ditt förslag. Tack så mycket! Kom gärna med fler förslag.'
+
+      content:
+        label: 'Förslag'
+        placeholder: 'Skriv ditt förslag...'
+
+      email:
+        label: 'Epostadress'
+        explain: '(Valfritt) Skicka gärna med en epostadress eller ett LiU-id, så kan vi kontakta dig om vi vill diskutera ditt förslag.'
+        placeholder: 'du@example.com eller abcde123...'
+
+    show:
+      title: 'Förslag'
+
+  # ar translations
+  activerecord:
+    attributes:
+      suggestion:
+        email: 'Epost'
+        content: 'Förslaget'

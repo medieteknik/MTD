@@ -15,6 +15,7 @@ Rails.application.routes.draw do
                                          :confirmations => 'users/confirmations' }
 
     resources :news
+    resources :suggestions, only: [:new, :create, :show]
 
     get '/' => 'static_pages#home', :as => :home
 
