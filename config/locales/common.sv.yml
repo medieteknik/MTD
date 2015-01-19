@@ -20,6 +20,7 @@ sv:
   mt_association: 'Medietekniksektionen'
   published: 'publicerad'
   save: 'Spara'
+  send: 'Skicka'
   short_description: 'Medieteknikdagarna är ett ideelt drivet arrangemang för studenter på Linköpings Universitet.'
   short_name: 'MTD2015'
   show: 'visa'

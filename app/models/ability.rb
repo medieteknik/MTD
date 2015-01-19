@@ -21,6 +21,7 @@ class Ability
         u.try(:user) == user
       end
       can :read, News
+      can [:create, :read], Suggestion
     end
   end
 end

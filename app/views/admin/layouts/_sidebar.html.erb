@@ -12,6 +12,11 @@
       <%= semantic_icon('file text') %> News
     </a>
   <% end %>
+  <% if can? :read, Suggestion %>
+    <a href="<%= admin_suggestions_path %>" class="item <%= 'active' if controller_name == 'suggestions' %>">
+      <%= semantic_icon('idea') %> Suggestions
+    </a>
+  <% end %>
   <a href="<%= root_path %>" class="item">
     <%= semantic_icon 'world' %>
     Public page

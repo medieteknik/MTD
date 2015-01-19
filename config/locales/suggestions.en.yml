@@ -1,0 +1,30 @@
+en:
+  suggestions:
+    home:
+      title: 'Have a suggestion?'
+      link: 'Share it with us!'
+      info: 'Do you have an idea or a suggestion of something that you want us to do?'
+
+    new:
+      title: 'New suggestion'
+      error: 'Could not save the suggestion'
+      created: 'We have saved your suggestion. Thank you so much! Have more ideas? Keep them coming!'
+
+      content:
+        label: 'Suggestion'
+        placeholder: 'Write your suggestion...'
+
+      email:
+        label: 'Email address'
+        explain: '(Optional) Enter your email address or your LiU-id so that we can contact you about your idea.'
+        placeholder: 'you@example.com or abcde123...'
+
+    show:
+      title: 'Suggestion'
+
+  # ar translations
+  activerecord:
+    attributes:
+      suggestion:
+        email: 'Email'
+        content: 'The suggestion'

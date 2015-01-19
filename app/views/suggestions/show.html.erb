@@ -1,0 +1,11 @@
+<div class="container limit-width">
+  <h1>
+    <%= t('.title') %>
+  </h1>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "ui message #{key}" %>
+  <% end %>
+  <p class="lead">
+    <%= @suggestion.content %>
+  </p>
+</div>

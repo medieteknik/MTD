@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/doabit/semantic-ui-sass.git
-  revision: 0c4dbb3b86572cf9996edc9955fb912bd675c86d
+  revision: 7cc93a06871686b9446eafe42961d124a09c4462
   branch: v1.0beta
   specs:
-    semantic-ui-sass (1.6.2.0)
+    semantic-ui-sass (1.7.3.0)
       sass (~> 3.2)
 
 GEM
@@ -38,7 +38,7 @@ GEM
     addressable (2.3.6)
     angularjs-rails (1.2.26)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (4.0.2.2)
+    autoprefixer-rails (5.0.0.1)
       execjs
     bcrypt (3.1.9)
     better_errors (2.1.1)
@@ -49,11 +49,11 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.0.1)
       sass (~> 3.2)
-    bourbon (3.2.3)
+    bourbon (3.2.4)
       sass (~> 3.2)
       thor
     builder (3.2.2)
-    cancancan (1.10.0)
+    cancancan (1.10.1)
     chronic (0.10.2)
     coderay (1.1.0)
     coffee-rails (4.0.1)

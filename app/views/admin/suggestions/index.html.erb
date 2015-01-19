@@ -1,0 +1,50 @@
+<%= render 'common' %>
+<div class="container">
+  <h2>
+    All suggestions
+  </h2>
+
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Suggestion
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Created at
+        </th>
+        <th>
+          &nbsp;
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @suggestions.each do |s| %>
+        <tr>
+          <td>
+            <%= s.id %>
+          </td>
+          <td>
+            <%= s.content %>
+          </td>
+          <td>
+            <%= s.email if !s.email.blank?%>
+          </td>
+          <td>
+            <%= s.created_at.strftime('%a %d %b %Y, %H:%M') %>
+          </td>
+          <td>
+            <%= link_to_if can?(:destroy, s), semantic_icon('trash') + "Delete", admin_suggestion_path(s), data: {confirm: "Are you sure?"}, method: :delete %>
+            <%= link_to semantic_icon('eye') + 'Public view', s %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

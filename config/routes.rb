@@ -1,10 +1,10 @@
-
 Rails.application.routes.draw do
 
   namespace :admin do
     get '/' => 'pages#dashboard'
     resources :users
     resources :news, except: [:show]
+    resources :suggestions, except: [:show, :create, :new, :edit]
   end
 
   localized do
@@ -15,6 +15,7 @@ Rails.application.routes.draw do
                                          :confirmations => 'users/confirmations' }
 
     resources :news
+    resources :suggestions, only: [:new, :create, :show]
 
     get '/' => 'static_pages#home', :as => :home
 

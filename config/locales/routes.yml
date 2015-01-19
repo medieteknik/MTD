@@ -11,6 +11,7 @@ sv:
     page: sida
     previous-years: 'tidigare-ar'
     sponsorship: sponsor
+    suggestions: tips
     gold: guld
 
     # devise routes
@@ -36,6 +37,7 @@ en:
     page: page
     previous-years: 'previous-years'
     sponsorship: sponsorship
+    suggestions: suggestions
     user: user
     gold: gold
 
