@@ -19,7 +19,7 @@ class Admin::NewsController < Admin::AdminController
 
   def create
     @news = News.new(news_params)
-    @news.users << User.find(news_params[:user_ids])
+    @news.users.replace(User.find(news_params[:user_ids]))
     if @news.save
       flash[:notice] = "Successfully created news entry"
       redirect_to edit_admin_news_path(@news)
