@@ -1,6 +1,7 @@
 sv:
   routes:
     about: om
+    apply: sok
     compare: jamfor
     bronze: brons
     contact: kontakt
@@ -27,6 +28,7 @@ sv:
 en:
   routes:
     about: about
+    apply: apply
     compare: compare
     bronze: bronze
     contact: contact

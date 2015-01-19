@@ -106,6 +106,12 @@ en:
       lead: 'MTD 2015 is just around the corner, and to make it as good as it''s ever possible we need your help!'
       title: 'MTD host'
 
+      apply:
+        closed: 'Applications are open between January 26 and February 20. Come back then!'
+        link: 'Click here to apply!'
+        open: 'We are now acception applications! We in the MTD group are looking forward to your application.'
+        title: 'Apply!'
+
     # folder: views/static_pages/sponsor
     sponsor:
       # route: en/sponsorship/compare

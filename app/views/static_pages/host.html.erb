@@ -1,9 +1,24 @@
 <% title(t('.title')) %>
 <div class="container">
-  <section class="info limit-width">
-    <%= content_tag :h1, t('.title') %>
-    <%= content_tag :p, t('.lead'), class: 'lead' %>
-    <%= content_tag :p, t('.info') %>
-  </section>
-  <%= render 'host_positions' %>
+  <div class="info row">
+    <div class="col-sm-8">
+      <%= content_tag :h1, t('.title') %>
+      <%= content_tag :p, t('.lead'), class: 'lead' %>
+      <%= content_tag :p, t('.info') %>
+      <div class="info">
+        <%= render 'host_positions' %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="info gray-box">
+        <%= content_tag :h3, t('.apply.title') %>
+        <% if Date.today > Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today < Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
+          <%= content_tag :p, t('.apply.open') %>
+          <%= link_to t('.apply.link'), new_host_path %>
+        <% else %>
+          <%= content_tag :p, t('.apply.closed') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

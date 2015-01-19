@@ -106,6 +106,12 @@ sv:
       lead: 'MTD 2015 är snart här och för att genomföra dessa två spännande dagar behöver vi din hjälp!'
       title: 'Sök värd'
 
+      apply:
+        closed: 'Värdsöket är inte öppet just nu. Kom tillbaka mellan den 26e januari och 20e februari.'
+        link: 'Klicka här för att skicka in din ansökan!'
+        open: 'Värdsöket är nu öppet! Vi i MTD-gruppen ser mycket fram emot din ansökan.'
+        title: 'Sök då!'
+
     # folder: views/static_pages/sponsor
     sponsor:
       # route: sv/sponsor/jamfor

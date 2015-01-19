@@ -27,6 +27,9 @@ Rails.application.routes.draw do
     get '/sponsorship/compare/gold' => 'static_pages#show', :page => 'sponsor/gold', as: :sponsorship_gold
 
     get '/host' => 'static_pages#show', :page => 'host', as: :host
+    resources :hosts, only: [:new, :create], path: 'host', path_names: { new: 'apply' }
+    # get '/host/apply' => 'hosts#new'
+    # post '/host/apply' => 'hosts#new'
 
     get '/about' => 'static_pages#show', :page => 'about/about'
     get '/about/contact' => 'static_pages#show', :page => 'about/contact'
