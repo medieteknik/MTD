@@ -1,4 +1,4 @@
-input:not([type="checkbox"]), form button {
+input:not([type="checkbox"]):not([type="radio"]), form button {
   @extend .form-control;
 }
 .field_with_errors {
@@ -7,6 +7,6 @@ input:not([type="checkbox"]), form button {
 .form-group .form-control:not(textarea) {
   max-width: 360px;
 }
-form input[type="submit"] {
+form .form-group input[type="submit"] {
   @extend .btn-success;
 }

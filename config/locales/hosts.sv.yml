@@ -1,0 +1,44 @@
+sv:
+  hosts:
+    new:
+      info: 'Vad kul att du vill söka till att bli MTD-värd. Fyll i formuläret nedan, så hör vi av oss när söktiden är över.'
+      title: 'Sök värd!'
+      you: 'Lite om dig'
+      host: 'Önskemål'
+      food: 'Mat'
+      go: 'Skicka'
+      double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg kalaset!'
+
+      allergies:
+        label: 'Allergier (mat)'
+        placeholder: 'Något du inte tål?'
+      banquet:
+        label: 'Vill du gå på banketten?'
+      first:
+        label: 'Förstahandsval'
+      liuid:
+        label: 'LiU-ID'
+        placeholder: 'abcde123...'
+      member:
+        label: 'Sektionsmedlem?'
+      name:
+        label: 'Namn'
+        placeholder: 'T.ex. Namn Namnsson'
+      other:
+        label: 'Övrigt'
+        placeholder: 'Har du något du vill dela med dig av?'
+        title: 'Övrigt'
+      phone:
+        label: 'Telefonnummer'
+        placeholder: '07X-XXXXXXX...'
+      reason:
+        label: 'Varför vill du bli värd?'
+        placeholder: 'Skriv varför vi ska välja just dig!'
+      second:
+        label: 'Andrahandsval'
+      size:
+        label: 'Tröjstorlek'
+      third:
+        label: 'Tredjehandsval'
+      year:
+        label: 'Årskurs'

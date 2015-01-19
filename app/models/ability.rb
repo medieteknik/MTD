@@ -22,6 +22,7 @@ class Ability
       end
       can :read, News
       can [:create, :read], Suggestion
+      can [:create, :read], Host
     end
   end
 end
