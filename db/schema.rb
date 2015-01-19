@@ -11,10 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116190606) do
+ActiveRecord::Schema.define(version: 20150119190437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "host_position_translations", force: true do |t|
+    t.integer  "host_position_id", null: false
+    t.string   "locale",           null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "position"
+  end
+
+  add_index "host_position_translations", ["host_position_id"], name: "index_host_position_translations_on_host_position_id", using: :btree
+  add_index "host_position_translations", ["locale"], name: "index_host_position_translations_on_locale", using: :btree
+
+  create_table "host_positions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hosts", force: true do |t|
+    t.string   "name"
+    t.string   "liuid"
+    t.string   "phone"
+    t.integer  "year"
+    t.text     "reason"
+    t.string   "size"
+    t.boolean  "member"
+    t.boolean  "banquet"
+    t.string   "allergies"
+    t.text     "other"
+    t.integer  "first"
+    t.integer  "second"
+    t.integer  "third"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news", force: true do |t|
     t.string   "status"
