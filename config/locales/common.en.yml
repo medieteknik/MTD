@@ -18,7 +18,7 @@ en:
   menu_previous: 'Previous years'
   meta_description: 'The Media Technology Days 2015 (MTD2015), career days for msc. students in media tehcnology at Linköping University.'
   mt_association: 'The Media Technology Association'
-  no: 'no'
+  "no": 'no'
   published: 'published'
   save: 'Save'
   send: 'Send'
@@ -29,7 +29,7 @@ en:
   swedish: 'swedish'
   the_date: 'March 25 – 26'
   the_group: 'The MTD group'
-  yes: 'yes'
+  "yes": 'yes'
 
   first: 'first'
   second: 'second'

@@ -1,2 +1,83 @@
 en:
   hosts:
+    created: 'Thank you for your application! We''ll be in touch.'
+    new:
+      error: 'Could not save your application'
+      info: 'We are so happy that you want to be a MTD host. Fill in the form below, and we''ll be in touch as soon as the application closes.'
+      title: 'Apply to be a host'
+      you: 'About you'
+      host: 'Wishes'
+      host_choose: 'Rank what positions you would like the most. We need you to enter three unique alternatives.'
+      food: 'Food'
+      go: 'Send it!'
+      double_check: 'Make sure everything is correct, and send it! * hightlights required fields.'
+
+      allergies:
+        label: 'Allergies and special food'
+        placeholder: 'Is there anything you don''t eat?'
+      banquet:
+        label: 'Do you wish to attend the banquet?'
+      first:
+        label: 'First-hand choice'
+      liuid:
+        label: 'LiU-ID'
+        placeholder: 'abcde123...'
+      member:
+        label: 'MT Association member?'
+      name:
+        label: 'Name'
+        placeholder: 'Your full name...'
+      other:
+        label: 'Other'
+        placeholder: 'Is there anything else you need us to know?'
+        title: 'Other'
+      phone:
+        label: 'Mobile phone number'
+        placeholder: '07X-XXXXXXX...'
+      reason:
+        label: 'Why do you want to be a MTD host?'
+        placeholder: 'Tell us why we should choose you!'
+      second:
+        label: 'Second-hand choice'
+      size:
+        label: 'T-shirt size'
+      third:
+        label: 'Third-hand choice'
+      year:
+        label: 'Year'
+
+    show:
+      title: 'Host application'
+      lead: 'Här nedan kan du se din ansökan. Om något ser fel ut, kontakta oss direkt!'
+      lead: 'This is you application. If you see anything that''s incorrect, contact us straight away.'
+
+      allergies: 'Allergies and special food'
+      banquet: 'Do you wish to attend the banquet?'
+      first: 'First-hand choice'
+      liuid: 'LiU-ID'
+      member: 'MT Association member?'
+      name: 'Name'
+      other: 'Other'
+      phone: 'Mobile phone number'
+      reason: 'Why do you want to be a MTD host?'
+      second: 'Second-hand choice'
+      size: 'T-shirt size'
+      third: 'Third-hand choice'
+      year: 'Year'
+
+  activerecord:
+    attributes:
+      host:
+        allergies: 'Allergies and special food'
+        banquet: 'Do you wish to attend the banquet?'
+        first: 'First-hand choice'
+        liuid: 'LiU-ID'
+        member: 'MT Association member?'
+        name: 'Name'
+        other: 'Other'
+        phone: 'Mobile phone number'
+        reason: 'Why do you want to be a MTD host?'
+        second: 'Second-hand choice'
+        size: 'T-shirt size'
+        third: 'Third-hand choice'
+        year: 'Year'

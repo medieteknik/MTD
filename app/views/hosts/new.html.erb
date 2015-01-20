@@ -7,10 +7,10 @@
 
   <%= form_for @host do |f| %>
     <% if @host.errors.any? %>
-      <div class="info">
-        <h5>
+      <div class="alert alert-warning">
+        <strong>
           <%= t('.error') %>
-        </h5>
+        </strong>
         <ul>
         <% @host.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -24,25 +24,25 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :name, t('.name.label') %>
+            <%= f.label :name, t('.name.label') + " *" %>
             <%= f.text_field :name, placeholder: t('.name.placeholder'), required: true, autofocus: true %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :liuid, t('.liuid.label') %>
+            <%= f.label :liuid, t('.liuid.label') + " *" %>
             <%= f.text_field :liuid, placeholder: t('.liuid.placeholder'), required: true %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :member, t('.member.label') %> <br>
-            <div class="radio-inline">
-              <%= radio_button 'host', 'member', '1' %> <%= t('yes') %>
-            </div>
-            <div class="radio-inline">
-              <%= radio_button 'host', 'member', '0' %> <%= t('no') %>
-            </div>
+            <%= f.label :member, t('.member.label') + " *", class: 'block' %>
+            <label class="radio-inline">
+              <%= radio_button 'host', 'member', '1', required: true %> <%= t('yes') %>
+            </label>
+            <label class="radio-inline">
+              <%= radio_button 'host', 'member', '0', required: true %> <%= t('no') %>
+            </label>
           </div>
         </div>
       </div>
@@ -50,19 +50,19 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :phone, t('.phone.label') %>
+            <%= f.label :phone, t('.phone.label') + " *" %>
             <%= f.telephone_field :phone, placeholder: t('.phone.placeholder'), required: true %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :year, t('.year.label') %>
+            <%= f.label :year, t('.year.label') + " *" %>
             <%= f.select(:year, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']]), {}, class: 'form-control') %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :size, t('.size.label') %>
+            <%= f.label :size, t('.size.label') + " *" %>
             <%= f.select(:size, options_for_select([['S – small', 's'], ['M – medium', 'm'], ['L – large', 'l'], ['XL – extra large', 'xl']]), {}, class: 'form-control') %>
           </div>
         </div>
@@ -71,28 +71,29 @@
 
     <div class="info">
       <%= content_tag :h3, t('.host') %>
+      <%= content_tag :p, t('.host_choose') %>
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :first, t('.first.label') %>
-            <%= f.collection_select(:first, HostPosition.all, :id, :position, {}, class: 'form-control host-position') %>
+            <%= f.label :first, "1. " + t('.first.label') + " *" %>
+            <%= f.collection_select(:first, HostPosition.all, :id, :position, {}, class: 'form-control host-position', required: true) %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :second, t('.second.label') %>
-            <%= f.collection_select(:second, HostPosition.all, :id, :position, {}, class: 'form-control host-position') %>
+            <%= f.label :second, "2. " + t('.second.label') + " *" %>
+            <%= f.collection_select(:second, HostPosition.all, :id, :position, {}, class: 'form-control host-position', required: true) %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :third, t('.third.label') %>
-            <%= f.collection_select(:third, HostPosition.all, :id, :position, {}, class: 'form-control host-position') %>
+            <%= f.label :third, "3. " + t('.third.label') + " *" %>
+            <%= f.collection_select(:third, HostPosition.all, :id, :position, {}, class: 'form-control host-position', required: true) %>
           </div>
         </div>
       </div>
       <div class="form-group">
-        <%= f.label :reason, t('.reason.label') %>
+        <%= f.label :reason, t('.reason.label') + " *" %>
         <%= f.text_area :reason, class: 'form-control', rows: 4, placeholder: t('.reason.placeholder'), required: true %>
       </div>
     </div>
@@ -100,21 +101,21 @@
     <div class="info">
       <%= content_tag :h3, t('.food') %>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <div class="form-group">
             <%= f.label :allergies, t('.allergies.label') %>
             <%= f.text_field :allergies, placeholder: t('.allergies.placeholder') %>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="form-group">
-            <%= f.label :banquet, t('.banquet.label') %> <br>
-            <div class="radio-inline">
-              <%= radio_button 'host', 'banquet', '1' %> <%= t('yes') %>
-            </div>
-            <div class="radio-inline">
-              <%= radio_button 'host', 'banquet', '0' %> <%= t('no') %>
-            </div>
+            <%= f.label :banquet, t('.banquet.label') + " *", class: 'block' %>
+            <label class="radio-inline">
+              <%= radio_button 'host', 'banquet', '1', required: true %> <%= t('yes') %>
+            </label>
+            <label class="radio-inline">
+              <%= radio_button 'host', 'banquet', '0', required: true %> <%= t('no') %>
+            </label>
           </div>
         </div>
       </div>
@@ -124,7 +125,7 @@
       <%= content_tag :h3, t('.other.title') %>
       <div class="form-group">
         <%= f.label :other, t('.other.label') %>
-        <%= f.text_area :other, class: 'form-control', rows: 4, placeholder: t('.other.placeholder'), required: true %>
+        <%= f.text_area :other, class: 'form-control', rows: 4, placeholder: t('.other.placeholder') %>
       </div>
     </div>
 

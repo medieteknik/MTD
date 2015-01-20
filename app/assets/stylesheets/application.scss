@@ -69,13 +69,18 @@ body > #content{
   background: red !important;
 }
 
+.block {
+  display: block;
+}
+
 .pagination {
   em.current {
     @extend .btn;
     font-style: normal;
     font-weight: bold;
   }
-  a, span {
+  a,
+  span {
     @extend .btn, .btn-default;
     text-decoration: none;
 

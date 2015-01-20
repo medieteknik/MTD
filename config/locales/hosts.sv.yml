@@ -1,17 +1,20 @@
 sv:
   hosts:
+    created: 'Tack för din ansökan! Vi hör av oss.'
     new:
-      info: 'Vad kul att du vill söka till att bli MTD-värd. Fyll i formuläret nedan, så hör vi av oss när söktiden är över.'
-      title: 'Sök värd!'
+      error: 'Kunde inte spara ansökan'
+      info: 'Vad kul att du vill söka till att bli MTD-värd! Fyll i formuläret nedan, så hör vi av oss när söktiden är över.'
+      title: 'Sök värd'
       you: 'Lite om dig'
       host: 'Önskemål'
+      host_choose: 'Rangordna vilka värdposter du helst vill ha. Du måste fylla i alla tre, och du kan inte välja samma på flera olika.'
       food: 'Mat'
       go: 'Skicka'
-      double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg kalaset!'
+      double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg kalaset! * markerar obligatoriska fält.'
 
       allergies:
-        label: 'Allergier (mat)'
-        placeholder: 'Något du inte tål?'
+        label: 'Allergier och specialkost'
+        placeholder: 'Något du inte äter?'
       banquet:
         label: 'Vill du gå på banketten?'
       first:
@@ -42,3 +45,38 @@ sv:
         label: 'Tredjehandsval'
       year:
         label: 'Årskurs'
+
+    show:
+      title: 'Värdansökan'
+      lead: 'Här nedan kan du se din ansökan. Om något ser fel ut, kontakta oss direkt!'
+
+      allergies: 'Allergier och specialkost'
+      banquet: 'Vill du gå på banketten?'
+      first: 'Förstahandsval'
+      liuid: 'LiU-ID'
+      member: 'Sektionsmedlem?'
+      name: 'Namn'
+      other: 'Övrigt'
+      phone: 'Telefonnummer'
+      reason: 'Varför vill du bli värd?'
+      second: 'Andrahandsval'
+      size: 'Tröjstorlek'
+      third: 'Tredjehandsval'
+      year: 'Årskurs'
+
+  activerecord:
+    attributes:
+      host:
+        liuid: 'LiU-ID'
+        name: Namn
+        member: Sektionsmedlemskap
+        phone: Telefonnummer
+        year: Årskurs
+        size: Tröjstorlek
+        first: Förstahandsval
+        second: Andrahandsval
+        third: Tredjehandsval
+        reason: '"Varför vill du bli värd?"'
+        allergies: Allergier och specialkost
+        banquet: Bankett
+        other: Övrigt

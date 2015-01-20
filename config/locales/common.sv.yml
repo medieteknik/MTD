@@ -18,7 +18,7 @@ sv:
   menu_previous: 'Tidigare år'
   meta_description: 'Medieteknikdagarna 2015 (MTD2015), Arbetsmarknadsdagarna för civilingenjörer i Medieteknik på Linköpings Universitet'
   mt_association: 'Medietekniksektionen'
-  no: 'nej'
+  "no": 'nej'
   published: 'publicerad'
   save: 'Spara'
   send: 'Skicka'
@@ -29,7 +29,7 @@ sv:
   swedish: 'svenska'
   the_date: '25 – 26 mars'
   the_group: 'MTD-Gruppen'
-  yes: 'ja'
+  "yes": 'ja'
 
   first: 'först'
   second: 'andra'

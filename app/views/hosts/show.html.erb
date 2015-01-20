@@ -1,0 +1,103 @@
+<section class="container limit-width">
+  <div class="info">
+    <%= content_tag :h2, t('.title') %>
+    <%= content_tag :p, t('.lead'), class: 'lead' %>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-info" %>
+    <% end %>
+  </div>
+  <div class="info">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, t('.name') %>
+          <%= @host.name %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, t('.liuid') %>
+          <%= @host.liuid %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, t('.member') %>
+          <%= @host.liuid ? t('yes') : t('no') %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, t('.phone') %>
+          <%= @host.phone %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, t('.year') %>
+          <%= @host.year %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, t('.size') %>
+          <%= @host.size %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, "1. " + t('.first') %>
+          <%= HostPosition.find(@host.first).position %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, "2. " + t('.second') %>
+          <%= HostPosition.find(@host.second).position %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= content_tag :h5, "3. " + t('.third') %>
+          <%= HostPosition.find(@host.third).position %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= content_tag :h5, t('.reason') %>
+      <%= @host.reason %>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <%= content_tag :h5, t('.allergies') %>
+          <%= @host.allergies %>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <%= content_tag :h5, t('.banquet') %>
+          <%= @host.banquet ? t('yes') : t('no') %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="form-group">
+      <%= content_tag :h5, t('.other') %>
+      <%= @host.other %>
+    </div>
+  </div>
+</section>
