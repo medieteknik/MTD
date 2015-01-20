@@ -18,6 +18,11 @@
         <%= semantic_icon('idea') %> Suggestions
       </a>
     <% end %>
+    <% if can? :read, Host %>
+      <a href="<%= admin_hosts_path %>" class="item <%= 'active' if controller_name == 'hosts' %>">
+        <%= semantic_icon('child') %> Hosts
+      </a>
+    <% end %>
     <div class="right menu">
       <div class="item">
         <%= semantic_icon 'user' %>

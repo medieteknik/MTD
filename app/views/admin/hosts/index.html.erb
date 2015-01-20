@@ -1,0 +1,74 @@
+<%= render 'common' %>
+
+<div class="container">
+  <h2>All hosts</h2>
+  <p>Currently only available as a list view.</p>
+
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          LiU-ID
+        </th>
+        <th>
+          First
+        </th>
+        <th>
+          Second
+        </th>
+        <th>
+          Third
+        </th>
+        <th>
+          Year
+        </th>
+        <th>
+          Created at
+        </th>
+        <th>
+          &nbsp;
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @hosts.each do |h| %>
+        <tr>
+          <td>
+            <%= h.id %>
+          </td>
+          <td>
+            <%= h.name %>
+          </td>
+          <td>
+            <%= h.liuid %>
+          </td>
+          <td>
+            <%= HostPosition.find(h.first).position %>
+          </td>
+          <td>
+            <%= HostPosition.find(h.second).position %>
+          </td>
+          <td>
+            <%= HostPosition.find(h.third).position %>
+          </td>
+          <td>
+            <%= h.year %>
+          </td>
+          <td>
+            <%= h.created_at.strftime('%a %d %b %Y, %H:%M') %>
+          </td>
+          <td>
+            <!-- <%= link_to_if can?(:destroy, h), semantic_icon('trash') + "Delete", admin_host_path(h), data: {confirm: "Are you sure?"}, method: :delete %> -->
+            <%= link_to semantic_icon('eye') + 'Public view', show_host_path(h.id, h.liuid) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
