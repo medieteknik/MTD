@@ -2,15 +2,16 @@ en:
   hosts:
     created: 'Thank you for your application! We''ll be in touch.'
     new:
+      closed: 'Application is closed.'
+      double_check: 'Make sure everything is correct, and send it! * hightlights required fields.'
       error: 'Could not save your application'
+      food: 'Food'
+      go: 'Send it!'
+      host: 'Wishes'
+      host_choose: 'Rank what positions you would like the most. We need you to enter three unique alternatives.'
       info: 'We are so happy that you want to be a MTD host. Fill in the form below, and we''ll be in touch as soon as the application closes.'
       title: 'Apply to be a host'
       you: 'About you'
-      host: 'Wishes'
-      host_choose: 'Rank what positions you would like the most. We need you to enter three unique alternatives.'
-      food: 'Food'
-      go: 'Send it!'
-      double_check: 'Make sure everything is correct, and send it! * hightlights required fields.'
 
       allergies:
         label: 'Allergies and special food'

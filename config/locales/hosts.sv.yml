@@ -2,15 +2,16 @@ sv:
   hosts:
     created: 'Tack för din ansökan! Vi hör av oss.'
     new:
+      closed: 'Ansökan är stängd.'
+      double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg kalaset! * markerar obligatoriska fält.'
       error: 'Kunde inte spara ansökan'
+      food: 'Mat'
+      go: 'Skicka'
+      host: 'Önskemål'
+      host_choose: 'Rangordna vilka värdposter du helst vill ha. Du måste fylla i alla tre, och du kan inte välja samma på flera olika.'
       info: 'Vad kul att du vill söka till att bli MTD-värd! Fyll i formuläret nedan, så hör vi av oss när söktiden är över.'
       title: 'Sök värd'
       you: 'Lite om dig'
-      host: 'Önskemål'
-      host_choose: 'Rangordna vilka värdposter du helst vill ha. Du måste fylla i alla tre, och du kan inte välja samma på flera olika.'
-      food: 'Mat'
-      go: 'Skicka'
-      double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg kalaset! * markerar obligatoriska fält.'
 
       allergies:
         label: 'Allergier och specialkost'
@@ -67,16 +68,16 @@ sv:
   activerecord:
     attributes:
       host:
-        liuid: 'LiU-ID'
-        name: Namn
-        member: Sektionsmedlemskap
-        phone: Telefonnummer
-        year: Årskurs
-        size: Tröjstorlek
-        first: Förstahandsval
-        second: Andrahandsval
-        third: Tredjehandsval
-        reason: '"Varför vill du bli värd?"'
         allergies: Allergier och specialkost
         banquet: Bankett
+        first: Förstahandsval
+        liuid: 'LiU-ID'
+        member: Sektionsmedlemskap
+        name: Namn
+        phone: Telefonnummer
         other: Övrigt
+        reason: '"Varför vill du bli värd?"'
+        size: Tröjstorlek
+        second: Andrahandsval
+        third: Tredjehandsval
+        year: Årskurs
