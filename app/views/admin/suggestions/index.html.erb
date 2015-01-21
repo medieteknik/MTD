@@ -31,7 +31,7 @@
             <%= s.id %>
           </td>
           <td>
-            <%= s.content %>
+            <%= GitHub::Markdown.render_gfm(s.content).html_safe %>
           </td>
           <td>
             <%= s.email if !s.email.blank?%>
