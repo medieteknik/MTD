@@ -37,12 +37,9 @@
           </div>
           <div class="col-sm-4">
             <div class="form-group">
-              <%= f.label :member, t('.member.label') + " *", class: 'block' %>
-              <label class="radio-inline">
-                <%= radio_button 'host', 'member', '1', required: true %> <%= t('yes') %>
-              </label>
-              <label class="radio-inline">
-                <%= radio_button 'host', 'member', '0', required: true %> <%= t('no') %>
+              <%= f.label :member, t('.member.label'), class: 'block' %>
+              <label class="checkbox-inline">
+                <%= f.check_box :member %> <%= t('yes') %>
               </label>
             </div>
           </div>
@@ -110,12 +107,9 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <%= f.label :banquet, t('.banquet.label') + " *", class: 'block' %>
-              <label class="radio-inline">
-                <%= radio_button 'host', 'banquet', '1', required: true %> <%= t('yes') %>
-              </label>
-              <label class="radio-inline">
-                <%= radio_button 'host', 'banquet', '0', required: true %> <%= t('no') %>
+              <%= f.label :banquet, t('.banquet.label'), class: 'block' %>
+              <label class="checkbox-inline">
+                <%= f.check_box :banquet %> <%= t('yes') %>
               </label>
             </div>
           </div>
