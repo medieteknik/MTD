@@ -1,5 +1,5 @@
 class Admin::SuggestionsController < Admin::AdminController
-  add_breadcrumb 'Suggestions', :admin_users_path
+  add_breadcrumb 'Suggestions', :admin_suggestions_path
 
   before_action :authenticate_user!
   load_and_authorize_resource

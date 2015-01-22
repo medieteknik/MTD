@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :hosts
     resources :news, except: [:show]
     resources :suggestions, except: [:show, :create, :new, :edit]
+    resources :studentexpos, only: [:index]
   end
 
   localized do

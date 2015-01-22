@@ -22,6 +22,11 @@
       <%= semantic_icon('child') %> Hosts
     </a>
   <% end %>
+  <% if can? :read, Studentexpo %>
+    <a href="<%= admin_studentexpos_path %>" class="item <%= 'active' if controller_name == 'hosts' %>">
+      <%= semantic_icon('desktop') %> Student Expo
+    </a>
+  <% end %>
   <a href="<%= root_path %>" class="item">
     <%= semantic_icon 'world' %>
     Public page

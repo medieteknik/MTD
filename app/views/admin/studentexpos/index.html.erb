@@ -1,0 +1,67 @@
+<%= render 'common' %>
+<div class="container">
+<h2>
+  All applications
+</h2>
+
+<table class="ui table">
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        Project name
+      </th>
+      <th>
+        Contact name
+      </th>
+      <th>
+        Contact LiU-ID
+      </th>
+      <th>
+        Members
+      </th>
+      <th>
+        Course
+      </th>
+      <th>
+        Created at
+      </th>
+      <th>
+        &nbsp;
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @studentexpos.each do |s| %>
+      <tr>
+        <td>
+          <%= s.id %>
+        </td>
+        <td>
+          <%= s.title %>
+        </td>
+        <td>
+          <%= s.name %>
+        </td>
+        <td>
+          <%= s.liuid %>
+        </td>
+        <td>
+          <%= s.members %>
+        </td>
+        <td>
+          <%= s.course %>
+        </td>
+        <td>
+          <%= s.created_at.strftime('%a %d %b %Y, %H:%M') %>
+        </td>
+        <td>
+          <%= link_to semantic_icon('eye') + 'Public view', show_studentexpo_path(s.id, s.liuid) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
