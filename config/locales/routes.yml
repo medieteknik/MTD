@@ -12,6 +12,7 @@ sv:
     page: sida
     previous-years: 'tidigare-ar'
     sponsorship: sponsor
+    studentexpo: studentexpo
     suggestions: tips
     gold: guld
 
@@ -39,6 +40,7 @@ en:
     page: page
     previous-years: 'previous-years'
     sponsorship: sponsorship
+    studentexpo: studentexpo
     suggestions: suggestions
     user: user
     gold: gold
