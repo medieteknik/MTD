@@ -21,8 +21,7 @@ class Ability
         u.try(:user) == user
       end
       can :read, News
-      can [:create, :read], Suggestion
-      can [:create, :read], Host
+      can [:create, :read], [Suggestion, Host, Studentexpo]
     end
   end
 end
