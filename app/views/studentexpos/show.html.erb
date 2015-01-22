@@ -1,0 +1,47 @@
+<% title "– " + t('.title') %>
+<section class="container limit-width">
+  <div class="info">
+    <%= content_tag :h1, t('.title') %>
+    <%= content_tag :p, t('.info'), class: 'lead' %>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-info" %>
+    <% end %>
+  </div>
+
+  <div class="info">
+    <%= content_tag :h3, t('.project') %>
+    <div class="row">
+      <div class="col-sm-6">
+        <%= content_tag :h5, t('.proj_title') %>
+        <%= @studentexpo.title %>
+      </div>
+      <div class="col-sm-6">
+        <%= content_tag :h5, t('.course') %>
+        <%= @studentexpo.course %>
+      </div>
+    </div>
+    <%= content_tag :h5, t('.description') %>
+    <%= content_tag :p, @studentexpo.description %>
+    <%= content_tag :h5, t('.members') %>
+    <%= content_tag :p, @studentexpo.members %>
+  </div>
+
+  <div class="info">
+    <%= content_tag :h3, t('.you') %>
+    <div class="row">
+      <div class="col-sm-4">
+        <%= content_tag :h5, t('.name') %>
+        <%= @studentexpo.name %>
+      </div>
+      <div class="col-sm-4">
+        <%= content_tag :h5, t('.liuid') %>
+        <%= @studentexpo.liuid %>
+      </div>
+      <div class="col-sm-4">
+        <%= content_tag :h5, t('.need_computer') %>
+        <%= @studentexpo.need_computer ? t('yes') : t('no') %>
+      </div>
+    </div>
+  </div>
+
+</section>

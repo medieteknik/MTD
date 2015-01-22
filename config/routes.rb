@@ -17,6 +17,12 @@ Rails.application.routes.draw do
 
     resources :news
     resources :suggestions, only: [:new, :create, :show]
+    resources :studentexpos, only: [:new, :create], path: 'studentexpo', path_names: { new: '' }
+    get '/studentexpo/:id/:liuid' => 'studentexpos#show', as: :show_studentexpo
+
+    get '/host' => 'static_pages#show', :page => 'host', as: :host
+    resources :hosts, only: [:new, :create], path: 'host', path_names: { new: 'apply' }
+    get '/host/:id/:liuid' => 'hosts#show', as: :show_host
 
     get '/' => 'static_pages#home', :as => :home
 
@@ -26,10 +32,6 @@ Rails.application.routes.draw do
     get '/sponsorship/compare/bronze' => 'static_pages#show', :page => 'sponsor/bronze', as: :sponsorship_bronze
     get '/sponsorship/compare/silver' => 'static_pages#show', :page => 'sponsor/silver', as: :sponsorship_silver
     get '/sponsorship/compare/gold' => 'static_pages#show', :page => 'sponsor/gold', as: :sponsorship_gold
-
-    get '/host' => 'static_pages#show', :page => 'host', as: :host
-    resources :hosts, only: [:new, :create], path: 'host', path_names: { new: 'apply' }
-    get '/host/:id/:liuid' => 'hosts#show', as: :show_host
 
     get '/about' => 'static_pages#show', :page => 'about/about'
     get '/about/contact' => 'static_pages#show', :page => 'about/contact'
