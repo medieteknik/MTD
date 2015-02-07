@@ -1,0 +1,1 @@
+@mtdApp = angular.module 'mtdApp', []

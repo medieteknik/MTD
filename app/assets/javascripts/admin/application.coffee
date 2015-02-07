@@ -8,7 +8,11 @@
 #= require nprogress
 #= require nprogress-turbolinks
 #= require semantic-ui
+#= require angular
+#= require websocket_rails/main
 #= require turbolinks
+#= require ../admin/angular/main
+#= require_tree ../admin
 
 $(document).ready ->
   $('.ui.accordion').accordion()

@@ -1,74 +1,121 @@
 <%= render 'common' %>
 
-<div class="container">
+<div class="container" ng-app="mtdApp">
+  <div ng-controller="HostsCtrl">
   <h2>All hosts</h2>
-  <p>Currently only available as a list view.</p>
+    <p>
+      <button class="ui compact labeled icon button" ng-click="view = 'cards'">
+        <i class="user icon"></i>
+        Card view
+      </button>
+      <button class="ui compact labeled icon button" ng-click="view = 'table'">
+        <i class="table icon"></i>
+        Table view
+      </button>
+    </p>
 
-  <table class="ui table">
-    <thead>
-      <tr>
-        <th>
-          #
-        </th>
-        <th>
-          Name
-        </th>
-        <th>
-          LiU-ID
-        </th>
-        <th>
-          First
-        </th>
-        <th>
-          Second
-        </th>
-        <th>
-          Third
-        </th>
-        <th>
-          Year
-        </th>
-        <th>
-          Created at
-        </th>
-        <th>
-          &nbsp;
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @hosts.each do |h| %>
+    <p ng-if="message.length > 0">
+      {{message}}
+    </p>
+
+    <table class="ui sortable table" ng-if="view == 'table'">
+      <thead>
         <tr>
+          <th ng-click="predicate = 'id'; reverse = !reverse;" ng-class="{sorted: predicate == 'id', ascending: predicate == 'id' && !reverse, descending: predicate == 'id' && reverse}">
+            #
+          </th>
+          <th ng-click="predicate = 'name'; reverse = !reverse;" ng-class="{sorted: predicate == 'name', ascending: predicate == 'name' && !reverse, descending: predicate == 'name' && reverse}">
+            Name
+          </th>
+          <th ng-click="predicate = 'liuid'; reverse = !reverse;" ng-class="{sorted: predicate == 'liuid', ascending: predicate == 'liuid' && !reverse, descending: predicate == 'liuid' && reverse}">
+            LiU-ID
+          </th>
+          <th ng-click="predicate = 'first'; reverse = !reverse;" ng-class="{sorted: predicate == 'first', ascending: predicate == 'first' && !reverse, descending: predicate == 'first' && reverse}">
+            First
+          </th>
+          <th ng-click="predicate = 'second'; reverse = !reverse;" ng-class="{sorted: predicate == 'second', ascending: predicate == 'second' && !reverse, descending: predicate == 'second' && reverse}">
+            Second
+          </th>
+          <th ng-click="predicate = 'third'; reverse = !reverse;" ng-class="{sorted: predicate == 'third', ascending: predicate == 'third' && !reverse, descending: predicate == 'third' && reverse}">
+            Third
+          </th>
+          <th ng-click="predicate = 'year'; reverse = !reverse;" ng-class="{sorted: predicate == 'year', ascending: predicate == 'year' && !reverse, descending: predicate == 'year' && reverse}">
+            Year
+          </th>
+          <th ng-click="predicate = 'id'; reverse = !reverse;" ng-class="{sorted: predicate == 'id', ascending: predicate == 'id' && !reverse, descending: predicate == 'id' && reverse}">
+            Created at
+          </th>
+          <th>
+            &nbsp;
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="host in hosts | orderBy:predicate:reverse">
           <td>
-            <%= h.id %>
+            {{host.id}}
           </td>
           <td>
-            <%= h.name %>
+            {{host.name}}
           </td>
           <td>
-            <%= h.liuid %>
+            {{host.liuid}}
           </td>
           <td>
-            <%= HostPosition.find(h.first).position %>
+            {{host.first}}
           </td>
           <td>
-            <%= HostPosition.find(h.second).position %>
+            {{host.second}}
           </td>
           <td>
-            <%= HostPosition.find(h.third).position %>
+            {{host.third}}
           </td>
           <td>
-            <%= h.year %>
+            {{host.year}}
           </td>
           <td>
-            <%= h.created_at.strftime('%a %d %b %Y, %H:%M') %>
+            {{host.created_at | date:'EEE dd MMM yyyy, HH:mm'}}
           </td>
           <td>
-            <!-- <%= link_to_if can?(:destroy, h), semantic_icon('trash') + "Delete", admin_host_path(h), data: {confirm: "Are you sure?"}, method: :delete %> -->
-            <%= link_to semantic_icon('eye') + 'Public view', show_host_path(h.id, h.liuid) %>
+            <%= link_to semantic_icon('eye') + 'Public view', '{{host.public_url}}' %>
           </td>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+
+    <div class="ui four stackable cards" ng-if="view == 'cards'">
+      <div class="ui card" ng-repeat="host in hosts | orderBy:'id'">
+        <div class="content">
+          <div class="header">
+            {{host.name}}, {{host.liuid}}
+          </div>
+          <div class="meta">
+            Year: {{host.year}}, Phone: <a href="tel:{{host.phone}}">{{host.phone}}</a>
+          </div>
+          <div class="description">
+            <p>
+              <strong>Reason</strong><br>
+              {{host.reason}}
+            </p>
+            <p ng-if="host.other.length > 0">
+              <strong>Other</strong><br>
+              {{host.other}}
+            </p>
+            <p>
+              <strong>Positions</strong><br>
+              1. {{host.first}}<br>
+              2. {{host.second}}<br>
+              3. {{host.third}}<br>
+            </p>
+          </div>
+        </div>
+        <div class="extra content">
+          Assign position:
+          <select ng-model="host.position" ng-options="p.id as p.position for p in positions" ng-change="updateHost(host.id, host.position)">
+            <option value="">--Select Option--</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

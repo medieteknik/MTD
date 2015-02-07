@@ -8,4 +8,8 @@ class Admin::HostsController < Admin::AdminController
   def index
     @hosts = Host.all
   end
+
+  def positions
+    @positions = HostPosition.order(:id).all
+  end
 end

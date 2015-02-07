@@ -15,6 +15,9 @@ gem 'paper_trail', '~> 3.0.6'
 # pagination!
 gem 'will_paginate', '~> 3.0.6'
 
+# websockets!
+gem 'websocket-rails'
+
 # handle secrets nicely
 gem 'figaro'
 
@@ -52,7 +55,7 @@ gem 'jquery-turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # angular es nice
-gem 'angularjs-rails', '~> 1.2.25'
+gem 'angularjs-rails', '~> 1.3.10'
 
 # user handeling with devise
 gem 'devise', '~> 3.4.1'

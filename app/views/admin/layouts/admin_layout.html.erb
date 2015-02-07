@@ -30,6 +30,10 @@
       ga('require', 'displayfeatures');
     </script>
   <% end %>
+
+  <script type="text/javascript">
+    WEBSOCKET_URL = '<%= request.host_with_port + websocket_path %>';
+  </script>
 </head>
 <body class="<%= controller.controller_name %> <%= yield(:body_class) %>">
 <% if Rails.env.production? %>
