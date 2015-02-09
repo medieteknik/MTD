@@ -32,7 +32,7 @@
   <% end %>
 
   <script type="text/javascript">
-    WEBSOCKET_URL = '<%= request.host_with_port + websocket_path %>';
+    WEBSOCKET_URL = '<%= request.host_with_port + '/websocket' %>';
   </script>
 </head>
 <body class="<%= controller.controller_name %> <%= yield(:body_class) %>">

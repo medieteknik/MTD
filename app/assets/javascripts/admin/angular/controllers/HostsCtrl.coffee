@@ -30,10 +30,6 @@
         $scope.message = 'Could not load host positions. Please contact webmaster.'
       )
 
-  # connect socket
-  dispatcher.on_open = (data) ->
-    console.log 'Connection has been established: ', data
-
   # recieve update event
   dispatcher.bind 'update_hosts', (data) ->
     console.log 'Updating hosts...', data

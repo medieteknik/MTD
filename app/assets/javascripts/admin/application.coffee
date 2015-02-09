@@ -11,7 +11,7 @@
 #= require angular
 #= require websocket_rails/main
 #= require turbolinks
-#= require ../admin/angular/main
+#= require ../admin/main
 #= require_tree ../admin
 
 $(document).ready ->

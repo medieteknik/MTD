@@ -2,7 +2,7 @@
 
 <div class="container" ng-app="mtdApp">
   <div ng-controller="HostsCtrl">
-  <h2>All hosts</h2>
+  <h2>All hosts ({{hosts.length}} applications)</h2>
     <p>
       <button class="ui compact labeled icon button" ng-click="view = 'cards'">
         <i class="user icon"></i>
@@ -14,9 +14,132 @@
       </button>
     </p>
 
+    <div class="ui styled fluid accordion">
+      <div class="title">
+        <i class="dropdown icon"></i>
+        Filter
+      </div>
+      <div class="content ui form">
+        <div class="four fields">
+          <div class="field">
+            <label>
+              Name
+            </label>
+            <input type="text" ng-model="search.name" placeholder="Name...">
+          </div>
+          <div class="field">
+            <label>
+              LiU-ID
+            </label>
+            <input type="text" ng-model="search.liuid" placeholder="abcd123...">
+          </div>
+          <div class="field">
+            <label>
+              Telephone
+            </label>
+            <input type="tel" ng-model="search.phone" placeholder="07...">
+          </div>
+          <div class="field">
+            <label>
+              Year
+            </label>
+            <select ng-model="search.year" class="ui">
+              <option value="">--Select Option--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="five fields">
+          <div class="field">
+            <label>First</label>
+            <select ng-model="search.first" ng-options="p.id as p.position for p in positions">
+              <option value="">--Select Option--</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Second</label>
+            <select ng-model="search.second" ng-options="p.id as p.position for p in positions">
+              <option value="">--Select Option--</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Third</label>
+            <select ng-model="search.third" ng-options="p.id as p.position for p in positions">
+              <option value="">--Select Option--</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Banquet</label>
+            <select ng-model="search.banquet" class="ui">
+              <option value="">both</option>
+              <option value="true">yes</option>
+              <option value="false">no</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Member</label>
+            <select ng-model="search.member" class="ui">
+              <option value="">both</option>
+              <option value="true">yes</option>
+              <option value="false">no</option>
+            </select>
+          </div>
+        </div>
+        <button class="ui button" ng-click="search = {}">
+          Reset
+        </button>
+      </div>
+    </div>
+
     <p ng-if="message.length > 0">
       {{message}}
     </p>
+
+    <div class="ui four stackable cards" ng-if="view == 'cards'">
+      <div class="ui card" ng-repeat="host in hosts | orderBy:'id' | filter:search">
+        <div class="content">
+          <div class="header">
+            <i class="icon checkmark" ng-if="host.position"></i>
+            <a href="{{host.public_url}}">{{host.name}}, {{host.liuid}}</a>
+          </div>
+          <div class="meta">
+            Year: {{host.year}}, <a href="tel:{{host.phone}}"><%= semantic_icon 'call' %>{{host.phone}}</a>, {{host.banquet ? 'Banquet' : 'No banquet'}}, {{host.member ? 'Member' : 'Not a member'}}
+          </div>
+          <div class="description">
+            <p>
+              <strong>Reason</strong><br>
+              {{host.reason}}
+            </p>
+            <p ng-if="host.other">
+              <strong>Other</strong><br>
+              {{host.other}}
+            </p>
+            <p ng-if="host.allergies">
+              <strong>Allergies</strong><br>
+              {{host.allergies}}
+            </p>
+          </div>
+        </div>
+        <div class="extra content">
+          <p>
+            <strong>Positions</strong><br>
+            1. {{host.first_text}}<br>
+            2. {{host.second_text}}<br>
+            3. {{host.third_text}}<br>
+          </p>
+          <p>
+            Assign position:
+            <select ng-model="host.position" ng-options="p.id as p.position for p in positions" ng-change="updateHost(host.id, host.position)">
+              <option value="">--Select Option--</option>
+            </select>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <table class="ui sortable table" ng-if="view == 'table'">
       <thead>
@@ -51,7 +174,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="host in hosts | orderBy:predicate:reverse">
+        <tr ng-repeat="host in hosts | orderBy:predicate:reverse | filter:search">
           <td>
             {{host.id}}
           </td>
@@ -62,13 +185,13 @@
             {{host.liuid}}
           </td>
           <td>
-            {{host.first}}
+            {{host.first_text}}
           </td>
           <td>
-            {{host.second}}
+            {{host.second_text}}
           </td>
           <td>
-            {{host.third}}
+            {{host.third_text}}
           </td>
           <td>
             {{host.year}}
@@ -82,40 +205,5 @@
         </tr>
       </tbody>
     </table>
-
-    <div class="ui four stackable cards" ng-if="view == 'cards'">
-      <div class="ui card" ng-repeat="host in hosts | orderBy:'id'">
-        <div class="content">
-          <div class="header">
-            {{host.name}}, {{host.liuid}}
-          </div>
-          <div class="meta">
-            Year: {{host.year}}, Phone: <a href="tel:{{host.phone}}">{{host.phone}}</a>
-          </div>
-          <div class="description">
-            <p>
-              <strong>Reason</strong><br>
-              {{host.reason}}
-            </p>
-            <p ng-if="host.other.length > 0">
-              <strong>Other</strong><br>
-              {{host.other}}
-            </p>
-            <p>
-              <strong>Positions</strong><br>
-              1. {{host.first}}<br>
-              2. {{host.second}}<br>
-              3. {{host.third}}<br>
-            </p>
-          </div>
-        </div>
-        <div class="extra content">
-          Assign position:
-          <select ng-model="host.position" ng-options="p.id as p.position for p in positions" ng-change="updateHost(host.id, host.position)">
-            <option value="">--Select Option--</option>
-          </select>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
