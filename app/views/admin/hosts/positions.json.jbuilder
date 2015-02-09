@@ -1,3 +1,3 @@
 json.array!(@positions) do |position|
-  json.extract! position, :id, :position
+  json.extract! position, :id, :position, :need
 end

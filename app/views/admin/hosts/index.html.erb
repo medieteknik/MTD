@@ -95,6 +95,38 @@
       </div>
     </div>
 
+    <div class="ui styled fluid accordion">
+      <div class="title active">
+        <i class="dropdown icon"></i>
+        Need
+      </div>
+      <div class="content active">
+        <div class="ui four stackable cards">
+          <div class="ui card" ng-repeat="position in positions">
+            <div class="content">
+              <div class="header">
+                {{position.position}}
+              </div>
+              <div class="description">
+                <div class="ui green indicating progress" data-value="1" data-total="{{position.need}}">
+                  <div class="bar">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="label">{{position.total}} of {{position.need}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui input">
+                <label>Edit need</label>
+                <input type="number" ng-model="position.need" ng-change="updateNeed(position.id, position.need)" min="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <p ng-if="message.length > 0">
       {{message}}
     </p>

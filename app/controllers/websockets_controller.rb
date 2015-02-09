@@ -13,4 +13,19 @@ class WebsocketsController < WebsocketRails::BaseController
       end
     end
   end
+
+  def update_need
+    # there could probably be a nice else clause here to
+    if can?(:update, HostPosition)
+      # update Hosts
+      position = HostPosition.find(message[:id])
+      p 'updating need!'
+      if position.update(need: message[:need])
+        broadcast_message 'update_need', {:id => position.id, :need => position.need}
+      else
+        p 'failed need update attempt'
+        p message
+      end
+    end
+  end
 end

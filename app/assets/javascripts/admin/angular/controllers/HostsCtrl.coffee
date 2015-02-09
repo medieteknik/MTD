@@ -40,10 +40,23 @@
         $scope.hosts[key].position = data.position
         ) if data.id is host.id
 
+  dispatcher.bind 'update_need', (data) ->
+    console.log 'Updating need...', data
+    # find correct host
+    angular.forEach $scope.positions, (position, key) ->
+      # make sure each client's scope is updated as it should
+      $scope.$apply(->
+        $scope.positions[key].need = data.need
+        ) if data.id is position.id
+
   # update host
   $scope.updateHost = (id, position) ->
     console.log 'Updating host: ', id, position
     dispatcher.trigger 'update_hosts', {id: id, position: position}
+
+  $scope.updateNeed = (id, need) ->
+    console.log 'Updating need: ', id, need
+    dispatcher.trigger 'update_need', {id: id, need: need}
 
   return
 ]

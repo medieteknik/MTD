@@ -7,4 +7,5 @@ WebsocketRails::EventMap.describe do
   #   subscribe :client_connected, :to => Controller, :with_method => :method_name
 
   subscribe :update_hosts, :to => WebsocketsController, :with_method => :update_hosts
+  subscribe :update_need, :to => WebsocketsController, :with_method => :update_need
 end
