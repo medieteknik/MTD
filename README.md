@@ -4,7 +4,20 @@ English: The Media Technology Days 2015
 
 ## Setup
 
-Install [Ruby](https://www.ruby-lang.org/en/), [Rails](http://rubyonrails.org/) and [PostgreSQL](http://www.postgresql.org/). If you're on a Mac, [Heroku's *Postgres.app*](http://postgresapp.com/) is nice.
+Install [Ruby](https://www.ruby-lang.org/en/), [Rails](http://rubyonrails.org/), [Foreman](https://github.com/ddollar/foreman) and [PostgreSQL](http://www.postgresql.org/). If you're on a Mac, [Heroku's *Postgres.app*](http://postgresapp.com/) is nice.
+
+### Running
+
+To start the app, run `foreman start` in your terminal. This does what the [`Procfile`](Procfile) tells it to do.
+
+If it is the first time you're running this app, you'll probably want to run all these commands:
+
+```
+bundle install
+rake db:migrate
+rake db:seed
+foreman start -p 3000
+```
 
 ### PostgreSQL setup
 

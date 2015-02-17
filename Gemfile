@@ -87,8 +87,8 @@ group :development do
 end
 
 ## Heroku/deployment stuff
-# Use unicorn as the app server
-gem 'unicorn'
+# Use puma as the app server
+gem 'puma'
 # heroku wants this to be here
 gem 'rails_12factor', group: :production
 # gzip them assets
