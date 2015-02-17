@@ -172,6 +172,7 @@
           <div class="header">
             <i class="icon checkmark" ng-if="host.position"></i>
             <a href="{{host.public_url}}">{{host.name}}, {{host.liuid}}</a>
+            <%= link_to_if can?(:delete, Host), semantic_icon('trash'), '{{host.admin_url}}', class: 'ui right floated mini icon button', data: {confirm: "Are you sure? This CAN'T BE UNDONE."}, method: :delete, title: 'Remove host application.' %>
           </div>
           <div class="meta">
             Year: {{host.year}}, <a href="tel:{{host.phone}}"><%= semantic_icon 'call' %>{{host.phone}}</a>, {{host.banquet ? 'Banquet' : 'No banquet'}}, {{host.member ? 'Member' : 'Not a member'}}
