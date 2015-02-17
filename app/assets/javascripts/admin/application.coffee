@@ -18,6 +18,7 @@ $(document).ready ->
   $('.ui.accordion').accordion()
   $('.ui.checkbox').checkbox()
   $('select.dropdown').dropdown()
+  $('.ui.progress').progress()
 
   $('.toggle-menu').click ->
     $('.menu.sidebar').sidebar('toggle')

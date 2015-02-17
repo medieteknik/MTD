@@ -2,17 +2,71 @@
 
 <div class="container" ng-app="mtdApp">
   <div ng-controller="HostsCtrl">
-  <h2>All hosts ({{hosts.length}} applications)</h2>
-    <p>
-      <button class="ui compact labeled icon button" ng-click="view = 'cards'">
-        <i class="user icon"></i>
-        Card view
-      </button>
-      <button class="ui compact labeled icon button" ng-click="view = 'table'">
-        <i class="table icon"></i>
-        Table view
-      </button>
-    </p>
+    <h2>Host positions</h2>
+
+    <div class="ui fluid accordion">
+      <div class="title active">
+        <i class="dropdown icon"></i>
+        Hide / show
+      </div>
+      <div class="content active">
+        <button class="ui blue labeled icon button" ng-class="{active:editNeed}" ng-click="editNeed = !editNeed">
+          <i class="icon radio" ng-class="{selected: editNeed}"></i>
+          {{editNeed ? 'Stop editing need' : 'Edit need'}}
+        </button>
+        <button class="ui green labeled icon button" ng-click="updatePosition()">
+          <i class="icon refresh"></i>
+          Update graphs and numbers
+        </button>
+
+        <div class="ui four stackable cards">
+          <div class="ui card" ng-repeat="position in positions">
+            <div class="content">
+              <div class="header">
+                <i class="icon checkmark" ng-if="position.total >= position.need"></i>
+                {{position.position}}
+                <span class="right floated">
+                  {{position.total}} of {{position.need}}
+                </span>
+              </div>
+              <div class="description">
+                <div class="ui indicating progress" ng-class="{green: (position.total/position.need) >= 1}">
+                  <div class="bar" style="width:{{min(position.total/position.need,1)*100}}%">
+                    <div class="progress"></div>
+                  </div>
+                </div>
+
+                <div class="ui mini horizontal statistic">
+                  <div class="value">
+                    {{position.first}}
+                  </div>
+                  <div class="label">
+                    First hand choice
+                  </div>
+                </div>
+                <div class="ui clearing"></div>
+                <div class="ui mini horizontal statistic">
+                  <div class="value">
+                    {{position.anywhere}}
+                  </div>
+                  <div class="label">
+                    First, second or third hand choice
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="extra content" ng-if="editNeed">
+              <div class="ui input">
+                <label>Edit need</label>
+                <input type="number" ng-model="position.need" ng-change="updateNeed(position.id, position.need)" min="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>All hosts ({{hosts.length}} applications)</h2>
 
     <div class="ui styled fluid accordion">
       <div class="title">
@@ -95,37 +149,18 @@
       </div>
     </div>
 
-    <div class="ui styled fluid accordion">
-      <div class="title active">
-        <i class="dropdown icon"></i>
-        Need
-      </div>
-      <div class="content active">
-        <div class="ui four stackable cards">
-          <div class="ui card" ng-repeat="position in positions">
-            <div class="content">
-              <div class="header">
-                {{position.position}}
-              </div>
-              <div class="description">
-                <div class="ui green indicating progress" data-value="1" data-total="{{position.need}}">
-                  <div class="bar">
-                    <div class="progress"></div>
-                  </div>
-                  <div class="label">{{position.total}} of {{position.need}}</div>
-                </div>
-              </div>
-            </div>
-            <div class="extra content">
-              <div class="ui input">
-                <label>Edit need</label>
-                <input type="number" ng-model="position.need" ng-change="updateNeed(position.id, position.need)" min="0">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="ui hidden divider"></div>
+
+    <p>
+      <button class="ui compact labeled icon button" ng-click="view = 'cards'">
+        <i class="user icon"></i>
+        Card view
+      </button>
+      <button class="ui compact labeled icon button" ng-click="view = 'table'">
+        <i class="table icon"></i>
+        Table view
+      </button>
+    </p>
 
     <p ng-if="message.length > 0">
       {{message}}
