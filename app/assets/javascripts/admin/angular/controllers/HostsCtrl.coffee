@@ -1,6 +1,6 @@
 @mtdApp.controller 'HostsCtrl', ['$scope', '$http', ($scope, $http) ->
   #
-  # When the moon is in the correct position and there's a eagle sitting on top
+  # When the moon is in the correct position and there's an eagle sitting on top
   # of the Kåkenhus tower, this controller should be refactored. It's a mess.
   #
   dispatcher = new WebSocketRails WEBSOCKET_URL
@@ -40,7 +40,6 @@
   # call this function when we need to update the need section of the page
   # it's ugly, but it works
   $scope.updatePosition = ->
-    # $('.ui.progress').progress()
     angular.forEach $scope.positions, (position, key) ->
       res = $.grep $scope.hosts, (host) ->
         console.log(host)

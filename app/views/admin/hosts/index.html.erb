@@ -107,7 +107,13 @@
             </select>
           </div>
         </div>
-        <div class="five fields">
+        <div class="four fields">
+          <div class="field">
+            <label>Given position</label>
+            <select ng-model="search.position" ng-options="p.id as p.position for p in positions">
+              <option value="">--Select Option--</option>
+            </select>
+          </div>
           <div class="field">
             <label>First</label>
             <select ng-model="search.first" ng-options="p.id as p.position for p in positions">
@@ -126,6 +132,8 @@
               <option value="">--Select Option--</option>
             </select>
           </div>
+        </div>
+        <div class="four fields">
           <div class="field">
             <label>Banquet</label>
             <select ng-model="search.banquet" class="ui">
