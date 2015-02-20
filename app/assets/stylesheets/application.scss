@@ -30,6 +30,10 @@ body > #content{
   height: 100%;
 }
 
+body {
+  line-height: 1.6;
+}
+
 #content > :nth-child(2):not(.beamer) {
   padding-top: $header-height;
 }

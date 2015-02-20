@@ -16,5 +16,6 @@
 #= require modernizr
 #= require nprogress
 #= require nprogress-turbolinks
-#= require_tree .
+#= require main
+#= require hosts
 #= require turbolinks
