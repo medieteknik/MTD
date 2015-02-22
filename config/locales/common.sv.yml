@@ -17,6 +17,7 @@ sv:
   menu_host: 'Bli MTD-värd'
   menu_previous: 'Tidigare år'
   menu_sponsor: 'Bli sponsor'
+  menu_studentexpo: 'Student Expo'
   meta_description: 'Medieteknikdagarna 2015 (MTD2015), Arbetsmarknadsdagarna för civilingenjörer i Medieteknik på Linköpings Universitet'
   mt_association: 'Medietekniksektionen'
   "no": 'nej'
@@ -48,3 +49,4 @@ sv:
       host: 'Bli värd'
       previous: 'Tidigare år'
       sponsor: 'Bli sponsor'
+      studentexpo: 'Student Expo'

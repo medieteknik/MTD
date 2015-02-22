@@ -17,6 +17,7 @@ en:
   menu_host: 'Become a MTD-host'
   menu_previous: 'Previous years'
   menu_sponsor: 'Become a Sponsor'
+  menu_studentexpo: 'Student Expo'
   meta_description: 'The Media Technology Days 2015 (MTD2015), career days for msc. students in media tehcnology at Linköping University.'
   mt_association: 'The Media Technology Association'
   "no": 'no'
@@ -48,3 +49,4 @@ en:
       host: 'Host'
       previous: 'Previous years'
       sponsor: 'Become a Sponsor'
+      studentexpo: 'Student Expo'
