@@ -5,88 +5,82 @@
     <%= content_tag :p, t('.info'), class: 'lead' %>
   </div>
 
-  <% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
-    <%= form_for @studentexpo do |f| %>
-      <% if @studentexpo.errors.any? %>
-        <div class="alert alert-warning">
-          <strong>
-            <%= t('.error') %>
-          </strong>
-          <ul>
-          <% @studentexpo.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <div class="info">
-        <%= content_tag :h3, t('.project') %>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label :title, t('.proj_title.label') + " *" %>
-              <%= f.text_field :title, placeholder: t('.proj_title.placeholder'), required: true, autofocus: true %>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <%= f.label :course, t('.course.label') + " *" %>
-              <%= f.text_field :course, placeholder: t('.course.placeholder'), required: true %>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <%= f.label :description, t('.description.label') + " *" %>
-          <%= f.text_area :description, class: 'form-control', rows: 10, placeholder: t('.description.placeholder'), required: true %>
-          <p>
-            <%= t('.description.info') %>
-          </p>
-        </div>
-        <div class="form-group">
-          <%= f.label :members, t('.members.label') + " *" %>
-          <%= f.text_area :members, class: 'form-control', rows: 3, placeholder: t('.members.placeholder'), required: true %>
-        </div>
-      </div>
-
-      <div class="info">
-        <%= content_tag :h3, t('.you') %>
-        <%= content_tag :p, t('.you_info') %>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="form-group">
-              <%= f.label :name, t('.name.label') + " *" %>
-              <%= f.text_field :name, placeholder: t('.name.placeholder'), required: true %>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <%= f.label :liuid, t('.liuid.label') + " *" %>
-              <%= f.text_field :liuid, placeholder: t('.liuid.placeholder'), required: true %>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <%= f.label :need_computer, t('.need_computer.label'), class: 'block' %>
-              <label class="checkbox-inline">
-                <%= f.check_box :need_computer %> <%= t('yes') %>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="info">
-        <%= content_tag :h3, t('.go') %>
-        <%= content_tag :p, t('.double_check') %>
-        <div class="form-group">
-          <%= f.submit t('send'), :disable_with => 'Submiting...' %>
-        </div>
+  <%= form_for @studentexpo do |f| %>
+    <% if @studentexpo.errors.any? %>
+      <div class="alert alert-warning">
+        <strong>
+          <%= t('.error') %>
+        </strong>
+        <ul>
+        <% @studentexpo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
       </div>
     <% end %>
-  <% else %>
-    <div class="info alert alert-info">
-      <%= t('.closed') %>
+
+    <div class="info">
+      <%= content_tag :h3, t('.project') %>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :title, t('.proj_title.label') + " *" %>
+            <%= f.text_field :title, placeholder: t('.proj_title.placeholder'), required: true, autofocus: true %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :course, t('.course.label') + " *" %>
+            <%= f.text_field :course, placeholder: t('.course.placeholder'), required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :description, t('.description.label') + " *" %>
+        <%= f.text_area :description, class: 'form-control', rows: 10, placeholder: t('.description.placeholder'), required: true %>
+        <p>
+          <%= t('.description.info') %>
+        </p>
+      </div>
+      <div class="form-group">
+        <%= f.label :members, t('.members.label') + " *" %>
+        <%= f.text_area :members, class: 'form-control', rows: 3, placeholder: t('.members.placeholder'), required: true %>
+      </div>
+    </div>
+
+    <div class="info">
+      <%= content_tag :h3, t('.you') %>
+      <%= content_tag :p, t('.you_info') %>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <%= f.label :name, t('.name.label') + " *" %>
+            <%= f.text_field :name, placeholder: t('.name.placeholder'), required: true %>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <%= f.label :liuid, t('.liuid.label') + " *" %>
+            <%= f.text_field :liuid, placeholder: t('.liuid.placeholder'), required: true %>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <%= f.label :need_computer, t('.need_computer.label'), class: 'block' %>
+            <label class="checkbox-inline">
+              <%= f.check_box :need_computer %> <%= t('yes') %>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <%= content_tag :h3, t('.go') %>
+      <%= content_tag :p, t('.double_check') %>
+      <div class="form-group">
+        <%= f.submit t('send'), :disable_with => 'Submiting...' %>
+      </div>
     </div>
   <% end %>
 
