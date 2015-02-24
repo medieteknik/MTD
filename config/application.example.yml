@@ -1,5 +1,11 @@
 # Add configuration values here and remove '.example' from the file name.
 
 NEW_RELIC_LICENSE_KEY: #put the new relic license key here
+
 OPEN_HOST_APPLICATIONS: '2000-01-01' # put the date that host applications opens here
 CLOSE_HOST_APPLICATIONS: '2000-01-02'
+
+# amazon s3 info
+AWS_ACCESS_KEY_ID: ''
+AWS_SECRET_ACCESS_KEY: ''
+S3_BUCKET_NAME: ''

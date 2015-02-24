@@ -74,6 +74,9 @@ gem 'github-markdown', '~> 0.6.7'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# amazon sdk
+gem 'aws-sdk', '~> 2.0.28'
+
 ## DEVELOPMENT TOOLS
 group :development do
   # a set of debugging tools for your Rails application
@@ -89,12 +92,14 @@ end
 ## Heroku/deployment stuff
 # Use puma as the app server
 gem 'puma'
-# heroku wants this to be here
-gem 'rails_12factor', group: :production
-# gzip them assets
-gem 'heroku-deflater', group: :production
-# minify dat html
-gem 'htmlcompressor', group: :production
+group :production do
+  # heroku wants this to be here
+  gem 'rails_12factor'
+  # gzip them assets
+  gem 'heroku-deflater'
+  # minify dat html
+  gem 'htmlcompressor'
+end
 
 # use newrelic to measure performance
 gem 'newrelic_rpm'
