@@ -9,3 +9,8 @@ CLOSE_HOST_APPLICATIONS: '2000-01-02'
 AWS_ACCESS_KEY_ID: ''
 AWS_SECRET_ACCESS_KEY: ''
 S3_BUCKET_NAME: ''
+
+# needed for sitemap
+FOG_PROVIDER: 'AWS'
+FOG_DIRECTORY: '' # probably same as aws/s3 settings here
+FOG_REGION: ''

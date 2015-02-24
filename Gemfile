@@ -66,6 +66,7 @@ gem 'cancancan', '~> 1.9'
 gem 'route_translator'
 # setup simple sitemap handeling
 gem 'sitemap_generator'
+gem 'fog'
 # use whenever to schedule sitemap refreshing
 gem 'whenever', :require => false
 # render pages and news with github flavored markdown
