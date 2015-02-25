@@ -26,6 +26,14 @@ sv:
           coordinator: 'Koordinator'
           web: 'Webbansvarig'
 
+        logo:
+          title: 'Logotyp'
+          text: 'Vill du använda vår logotyp? Kul! Här nedan finns den i några olika utföranden.'
+
+          print: 'Logotyp för tryck'
+          web: 'Logotyp för webb'
+          web_high: 'Högupplöst logotyp för webb'
+
         programme:
           title: 'Medieteknikprogrammet på Linköpings Universitet'
 

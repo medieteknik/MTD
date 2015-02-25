@@ -26,6 +26,14 @@ en:
           coordinator: 'Coordinator'
           web: 'Web manager'
 
+        logo:
+          title: 'Logotype'
+          text: 'Do you want to user our logotype? Neat! Here it is in some different file formats:'
+
+          print: 'Logotype for print'
+          web: 'Logotype for web'
+          web_high: 'High resolution logotype'
+
         programme:
           title: 'The media technology programme at Linköping University'
 

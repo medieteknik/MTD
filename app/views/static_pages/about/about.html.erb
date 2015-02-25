@@ -11,7 +11,6 @@
 
   <div class="info limit-width">
     <%= content_tag :h2, t('.programme.title') %>
-
     <%= render 'static_pages/about/program' %>
   </div>
 
@@ -133,6 +132,20 @@
           <%= content_tag :li, link_to(icon('phone') + ' +4673-730 73 56', 'tel:+46737307356') %>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="limit-width">
+      <%= content_tag :h2, t('.logo.title') %>
+      <%= content_tag :p, t('.logo.text') %>
+
+      <ul>
+        <%= content_tag :li, link_to(t('.logo.print') + ' (Illustrator .ai)', asset_url('logos/print.ai')) %>
+        <%= content_tag :li, link_to(t('.logo.print') + ' (Vector .svg)', asset_url('logos/print.svg')) %>
+        <%= content_tag :li, link_to(t('.logo.web') + ' (.png)', asset_url('logos/web.png')) %>
+        <%= content_tag :li, link_to(t('.logo.web_high') + ' (.png)', asset_url('logos/web_high.png')) %>
+      </ul>
     </div>
   </section>
 </div>
