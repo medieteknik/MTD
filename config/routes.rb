@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     get '/sponsorship/compare/gold' => 'static_pages#show', :page => 'sponsor/gold', as: :sponsorship_gold
 
     get '/about' => 'static_pages#show', :page => 'about/about'
+    get '/about/banquet' => 'static_pages#show', :page => 'banquet'
     get '/about/contact' => 'static_pages#show', :page => 'about/contact'
     get '/about/previous-years' => 'static_pages#show', :page => 'about/previous', :as => :about_previous
   end
