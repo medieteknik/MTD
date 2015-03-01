@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     as :user do
       patch 'user/confirmation' => 'users/confirmations#update', :via => :patch, :as => :update_user_confirmation
     end
-    devise_for :users, :controllers => { :registrations => 'users/registrations',
-                                         :confirmations => 'users/confirmations' }
+    devise_for :users, :controllers => {:registrations => 'users/registrations',
+                                        :confirmations => 'users/confirmations'}
 
     resources :news
     resources :suggestions, only: [:new, :create, :show]

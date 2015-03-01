@@ -11,10 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150209215851) do
+ActiveRecord::Schema.define(version: 20150301151523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.string   "sponsor"
+    t.boolean  "first_day"
+    t.boolean  "second_day"
+    t.integer  "first_day_spot"
+    t.integer  "second_day_spot"
+    t.boolean  "published"
+    t.integer  "image_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "companies", ["image_id"], name: "index_companies_on_image_id", using: :btree
+
+  create_table "company_translations", force: :cascade do |t|
+    t.integer  "company_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "description"
+    t.string   "looking_for"
+  end
+
+  add_index "company_translations", ["company_id"], name: "index_company_translations_on_company_id", using: :btree
+  add_index "company_translations", ["locale"], name: "index_company_translations_on_locale", using: :btree
 
   create_table "host_position_translations", force: :cascade do |t|
     t.integer  "host_position_id",             null: false
@@ -52,6 +80,12 @@ ActiveRecord::Schema.define(version: 20150209215851) do
     t.integer  "position",               default: 0
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string   "original_url"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "news", force: :cascade do |t|
     t.string   "status",       limit: 255
     t.datetime "published_at"
@@ -85,6 +119,13 @@ ActiveRecord::Schema.define(version: 20150209215851) do
   create_table "roles_users", id: false, force: :cascade do |t|
     t.integer "role_id"
     t.integer "user_id"
+  end
+
+  create_table "spots", force: :cascade do |t|
+    t.boolean  "first_day"
+    t.boolean  "second_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "studentexpos", force: :cascade do |t|
@@ -142,4 +183,5 @@ ActiveRecord::Schema.define(version: 20150209215851) do
 
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
+  add_foreign_key "companies", "images"
 end
