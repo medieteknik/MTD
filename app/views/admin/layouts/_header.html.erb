@@ -28,6 +28,11 @@
         <%= semantic_icon('desktop') %> Student Expo
       </a>
     <% end %>
+    <% if can? :read, Company %>
+      <a href="<%= admin_companies_path %>" class="item <%= 'active' if controller_name == 'companies' %>">
+        <%= semantic_icon('briefcase') %> Companies
+      </a>
+    <% end %>
     <div class="right menu">
       <div class="item">
         <%= semantic_icon 'user' %>

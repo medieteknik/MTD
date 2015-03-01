@@ -1,0 +1,9 @@
+<% title '– ' + @company.name %>
+<div class="container limit-width">
+  <div class="info">
+    <%= content_tag :h1, @company.name %>
+  </div>
+  <div class="info">
+    <%= GitHub::Markdown.render_gfm(@company.description).html_safe %>
+  </div>
+</div>

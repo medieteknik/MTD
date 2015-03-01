@@ -1,0 +1,107 @@
+<%
+classes = 'ui form'
+classes << ' warning' if @company.errors.any?
+if action_name == 'edit'
+  form_path = admin_company_path(@company)
+  form_method = :patch
+else
+  form_path = admin_companies_path
+  form_method = :post
+end
+%>
+<%= form_for(@company, url: form_path, html: { method: form_method, class: classes }) do |f| %>
+  <% if @company.errors.any? %>
+    <div class="ui warning message">
+      <div class="header">Could not create company!</div>
+      <ul class="list">
+        <% @company.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui stackable grid">
+    <div class="twelve wide column">
+      <div class="segment">
+        <div class="required field">
+          <%= f.label :name, "Company name" %>
+          <div class="ui big input">
+            <%= f.text_field :name, placeholder: 'Name of the company' %>
+          </div>
+        </div>
+        <div class="required field">
+          <%= f.label :slug, "Company slug" %>
+          <%= f.text_field :slug, placeholder: 'URL slug for the company, eg c-awards' %>
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+        <div class="ui stackable three column grid">
+          <div class="column">
+            <div class="ui checkbox">
+              <%= f.check_box :first_day %>
+              <%= f.label :first_day, "Will be here day 1" %>
+            </div>
+            <%= select "company", "first_day_spot", Spot.all {|s| [s.name, s.id]},
+                {prompt: "Select spot day 1"}, class: 'ui dropdown' %>
+          </div>
+          <div class="column">
+            <div class="ui checkbox">
+              <%= f.check_box :second_day %>
+              <%= f.label :second_day, "Will be here day 2" %>
+            </div>
+            <%= select "company", "second_day_spot", Spot.all {|s| [s.name, s.id]},
+                {prompt: "Select spot day 2..."}, class: 'ui dropdown' %>
+          </div>
+          <div class="column">
+            <div class="required field">
+              <label for="">Sponsorship</label>
+              <%= select "company", "sponsor", %w[fair gold silver bronze],
+                {prompt: "Select sponsorship..."}, class: 'ui dropdown' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui stackable two column grid">
+          <div class="column">
+            <div class="required field">
+              <%= f.label :description, '<i class="se flag"></i> Swedish description'.html_safe %>
+              <%= f.text_area :description_sv %>
+            </div>
+            <div class="field">
+              <%= f.label :looking_for_sv, '<i class="se flag"></i> Looking for'.html_safe %>
+              <%= f.text_field :looking_for_sv, placeholder: 'Eg "exjobb, sommarjobb..."' %>
+            </div>
+          </div>
+          <div class="column">
+            <div class="required field">
+              <%= f.label :description, '<i class="gb flag"></i> English description'.html_safe %>
+              <%= f.text_area :description_en %>
+            </div>
+            <div class="field">
+              <%= f.label :looking_for_en, '<i class="gb flag"></i> Looking for'.html_safe %>
+              <%= f.text_field :looking_for_en, placeholder: 'Eg "thesis, summer job..."' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="four wide column">
+      <div class="ui segment">
+        <h4 class="ui dividing header">Save</h4>
+
+        <div class="ui checkbox">
+          <%= f.check_box :published %>
+          <%= f.label :published %>
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+        <%= f.submit "Save", :disable_with => 'Saveing...', class: 'ui primary fluid submit button' %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -20,7 +20,7 @@ class Ability
       can :update, User do |u|
         u.try(:user) == user
       end
-      can :read, News
+      can :read, [News, Company]
       can [:create, :read], [Suggestion, Host, Studentexpo]
     end
   end

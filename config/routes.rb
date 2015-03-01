@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     get '/' => 'pages#dashboard'
     resources :users
     get '/hosts/positions' => 'hosts#positions'
-    resources :hosts
+    resources :hosts, except: [:show]
+    resources :companies, except: [:show]
     resources :news, except: [:show]
     resources :suggestions, except: [:show, :create, :new, :edit]
     resources :studentexpos, only: [:index]
@@ -19,11 +20,16 @@ Rails.application.routes.draw do
 
     resources :news
     resources :suggestions, only: [:new, :create, :show]
-    resources :studentexpos, only: [:new, :create], path: 'studentexpo', path_names: { new: '' }
+    resources :studentexpos, only: [:new, :create], path: 'studentexpo', path_names: {new: ''}
     get '/studentexpo/:id/:liuid' => 'studentexpos#show', as: :show_studentexpo
 
+    # resources :companies, only: [:index, :show]
+    get '/companies' => 'companies#index', as: :companies
+    get '/companies/:slug' => 'companies#show', as: :company
+
+
     get '/host' => 'static_pages#show', :page => 'host', as: :host
-    resources :hosts, only: [:new, :create], path: 'host', path_names: { new: 'apply' }
+    resources :hosts, only: [:new, :create], path: 'host', path_names: {new: 'apply'}
     get '/host/:id/:liuid' => 'hosts#show', as: :show_host
 
     get '/' => 'static_pages#home', :as => :home

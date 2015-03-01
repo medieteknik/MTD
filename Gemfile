@@ -7,8 +7,8 @@ gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # handle internationalization of db
-gem 'globalize', '~> 4.0.2'
-gem 'globalize-versioning', '~> 0.1.0.alpha.1' # so we can use paper_trail!
+gem 'globalize', '~> 5.0.0'
+gem 'globalize-versioning', '~> 0.1.0' # so we can use paper_trail!
 gem 'globalize-accessors' # edit multiple locales at the same time
 # handle news version
 gem 'paper_trail', '~> 3.0.6'
@@ -88,6 +88,8 @@ group :development do
   gem 'spring'
   # Intercept email sending and show email in browser
   gem 'letter_opener'
+  # neat debug tool
+  gem 'byebug'
 end
 
 ## Heroku/deployment stuff

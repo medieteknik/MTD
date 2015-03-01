@@ -1,0 +1,19 @@
+<div class="page-title">
+  <div class="container">
+    <h1 class="ui header">
+      <%= semantic_icon 'briefcase' %>
+      <div class="content">
+        Companies
+        <div class="sub header">
+          Handle the companies visiting MTD.
+        </div>
+      </div>
+    </h1>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "ui message #{key}" %>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <%= render_breadcrumbs %>
+</div>

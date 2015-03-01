@@ -1,0 +1,59 @@
+class Admin::CompaniesController < Admin::AdminController
+  add_breadcrumb 'Companies', :admin_companies_path
+
+  before_action :set_company, only: [:edit, :update, :destroy, :show]
+  before_action :authenticate_user!
+  load_and_authorize_resource
+
+  def index
+    @companies = Company.all
+  end
+
+  def new
+    add_breadcrumb 'New company', :new_admin_company_path
+    @company = Company.new
+  end
+
+  def create
+    @company = Company.new(company_params)
+    if @company.save
+      flash[:notice] = "Successfully created company!"
+      redirect_to edit_admin_company_path @company
+    else
+      add_breadcrumb 'New company', :new_admin_company_path
+      render action: 'new'
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @company.update_attributes(company_params)
+      flash[:notice] = "Updated company."
+      redirect_to edit_admin_company_path @company
+    else
+      render action: 'edit'
+    end
+  end
+
+  def destroy
+    if @company.destroy
+      flash[:notice] = "Deleted company."
+    else
+      flash[:notice] = "Could not delete company."
+    end
+    redirect_to admin_companies_path
+  end
+
+  private
+    def set_company
+      @company = Company.find(params[:id])
+      add_breadcrumb @company.name, edit_admin_company_path(@company)
+    end
+
+    def company_params
+      permitted = Company.globalize_attribute_names + [:name, :slug, :published, :sponsor, :first_day, :second_day, :first_day_spot, :second_day_spot, :image]
+      params.require("company").permit(permitted)
+    end
+end

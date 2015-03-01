@@ -1,0 +1,65 @@
+<%= render 'common' %>
+<div class="container">
+  <h2>
+    All companies
+  </h2>
+  <%= link_to_if can?(:create, Company), semantic_icon('plus') + 'Add new', new_admin_company_path, class: 'ui green labeled icon button' %>
+
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Slug
+        </th>
+        <th>
+          Days
+        </th>
+        <th>
+          Sponsorship
+        </th>
+        <th>
+          Published
+        </th>
+        <th>
+          &nbsp;
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @companies.each do |c| %>
+        <tr>
+          <td>
+            <%= c.id %>
+          </td>
+          <td>
+            <%= c.name %>
+          </td>
+          <td>
+            <%= c.slug %>
+          </td>
+          <td>
+            <%= 'first' if c.first_day %>
+            <%= 'second' if c.second_day %>
+          </td>
+          <td>
+            <%= c.sponsor %>
+          </td>
+          <td <%= 'class=positive' if c.published %>>
+            <%= c.published ? 'yes' : 'no' %>
+          </td>
+          <td>
+            <%= link_to_if can?(:update, c), semantic_icon('write') + "Edit", edit_admin_company_path(c) %>
+            <%= link_to_if can?(:destroy, c), semantic_icon('trash') + "Delete", admin_company_path(c), data: {confirm: "Are you sure?"}, method: :delete %>
+            <%= link_to semantic_icon('eye') + 'Show', company_path(c.slug) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
