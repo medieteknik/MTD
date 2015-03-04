@@ -26,6 +26,14 @@ sv:
           coordinator: 'Koordinator'
           web: 'Webbansvarig'
 
+        logo:
+          title: 'Logotyp'
+          text: 'Vill du använda vår logotyp? Kul! Här nedan finns den i några olika utföranden.'
+
+          print: 'Logotyp för tryck'
+          web: 'Logotyp för webb'
+          web_high: 'Högupplöst logotyp för webb'
+
         programme:
           title: 'Medieteknikprogrammet på Linköpings Universitet'
 
@@ -33,6 +41,7 @@ sv:
       contact:
         title: 'Kontakta oss'
         lead: 'Vi gillar att snacka! Så enkelt är det. Om du har minsta lilla fråga eller fundering, tveka inte alls att höra av dig till oss.'
+        sponsor: 'Här kan du läsa om hur du blir MTD-sponsor i framtiden.'
 
         business:
           email: 'foretag@medieteknikdagarna.se'
@@ -172,7 +181,7 @@ sv:
 
       # route: sv/sponsor
       sponsor:
-        title: 'Bli sponsor'
+        title: 'Bli sponsor för MTD2015'
         lead: 'Vill du komma i kontakt med studenter från en av Sveriges bästa utbildningar? Bli en av våra sponsorer!'
         second: 'Som en utav våra sponsorer ser du till att göra MTD möjligt, och ditt företag hamnar i en unik och nära position till studenterna. Vi har här satt ihop ett antal attraktiva paket att välja från.'
 

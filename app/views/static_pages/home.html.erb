@@ -33,7 +33,7 @@
         <div class="info">
           <%= content_tag :h2, link_to(n.title, n) %>
           <p>
-            <%= t('published').titleize %> <%= time_ago_in_words n.published_at %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
+            <%= l(n.published_at, format: '%e %B, %Y') %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
             <%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
           </p>
           <p>

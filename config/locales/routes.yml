@@ -2,6 +2,7 @@ sv:
   routes:
     about: om
     apply: sok
+    banquet: bankett
     companies: foretag
     compare: jamfor
     bronze: brons
@@ -31,8 +32,9 @@ en:
   routes:
     about: about
     apply: apply
-    compare: compare
+    banquet: banquet
     companies: foretag
+    compare: compare
     bronze: bronze
     contact: contact
     gold: gold

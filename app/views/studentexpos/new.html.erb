@@ -3,6 +3,7 @@
   <div class="info">
     <%= content_tag :h1, t('.title') %>
     <%= content_tag :p, t('.info'), class: 'lead' %>
+    <%= render 'info' %>
   </div>
 
   <%= form_for @studentexpo do |f| %>
