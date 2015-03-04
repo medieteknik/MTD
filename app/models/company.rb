@@ -1,6 +1,7 @@
 class Company < ActiveRecord::Base
   belongs_to :image
   has_and_belongs_to_many :users
+  has_many :links
 
   translates :description, :looking_for, :fallbacks_for_empty_translations => true, :versioning => :paper_trail
   globalize_accessors
