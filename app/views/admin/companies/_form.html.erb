@@ -23,68 +23,68 @@ end
 
   <div class="ui stackable grid">
     <div class="twelve wide column">
-      <div class="segment">
-        <div class="required field">
-          <%= f.label :name, "Company name" %>
-          <div class="ui big input">
-            <%= f.text_field :name, placeholder: 'Name of the company' %>
-          </div>
+      <h4 class="ui dividing header">Basic information</h4>
+      <div class="required field">
+        <%= f.label :name, "Company name" %>
+        <div class="ui big input">
+          <%= f.text_field :name, placeholder: 'Name of the company' %>
         </div>
+      </div>
+      <div class="two fields">
         <div class="required field">
           <%= f.label :slug, "Company slug" %>
           <%= f.text_field :slug, placeholder: 'URL slug for the company, eg c-awards' %>
         </div>
+        <div class="required field">
+          <label for="">Sponsorship</label>
+          <%= select "company", "sponsor", %w[fair gold silver bronze],
+            {prompt: "Select sponsorship..."}, class: 'ui dropdown' %>
+        </div>
+      </div>
 
-        <div class="ui hidden divider"></div>
 
-        <div class="ui stackable three column grid">
-          <div class="column">
-            <div class="ui checkbox">
-              <%= f.check_box :first_day %>
-              <%= f.label :first_day, "Will be here day 1" %>
-            </div>
-            <%= select "company", "first_day_spot", Spot.all {|s| [s.name, s.id]},
-                {prompt: "Select spot day 1"}, class: 'ui dropdown' %>
+      <h4 class="ui dividing header">Fair information</h4>
+
+      <div class="ui stackable two column grid">
+        <div class="column">
+          <div class="ui checkbox">
+            <%= f.check_box :first_day %>
+            <%= f.label :first_day, "Will be here day 1" %>
           </div>
-          <div class="column">
-            <div class="ui checkbox">
-              <%= f.check_box :second_day %>
-              <%= f.label :second_day, "Will be here day 2" %>
-            </div>
-            <%= select "company", "second_day_spot", Spot.all {|s| [s.name, s.id]},
-                {prompt: "Select spot day 2..."}, class: 'ui dropdown' %>
+          <%= select "company", "first_day_spot", Spot.all {|s| [s.name, s.id]},
+              {prompt: "Select spot day 1"}, class: 'ui dropdown' %>
+        </div>
+        <div class="column">
+          <div class="ui checkbox">
+            <%= f.check_box :second_day %>
+            <%= f.label :second_day, "Will be here day 2" %>
           </div>
-          <div class="column">
-            <div class="required field">
-              <label for="">Sponsorship</label>
-              <%= select "company", "sponsor", %w[fair gold silver bronze],
-                {prompt: "Select sponsorship..."}, class: 'ui dropdown' %>
-            </div>
+          <%= select "company", "second_day_spot", Spot.all {|s| [s.name, s.id]},
+              {prompt: "Select spot day 2..."}, class: 'ui dropdown' %>
+        </div>
+      </div>
+
+      <h4 class="ui dividing header">Company presentation</h4>
+
+      <div class="ui stackable two column grid">
+        <div class="column">
+          <div class="required field">
+            <%= f.label :description, '<i class="se flag"></i> Swedish description'.html_safe %>
+            <%= f.text_area :description_sv %>
+          </div>
+          <div class="field">
+            <%= f.label :looking_for_sv, '<i class="se flag"></i> Looking for'.html_safe %>
+            <%= f.text_field :looking_for_sv, placeholder: 'Eg "exjobb, sommarjobb..."' %>
           </div>
         </div>
-
-        <div class="ui divider"></div>
-
-        <div class="ui stackable two column grid">
-          <div class="column">
-            <div class="required field">
-              <%= f.label :description, '<i class="se flag"></i> Swedish description'.html_safe %>
-              <%= f.text_area :description_sv %>
-            </div>
-            <div class="field">
-              <%= f.label :looking_for_sv, '<i class="se flag"></i> Looking for'.html_safe %>
-              <%= f.text_field :looking_for_sv, placeholder: 'Eg "exjobb, sommarjobb..."' %>
-            </div>
+        <div class="column">
+          <div class="required field">
+            <%= f.label :description, '<i class="gb flag"></i> English description'.html_safe %>
+            <%= f.text_area :description_en %>
           </div>
-          <div class="column">
-            <div class="required field">
-              <%= f.label :description, '<i class="gb flag"></i> English description'.html_safe %>
-              <%= f.text_area :description_en %>
-            </div>
-            <div class="field">
-              <%= f.label :looking_for_en, '<i class="gb flag"></i> Looking for'.html_safe %>
-              <%= f.text_field :looking_for_en, placeholder: 'Eg "thesis, summer job..."' %>
-            </div>
+          <div class="field">
+            <%= f.label :looking_for_en, '<i class="gb flag"></i> Looking for'.html_safe %>
+            <%= f.text_field :looking_for_en, placeholder: 'Eg "thesis, summer job..."' %>
           </div>
         </div>
       </div>
@@ -92,6 +92,11 @@ end
     <div class="four wide column">
       <div class="ui segment">
         <h4 class="ui dividing header">Save</h4>
+        <% if @company.id %>
+          <p>
+            <%= link_to semantic_icon("eye") + "View company", company_path(slug: @company.slug) %>
+          </p>
+        <% end %>
 
         <div class="ui checkbox">
           <%= f.check_box :published %>
@@ -101,6 +106,48 @@ end
         <div class="ui hidden divider"></div>
 
         <%= f.submit "Save", :disable_with => 'Saveing...', class: 'ui primary fluid submit button' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<% if @company.id %>
+  <div class="ui hidden divider"></div>
+  <div class="ui stackable grid">
+    <div class="twelve wide column">
+      <h4 class="ui dividing header">Image</h4>
+      <div class="ui two column grid">
+        <% if !@company.image.nil? %>
+          <div class="column">
+            <%= image_tag @company.image.url, alt: 'Company image', class: 'ui image', id: 'company-image' %>
+          </div>
+        <% end %>
+        <div class="column">
+          <div id="uploads_container"></div>
+          <script id="template-upload" type="text/x-tmpl">
+          <div id="upload_{%=o.unique_id%}" class="upload">
+            <h5>{%=o.name%}</h5>
+            <div class="ui indicating progress">
+              <div class="bar" style="width: 0%"></div>
+              <div class="label">Uploading...</div>
+            </div>
+          </div>
+          </script>
+
+          <%= s3_uploader_form callback_url: admin_company_image_path(@company),
+            id: "s3_uploader",
+            callback_param: "document[direct_upload_url]",
+            expiration: 24.hours.from_now.utc.iso8601,
+            max_file_size: 100.megabytes,
+            class: 'ui form' do %>
+            <div class="ui input">
+              <%= label_tag @company.image ? "Replace image" : "Upload image" %>
+              <%= file_field_tag :file, multiple: false %>
+            </div>
+            <p>
+              We accept PNG, JPG and GIF images. Upload starts automatically.
+            </p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get '/hosts/positions' => 'hosts#positions'
     resources :hosts, except: [:show]
     resources :companies, except: [:show]
+    post '/companies/:id/image' => 'companies#image_callback', as: :company_image
     resources :news, except: [:show]
     resources :suggestions, except: [:show, :create, :new, :edit]
     resources :studentexpos, only: [:index]

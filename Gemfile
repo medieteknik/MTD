@@ -75,8 +75,11 @@ gem 'github-markdown', '~> 0.6.7'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+## File uploads
 # amazon sdk
-gem 'aws-sdk', '~> 2.0.28'
+gem 'aws-sdk', '< 2'
+# direct upload form helper and assets
+gem 's3_direct_upload'
 
 ## DEVELOPMENT TOOLS
 group :development do

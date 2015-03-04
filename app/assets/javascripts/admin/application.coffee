@@ -11,6 +11,7 @@
 #= require angular
 #= require websocket_rails/main
 #= require turbolinks
+#= require s3_direct_upload
 #= require ../admin/main
 #= require_tree ../admin
 

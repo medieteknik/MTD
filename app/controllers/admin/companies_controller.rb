@@ -1,7 +1,7 @@
 class Admin::CompaniesController < Admin::AdminController
   add_breadcrumb 'Companies', :admin_companies_path
 
-  before_action :set_company, only: [:edit, :update, :destroy, :show]
+  before_action :set_company, only: [:edit, :update, :destroy, :show, :image_callback]
   before_action :authenticate_user!
   load_and_authorize_resource
 
@@ -46,6 +46,14 @@ class Admin::CompaniesController < Admin::AdminController
     redirect_to admin_companies_path
   end
 
+  # set a company's image, callback from s3
+  # @http_method XHR POST
+  # @url /admin/companies/:id/image
+  def image_callback
+    @image = Image.create(image_params)
+    @company.update(image: @image)
+  end
+
   private
     def set_company
       @company = Company.find(params[:id])
@@ -53,7 +61,11 @@ class Admin::CompaniesController < Admin::AdminController
     end
 
     def company_params
-      permitted = Company.globalize_attribute_names + [:name, :slug, :published, :sponsor, :first_day, :second_day, :first_day_spot, :second_day_spot, :image]
+      permitted = Company.globalize_attribute_names + [:name, :slug, :published, :sponsor, :first_day, :second_day, :first_day_spot, :second_day_spot]
       params.require("company").permit(permitted)
+    end
+
+    def image_params
+      params.permit(:url, :filetype, :filesize, :filepath, :unique_id)
     end
 end

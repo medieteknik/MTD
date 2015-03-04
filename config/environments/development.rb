@@ -43,4 +43,10 @@ Rails.application.configure do
 
   # disable Rack::Lock middleware to get websocket-rails working
   config.middleware.delete Rack::Lock
+
+  # setup byebyg remote as this guide suggests:
+  # https://github.com/deivid-rodriguez/byebug/blob/7c8c0db25f3efe5878477449c5b9e070b41beabe/GUIDE.md#debugging-remote-programs
+  # require 'byebug'
+  # Byebug.wait_connection = true
+  # Byebug.start_server('localhost', 10001)
 end
