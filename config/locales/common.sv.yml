@@ -13,6 +13,7 @@ sv:
   liu: 'Linköpings Universitet'
   media_technology_days: 'Medieteknikdagarna'
   menu_about: 'Om'
+  menu_banquet: 'Banketten'
   menu_contact: 'Kontakt'
   menu_host: 'Bli MTD-värd'
   menu_previous: 'Tidigare år'
@@ -45,6 +46,7 @@ sv:
 
     header:
       about: 'Om'
+      banquet: 'Banketten'
       contact: 'Kontakt'
       host: 'Bli värd'
       previous: 'Tidigare år'

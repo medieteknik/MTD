@@ -3,6 +3,7 @@
   <section class="info limit-width">
     <%= content_tag :h1, t('.title') %>
     <%= content_tag :p, t('.lead'), class: 'lead' %>
+    <%= content_tag :p, link_to(t('.sponsor'), sponsorship_path) %>
   </section>
   <section class="info">
     <section class="row">
