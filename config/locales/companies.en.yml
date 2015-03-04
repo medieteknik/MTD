@@ -1,0 +1,18 @@
+en:
+  companies:
+    show:
+      not_published: 'This company is not yet published!'
+      reminder: 'Consider this before sharing the url.'
+
+      looking_for: 'Looking for'
+      links: 'More information'
+
+      attending:
+        both: 'Will be attending the fair both days.'
+        first: 'Will attend the fair on the first day, Wednesday.'
+        second: 'Will attend the fair on the second day, Thursday.'
+
+      sponsor:
+        gold: 'is one of our main sponsors.'
+        sponsor: 'is a sponsor for MTD2015'
+        fair: 'Fair company.'

@@ -1,0 +1,18 @@
+sv:
+  companies:
+    show:
+      not_published: 'Företaget är ännu inte publicerat!'
+      reminder: 'Tänk på detta innan du delar med dig av länken.'
+
+      looking_for: 'Tar emot'
+      links: 'Mer information'
+
+      attending:
+        both: 'Besöker mässan båda dagarna.'
+        first: 'Är på mässan första dagen, på onsdagen.'
+        second: 'Besöker mässan dag två, på torsdagen.'
+
+      sponsor:
+        gold: 'är en av våra huvudsponsorer.'
+        sponsor: 'är sponsor för MTD 2015.'
+        fair: 'Mässföretag.'

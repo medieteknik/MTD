@@ -1,9 +1,41 @@
 <% title '– ' + @company.name %>
-<div class="container limit-width">
-  <div class="info">
-    <%= content_tag :h1, @company.name %>
-  </div>
-  <div class="info">
-    <%= GitHub::Markdown.render_gfm(@company.description).html_safe %>
-  </div>
+<div class="container">
+  <% unless @company.published %>
+    <div class="info alert alert-warning">
+      <%= content_tag :strong, t('.not_published') %>
+      <%= t('.reminder') %>
+    </div>
+  <% end %>
+  <article class="company">
+    <aside class="company-info">
+      <%= image_tag @company.image.url, alt: @company.name, class: 'info' if @company.image %>
+      <header class="info visible-xs-block">
+        <%= content_tag :h1, @company.name %>
+      </header>
+      <summary class="info gray-box">
+        <%= content_tag :p, sponsor(@company) %>
+        <%= content_tag :p, attendance(@company) %>
+
+        <%= content_tag :h5, t('.looking_for') if @company.looking_for.present? %>
+        <%= content_tag :p, @company.looking_for %>
+
+        <% if @company.links && @company.links.any? %>
+          <%= content_tag :h5, t('.links') %>
+          <ul class="list-unstyled">
+            <% @company.links.each do |link| %>
+              <%= content_tag(:li, link_to(link.url, link.title)) if link.title.present? %>
+            <% end %>
+          </ul>
+        <% end %>
+      </summary>
+    </aside>
+    <div class="company-body">
+      <header class="info hidden-xs">
+        <%= content_tag :h1, @company.name %>
+      </header>
+      <main class="info">
+        <%= GitHub::Markdown.render_gfm(@company.description).html_safe if @company.description.present? %>
+      </main>
+    </div>
+  </article>
 </div>
