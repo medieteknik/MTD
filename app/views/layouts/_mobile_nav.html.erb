@@ -6,9 +6,10 @@
   <ul class="menu">
     <%= content_tag :li, link_to(t('menu_about'), about_path) %>
     <%= content_tag :li, link_to(t('menu_contact'), about_contact_path) %>
-    <%= content_tag :li, link_to(t('menu_previous'), about_previous_path) %>
+    <%= content_tag :li, link_to(t('menu_companies'), companies_path) %>
     <%= content_tag :li, link_to(t('menu_banquet'), banquet_path) %>
     <%= content_tag :li, link_to(t('menu_studentexpo'), studentexpos_path) %>
+    <%= content_tag :li, link_to(t('menu_previous'), about_previous_path) %>
     <%= content_tag :li, link_to(icon('globe') + ' ' + t('change_lang_opposite'), url_for(locale: i18n_opposite)) %>
   </ul>
 </nav>

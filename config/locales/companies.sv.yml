@@ -1,5 +1,15 @@
 sv:
   companies:
+    index:
+      title: 'Besökande företag'
+      lead: 'MTD vore ingenting utan sin stora mässa. Här är företagen som kommer och besöker oss.'
+
+      sponsor:
+        gold: 'Huvudsponsorer'
+        silver: 'Sponsorer'
+        bronze:
+        fair: 'Mässföretag'
+
     show:
       not_published: 'Företaget är ännu inte publicerat!'
       reminder: 'Tänk på detta innan du delar med dig av länken.'

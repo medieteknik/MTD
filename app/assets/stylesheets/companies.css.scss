@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-article.company {
+article.show-company {
   @include make-row();
   .company-info {
     @include make-sm-column(4);
@@ -13,5 +13,72 @@ article.company {
   }
   .company-body {
     @include make-sm-column(8);
+  }
+}
+
+.companies-row {
+  text-align: center;
+  @include make-row();
+
+  article.company {
+
+
+    img {
+      display: block;
+      margin: 0 auto 15px;
+      width: 100%;
+      max-width: 200px;
+      max-height: 100%;
+    }
+  }
+
+  &.gold article.company {
+    @include make-sm-column(6);
+
+    img {
+      max-width: 300px;
+    }
+  }
+  &.silver article.company {
+    margin-bottom: 20px;
+    @include make-sm-column(4);
+
+    img {
+      max-width: 250px;
+    }
+  }
+  &.bronze article.company {
+    @include make-sm-column(3);
+  }
+  &.fair article.company {
+    @include make-sm-column(3);
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    .wrap {
+      position: relative;
+      width: 100%;
+
+      img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.gold .wrap {
+      height: 300px;
+    }
+    &.silver .wrap {
+      height: 250px;
+    }
+    &.fair .wrap {
+      height: 200px;
+    }
+    &.bronze .wrap {
+      height: 200px;
+    }
   }
 }

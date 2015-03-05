@@ -1,5 +1,15 @@
 en:
   companies:
+    index:
+      title: 'Visiting Companies'
+      lead: 'Without its fair, MTD wouldn''t be anything. Here are all the companies that will be attending the fair.'
+
+      sponsor:
+        gold: 'Main sponsors'
+        silver: 'Sponsors'
+        bronze:
+        fair: 'Fair'
+
     show:
       not_published: 'This company is not yet published!'
       reminder: 'Consider this before sharing the url.'

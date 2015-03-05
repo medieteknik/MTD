@@ -6,7 +6,7 @@ class Admin::CompaniesController < Admin::AdminController
   load_and_authorize_resource
 
   def index
-    @companies = Company.all
+    @companies = Company.all.order('name asc')
   end
 
   def new

@@ -14,6 +14,7 @@ en:
   media_technology_days: 'Media Technology Days'
   menu_about: 'About'
   menu_banquet: 'The banquet'
+  menu_companies: 'Companies'
   menu_contact: 'Contact'
   menu_host: 'Become a MTD-host'
   menu_previous: 'Previous years'
@@ -47,6 +48,7 @@ en:
     header:
       about: 'About'
       banquet: 'The banquet'
+      companies: 'Companies'
       contact: 'Contact'
       host: 'Host'
       previous: 'Previous years'

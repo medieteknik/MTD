@@ -1,0 +1,111 @@
+<!-- kinda messy -->
+<div class="container">
+  <section class="info limit-width">
+    <%= content_tag :h1, t('.title') %>
+    <%= content_tag :p, t('.lead'), class: 'lead' %>
+  </section>
+</div>
+
+<div class="ribbon">
+  <div class="container">
+    <div class="info text-center">
+      <h2><%= t('.sponsor.gold') %></h2>
+    </div>
+
+    <section class="info">
+      <div class="companies-row gold">
+        <% @gold_companies.each do |company| %>
+          <article class="company text-center">
+            <%= link_to image_tag(company.image.url, alt: company.name), company_path(company.slug) if company.image %>
+            <h3>
+              <%= link_to company.name, company_path(company.slug) %>
+            </h3>
+            <p>
+              <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %>
+            </p>
+          </article>
+        <% end %>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container">
+  <% if @silver_companies.any? %>
+    <h3 class="info text-center"><%= t('.sponsor.silver') %></h3>
+    <section class="info">
+
+      <div class="companies-row silver">
+        <% @silver_companies.each_with_index do |company, index| %>
+          <article class="company">
+            <%= link_to company_path(company.slug) do %>
+              <div class="wrap">
+                <%= image_tag(company.image.url, alt: company.name) if company.image %>
+              </div>
+              <h4>
+                <%= company.name %>
+              </h4>
+            <% end %>
+            <p>
+              <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 70, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %>
+            </p>
+          </article>
+          <% if (index+1)%3 == 0 %>
+            <!-- semi-ugly way to solve this, yes -->
+            </div><div class="companies-row silver">
+          <% end %>
+        <% end %>
+      </div>
+    </section>
+  <% end %>
+
+  <% if @bronze_companies.any? %>
+    <section class="info">
+      <div class="companies-row bronze">
+        <% @bronze_companies.each_with_index do |company, index| %>
+          <article class="company">
+            <%= link_to company_path(company.slug) do %>
+              <div class="wrap">
+                <%= image_tag(company.image.url, alt: company.name) if company.image %>
+              </div>
+              <h4>
+                <%= company.name %>
+              </h4>
+            <% end %>
+            <p>
+              <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 50, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %>
+            </p>
+          </article>
+          <% if (index+1)%4 == 0 %>
+            <!-- semi-ugly way to solve this, yes -->
+            </div><div class="companies-row bronze">
+          <% end %>
+        <% end %>
+      </div>
+    </section>
+  <% end %>
+
+  <% if @fair_companies.any? %>
+    <section class="info">
+      <h3 class="text-center"><%= t('.sponsor.fair') %></h3>
+      <div class="companies-row fair">
+        <% @fair_companies.each_with_index do |company, index| %>
+          <article class="company">
+            <%= link_to company_path(company.slug) do %>
+              <div class="wrap">
+                <%= image_tag(company.image.url, alt: company.name) if company.image %>
+              </div>
+              <h4 class="text-center">
+                <%= company.name %>
+              </h4>
+            <% end %>
+          </article>
+          <% if (index+1)%4 == 0 %>
+            <!-- semi-ugly way to solve this, yes -->
+            </div><div class="companies-row fair">
+          <% end %>
+        <% end %>
+      </div>
+    </section>
+  <% end %>
+</div>
