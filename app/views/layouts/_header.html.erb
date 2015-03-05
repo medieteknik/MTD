@@ -1,23 +1,39 @@
-<nav>
-  <%= link_to(content_tag(:div, '', class: 'logo') +
-        content_tag(:span, t('short_name'), class: 'name') + ' ' +
-        content_tag(:span, t('the_date'), class: 'hidden-sm'),
-      home_path, class: 'brand') %>
+<header id="header" class="<%= yield :header_class %>">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+        <%= link_to image_tag('logos/print.svg', alt: 'MTD2015', class: 'img-responsive'), root_url %>
+      </div>
+      <div class="col-sm-4 col-md-3 col-md-offset-3">
+        <%= image_tag 'sponsors/autodesk.png', alt: 'Effektfabriken & Gaia', class: 'img-responsive' %>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <%= image_tag 'sponsors/ge.png', alt: 'Effektfabriken & Gaia', class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
 
-  <ul class="menu left">
-    <%= content_tag :li, link_to(t('.about'), about_path) %>
-    <%= content_tag :li, link_to(t('.contact'), about_contact_path) %>
-    <%= content_tag :li, link_to(t('.previous'), about_previous_path) %>
-    <%= content_tag :li, link_to(t('.banquet'), banquet_path) %>
-    <%= content_tag :li, link_to(t('.studentexpo'), studentexpos_path) %>
-  </ul>
+  <nav id="main-nav">
+    <div class="container">
+      <%= link_to(content_tag(:div, '', class: 'logo'), home_path, class: 'brand') %>
 
-  <ul class="menu right">
-    <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'), url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
-    <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-lg'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
-    <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-lg'), 'https://twitter.com/mtdagarna', target: 'blank') %>
-    <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-lg'), 'https://youtube.com/mtdagarna', target: 'blank') %>
-  </ul>
+      <ul class="menu left">
+        <%= content_tag :li, link_to(t('.about'), about_path) %>
+        <%= content_tag :li, link_to(t('.contact'), about_contact_path) %>
+        <%= content_tag :li, link_to(t('.previous'), about_previous_path) %>
+        <%= content_tag :li, link_to(t('.banquet'), banquet_path) %>
+        <%= content_tag :li, link_to(t('.studentexpo'), studentexpos_path) %>
+      </ul>
 
-  <%= icon 'bars', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
-</nav>
+      <ul class="menu right">
+        <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'), url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
+        <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-lg'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
+        <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-lg'), 'https://twitter.com/mtdagarna', target: 'blank') %>
+        <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-lg'), 'https://youtube.com/mtdagarna', target: 'blank') %>
+      </ul>
+
+      <%= icon 'bars', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
+    </div>
+  </nav>
+</header>
+

@@ -1,18 +1,22 @@
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
   z-index: 10;
   width: 100%;
-  height: $header-height;
+  // height: $header-height;
   padding: $header-padding 0;
   font-family: $font-family-sans-serif;
   background: rgba(#fff, .9);
   border-bottom: 1px solid rgba($gray, .5);
 
-  @include transition (all .2s ease-in-out);
+  // @include transition (all .2s ease-in-out);
 
-  .header-scroll &.transparent {
+  &.detached {
+    padding-bottom: $header-height;
+  }
+
+  &.transparent {
     position: absolute;
     color: #fff;
     background: transparent;
@@ -22,17 +26,26 @@
       color: #fff;
     }
     .brand .logo {
-      @include background-img('header/white', contain);
+      // @include background-img('header/white', contain);
     }
+  }
+}
+
+// nav
+#header > nav {
+  text-transform: uppercase;
+  line-height: $header-height - 2 * $header-padding;
+
+  @include transition (background .2s ease-in-out);
+
+  .togglemenu {
+    margin-top: 8px;
   }
 
   .brand {
     float: left;
+    display: none;
 
-    .name {
-      font-weight: bold;
-      padding-left: $header-padding;
-    }
     .logo {
       display: inline-block;
       float: left;
@@ -42,22 +55,11 @@
       @include background-img('header/logo', contain);
     }
   }
-}
-
-// nav
-#header > nav {
-  @extend .container;
-  text-transform: uppercase;
-  line-height: $header-height - 2 * $header-padding;
-
-  .togglemenu {
-    margin-top: 8px;
-  }
 
   .menu {
     @extend .list-inline;
     @extend .hidden-xs;
-
+    margin-bottom: 0;
 
     &.right {
       @extend .pull-right;
@@ -65,7 +67,6 @@
 
     &.left {
       @extend .pull-left;
-      margin-left: 4 * $header-padding;
     }
     &.left a {
       padding: 2 * $header-padding;
@@ -80,6 +81,27 @@
       margin-top: -2px;
       height: 17px;
     }
+  }
+}
+
+#header.detached > nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(#fff, .9);
+  border-bottom: 1px solid rgba($gray, .5);
+  padding: $header-padding 0;
+
+  a {
+    color: $orange;
+  }
+  .brand {
+    display: block;
+  }
+  .menu.left {
+    margin-left: 2 * $header-padding;
   }
 }
 
