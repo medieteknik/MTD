@@ -1,14 +1,15 @@
 <header id="header" class="<%= yield :header_class %>">
   <div class="container">
     <%= link_to(content_tag(:div, '', class: 'logo') + 'MTD<span class="year">2015</span>'.html_safe,
-          home_path, class: 'mtd') %>
+          home_path, class: 'big-brand') %>
     <div class="sponsor ge"></div>
     <div class="sponsor autodesk"></div>
   </div>
 
   <nav id="main-nav">
     <div class="container">
-      <%= link_to(content_tag(:div, '', class: 'logo'), home_path, class: 'brand') %>
+      <%= link_to(content_tag(:div, '', class: 'logo') + content_tag(:span, t('short_name'), class: 'name') + ' ' + content_tag(:span, t('the_date'), class: 'visible-xs-inline'),
+        home_path, class: 'brand') %>
 
       <ul class="menu left">
         <%= content_tag :li, link_to(t('.about'), about_path) %>
@@ -19,7 +20,8 @@
       </ul>
 
       <ul class="menu right">
-        <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'), url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
+        <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'),
+          url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
         <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-lg'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
         <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-lg'), 'https://twitter.com/mtdagarna', target: 'blank') %>
         <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-lg'), 'https://youtube.com/mtdagarna', target: 'blank') %>

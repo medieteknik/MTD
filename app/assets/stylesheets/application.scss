@@ -43,7 +43,7 @@ body {
     @include transition(left .3s ease-in-out);
   }
   #content > :nth-child(2):not(.beamer) {
-    padding-top: $header-height;
+    // padding-top: $header-height;
   }
 }
 

@@ -3,7 +3,6 @@ jQuery ->
     # scrollControl = $(".header-scroll-target").offset() and $(window).scrollTop() < ($(".header-scroll-target").offset().top) * .625
     # $(".header-scroll #header").toggleClass "transparent", scrollControl
 
-    console.log $("#header").offset()
     $("#header").toggleClass "detached", $(window).scrollTop() > 1.5 * $("#header").height()
 
 $(document).ready ->

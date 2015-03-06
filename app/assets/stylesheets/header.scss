@@ -23,7 +23,7 @@
     a {
       color: #fff;
     }
-    .mtd .logo {
+    .big-brand .logo, &:not(.detached) .brand .logo {
       @include background-img('header/white', contain);
     }
     .sponsor.ge {
@@ -34,16 +34,26 @@
     }
   }
 
-  .mtd {
+  @media (min-width: $screen-sm-min) {
+    // hide small brand on desktop if not detached
+    &:not(.detached) .brand {
+      display: none;
+    }
+    > .container {
+      margin-bottom: $header-padding;
+    }
+  }
+
+  .big-brand {
     @extend .hidden-xs;
     float: left;
     line-height: $header-logo-height;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 37px;
+    font-weight: 800;
     color: #000;
 
     .year {
-      font-weight: normal;
+      font-weight: 700;
     }
     .logo {
       display: inline-block;
@@ -78,17 +88,21 @@
 #header > nav {
   text-transform: uppercase;
   line-height: $header-height - 2 * $header-padding;
-  padding-top: 15px;
 
-  @include transition (background .2s ease-in-out);
+  @include transition(background, right, left, width .2s ease-in-out);
 
   .togglemenu {
     margin-top: 8px;
   }
 
+  .expand-nav & {
+    // positoin: fixed;
+    width: 100%;
+    right: $mobile-header-width !important;
+  }
+
   .brand {
     float: left;
-    display: none;
 
     .logo {
       display: inline-block;
@@ -97,6 +111,11 @@
       width: $header-height - 2*$header-padding;
       background-repeat: no-repeat;
       @include background-img('header/logo', contain);
+    }
+    .name {
+      margin-right: 5px;
+      float: left;
+      font-weight: bold;
     }
   }
 
@@ -115,13 +134,12 @@
     &.left a {
       padding: 2 * $header-padding;
     }
-
     .sponsor {
       font-weight: bold;
     }
 
     .lang a img {
-      /* don't look at this. just dont. */
+      /* don't look at this. just don't. */
       margin-top: -2px;
       height: 17px;
     }
@@ -134,15 +152,22 @@
   left: 0;
   right: 0;
   z-index: 10;
-  background: rgba(#fff, .9);
+  background: rgba(#fff, .95);
   border-bottom: 1px solid rgba($gray, .5);
   padding: $header-padding 0;
 
   a {
     color: $orange;
   }
+  .togglemenu {
+    color: #111;
+  }
   .brand {
     display: block;
+
+    .name {
+      @extend .visible-xs-block;
+    }
   }
   .menu.left {
     margin-left: 2 * $header-padding;
@@ -163,7 +188,6 @@
   @include transition(all .3s ease-in-out);
 
   .expand-nav & {
-    // @extend .container;
     left: 100% - $mobile-header-width;
   }
 
@@ -187,7 +211,7 @@
 }
 
 .expand-nav > #content,
-.expand-nav #header {
+.expand-nav #header > nav {
   left: -1 * $mobile-header-width;
 }
 
