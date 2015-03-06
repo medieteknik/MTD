@@ -10,8 +10,6 @@
   background: rgba(#fff, .9);
   border-bottom: 1px solid rgba($gray, .5);
 
-  // @include transition (all .2s ease-in-out);
-
   &.detached {
     padding-bottom: $header-height;
   }
@@ -25,8 +23,53 @@
     a {
       color: #fff;
     }
-    .brand .logo {
-      // @include background-img('header/white', contain);
+    .mtd .logo {
+      @include background-img('header/white', contain);
+    }
+    .sponsor.ge {
+      background-image: image-url('sponsors/ge_gray.png');
+    }
+    .sponsor.autodesk {
+      background-image: image-url('sponsors/autodesk_gray.png');
+    }
+  }
+
+  .mtd {
+    @extend .hidden-xs;
+    float: left;
+    line-height: $header-logo-height;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+
+    .year {
+      font-weight: normal;
+    }
+    .logo {
+      display: inline-block;
+      float: left;
+      height: $header-logo-height;
+      width: $header-logo-height;
+      background-repeat: no-repeat;
+      @include background-img('header/logo', contain);
+    }
+  }
+
+  .sponsor {
+    @extend .hidden-xs;
+    float: right;
+    width: 22%;
+    height: $header-logo-height;
+    margin: 0 0 0 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.ge {
+      background-image: image-url('sponsors/ge.png');
+    }
+    &.autodesk {
+      background-image: image-url('sponsors/autodesk.png');
     }
   }
 }
@@ -35,6 +78,7 @@
 #header > nav {
   text-transform: uppercase;
   line-height: $header-height - 2 * $header-padding;
+  padding-top: 15px;
 
   @include transition (background .2s ease-in-out);
 

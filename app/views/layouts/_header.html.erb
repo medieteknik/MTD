@@ -1,16 +1,9 @@
 <header id="header" class="<%= yield :header_class %>">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-4 col-md-3">
-        <%= link_to image_tag('logos/print.svg', alt: 'MTD2015', class: 'img-responsive'), root_url %>
-      </div>
-      <div class="col-sm-4 col-md-3 col-md-offset-3">
-        <%= image_tag 'sponsors/autodesk.png', alt: 'Effektfabriken & Gaia', class: 'img-responsive' %>
-      </div>
-      <div class="col-sm-4 col-md-3">
-        <%= image_tag 'sponsors/ge.png', alt: 'Effektfabriken & Gaia', class: 'img-responsive' %>
-      </div>
-    </div>
+    <%= link_to(content_tag(:div, '', class: 'logo') + 'MTD<span class="year">2015</span>'.html_safe,
+          home_path, class: 'mtd') %>
+    <div class="sponsor ge"></div>
+    <div class="sponsor autodesk"></div>
   </div>
 
   <nav id="main-nav">
