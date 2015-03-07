@@ -7,7 +7,7 @@
   // height: $header-height;
   padding: $header-padding 0;
   font-family: $font-family-sans-serif;
-  background: rgba(#fff, .9);
+  background: rgba(#efefef, .9);
   border-bottom: 1px solid rgba($gray, .5);
 
   &.detached {
@@ -152,7 +152,7 @@
   left: 0;
   right: 0;
   z-index: 10;
-  background: rgba(#fff, .95);
+  background: rgba(#fff, .9);
   border-bottom: 1px solid rgba($gray, .5);
   padding: $header-padding 0;
 
