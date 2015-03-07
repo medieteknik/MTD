@@ -8,6 +8,9 @@ module ApplicationHelper
   def body_class(the_class)
     content_for(:body_class) { the_class }
   end
+  def header_class(the_class)
+    content_for(:header_class) { the_class }
+  end
   def i18n_opposite
     I18n.locale == :en ? 'sv' : 'en'
   end

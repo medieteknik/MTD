@@ -35,9 +35,6 @@ body {
   line-height: 1.6;
 }
 
-#content > :nth-child(2):not(.beamer) {
-  padding-top: $header-height;
-}
 
 // mobile
 @media only screen and (max-width: $screen-sm-max) {
@@ -45,6 +42,9 @@ body {
     position: relative;
     left: 0;
     @include transition(left .3s ease-in-out);
+  }
+  #content > :nth-child(2):not(.beamer) {
+    // padding-top: $header-height;
   }
 }
 
