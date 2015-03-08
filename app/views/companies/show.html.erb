@@ -23,7 +23,7 @@
           <%= content_tag :h5, t('.links') %>
           <ul class="list-unstyled">
             <% @company.links.each do |link| %>
-              <%= content_tag(:li, link_to(link.url, link.title)) if link.title.present? %>
+              <%= content_tag(:li, link_to(link.title, link.url)) if link.title.present? %>
             <% end %>
           </ul>
         <% end %>

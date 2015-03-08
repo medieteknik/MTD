@@ -38,29 +38,34 @@ end
         <div class="required field">
           <label for="">Sponsorship</label>
           <%= select "company", "sponsor", %w[fair gold silver bronze],
-            {prompt: "Select sponsorship..."}, class: 'ui dropdown' %>
+            { prompt: "Select sponsorship..." }, class: 'ui dropdown' %>
         </div>
       </div>
 
-
       <h4 class="ui dividing header">Fair information</h4>
 
-      <div class="ui stackable two column grid">
+      <div class="ui stackable three column grid">
         <div class="column">
           <div class="ui checkbox">
             <%= f.check_box :first_day %>
             <%= f.label :first_day, "Will be here day 1" %>
           </div>
-          <%= select "company", "first_day_spot", Spot.all {|s| [s.name, s.id]},
-              {prompt: "Select spot day 1"}, class: 'ui dropdown' %>
+          <%= select "company", "first_day_spot", Spot.all { |s| [s.name, s.id] },
+              { prompt: "Select spot day 1" }, class: 'ui dropdown' %>
         </div>
         <div class="column">
           <div class="ui checkbox">
             <%= f.check_box :second_day %>
             <%= f.label :second_day, "Will be here day 2" %>
           </div>
-          <%= select "company", "second_day_spot", Spot.all {|s| [s.name, s.id]},
-              {prompt: "Select spot day 2..."}, class: 'ui dropdown' %>
+          <%= select "company", "second_day_spot", Spot.all { |s| [s.name, s.id] },
+              { prompt: "Select spot day 2..." }, class: 'ui dropdown' %>
+        </div>
+        <div class="column">
+          <div class="ui checkbox">
+            <%= f.check_box :extended %>
+            <%= f.label :extended, "Has extended booth size" %>
+          </div>
         </div>
       </div>
 
@@ -88,6 +93,23 @@ end
           </div>
         </div>
       </div>
+
+      <% if @company.links.any? %>
+        <h4 class="ui dividing header">Company links</h4>
+
+        <%= f.fields_for :links, @company.links do |l| %>
+          <div class="two fields">
+            <div class="field">
+              <%= l.label :title, "Title" %>
+              <%= l.text_field :title, placeholder: 'Title' %>
+            </div>
+            <div class="field">
+              <%= l.label :url, "URL" %>
+              <%= l.url_field :url, placeholder: 'http://...' %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
     <div class="four wide column">
       <div class="ui segment">

@@ -12,10 +12,14 @@ class Admin::CompaniesController < Admin::AdminController
   def new
     add_breadcrumb 'New company', :new_admin_company_path
     @company = Company.new
+    5.times { @company.links.build }
   end
 
   def create
     @company = Company.new(company_params)
+    # 5.times do
+    #   @company.links << Link.create
+    # end
     if @company.save
       flash[:notice] = "Successfully created company!"
       redirect_to edit_admin_company_path @company
@@ -61,7 +65,10 @@ class Admin::CompaniesController < Admin::AdminController
     end
 
     def company_params
-      permitted = Company.globalize_attribute_names + [:name, :slug, :published, :sponsor, :first_day, :second_day, :first_day_spot, :second_day_spot]
+      # asda
+      permitted = Company.globalize_attribute_names + [:name, :slug, :published,
+        :sponsor, :first_day, :second_day, :first_day_spot, :second_day_spot,
+        :extended, { links_attributes: [:title, :url, :id] }]
       params.require("company").permit(permitted)
     end
 
