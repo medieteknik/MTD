@@ -102,6 +102,8 @@ sv:
       # teaser: 'För femtonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
       quote: 'Medieteknik i Norrköping är en utav de bästa programeringsutbildningarna som finns i Sverige'
       welcome: 'Välkommen'
+      main_sponsors: 'Huvudsponsorer'
+      sponsors: 'Sponsorer'
 
       contacts:
         title: 'Knyt kontakter'
@@ -143,7 +145,7 @@ sv:
           perk_5: 'Förstasidan av medieteknikdagarna.se'
           perk_6: 'Goodiebags'
           perk_7: 'Header på medieteknikdagarna.se'
-          perk_8: 'Vår Cover Photo på Facebook'
+          perk_8: 'Vårt Cover Photo på Facebook'
           perk_9: 'Bumper i videomaterial'
           perk_10: 'Våra rollups under mässan'
           perk_11: 'Värdtröjor'

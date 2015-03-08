@@ -44,6 +44,7 @@ sv:
     footer:
       arranged_by: 'MTD arrangeras utav Medietekniksektionen vid Linköpings Universitet.'
       contact: 'Kontakta oss!'
+      open_source: 'Detta är ett projekt med öppen källkod.'
 
     header:
       about: 'Om'

@@ -17,9 +17,6 @@ class Admin::CompaniesController < Admin::AdminController
 
   def create
     @company = Company.new(company_params)
-    # 5.times do
-    #   @company.links << Link.create
-    # end
     if @company.save
       flash[:notice] = "Successfully created company!"
       redirect_to edit_admin_company_path @company

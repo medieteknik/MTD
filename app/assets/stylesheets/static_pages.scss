@@ -4,7 +4,6 @@
   min-height: 300px;
   max-height: 1000px;
   height: 100%;
-  // height: calc(100% - 100px);
 
   .home & {
     background: $gray;
@@ -130,14 +129,6 @@
     .button:hover {
       background: darken($orange, 10%);
     }
-
-    // TODO: make these pritty
-    // &.bronze .button {
-    // }
-    // &.silver .button {
-    // }
-    // &.gold .button {
-    // }
   }
 }
 
@@ -211,4 +202,11 @@
       @include background-img('medals/bronze');
     }
   }
+}
+
+// silver sponsors on home
+.silver-sponsor img {
+  max-width: 200px;
+  width: 100%;
+  margin: 20px auto;
 }

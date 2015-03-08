@@ -44,6 +44,7 @@ en:
     footer:
       arranged_by: 'MTD is arranged by the Media Technology Association at Linköping University.'
       contact: 'Contact us!'
+      open_source: 'This is a Open Source project.'
 
     header:
       about: 'About'

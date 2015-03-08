@@ -4,7 +4,9 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    @news = News.where('status = :status AND published_at <= :right_now', {status: 'public', right_now: DateTime.now}).order(published_at: :desc).limit(5)
+    @news = News.where('status = :status AND published_at <= :right_now', {status: 'public', right_now: DateTime.now}).order(published_at: :desc).limit(6)
+    @gold_sponsors = Company.where(sponsor: 'gold', published: true).shuffle
+    @silver_sponsors = Company.where(sponsor: 'silver', published: true).shuffle
   end
 
   # make sure we catch that nasty missing template-error
