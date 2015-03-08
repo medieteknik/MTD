@@ -19,6 +19,7 @@ SitemapGenerator::Sitemap.create do
   group(:filename => :en) do
     add '/en', :changefreq => 'daily', :priority => 1
     add '/en/about'
+    add '/en/banquet'
     add '/en/about/contact'
     add '/en/about/previous-years'
     add '/en/sponsorship'
@@ -26,10 +27,18 @@ SitemapGenerator::Sitemap.create do
     add '/en/sponsorship/compare/bronze'
     add '/en/sponsorship/compare/gold'
     add '/en/sponsorship/compare/silver'
+
+    Company.where(published: true).find_each do |company|
+      add company_en_path(company.slug), :lastmod => company.updated_at
+    end
+    News.where(status: 'public').find_each do |news|
+      add news_en_path(news), :lastmod => news.updated_at
+    end
   end
 
   group(:filename => :sv) do
     add '/sv', :changefreq => 'daily', :priority => 1
+    add '/sv/bankett'
     add '/sv/om'
     add '/sv/om/kontakt'
     add '/sv/om/tidigare-ar'
@@ -38,5 +47,14 @@ SitemapGenerator::Sitemap.create do
     add '/sv/sponsor/jamfor/brons'
     add '/sv/sponsor/jamfor/guld'
     add '/sv/sponsor/jamfor/silver'
+
+    add '/sv/foretag'
+
+    Company.where(published: true).find_each do |company|
+      add company_sv_path(company.slug), :lastmod => company.updated_at
+    end
+    News.where(status: 'public').find_each do |news|
+      add news_sv_path(news), :lastmod => news.updated_at
+    end
   end
 end
