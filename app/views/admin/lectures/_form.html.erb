@@ -1,0 +1,136 @@
+<%
+classes = 'ui form'
+classes << ' warning' if @lecture.errors.any?
+if action_name == 'edit'
+  form_path = admin_lecture_path(@lecture)
+  form_method = :patch
+else
+  form_path = admin_lectures_path
+  form_method = :post
+end
+%>
+<%= form_for(@lecture, url: form_path, html: { method: form_method, class: classes }) do |f| %>
+  <% if @lecture.errors.any? %>
+    <div class="ui warning message">
+      <div class="header">Could not create/update lecture!</div>
+      <ul class="list">
+        <% @lecture.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui stackable grid">
+    <div class="twelve wide column">
+      <h4 class="ui dividing header">Basic information</h4>
+      <div class="two fields">
+        <div class="required field">
+          <%= f.label :name, "Lecturer name" %>
+          <%= f.text_field :name, placeholder: 'Name of the lecturer, eg Kalle Anka' %>
+        </div>
+        <div class="required field">
+          <%= f.label :slug, "Lecture slug" %>
+          <%= f.text_field :slug, placeholder: 'URL slug for the lecturer, eg kalle-anka' %>
+        </div>
+      </div>
+
+      <div class="two fields">
+        <div class="required field">
+          <%= f.label :start, "Start time" %>
+          <%= f.datetime_local_field :start, placeholder: 'yyyy-mm-dd --:--' %>
+        </div>
+        <div class="required field">
+          <%= f.label :stop, "End time" %>
+          <%= f.datetime_local_field :stop, placeholder: 'yyyy-mm-dd --:--' %>
+        </div>
+      </div>
+
+      <h4 class="ui dividing header">Lecture information</h4>
+      <div class="ui stackable two column grid">
+        <div class="column">
+          <div class="required field">
+            <%= f.label :title_sv, '<i class="se flag"></i> Swedish lecture title'.html_safe %>
+            <%= f.text_field :title_sv, placeholder: 'Eg "Att ha en rik farbror..."' %>
+          </div>
+          <div class="required field">
+            <%= f.label :description_sv, '<i class="se flag"></i> Swedish description'.html_safe %>
+            <%= f.text_area :description_sv %>
+          </div>
+        </div>
+        <div class="column">
+          <div class="required field">
+            <%= f.label :title_en, '<i class="gb flag"></i> English lecture title'.html_safe %>
+            <%= f.text_field :title_en, placeholder: 'Eg "To have a rich uncle..."' %>
+          </div>
+          <div class="required field">
+            <%= f.label :description_en, '<i class="gb flag"></i> English description'.html_safe %>
+            <%= f.text_area :description_en %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="four wide column">
+      <div class="ui segment">
+        <h4 class="ui dividing header">Save</h4>
+        <% if @lecture.id %>
+          <p>
+            <%= link_to semantic_icon("eye") + "View lecture", lecture_path(slug: @lecture.slug) %>
+          </p>
+        <% end %>
+
+        <div class="ui checkbox">
+          <%= f.check_box :published %>
+          <%= f.label :published %>
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+        <%= f.submit "Save", :disable_with => 'Saveing...', class: 'ui primary fluid submit button' %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<% if @lecture.id %>
+  <div class="ui hidden divider"></div>
+  <div class="ui stackable grid">
+    <div class="twelve wide column">
+      <h4 class="ui dividing header">Image</h4>
+      <div class="ui two column grid">
+        <% if !@lecture.image.nil? %>
+          <div class="column">
+            <%= image_tag @lecture.image.url, alt: 'Lecture image', class: 'ui image', id: 'lecture-image' %>
+          </div>
+        <% end %>
+        <div class="column">
+          <div id="uploads_container"></div>
+          <script id="template-upload" type="text/x-tmpl">
+          <div id="upload_{%=o.unique_id%}" class="upload">
+            <h5>{%=o.name%}</h5>
+            <div class="ui indicating progress">
+              <div class="bar" style="width: 0%"></div>
+              <div class="label">Uploading...</div>
+            </div>
+          </div>
+          </script>
+
+          <%= s3_uploader_form callback_url: admin_lecture_image_path(@lecture),
+            id: "s3_uploader",
+            callback_param: "document[direct_upload_url]",
+            expiration: 24.hours.from_now.utc.iso8601,
+            max_file_size: 100.megabytes,
+            class: 'ui form' do %>
+            <div class="ui input">
+              <%= label_tag @lecture.image ? "Replace image" : "Upload image" %>
+              <%= file_field_tag :file, multiple: false %>
+            </div>
+            <p>
+              We accept PNG, JPG and GIF images. Upload starts automatically.
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

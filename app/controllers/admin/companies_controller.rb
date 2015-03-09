@@ -62,7 +62,6 @@ class Admin::CompaniesController < Admin::AdminController
     end
 
     def company_params
-      # asda
       permitted = Company.globalize_attribute_names + [:name, :slug, :published,
         :sponsor, :first_day, :second_day, :first_day_spot, :second_day_spot,
         :extended, { links_attributes: [:title, :url, :id] }]

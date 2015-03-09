@@ -1,0 +1,71 @@
+<%= render 'common' %>
+<div class="container">
+  <h2>
+    All lectures
+  </h2>
+  <%= link_to_if can?(:create, Lecture), semantic_icon('plus') + 'Create new', new_admin_lecture_path, class: 'ui green labeled icon button' %>
+
+  <table class="ui table">
+    <thead>
+      <tr>
+        <th>
+          #
+        </th>
+        <th>
+          Lecturer
+          <%= semantic_icon('caret down') %>
+        </th>
+        <th>
+          Title
+        </th>
+        <th>
+          Slug
+        </th>
+        <th>
+          Start time
+        </th>
+        <th>
+          End time
+        </th>
+        <th>
+          Published?
+        </th>
+        <th>
+          &nbsp;
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @lectures.each do |l| %>
+        <tr>
+          <td>
+            <%= l.id %>
+          </td>
+          <td>
+            <%= l.name %>
+          </td>
+          <td>
+            <%= l.title %>
+          </td>
+          <td>
+            <%= l.slug %>
+          </td>
+          <td>
+            <%= l.start.strftime('%a %d %b %Y, %H:%M') if l.start? %>
+          </td>
+          <td>
+            <%= l.stop.strftime('%a %d %b %Y, %H:%M') if l.stop? %>
+          </td>
+          <td <%= 'class=positive' if l.published %>>
+            <%= l.published ? 'yes' : 'no' %>
+          </td>
+          <td>
+            <%= link_to_if can?(:update, l), semantic_icon('write') + "Edit", edit_admin_lecture_path(l) %>
+            <%= link_to_if can?(:destroy, l), semantic_icon('trash') + "Delete", admin_lecture_path(l), data: {confirm: "Are you sure?"}, method: :delete %>
+            <%= link_to semantic_icon('eye') + 'Show', lecture_path(l.slug) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

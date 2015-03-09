@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :hosts, except: [:show]
     resources :companies, except: [:show]
     post '/companies/:id/image' => 'companies#image_callback', as: :company_image
+    resources :lectures, except: [:show]
+    post '/lectures/:id/image' => 'lectures#image_callback', as: :lecture_image
     resources :news, except: [:show]
     resources :suggestions, except: [:show, :create, :new, :edit]
     resources :studentexpos, only: [:index]
@@ -28,6 +30,8 @@ Rails.application.routes.draw do
     get '/companies' => 'companies#index', as: :companies
     get '/companies/:slug' => 'companies#show', as: :company
 
+    get '/lectures' => 'lectures#index', as: :lectures
+    get '/lectures/:slug' => 'lectures#show', as: :lecture
 
     get '/host' => 'static_pages#show', :page => 'host', as: :host
     resources :hosts, only: [:new, :create], path: 'host', path_names: {new: 'apply'}
