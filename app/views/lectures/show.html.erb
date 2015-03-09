@@ -1,0 +1,35 @@
+<% title '– ' + @lecture.name + ': ' + @lecture.title %>
+<div class="container limit-width">
+  <% unless @lecture.published %>
+      <div class="info alert alert-warning">
+        <%= content_tag :strong, t('.not_published') %>
+        <%= t('.reminder') %>
+      </div>
+  <% end %>
+
+  <div class="info info--large">
+    <summary class="info text-center">
+      <h1>
+        <%= @lecture.title %>
+      </h1>
+      <p class="lead">
+        <%= icon 'clock-o' %>
+        <%= l(@lecture.start, format: '%A %e %B %H:%M').titleize %> &mdash;
+        <%= l(@lecture.stop, format: '%H:%M').titleize %>
+      </p>
+    </summary>
+    <article class="lecture info">
+      <div class="row">
+        <div class="col-sm-4">
+          <%= image_tag @lecture.image.url, alt: @lecture.name, class: 'img-responsive' if @lecture.image %>
+        </div>
+        <div class="col-sm-8">
+          <h3>
+            <%= @lecture.name %>
+          </h3>
+          <%= GitHub::Markdown.render_gfm(@lecture.description).html_safe %>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

@@ -4,14 +4,14 @@ Rails.application.routes.draw do
     get '/' => 'pages#dashboard'
     resources :users
     get '/hosts/positions' => 'hosts#positions'
-    resources :hosts, except: [:show]
-    resources :companies, except: [:show]
+    resources :hosts, except: :show
+    resources :companies, except: :show
     post '/companies/:id/image' => 'companies#image_callback', as: :company_image
-    resources :lectures, except: [:show]
+    resources :lectures, except: :show
     post '/lectures/:id/image' => 'lectures#image_callback', as: :lecture_image
-    resources :news, except: [:show]
+    resources :news, except: :show
     resources :suggestions, except: [:show, :create, :new, :edit]
-    resources :studentexpos, only: [:index]
+    resources :studentexpos, only: :index
   end
 
   localized do

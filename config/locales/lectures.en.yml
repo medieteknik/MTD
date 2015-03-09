@@ -1,0 +1,11 @@
+en:
+  lectures:
+    index:
+      title: 'Lectures'
+      not_yet: 'You''re early! We''ll release this year''s lecturers soon.'
+      pub: ''
+      pub_link: ''
+
+    show:
+      not_published: 'This lecture is not yet published!'
+      reminder: 'Consider this before sharing the url.'
