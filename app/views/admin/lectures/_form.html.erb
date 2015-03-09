@@ -27,22 +27,22 @@ end
       <div class="two fields">
         <div class="required field">
           <%= f.label :name, "Lecturer name" %>
-          <%= f.text_field :name, placeholder: 'Name of the lecturer, eg Kalle Anka' %>
+          <%= f.text_field :name, placeholder: 'Name of the lecturer, eg Kalle Anka', required: true %>
         </div>
         <div class="required field">
           <%= f.label :slug, "Lecture slug" %>
-          <%= f.text_field :slug, placeholder: 'URL slug for the lecturer, eg kalle-anka' %>
+          <%= f.text_field :slug, placeholder: 'URL slug for the lecturer, eg kalle-anka', required: true %>
         </div>
       </div>
 
       <div class="two fields">
         <div class="required field">
           <%= f.label :start, "Start time" %>
-          <%= f.datetime_local_field :start, placeholder: 'yyyy-mm-dd --:--' %>
+          <%= f.datetime_local_field :start, placeholder: 'yyyy-mm-dd --:--', required: true %>
         </div>
         <div class="required field">
           <%= f.label :stop, "End time" %>
-          <%= f.datetime_local_field :stop, placeholder: 'yyyy-mm-dd --:--' %>
+          <%= f.datetime_local_field :stop, placeholder: 'yyyy-mm-dd --:--', required: true %>
         </div>
       </div>
 
