@@ -6,6 +6,9 @@ class Company < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :links
 
+  belongs_to :first_day_booth, :class_name => "Booth"
+  belongs_to :second_day_booth, :class_name => "Booth"
+
   accepts_nested_attributes_for :links
 
   # translations
