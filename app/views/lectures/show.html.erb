@@ -14,8 +14,8 @@
       </h1>
       <p class="lead">
         <%= icon 'clock-o' %>
-        <%= l(@lecture.start, format: '%A %e %B %H:%M').titleize %> &mdash;
-        <%= l(@lecture.stop, format: '%H:%M').titleize %>
+        <%= l(@lecture.start, format: '%A %e %B %H:%M').humanize %> &mdash;
+        <%= l(@lecture.stop, format: '%H:%M') %>
       </p>
     </summary>
     <article class="lecture info">
