@@ -50,16 +50,16 @@ end
             <%= f.check_box :first_day %>
             <%= f.label :first_day, "Will be here day 1" %>
           </div>
-          <%= select "company", "first_day_spot", Spot.all { |s| [s.name, s.id] },
-              { prompt: "Select spot day 1" }, class: 'ui dropdown' %>
+          <%= select "company", "first_day_booth", Booth.all { |b| [b.number, b.id] },
+              { prompt: "Select booth day 1..." }, class: 'ui dropdown' %>
         </div>
         <div class="column">
           <div class="ui checkbox">
             <%= f.check_box :second_day %>
             <%= f.label :second_day, "Will be here day 2" %>
           </div>
-          <%= select "company", "second_day_spot", Spot.all { |s| [s.name, s.id] },
-              { prompt: "Select spot day 2..." }, class: 'ui dropdown' %>
+          <%= select "company", "second_day_booth", Booth.all { |b| [b.number, b.id] },
+              { prompt: "Select booth day 2..." }, class: 'ui dropdown' %>
         </div>
         <div class="column">
           <div class="ui checkbox">

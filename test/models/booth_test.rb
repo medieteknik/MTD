@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SpotTest < ActiveSupport::TestCase
+class BoothTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

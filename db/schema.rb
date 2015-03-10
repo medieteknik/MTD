@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310084534) do
+ActiveRecord::Schema.define(version: 20150310123835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "booths", force: :cascade do |t|
+    t.boolean  "first_day"
+    t.boolean  "second_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "extended"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -22,12 +30,12 @@ ActiveRecord::Schema.define(version: 20150310084534) do
     t.string   "sponsor"
     t.boolean  "first_day"
     t.boolean  "second_day"
-    t.integer  "first_day_spot"
-    t.integer  "second_day_spot"
+    t.integer  "first_day_booth"
+    t.integer  "second_day_booth"
     t.boolean  "published"
     t.integer  "image_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.boolean  "extended"
     t.string   "identifier"
   end
@@ -168,14 +176,6 @@ ActiveRecord::Schema.define(version: 20150310084534) do
   create_table "roles_users", id: false, force: :cascade do |t|
     t.integer "role_id"
     t.integer "user_id"
-  end
-
-  create_table "spots", force: :cascade do |t|
-    t.boolean  "first_day"
-    t.boolean  "second_day"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "extended"
   end
 
   create_table "studentexpos", force: :cascade do |t|
