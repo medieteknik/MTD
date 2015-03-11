@@ -1,0 +1,94 @@
+<% title '– ' + t('.title') %>
+<div class="container">
+  <section class="info">
+    <h1>
+      <%= @company.name %>
+      <small>
+        <%= t('.title') %>
+      </small>
+    </h1>
+  </section>
+
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "alert alert-info #{key}" %>
+  <% end %>
+
+  <%= form_for @company, url: company_update_path(@company.slug, @company.identifier), method: :put do |f| %>
+    <% if @company.errors.any? %>
+      <div class="alert alert-warning" role="alert">
+        <strong><%= t('.error') %></strong>
+        <ul class="list">
+          <% @company.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <section class="info">
+      <h2>
+        <%= t('.booth') %>
+      </h2>
+
+      <div class="row">
+        <div class="col-sm-8">
+          <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+              <% if @company.first_day %>
+                <li role="presentation" class="active">
+                  <a href="#day_one" aria-controls="day_one" role="tab" data-toggle="tab"><%= t('.first_day') %></a>
+                </li>
+              <% end %>
+              <% if @company.second_day %>
+                <li role="presentation" <%= @company.first_day ? '' : 'class="active"'%>>
+                  <a href="#day_two" aria-controls="day_two" role="tab" data-toggle="tab"><%= t('.second_day') %></a>
+                </li>
+              <% end %>
+            </ul>
+            <div class="tab-content">
+              <% if @company.first_day %>
+                <div role="tabpanel" class="tab-pane active" id="day_one">
+                  <% @funct = "is_first_day_taken"; @target = "#company_first_day_booth_id" %>
+                  <%= render 'select_booth' %>
+                </div>
+              <% end %>
+              <% if @company.second_day %>
+                <div role="tabpanel" class="tab-pane <%= @company.first_day ? '' : 'active'%>" id="day_two">
+                  <% @funct = "is_second_day_taken"; @target = "#company_second_day_booth_id"  %>
+                  <%= render 'select_booth' %>
+                </div>
+              <% end %>
+            </div>
+            <p>
+              <%= t('.map') %>
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <p>
+            <%= t('.select') %>
+          </p>
+          <% if @company.first_day %>
+            <div class="form-group">
+              <%=  %>
+              <%= f.label :first_day_booth_id, t('.first_day') %>
+              <%= f.select :first_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: disable_booth(b, "is_first_day_taken", @company)] },
+                {}, class: 'form-control' %>
+            </div>
+          <% end %>
+          <% if @company.second_day %>
+            <div class="form-group">
+              <%=  %>
+              <%= f.label :second_day_booth_id, t('.second_day') %>
+              <%= f.select :second_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: disable_booth(b, "is_second_day_taken", @company)] },
+                {}, class: 'form-control' %>
+            </div>
+          <% end %>
+
+          <p class="form-group">
+            <%= f.submit "Spara", class: 'btn btn-primary' %>
+          </p>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</div>

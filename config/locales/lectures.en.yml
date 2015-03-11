@@ -2,6 +2,8 @@ en:
   lectures:
     index:
       title: 'Lectures'
+      lead: 'Inspireras, lär dig något eller hör någons historia.'
+      lead: 'Get inspired, learn something or hear a person''s story.'
       not_yet: 'You''re early! We''ll release this year''s lecturers soon.'
       pub: ''
       pub_link: ''

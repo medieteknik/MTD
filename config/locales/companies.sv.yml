@@ -1,5 +1,18 @@
 sv:
   companies:
+    edit:
+      title: 'Redigera företagsinformation'
+
+      booth: 'Mässplats'
+      first_day: 'Dag ett, onsdag 25/3'
+      second_day: 'Dag två, torsdag 26/3'
+      select: 'Välj vilken mässplats ni vill ha i listan eller genom att klicka på den i kartan. Gråmarkerade platser går ej att välja.'
+      map: 'Klicka på kartan för att välja en plats.'
+
+      save: 'Spara!'
+      error: 'Kunde inte spara informationen! Om problemet kvarstår, kontakta oss omedelbart!'
+      success: 'Sparade informationen!'
+
     index:
       title: 'Besökande företag'
       lead: 'MTD vore ingenting utan sin stora mässa. Här är företagen som kommer och besöker oss.'

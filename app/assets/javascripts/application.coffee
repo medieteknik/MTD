@@ -16,6 +16,8 @@
 #= require modernizr
 #= require nprogress
 #= require nprogress-turbolinks
+#= require bootstrap/tab
 #= require main
 #= require hosts
+#= require companies
 #= require turbolinks

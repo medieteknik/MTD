@@ -29,6 +29,8 @@ Rails.application.routes.draw do
     # resources :companies, only: [:index, :show]
     get '/companies' => 'companies#index', as: :companies
     get '/companies/:slug' => 'companies#show', as: :company
+    get '/companies/:slug/edit/:identifier' => 'companies#edit', as: :company_edit
+    put '/companies/:slug/edit/:identifier' => 'companies#update', as: :company_update
 
     get '/lectures' => 'lectures#index', as: :lectures
     get '/lectures/:slug' => 'lectures#show', as: :lecture

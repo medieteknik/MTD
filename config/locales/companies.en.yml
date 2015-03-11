@@ -1,5 +1,19 @@
 en:
   companies:
+    edit:
+      title: 'Edit company information'
+
+      booth: 'Fair booth'
+      first_day: 'Day one, Wednesday 25th of March'
+      second_day: 'Day two, Thursday 26th of March'
+      select: 'Välj vilken mässplats ni vill ha i listan eller genom att klicka på den i kartan. Gråmarkerade platser går ej att välja.'
+      select: 'Choose a booth by selecting it in the dropdown menu or by clicking on it in the map. Unavailable options are marked with a gray color.'
+      map: 'Choose a booth my clicking it on the map.'
+
+      save: 'Save!'
+      error: 'Could not save that information! If the problem persists, contact us immediately!'
+      success: 'Information saved!'
+
     index:
       title: 'Visiting Companies'
       lead: 'Without its fair, MTD wouldn''t be anything. Here are all the companies that will be attending the days.'

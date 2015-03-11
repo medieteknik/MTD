@@ -80,3 +80,20 @@ article.show-company {
     }
   }
 }
+
+// booth selecting
+.booth-img {
+  display: block;
+  max-width: 100%;
+
+  .disabled {
+    opacity: .2;
+  }
+  .choose:not(.disabled)[data-value] {
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}

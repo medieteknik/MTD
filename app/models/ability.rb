@@ -1,7 +1,7 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
+  def initialize(user, company = Company.new, request_identifier = nil)
     user ||= User.new # guest user (not logged in)
 
     if user.role? :super_admin
@@ -20,7 +20,8 @@ class Ability
       can :update, User do |u|
         u.try(:user) == user
       end
-      can :read, [News, Company, Lecture]
+      can :update, Company if company.identifier == request_identifier
+      can :read, [News, Company, Lecture, Booth]
       can [:create, :read], [Suggestion, Host, Studentexpo]
     end
   end
