@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310135047) do
+ActiveRecord::Schema.define(version: 20150310210100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20150310135047) do
     t.boolean  "second_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean  "extended"
     t.integer  "number"
+    t.integer  "mode"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -31,12 +31,12 @@ ActiveRecord::Schema.define(version: 20150310135047) do
     t.string   "sponsor"
     t.boolean  "first_day"
     t.boolean  "second_day"
-    t.integer  "first_day_booth"
-    t.integer  "second_day_booth"
+    t.integer  "first_day_booth_id"
+    t.integer  "second_day_booth_id"
     t.boolean  "published"
     t.integer  "image_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.boolean  "extended"
     t.string   "identifier"
   end

@@ -17,7 +17,7 @@ class Company < ActiveRecord::Base
 
   # validations
   validates :slug, :name, presence: true
-  validates :slug, :first_day_spot, :second_day_spot, uniqueness: true, allow_nil: true
+  validates :slug, :first_day_booth_id, :second_day_booth_id, uniqueness: true, allow_nil: true
 
   def create_unique_identifier
     begin

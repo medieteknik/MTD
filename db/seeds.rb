@@ -25,3 +25,51 @@ host_positions.each_index do |i|
   pos.position = host_positions[i][:position_en]
   pos.save
 end
+
+# mode
+# 0 = 2x2
+# 1 = 2x2, extendible
+# 3 = 3x3
+booths = [
+  { first_day: true, second_day: true, mode: 0, number: 1 },
+  { first_day: true, second_day: true, mode: 2, number: 2 },
+  { first_day: true, second_day: true, mode: 0, number: 3 },
+  { first_day: true, second_day: true, mode: 0, number: 4 },
+  { first_day: true, second_day: true, mode: 0, number: 5 },
+  { first_day: true, second_day: true, mode: 0, number: 6 },
+  { first_day: true, second_day: true, mode: 0, number: 7 },
+  { first_day: true, second_day: true, mode: 0, number: 8 },
+  { first_day: true, second_day: true, mode: 0, number: 9 },
+  { first_day: true, second_day: true, mode: 0, number: 10 },
+  { first_day: true, second_day: true, mode: 0, number: 11 },
+  { first_day: true, second_day: true, mode: 1, number: 12 },
+  { first_day: true, second_day: true, mode: 1, number: 13 },
+  { first_day: true, second_day: true, mode: 1, number: 14 },
+  { first_day: true, second_day: true, mode: 1, number: 15 },
+  { first_day: true, second_day: true, mode: 1, number: 16 },
+  { first_day: true, second_day: true, mode: 1, number: 17 },
+  { first_day: true, second_day: true, mode: 1, number: 18 },
+  { first_day: true, second_day: true, mode: 1, number: 19 },
+  { first_day: true, second_day: true, mode: 1, number: 20 },
+  { first_day: true, second_day: true, mode: 1, number: 21 },
+  { first_day: true, second_day: true, mode: 1, number: 22 },
+  { first_day: true, second_day: true, mode: 1, number: 23 },
+  { first_day: true, second_day: true, mode: 1, number: 24 },
+  { first_day: true, second_day: true, mode: 1, number: 25 },
+  { first_day: true, second_day: true, mode: 1, number: 26 },
+  { first_day: true, second_day: true, mode: 1, number: 27 },
+  { first_day: true, second_day: true, mode: 1, number: 28 },
+  { first_day: true, second_day: true, mode: 1, number: 29 },
+  { first_day: true, second_day: true, mode: 0, number: 30 },
+  { first_day: true, second_day: true, mode: 0, number: 31 },
+  { first_day: true, second_day: true, mode: 0, number: 32 },
+  { first_day: true, second_day: true, mode: 2, number: 33 },
+  { first_day: true, second_day: true, mode: 0, number: 34 },
+  { first_day: true, second_day: true, mode: 0, number: 35 },
+  { first_day: true, second_day: true, mode: 2, number: 36 }
+]
+
+booths.each do |booth|
+  b = Booth.find_or_create_by({number: booth["number"]})
+  b.update_attributes(booth)
+end

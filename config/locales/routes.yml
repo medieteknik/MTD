@@ -9,6 +9,7 @@ sv:
     contact: kontakt
     gold: guld
     host: vard
+    lectures: forelasningar
     new: ny
     news: nyheter
     page: sida
@@ -39,6 +40,7 @@ en:
     contact: contact
     gold: gold
     host: host
+    lectures: lectures
     new: new
     news: news
     page: page
