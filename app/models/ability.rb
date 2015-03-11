@@ -20,7 +20,7 @@ class Ability
       can :update, User do |u|
         u.try(:user) == user
       end
-      can :update, Company if company.identifier == request_identifier
+      can :update, Company if company && company.identifier && company.identifier == request_identifier
       can :read, [News, Company, Lecture, Booth]
       can [:create, :read], [Suggestion, Host, Studentexpo]
     end
