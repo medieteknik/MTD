@@ -46,20 +46,30 @@ end
 
       <div class="ui stackable three column grid">
         <div class="column">
-          <div class="ui checkbox">
-            <%= f.check_box :first_day %>
-            <%= f.label :first_day, "Will be here day 1" %>
+          <div class="field">
+            <div class="ui checkbox">
+              <%= f.check_box :first_day %>
+              <%= f.label :first_day, "Will be here day 1" %>
+            </div>
           </div>
-          <%= select "company", "first_day_booth", Booth.all { |b| [b.number, b.id] },
-              { prompt: "Select booth day 1..." }, class: 'ui dropdown' %>
+          <div class="field">
+            <%= f.label :first_day_booth_id, "First day booth" %>
+            <%= f.select :first_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: b.is_first_day_taken] },
+                { include_blank: "None" } %>
+          </div>
         </div>
         <div class="column">
-          <div class="ui checkbox">
-            <%= f.check_box :second_day %>
-            <%= f.label :second_day, "Will be here day 2" %>
+          <div class="field">
+            <div class="ui checkbox">
+              <%= f.check_box :second_day %>
+              <%= f.label :second_day, "Will be here day 2" %>
+            </div>
           </div>
-          <%= select "company", "second_day_booth", Booth.all { |b| [b.number, b.id] },
-              { prompt: "Select booth day 2..." }, class: 'ui dropdown' %>
+          <div class="field">
+            <%= f.label :second_day_booth_id, "Second day booth" %>
+            <%= f.select :second_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: b.is_second_day_taken] },
+                { include_blank: "None" } %>
+          </div>
         </div>
         <div class="column">
           <div class="ui checkbox">
@@ -118,6 +128,13 @@ end
           <p>
             <%= link_to semantic_icon("eye") + "View company", company_path(slug: @company.slug) %>
           </p>
+          <div class="field">
+            <label>
+              URL for selecting booth
+              <%= link_to "Open", company_edit_url(@company.slug, @company.identifier) %>
+            </label>
+            <%= text_field_tag :edit_url, company_edit_url(@company.slug, @company.identifier), disabled: true %>
+          </div>
         <% end %>
 
         <div class="ui checkbox">
