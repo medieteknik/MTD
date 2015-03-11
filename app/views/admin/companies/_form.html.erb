@@ -44,7 +44,10 @@ end
 
       <h4 class="ui dividing header">Fair information</h4>
 
-      <div class="ui stackable three column grid">
+      <div class="ui stackable two column grid">
+        <div class="column">
+          <%= image_tag 'fair.svg', alt: 'map', class: 'ui image' %>
+        </div>
         <div class="column">
           <div class="field">
             <div class="ui checkbox">
@@ -57,8 +60,6 @@ end
             <%= f.select :first_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: b.is_first_day_taken] },
                 { include_blank: "None" } %>
           </div>
-        </div>
-        <div class="column">
           <div class="field">
             <div class="ui checkbox">
               <%= f.check_box :second_day %>
@@ -70,11 +71,11 @@ end
             <%= f.select :second_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: b.is_second_day_taken] },
                 { include_blank: "None" } %>
           </div>
-        </div>
-        <div class="column">
-          <div class="ui checkbox">
-            <%= f.check_box :extended %>
-            <%= f.label :extended, "Has extended booth size" %>
+          <div class="field">
+            <div class="ui checkbox">
+              <%= f.check_box :extended %>
+              <%= f.label :extended, "Has extended booth size" %>
+            </div>
           </div>
         </div>
       </div>
