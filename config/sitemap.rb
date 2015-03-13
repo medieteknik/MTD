@@ -34,7 +34,7 @@ SitemapGenerator::Sitemap.create do
     Company.where(published: true).find_each do |company|
       add company_en_path(company.slug), :lastmod => company.updated_at
     end
-    Lecture.where(published: true).find_each do |company|
+    Lecture.where(published: true).find_each do |lecture|
       add lecture_en_path(lecture.slug), :lastmod => lecture.updated_at
     end
     News.where(status: 'public').find_each do |news|
@@ -60,7 +60,7 @@ SitemapGenerator::Sitemap.create do
     Company.where(published: true).find_each do |company|
       add company_sv_path(company.slug), :lastmod => company.updated_at
     end
-    Lecture.where(published: true).find_each do |company|
+    Lecture.where(published: true).find_each do |lecture|
       add lecture_sv_path(lecture.slug), :lastmod => lecture.updated_at
     end
     News.where(status: 'public').find_each do |news|
