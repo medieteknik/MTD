@@ -12,11 +12,12 @@
     <% @lectures.each_with_index do |lecture, index| %>
       <article class="row info">
         <div class="col-sm-4 <%= index % 2 == 0 ? 'col-sm-push-8' : '' %>">
-          <%= image_tag lecture.image.url, alt: lecture.name, class: 'img-responsive' if lecture.image %>
+          <%= link_to image_tag(lecture.image.url, alt: lecture.name, class: 'img-responsive'),
+            lecture_path(lecture.slug) if lecture.image %>
         </div>
         <div class="col-sm-8 <%= index % 2 == 0 ? 'col-sm-pull-4' : '' %>">
           <h3>
-            <%= lecture.title %>
+            <%= link_to lecture.title, lecture_path(lecture.slug) %>
           </h3>
           <p class="lead">
             <%= lecture.name %>,

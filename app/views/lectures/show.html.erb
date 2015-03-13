@@ -1,4 +1,6 @@
 <% title '– ' + @lecture.name + ': ' + @lecture.title %>
+<% description truncate(strip_tags(GitHub::Markdown.render_gfm(@lecture.description).html_safe), length: 100, separator: ' ') %>
+<% social_image @lecture.image.url if @lecture.image %>
 <div class="container limit-width">
   <% unless @lecture.published %>
       <div class="info alert alert-warning">

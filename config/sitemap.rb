@@ -28,8 +28,14 @@ SitemapGenerator::Sitemap.create do
     add '/en/sponsorship/compare/gold'
     add '/en/sponsorship/compare/silver'
 
+    add '/en/companies'
+    add '/en/lectures'
+
     Company.where(published: true).find_each do |company|
       add company_en_path(company.slug), :lastmod => company.updated_at
+    end
+    Lecture.where(published: true).find_each do |company|
+      add lecture_en_path(lecture.slug), :lastmod => lecture.updated_at
     end
     News.where(status: 'public').find_each do |news|
       add news_en_path(news), :lastmod => news.updated_at
@@ -49,9 +55,13 @@ SitemapGenerator::Sitemap.create do
     add '/sv/sponsor/jamfor/silver'
 
     add '/sv/foretag'
+    add '/sv/forelasningar'
 
     Company.where(published: true).find_each do |company|
       add company_sv_path(company.slug), :lastmod => company.updated_at
+    end
+    Lecture.where(published: true).find_each do |company|
+      add lecture_sv_path(lecture.slug), :lastmod => lecture.updated_at
     end
     News.where(status: 'public').find_each do |news|
       add news_sv_path(news), :lastmod => news.updated_at

@@ -5,6 +5,9 @@ module ApplicationHelper
   def description(page_description)
     content_for(:description) { page_description }
   end
+  def social_image(the_image)
+    content_for(:social_image) { the_image }
+  end
   def body_class(the_class)
     content_for(:body_class) { the_class }
   end

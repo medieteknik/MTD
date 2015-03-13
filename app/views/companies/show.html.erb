@@ -1,4 +1,6 @@
 <% title '– ' + @company.name %>
+<% description truncate(strip_tags(GitHub::Markdown.render_gfm(@company.description).html_safe), length: 100, separator: ' ') %>
+<% social_image @company.image.url if @company.image %>
 <div class="container">
   <% unless @company.published %>
     <div class="info alert alert-warning">

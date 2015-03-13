@@ -20,7 +20,8 @@
   <meta property="og:title" content="<%= t('media_technology_days') %> 2015 <%= yield(:title) %>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%= request.original_url %>" />
-  <meta property="og:image" content="<%= image_url 'favicon.png' %>" />
+  <meta property="og:description" content="<%= yield(:description).blank? ? t('meta_description') : yield(:description) %>" />
+  <meta property="og:image" content="<%= yield(:social_image).blank? ? image_url('favicon.png') : yield(:social_image) %>" />
   <meta property="og:locale" content="<%= I18n.locale == :en ? 'en_GB' : 'sv_SE' %>" />
   <meta property="og:locale:alternate" content="<%= I18n.locale == :sv ? 'en_GB' : 'sv_SE' %>" />
 
@@ -28,7 +29,7 @@
   <meta name="twitter:site" content="@mtdagarna" />
   <meta name="twitter:title" content="<%= t('media_technology_days') %> 2015 <%= yield(:title) %>" />
   <meta name="twitter:description" content="<%= yield(:description).blank? ? t('meta_description') : yield(:description) %>" />
-  <meta name="twitter:image" content="<%= image_url 'favicon.png' %>" />
+  <meta name="twitter:image" content="<%= yield(:social_image).blank? ? image_url('favicon.png') : yield(:social_image) %>" />
   <meta name="twitter:url" content="<%= request.original_url %>" />
 
   <!--[if lt IE 9]>
