@@ -11,9 +11,9 @@ module CompaniesHelper
     return company.name + " " + t('companies.show.sponsor.sponsor')
   end
 
-  def disable_booth(booth, function, company)
-    # is booth taken?
-    return true if booth.send(function)
+  def disable_booth(booth, day, company)
+    # is booth taken or closed?
+    return true if booth.send("is_"+day+"_taken") || booth.send("is_"+day+"_unavailable")
     # is this booth non-extendible at the same time as the company wants an extended booth?
     return true if booth.mode == 0 && company.extended
     # is this extended-only and company non-extended?
@@ -21,7 +21,7 @@ module CompaniesHelper
     return false
   end
 
-  def booth_class(booth, function, company)
-    disable_booth(booth, function, company) ? 'disabled' : ''
+  def booth_class(booth, day, company)
+    disable_booth(booth, day, company) ? 'disabled' : ''
   end
 end
