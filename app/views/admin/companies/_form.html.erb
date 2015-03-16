@@ -57,7 +57,7 @@ end
           </div>
           <div class="field">
             <%= f.label :first_day_booth_id, "First day booth" %>
-            <%= f.select :first_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: b.is_first_day_taken] },
+            <%= f.select :first_day_booth_id, Booth.all.order(number: :asc).collect { |b| [b.number, b.id, disabled: b.is_first_day_taken] },
                 { include_blank: "None" } %>
           </div>
           <div class="field">
@@ -68,7 +68,7 @@ end
           </div>
           <div class="field">
             <%= f.label :second_day_booth_id, "Second day booth" %>
-            <%= f.select :second_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: b.is_second_day_taken] },
+            <%= f.select :second_day_booth_id, Booth.all.order(number: :asc).collect { |b| [b.number, b.id, disabled: b.is_second_day_taken] },
                 { include_blank: "None" } %>
           </div>
           <div class="field">

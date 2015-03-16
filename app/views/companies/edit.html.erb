@@ -47,13 +47,13 @@
             <div class="tab-content">
               <% if @company.first_day %>
                 <div role="tabpanel" class="tab-pane active" id="day_one">
-                  <% @funct = "is_first_day_taken"; @target = "#company_first_day_booth_id" %>
+                  <% @day = "first_day"; @target = "#company_first_day_booth_id" %>
                   <%= render 'select_booth' %>
                 </div>
               <% end %>
               <% if @company.second_day %>
                 <div role="tabpanel" class="tab-pane <%= @company.first_day ? '' : 'active'%>" id="day_two">
-                  <% @funct = "is_second_day_taken"; @target = "#company_second_day_booth_id"  %>
+                  <% @day = "second_day"; @target = "#company_second_day_booth_id"  %>
                   <%= render 'select_booth' %>
                 </div>
               <% end %>
@@ -71,7 +71,7 @@
             <div class="form-group">
               <%=  %>
               <%= f.label :first_day_booth_id, t('.first_day') %>
-              <%= f.select :first_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: disable_booth(b, "is_first_day_taken", @company)] },
+              <%= f.select :first_day_booth_id, Booth.all.order(number: :asc).collect { |b| [b.number, b.id, disabled: disable_booth(b, "first_day", @company)] },
                 {}, class: 'form-control' %>
             </div>
           <% end %>
@@ -79,7 +79,7 @@
             <div class="form-group">
               <%=  %>
               <%= f.label :second_day_booth_id, t('.second_day') %>
-              <%= f.select :second_day_booth_id, Booth.all.collect { |b| [b.number, b.id, disabled: disable_booth(b, "is_second_day_taken", @company)] },
+              <%= f.select :second_day_booth_id, Booth.all.order(number: :asc).collect { |b| [b.number, b.id, disabled: disable_booth(b, "second_day", @company)] },
                 {}, class: 'form-control' %>
             </div>
           <% end %>
