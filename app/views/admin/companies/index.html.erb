@@ -18,7 +18,7 @@
           Slug
         </th>
         <th>
-          Days
+          Days and booth
         </th>
         <th>
           Sponsorship
@@ -52,6 +52,7 @@
               <%= 'Day two' %>
               <%= content_tag :strong, c.second_day_booth.number, title: 'Selected booth' if c.second_day_booth %>
             <% end %>
+            <%= c.extended ? ', extended' : '' %>
           </td>
           <td>
             <%= c.sponsor %>
