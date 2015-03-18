@@ -76,8 +76,11 @@
       Fair map / booths
     </div>
     <div class="content active">
-      <div class="ui two column grid">
+      <div class="ui two column stackable grid">
         <div class="column">
+          <h3 class="ui dividing header">
+            Map
+          </h3>
           <div class="ui top attached tabular menu">
               <a class="active item" data-tab="first">Day one, Wednesday march 25</a>
               <a class="item" data-tab="second">Day two, Thursday march 26</a>
@@ -94,7 +97,34 @@
           </div>
         </div>
         <div class="column">
-          b
+          <h3 class="ui dividing header">
+            Open / close booths
+          </h3>
+          <%= form_tag admin_update_companies_booths_path, { method: :post, class: 'ui form' } do %>
+            <% if @booths.any? %>
+              <%= submit_tag 'Save', class: 'ui primary button' %>
+              <% for booth in @booths %>
+                <%= fields_for "booths[]", booth do |f| %>
+                  <h5 class="ui dividing header">Booth <%= booth.number %></h5>
+                  <%= hidden_field_tag "booths_ids[]", booth.id %>
+                  <div class="two fields">
+                    <div class="field">
+                      <div class="ui checkbox">
+                        <%= f.check_box :first_day %>
+                        <%= f.label :first_day, "Available first day" %>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui checkbox">
+                        <%= f.check_box :second_day %>
+                        <%= f.label :second_day, "Available second day" %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>

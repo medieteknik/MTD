@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :hosts, except: :show
     resources :companies, except: :show
     post '/companies/:id/image' => 'companies#image_callback', as: :company_image
+    post '/companies/booths' => 'companies#update_booths', as: :update_companies_booths
     resources :lectures, except: :show
     post '/lectures/:id/image' => 'lectures#image_callback', as: :lecture_image
     resources :news, except: :show

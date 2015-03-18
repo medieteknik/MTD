@@ -7,6 +7,7 @@ class Admin::CompaniesController < Admin::AdminController
 
   def index
     @companies = Company.all.order('name asc')
+    @booths = Booth.all.order('number asc')
   end
 
   def new
@@ -38,6 +39,15 @@ class Admin::CompaniesController < Admin::AdminController
     end
   end
 
+  def update_booths
+    @booths = Booth.find(params[:booths_ids])
+    @booths.each do |booth|
+      booth.update_attributes!(booth_params[:booths][booth.id.to_s])
+    end
+    flash[:notice] = "Updated bootsh!"
+    redirect_to admin_companies_path
+  end
+
   def destroy
     if @company.destroy
       flash[:notice] = "Deleted company."
@@ -59,6 +69,10 @@ class Admin::CompaniesController < Admin::AdminController
     def set_company
       @company = Company.find(params[:id])
       add_breadcrumb @company.name, edit_admin_company_path(@company)
+    end
+
+    def booth_params
+      params.permit(:booths => [:first_day, :second_day])
     end
 
     def company_params
