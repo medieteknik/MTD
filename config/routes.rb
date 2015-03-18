@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :lectures, except: :show
     post '/lectures/:id/image' => 'lectures#image_callback', as: :lecture_image
     resources :news, except: :show
+    resources :photo_albums, path: 'photos', except: :show
     resources :suggestions, except: [:show, :create, :new, :edit]
     resources :studentexpos, only: :index
   end

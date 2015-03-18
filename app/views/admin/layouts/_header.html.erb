@@ -28,6 +28,11 @@
         <%= semantic_icon('road') %> Lectures
       </a>
     <% end %>
+    <% if can? :read, User %>
+      <a href="<%= admin_photos_path %>" class="item <%= 'active' if controller_name == 'photos' %>">
+        <%= semantic_icon('photo') %> Photos
+      </a>
+    <% end %>
     <div class="right menu">
       <div class="item">
         <%= semantic_icon 'user' %>
