@@ -11,6 +11,9 @@ class Ability
       can :manage, :all
       can :access_panel, User
       cannot [:read, :update, :create, :destroy], Role
+    elsif user.role? :photographer
+      can :create, Image
+      can :access_panel, User
     elsif user.role? :company_representative
       can [:update, :destroy], News do |n|
         n.try(:users).include? user
@@ -21,7 +24,7 @@ class Ability
         u.try(:user) == user
       end
       can :update, Company if company && company.identifier && company.identifier == request_identifier
-      can :read, [News, Company, Lecture, Booth]
+      can :read, [News, Company, Lecture, Booth, PhotoAlbum]
       can [:create, :read], [Suggestion, Host, Studentexpo]
     end
   end
