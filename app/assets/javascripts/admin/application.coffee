@@ -20,6 +20,7 @@ $(document).ready ->
   $('.ui.checkbox').checkbox()
   $('select.dropdown').dropdown()
   $('.ui.progress').progress()
+  $('.menu .item').tab();
 
   $('.toggle-menu').click ->
     $('.menu.sidebar').sidebar('toggle')

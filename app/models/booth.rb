@@ -14,4 +14,11 @@ class Booth < ActiveRecord::Base
   def is_second_day_unavailable
     !second_day
   end
+
+  def admin_first_day_class
+    is_first_day_unavailable || is_first_day_taken ? 'disable' : ''
+  end
+  def admin_second_day_class
+    is_second_day_unavailable || is_second_day_taken ? 'disable' : ''
+  end
 end

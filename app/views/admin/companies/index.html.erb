@@ -69,4 +69,34 @@
       <% end %>
     </tbody>
   </table>
+
+  <div class="ui fluid accordion">
+    <div class="title active">
+      <i class="dropdown icon"></i>
+      Fair map / booths
+    </div>
+    <div class="content active">
+      <div class="ui two column grid">
+        <div class="column">
+          <div class="ui top attached tabular menu">
+              <a class="active item" data-tab="first">Day one, Wednesday march 25</a>
+              <a class="item" data-tab="second">Day two, Thursday march 26</a>
+            </div>
+          <div class="ui bottom attached active tab segment" data-tab="first">
+            First
+            <% @day = 'first_day' %>
+            <%= render 'map_first' %>
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="second">
+            Second
+            <% @day = 'second_day' %>
+            <%= render 'map_second' %>
+          </div>
+        </div>
+        <div class="column">
+          b
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
