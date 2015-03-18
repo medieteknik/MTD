@@ -23,22 +23,30 @@
     <div class="column">
       <h2>In numbers</h2>
       <div class="ui statistics">
-        <div class="statistic">
+        <%= link_to admin_news_index_path, class: 'statistic' do %>
           <div class="value">
             <%= @news_draft.count %>
           </div>
           <div class="label">
             News <%= 'draft'.pluralize(@news_draft.count) %>
           </div>
-        </div>
-        <div class="statistic">
+        <% end %>
+        <%= link_to admin_users_path, class: 'statistic' do %>
           <div class="value">
             <%= @unconfirmed_users.count %>
           </div>
           <div class="label">
             Unconfirmed <%= 'user'.pluralize(@unconfirmed_users.count) %>
           </div>
-        </div>
+        <% end %>
+        <%= link_to admin_companies_path, class: 'statistic' do %>
+          <div class="value">
+            <%= Company.where(published: false).count %>
+          </div>
+          <div class="label">
+            Unpublished <%= 'company'.pluralize(Company.where(published: false).count) %>
+          </div>
+        <% end %>
       </div>
     </div>
     <div class="column">
@@ -48,5 +56,58 @@
         <%= link_to 'New news entry', new_admin_news_path, class: 'ui button' %>
       </p>
     </div>
+  </div>
+
+  <div class="ui stackable two column grid">
+    <% if can? :read, Studentexpo %>
+      <div class="column">
+        <h2 class="ui dividing header">
+          <%= semantic_icon 'desktop' %>
+          <div class="content">
+            Student Expo
+            <div class="sub header">
+              Latest applications of <%= Studentexpo.count %> in total.
+              <%= link_to 'View all', admin_studentexpos_path %>
+            </div>
+          </div>
+        </h2>
+        <% @student_expos.each do |s| %>
+          <article>
+            <h4><%= s.title %>, <%= s.name %> (<%= s.liuid %>)</h4>
+            <p>
+              <%= truncate(s.description, length: 150) %>
+              <%= link_to semantic_icon('eye') + 'Public view', show_studentexpo_path(s.id, s.liuid) %>
+            </p>
+          </article>
+        <% end %>
+      </div>
+    <% end %>
+    <% if can? :read, Suggestion %>
+      <div class="column">
+        <h2 class="ui dividing header">
+          <%= semantic_icon 'idea' %>
+          <div class="content">
+            Suggestions
+            <div class="sub header">
+              Latest suggestions of <%= Suggestion.count %> in total.
+              <%= link_to 'View all', admin_suggestions_path %>
+            </div>
+          </div>
+        </h2>
+        <% @suggestions.each do |s| %>
+          <article>
+            <h4>
+              Created
+              <%= 'by ' + s.email if !s.email.blank?%>
+              at <%= s.created_at.strftime('%a %d %b %Y, %H:%M') %>
+            </h4>
+            <p>
+              <%= truncate(s.content, length: 150) %>
+              <%= link_to semantic_icon('eye') + 'Public view', s %>
+            </p>
+          </article>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

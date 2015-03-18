@@ -13,19 +13,9 @@
         <%= semantic_icon('file text') %> News
       </a>
     <% end %>
-    <% if can? :read, Suggestion %>
-      <a href="<%= admin_suggestions_path %>" class="item <%= 'active' if controller_name == 'suggestions' %>">
-        <%= semantic_icon('idea') %> Suggestions
-      </a>
-    <% end %>
     <% if can? :read, Host %>
       <a href="<%= admin_hosts_path %>" class="item <%= 'active' if controller_name == 'hosts' %>">
         <%= semantic_icon('child') %> Hosts
-      </a>
-    <% end %>
-    <% if can? :read, Studentexpo %>
-      <a href="<%= admin_studentexpos_path %>" class="item <%= 'active' if controller_name == 'studentexpos' %>">
-        <%= semantic_icon('desktop') %> Student Expo
       </a>
     <% end %>
     <% if can? :read, Company %>

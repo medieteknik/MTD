@@ -7,5 +7,7 @@ class Admin::PagesController < Admin::AdminController
     add_breadcrumb 'Dashboard', :admin_path
     @news_draft = News.where(status: 'draft')
     @unconfirmed_users = User.where('confirmed_at IS ?', nil)
+    @student_expos = Studentexpo.limit(3).order(id: :desc)
+    @suggestions = Suggestion.limit(3).order(id: :desc)
   end
 end
