@@ -13,6 +13,9 @@ class Ability
       cannot [:read, :update, :create, :destroy], Role
     elsif user.role? :photographer
       can :create, Image
+      can [:update, :destroy], Image do |i|
+        i.try(:user) == user
+      end
       can :access_panel, User
     elsif user.role? :company_representative
       can [:update, :destroy], News do |n|
