@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310210100) do
+ActiveRecord::Schema.define(version: 20150318221630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,7 +107,11 @@ ActiveRecord::Schema.define(version: 20150310210100) do
     t.string   "filetype"
     t.string   "filepath"
     t.integer  "filesize"
+    t.integer  "user_id"
+    t.string   "thumbnail"
   end
+
+  add_index "images", ["user_id"], name: "index_images_on_user_id", using: :btree
 
   create_table "lecture_translations", force: :cascade do |t|
     t.integer  "lecture_id",  null: false
@@ -235,6 +239,7 @@ ActiveRecord::Schema.define(version: 20150310210100) do
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
   add_foreign_key "companies", "images"
+  add_foreign_key "images", "users"
   add_foreign_key "lectures", "images"
   add_foreign_key "links", "companies"
 end
