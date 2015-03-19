@@ -78,7 +78,7 @@ class Admin::CompaniesController < Admin::AdminController
     def company_params
       permitted = Company.globalize_attribute_names + [:name, :slug, :published,
         :sponsor, :first_day, :second_day, :first_day_booth_id, :second_day_booth_id,
-        :extended, { links_attributes: [:title, :url, :id] }]
+        :extended, :color, :initials, { links_attributes: [:title, :url, :id] }]
       params.require("company").permit(permitted)
     end
 

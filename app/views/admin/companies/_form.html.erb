@@ -30,7 +30,7 @@ end
           <%= f.text_field :name, placeholder: 'Name of the company' %>
         </div>
       </div>
-      <div class="two fields">
+      <div class="four fields">
         <div class="required field">
           <%= f.label :slug, "Company slug" %>
           <%= f.text_field :slug, placeholder: 'URL slug for the company, eg c-awards' %>
@@ -39,6 +39,19 @@ end
           <label for="">Sponsorship</label>
           <%= select "company", "sponsor", %w[fair gold silver bronze],
             { prompt: "Select sponsorship..." }, class: 'ui dropdown' %>
+        </div>
+        <div class="required field">
+          <%= f.label :initials, "Company initials" %>
+          <%= f.text_field :initials, placeholder: 'Eg AU, GE, ER' %>
+        </div>
+        <div class="field">
+          <%= f.label :color, "Color" %>
+          <div class="ui labeled input">
+            <div class="ui label" id="colordisp" style="background: <%= @company.color %>;">
+              HEX
+            </div>
+            <%= f.text_field :color, placeholder: 'Color Hex', onKeyDown: 'document.getElementById("colordisp").style.background = this.value' %>
+          </div>
         </div>
       </div>
 
