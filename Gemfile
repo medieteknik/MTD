@@ -35,7 +35,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 ## Front end stuff
 gem 'bootstrap-sass', '~> 3.3.0.1'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '4.3.1'
 gem 'bourbon'
 # setup font assets origin control without hassle
 gem 'font_assets'

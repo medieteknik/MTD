@@ -184,7 +184,7 @@ GEM
     fog-xml (0.1.1)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
-    font-awesome-sass (4.3.2)
+    font-awesome-sass (4.3.1)
       sass (~> 3.2)
     font_assets (0.1.11)
       rack
@@ -373,7 +373,7 @@ DEPENDENCIES
   devise (~> 3.4.1)
   figaro
   fog
-  font-awesome-sass
+  font-awesome-sass (= 4.3.1)
   font_assets
   github-markdown (~> 0.6.7)
   globalize (~> 5.0.0)
