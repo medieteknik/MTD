@@ -17,6 +17,7 @@
 #= require nprogress
 #= require nprogress-turbolinks
 #= require bootstrap/tab
+#= require magnific
 #= require main
 #= require hosts
 #= require companies

@@ -10,9 +10,6 @@
     color: #fff;
     @include background-photo('beamer/fair-2', cover);
 
-    h1 {
-      font-size: 57px;
-    }
     h2 {
       font-size: floor($font-size-base * 1.6);
       font-weight: 300;
@@ -32,6 +29,7 @@
     transform: translateY(-50%);
     text-align: center;
   }
+
   footer {
     @extend .hidden-xs;
     width: 100%;
@@ -45,6 +43,24 @@
     }
     a {
       color: #fff;
+    }
+  }
+
+}
+
+.beamer h1 {
+  margin: 24px 0;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 57px;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      color: darken(white, .9);
+      text-decoration: none;
     }
   }
 }

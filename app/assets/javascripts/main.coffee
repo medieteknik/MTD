@@ -8,3 +8,14 @@ $(document).ready ->
   # control mobile menu
   $('.togglemenu').click ->
     $('body').toggleClass 'expand-nav'
+
+  # stream setup
+  $('.popup-iframe').magnificPopup(
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  )

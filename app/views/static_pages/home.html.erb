@@ -3,10 +3,15 @@
 <% header_class 'transparent' %>
 <div class="beamer">
   <div class="content header-scroll-target">
-    <%= content_tag :h2, t('media_technology_days') + ' 2015' %>
-    <%= content_tag :h1, t('the_date'), class: 'date' %>
-    <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
-    <%= content_tag :h2, 'Campus Norrköping' %>
+    <% if ENV['STREAM_URL'].blank? %>
+      <%= content_tag :h2, t('media_technology_days') + ' 2015' %>
+      <%= content_tag :h1, t('the_date') %>
+      <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
+    <% else %>
+      <%= content_tag :h2, t('media_technology_days') + ' 2015, ' + t('the_date') %>
+      <%= content_tag :h1, link_to(icon('play-circle-o') + ' ' + t('.stream'), ENV['STREAM_URL'], class: 'popup-iframe'), class: 'stream' %>
+      <%= content_tag :h2, 'Färgeriet, Kåkenhus, Campus Norrköping' %>
+    <% end %>
   </div>
   <footer>
     <ul>
