@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310210100) do
+ActiveRecord::Schema.define(version: 20150319215336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20150310210100) do
     t.datetime "updated_at",          null: false
     t.boolean  "extended"
     t.string   "identifier"
+    t.string   "color"
+    t.string   "initials"
   end
 
   add_index "companies", ["image_id"], name: "index_companies_on_image_id", using: :btree
@@ -107,7 +109,11 @@ ActiveRecord::Schema.define(version: 20150310210100) do
     t.string   "filetype"
     t.string   "filepath"
     t.integer  "filesize"
+    t.integer  "user_id"
+    t.string   "thumbnail"
   end
+
+  add_index "images", ["user_id"], name: "index_images_on_user_id", using: :btree
 
   create_table "lecture_translations", force: :cascade do |t|
     t.integer  "lecture_id",  null: false
@@ -166,6 +172,28 @@ ActiveRecord::Schema.define(version: 20150310210100) do
   create_table "news_users", force: :cascade do |t|
     t.integer "news_id"
     t.integer "user_id"
+  end
+
+  create_table "photo_album_translations", force: :cascade do |t|
+    t.integer  "photo_album_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "title"
+  end
+
+  add_index "photo_album_translations", ["locale"], name: "index_photo_album_translations_on_locale", using: :btree
+  add_index "photo_album_translations", ["photo_album_id"], name: "index_photo_album_translations_on_photo_album_id", using: :btree
+
+  create_table "photo_albums", force: :cascade do |t|
+    t.boolean  "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photo_albums_images_tables", id: false, force: :cascade do |t|
+    t.integer "photo_album_id"
+    t.integer "image_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -235,6 +263,7 @@ ActiveRecord::Schema.define(version: 20150310210100) do
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
   add_foreign_key "companies", "images"
+  add_foreign_key "images", "users"
   add_foreign_key "lectures", "images"
   add_foreign_key "links", "companies"
 end
