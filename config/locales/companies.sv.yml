@@ -29,6 +29,8 @@ sv:
 
       looking_for: 'Tar emot'
       links: 'Mer information'
+      first_day: 'Onsdag 25 mars'
+      second_day: 'Torsdag 26 mars'
 
       attending:
         both: 'Besöker mässan båda dagarna.'

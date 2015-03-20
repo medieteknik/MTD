@@ -9,6 +9,8 @@ $(document).ready ->
   $('.togglemenu').click ->
     $('body').toggleClass 'expand-nav'
 
+  $('[data-toggle="tooltip"]').tooltip({'container': 'body'})
+
   # stream setup
   $('.popup-iframe').magnificPopup(
     disableOn: 700,

@@ -30,6 +30,8 @@ en:
 
       looking_for: 'Looking for'
       links: 'More information'
+      first_day: 'Wednesday'
+      second_day: 'Thursday'
 
       attending:
         both: 'Will be attending the fair both days.'
