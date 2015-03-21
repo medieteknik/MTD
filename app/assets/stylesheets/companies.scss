@@ -97,3 +97,8 @@ article.show-company {
     }
   }
 }
+
+// public map
+.map svg #booth_names text {
+  @extend .visible-xs-inline;
+}
