@@ -4,7 +4,7 @@
 
 $image-width: 100px;
 
-.lectures {
+.lecture {
   @include make-row();
 
   .day {
@@ -13,8 +13,6 @@ $image-width: 100px;
     .schedule {
       border-left: 1px solid #ccc;
       @include clearfix;
-    }
-    @media (min-width: $screen-sm-min) {
     }
   }
   h2 {
@@ -25,7 +23,7 @@ $image-width: 100px;
 
 .schedule article {
   width: 100%;
-  // width: calc(100% - 15px);
+  margin: 40px 0;
   @include clearfix;
 
   img {
@@ -42,11 +40,14 @@ $image-width: 100px;
     font-weight: 300;
     margin: 0;
     font-size: $font-size-base;
+    .time {
+      font-weight: 700;
+    }
   }
   p {
     padding: 5px 10px;
   }
-  &.image :not(img) {
+  &.image :not(img):not(p) {
     width: calc(100% - #{$image-width});
   }
 }
@@ -58,7 +59,10 @@ $image-width: 100px;
   .schedule.two article.image img {
     float: left;
   }
-  .lectures .day .schedule.two {
+  .schedule p {
+    width: calc(100% - #{$image-width});
+  }
+  .lecture .day .schedule.two {
     border-left: 0;
     border-right: 1px solid #ccc;
   }
