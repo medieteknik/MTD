@@ -2,6 +2,68 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$image-width: 100px;
+
+.lectures {
+  @include make-row();
+
+  .day {
+    @include make-sm-column(6);
+
+    .schedule {
+      border-left: 1px solid #ccc;
+      @include clearfix;
+    }
+    @media (min-width: $screen-sm-min) {
+    }
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.schedule article {
+  width: 100%;
+  // width: calc(100% - 15px);
+  @include clearfix;
+
+  img {
+    width: $image-width;
+    float: right;
+  }
+  h3 {
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px 5px;
+    margin: 0;
+  }
+  h4 {
+    padding: 5px 10px;
+    font-weight: 300;
+    margin: 0;
+    font-size: $font-size-base;
+  }
+  p {
+    padding: 5px 10px;
+  }
+  &.image :not(img) {
+    width: calc(100% - #{$image-width});
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .schedule.two article.image > :not(img) {
+    float: right;
+  }
+  .schedule.two article.image img {
+    float: left;
+  }
+  .lectures .day .schedule.two {
+    border-left: 0;
+    border-right: 1px solid #ccc;
+  }
+}
+
 @media screen and (min-width: $screen-sm-min) {
   .lecture h3 {
     margin-top: 0;

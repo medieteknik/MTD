@@ -6,6 +6,9 @@ class LecturesController < ApplicationController
   end
 
   def index
-    @lectures = Lecture.all.where(published: true).order('start asc')
+    @lectures_one = Lecture.all.where(published: true,
+      start: (Date.new(2015, 3, 25).beginning_of_day)..(Date.new(2015, 3, 25).end_of_day)).order('start asc')
+    @lectures_two = Lecture.all.where(published: true,
+      start: (Date.new(2015, 3, 26).beginning_of_day)..(Date.new(2015, 3, 26).end_of_day)).order('start asc')
   end
 end

@@ -8,28 +8,57 @@
       <%= t('.lead') %>
     </p>
   </section>
-  <section class="lectures info container limit-width">
-    <% @lectures.each_with_index do |lecture, index| %>
-      <article class="row info">
-        <div class="col-sm-4 <%= index % 2 == 0 ? 'col-sm-push-8' : '' %>">
-          <%= link_to image_tag(lecture.image.url, alt: lecture.name, class: 'img-responsive'),
-            lecture_path(lecture.slug) if lecture.image %>
+  <section class="info container">
+    <div class="lectures">
+      <div class="day">
+        <h2>
+          <%= l(Date.new(2015, 3, 25), format: '%A %e %B').humanize %>
+        </h2>
+        <div class="schedule one">
+          <% @lectures_one.each do |lecture| %>
+            <article class="<%= 'image' if lecture.image_id? %>">
+              <%= image_tag lecture.image.url, alt: lecture.name if lecture.image_id? %>
+              <h3>
+                <%= link_to lecture.title, lecture_path(lecture.slug) %>
+              </h3>
+              <h4>
+                <%= lecture.name + ', ' if lecture.name? %>
+                <%= l(lecture.start, format: '%A %e %B %H:%M') %> &mdash;
+                <%= l(lecture.stop, format: '%H:%M') %>
+              </h4>
+              <p>
+                <%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
+                  length: 100, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+              </p>
+            </article>
+          <% end %>
         </div>
-        <div class="col-sm-8 <%= index % 2 == 0 ? 'col-sm-pull-4' : '' %>">
-          <h3>
-            <%= link_to lecture.title, lecture_path(lecture.slug) %>
-          </h3>
-          <p class="lead">
-            <%= lecture.name %>,
-            <%= l(lecture.start, format: '%A %e %B %H:%M') %> &mdash;
-            <%= l(lecture.stop, format: '%H:%M') %>
-          </p>
-          <p>
-            <%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe), length: 100, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
-          </p>
+      </div>
+      <div class="day">
+        <h2>
+          <%= l(Date.new(2015, 3, 26), format: '%A %e %B').humanize %>
+        </h2>
+        <div class="schedule two">
+          <% @lectures_two.each do |lecture| %>
+            <article class="<%= 'image' if lecture.image_id? %>">
+              <%= image_tag lecture.image.url, alt: lecture.name if lecture.image_id? %>
+              <h3>
+                <%= link_to lecture.title, lecture_path(lecture.slug) %>
+              </h3>
+              <h4>
+                <%= lecture.name + ', ' if lecture.name? %>
+                <%= l(lecture.start, format: '%A %e %B %H:%M') %> &mdash;
+                <%= l(lecture.stop, format: '%H:%M') %>
+              </h4>
+              <p>
+                <%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
+                  length: 100, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+              </p>
+            </article>
+          <% end %>
         </div>
-      </article>
-    <% end %>
+      </div>
+    </div>
   </section>
 <% else %>
   <!-- no lectures -->
