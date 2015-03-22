@@ -17,6 +17,8 @@
 #= require nprogress
 #= require nprogress-turbolinks
 #= require bootstrap/tab
+#= require bootstrap/tooltip
+#= require magnific
 #= require main
 #= require hosts
 #= require companies

@@ -1,8 +1,33 @@
 <!-- kinda messy -->
 <div class="container">
-  <section class="info limit-width">
-    <%= content_tag :h1, t('.title') %>
-    <%= content_tag :p, t('.lead'), class: 'lead' %>
+  <section class="info row">
+    <div class="col-sm-6">
+      <%= content_tag :h1, t('.title') %>
+      <%= content_tag :p, t('.lead'), class: 'lead' %>
+      <%= content_tag :p, t('.count_begin') + Company.where(published: true).count.to_s + t('.count_end'), class: 'lead' %>
+    </div>
+    <div class="col-sm-6">
+      <summary class="map tabpanel">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li role="presentation" class="<%= 'active' unless Date.today === Date.new(2015, 3, 26) %>">
+            <a href="#day_one" aria-controls="day_one" role="tab" data-toggle="tab"><%= t('.first_day') %></a>
+          </li>
+          <li role="presentation" class="<%= 'active' if Date.today === Date.new(2015, 3, 26) %>">
+            <a href="#day_two" aria-controls="day_two" role="tab" data-toggle="tab"><%= t('.second_day') %></a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane <%= 'active' unless Date.today === Date.new(2015, 3, 26) %>" id="day_one">
+            <% @day = "first"; %>
+            <%= render 'public_map' %>
+          </div>
+          <div role="tabpanel" class="tab-pane <%= 'active' if Date.today === Date.new(2015, 3, 26) %>" id="day_two">
+            <% @day = "second";  %>
+            <%= render 'public_map' %>
+          </div>
+        </div>
+      </summary>
+    </div>
   </section>
 </div>
 

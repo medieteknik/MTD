@@ -104,6 +104,7 @@ sv:
       welcome: 'Välkommen'
       main_sponsors: 'Huvudsponsorer'
       sponsors: 'Sponsorer'
+      stream: 'Visa stream'
 
       contacts:
         title: 'Knyt kontakter'

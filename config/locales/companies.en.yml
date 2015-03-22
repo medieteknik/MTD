@@ -17,6 +17,8 @@ en:
     index:
       title: 'Visiting Companies'
       lead: 'Without its fair, MTD wouldn''t be anything. Here are all the companies that will be attending the days.'
+      count_begin: ''
+      count_end: ' companies will be attending the fair at MTD 2015.'
 
       sponsor:
         gold: 'Main sponsors'
@@ -30,6 +32,8 @@ en:
 
       looking_for: 'Looking for'
       links: 'More information'
+      first_day: 'Wednesday 25th March'
+      second_day: 'Thursday 26th March'
 
       attending:
         both: 'Will be attending the fair both days.'

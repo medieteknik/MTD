@@ -16,6 +16,11 @@ sv:
     index:
       title: 'Besökande företag'
       lead: 'MTD vore ingenting utan sin stora mässa. Här är företagen som kommer och besöker oss.'
+      count_begin: 'Det är '
+      count_end: ' företag som kommer till MTD2015. Du kan träffa dem på mässan klockan 10-16.'
+
+      first_day: 'Onsdag 25 mars'
+      second_day: 'Torsdag 26 mars'
 
       sponsor:
         gold: 'Huvudsponsorer'
@@ -29,6 +34,8 @@ sv:
 
       looking_for: 'Tar emot'
       links: 'Mer information'
+      first_day: 'Onsdag 25 mars'
+      second_day: 'Torsdag 26 mars'
 
       attending:
         both: 'Besöker mässan båda dagarna.'
