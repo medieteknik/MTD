@@ -17,6 +17,7 @@ class Ability
         i.try(:user) == user
       end
       can :access_panel, User
+      can :read, :all
     elsif user.role? :company_representative
       can [:update, :destroy], News do |n|
         n.try(:users).include? user

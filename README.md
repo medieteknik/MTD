@@ -61,3 +61,7 @@ When deployed, you might want to create the sitemap, since we don't wan't that t
 ## Environment variables
 
 Make sure that the system has access to the variables stated in [`application.example.yml`](config/application.example.yml), and remove `.example` from the file name.
+
+## Known problems
+
+* Images aren't deleted from S3

@@ -1,0 +1,7 @@
+<% if @image.persisted? %>
+  $('#upload_<%= params[:unique_id] %>').hide();
+  $('#lecture-image').attr('src', '<%= params[:url] %>');
+  $('<div class="ui message">Image uploaded!</div>').insertBefore('#uploads_container');
+<% else %>
+  $('#upload_<%=params[:unique_id]%> div.progress').removeClass('active progress-striped').addClass('progress-danger');
+<% end %>

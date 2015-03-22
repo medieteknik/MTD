@@ -4,6 +4,7 @@ class Admin::PhotoAlbumsController < Admin::AdminController
   before_action :set_photo_album, except: [:index, :new, :create]
   before_action :authenticate_user!
   load_and_authorize_resource
+  skip_authorize_resource only: :image_callback
 
   def index
     @albums  = PhotoAlbum.all
@@ -52,6 +53,17 @@ class Admin::PhotoAlbumsController < Admin::AdminController
     redirect_to admin_photo_albums_path
   end
 
+  def image_callback
+    # make sure user are allowed to create photo
+    authorize! :create, Image
+
+    logger.debug 'saving image'
+    @image = Image.new(image_params)
+    logger.debug @image
+    @image.user = current_user
+    @album.images << @image
+  end
+
   private
     def set_photo_album
       @album = PhotoAlbum.find(params[:id])
@@ -61,5 +73,9 @@ class Admin::PhotoAlbumsController < Admin::AdminController
     def photo_album_params
       permitted = PhotoAlbum.globalize_attribute_names
       params.require(:photo_album).permit(*permitted)
+    end
+
+    def image_params
+      params.permit(:url, :filetype, :filesize, :filepath, :unique_id)
     end
 end

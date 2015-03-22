@@ -1,9 +1,59 @@
 <%= render 'common' %>
 <div class="container">
-  <h2>Photo album <%= @album.title %></h2>
-  <h3>
-    <%= @album.images.count %> photos
-    <%= link_to_if can?(:edit, @album), semantic_icon('edit') + 'Edit', edit_admin_photo_album_path(@album) %>
-    <%= link_to_if can?(:destroy, @album), semantic_icon('trash') + "Delete", admin_photo_album_path(@album), data: {confirm: "Are you sure?"}, method: :delete %>
-  </h3>
+  <div class="ui two column stackable grid">
+    <div class="column">
+      <h2>Photo album <%= @album.title %></h2>
+      <h3>
+        <%= @album.images.count %> photos
+        <%= link_to semantic_icon('edit') + 'Edit', edit_admin_photo_album_path(@album) if can?(:edit, @album) %>
+        <%= link_to semantic_icon('trash') + "Delete", admin_photo_album_path(@album), data: {confirm: "Are you sure?"}, method: :delete if can?(:destroy, @album) %>
+      </h3>
+    </div>
+    <div class="column">
+      <h3>
+        Upload photos
+      </h3>
+      <script id="template-upload" type="text/x-tmpl">
+      <div id="upload_{%=o.unique_id%}" class="upload">
+        <h5>{%=o.name%}</h5>
+        <div class="ui indicating progress">
+          <div class="bar" style="width: 0%"></div>
+          <div class="label">Uploading...</div>
+        </div>
+      </div>
+      </script>
+
+      <%= s3_uploader_form callback_url: admin_photo_album_image_path(@album),
+        id: "s3_uploader",
+        callback_param: "document[direct_upload_url]",
+        expiration: 24.hours.from_now.utc.iso8601,
+        max_file_size: 10.megabytes,
+        class: 'ui form' do %>
+        <div class="ui input">
+          <%= file_field_tag :file, multiple: true %>
+        </div>
+        <p>
+          We accept PNG, JPG and GIF images. Upload starts automatically.
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <div id="uploads_container"></div>
+
+  <div class="ui stackable six column grid">
+    <% @album.images.each do |image| %>
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="image">
+            <%= image_tag image.url, alt: 'Photo' %>
+          </div>
+          <div class="content">
+            <p>
+              Uploaded <%= l(image.created_at, format: '%A %e %B %H:%M') %><%= ' by ' + image.user.name if image.user %>.
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

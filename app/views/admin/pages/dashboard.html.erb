@@ -30,7 +30,7 @@
           <div class="label">
             News <%= 'draft'.pluralize(@news_draft.count) %>
           </div>
-        <% end %>
+        <% end if can?(:edit, News) %>
         <%= link_to admin_users_path, class: 'statistic' do %>
           <div class="value">
             <%= @unconfirmed_users.count %>
@@ -38,7 +38,7 @@
           <div class="label">
             Unconfirmed <%= 'user'.pluralize(@unconfirmed_users.count) %>
           </div>
-        <% end %>
+        <% end if can?(:edit, User)  %>
         <%= link_to admin_companies_path, class: 'statistic' do %>
           <div class="value">
             <%= Company.where(published: false).count %>
@@ -46,20 +46,20 @@
           <div class="label">
             Unpublished <%= 'company'.pluralize(Company.where(published: false).count) %>
           </div>
-        <% end %>
+        <% end if can?(:edit, Company)  %>
       </div>
     </div>
     <div class="column">
       <h2>Quick actions</h2>
       <p>
-        <%= link_to 'Create user', new_admin_user_path, class: 'ui button' %>
-        <%= link_to 'New news entry', new_admin_news_path, class: 'ui button' %>
+        <%= link_to 'Create user', new_admin_user_path, class: 'ui button' if can?(:create, User) %>
+        <%= link_to 'New news entry', new_admin_news_path, class: 'ui button' if can?(:create, News)  %>
       </p>
     </div>
   </div>
 
   <div class="ui stackable two column grid">
-    <% if can? :read, Studentexpo %>
+    <% if can? :edit, Studentexpo %>
       <div class="column">
         <h2 class="ui dividing header">
           <%= semantic_icon 'desktop' %>
@@ -82,7 +82,7 @@
         <% end %>
       </div>
     <% end %>
-    <% if can? :read, Suggestion %>
+    <% if can? :edit, Suggestion %>
       <div class="column">
         <h2 class="ui dividing header">
           <%= semantic_icon 'idea' %>
