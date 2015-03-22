@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319215336) do
+ActiveRecord::Schema.define(version: 20150322204031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 20150319215336) do
   create_table "company_translations", force: :cascade do |t|
     t.integer  "company_id",  null: false
     t.string   "locale",      null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.text     "description"
     t.string   "looking_for"
   end
@@ -114,6 +114,11 @@ ActiveRecord::Schema.define(version: 20150319215336) do
   end
 
   add_index "images", ["user_id"], name: "index_images_on_user_id", using: :btree
+
+  create_table "images_photo_albums", id: false, force: :cascade do |t|
+    t.integer "photo_album_id"
+    t.integer "image_id"
+  end
 
   create_table "lecture_translations", force: :cascade do |t|
     t.integer  "lecture_id",  null: false
@@ -189,11 +194,6 @@ ActiveRecord::Schema.define(version: 20150319215336) do
     t.boolean  "published"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "photo_albums_images_tables", id: false, force: :cascade do |t|
-    t.integer "photo_album_id"
-    t.integer "image_id"
   end
 
   create_table "roles", force: :cascade do |t|
