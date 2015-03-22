@@ -1,7 +1,7 @@
 class Admin::PhotoAlbumsController < Admin::AdminController
   add_breadcrumb 'Photos', :admin_photo_albums_path
 
-  before_action :set_photo_album, only: [:edit, :update, :destroy, :image_callback]
+  before_action :set_photo_album, except: [:index, :new, :create]
   before_action :authenticate_user!
   load_and_authorize_resource
 
@@ -18,12 +18,15 @@ class Admin::PhotoAlbumsController < Admin::AdminController
     add_breadcrumb 'Edit', edit_admin_photo_album_path(@album)
   end
 
+  def show
+  end
+
   def create
     @album = PhotoAlbum.new(photo_album_params)
 
     if @album.save!
       flash[:notice] = "Album created!"
-      redirect_to admin_photo_albums_path
+      redirect_to admin_photo_album_path @album
     else
       flash[:notice] = "Could not create album!"
       render 'new'
@@ -33,7 +36,7 @@ class Admin::PhotoAlbumsController < Admin::AdminController
   def update
     if @album.update(photo_album_params)
       flash[:notice] = "Updated photo album"
-      redirect_to edit_admin_photo_album_path(@album)
+      redirect_to admin_photo_album_path(@album)
     else
       flash[:notice] = "Could not update album"
       render 'edit'
@@ -52,7 +55,7 @@ class Admin::PhotoAlbumsController < Admin::AdminController
   private
     def set_photo_album
       @album = PhotoAlbum.find(params[:id])
-      add_breadcrumb 'Photo album ' + @album.title, edit_admin_photo_album_path(@album)
+      add_breadcrumb 'Photo album ' + @album.title, admin_photo_album_path(@album)
     end
 
     def photo_album_params

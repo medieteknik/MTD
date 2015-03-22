@@ -8,6 +8,7 @@
   <% @albums.each do |album| %>
     <h3>
       <%= album.title %>
+      <%= link_to_if can?(:create, Image), semantic_icon('plus') + 'Add photos', admin_photo_album_path(album) %>
       <%= link_to_if can?(:edit, album), semantic_icon('edit') + 'Edit', edit_admin_photo_album_path(album) %>
       <%= link_to_if can?(:destroy, album), semantic_icon('trash') + "Delete", admin_photo_album_path(album), data: {confirm: "Are you sure?"}, method: :delete %>
     </h3>
