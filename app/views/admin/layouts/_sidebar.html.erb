@@ -32,11 +32,16 @@
       <%= semantic_icon('briefcase') %> Companies
     </a>
   <% end %>
-    <% if can? :read, Lecture %>
-      <a href="<%= admin_lectures_path %>" class="item <%= 'active' if controller_name == 'lectures' %>">
-        <%= semantic_icon('road') %> Lectures
-      </a>
-    <% end %>
+  <% if can? :read, Lecture %>
+    <a href="<%= admin_lectures_path %>" class="item <%= 'active' if controller_name == 'lectures' %>">
+      <%= semantic_icon('road') %> Lectures
+    </a>
+  <% end %>
+  <% if can? :read, User %>
+    <a href="<%= admin_photo_albums_path %>" class="item <%= 'active' if controller_name == 'photos' %>">
+      <%= semantic_icon('photo') %> Photos
+    </a>
+  <% end %>
   <a href="<%= root_path %>" class="item">
     <%= semantic_icon 'world' %>
     Public page

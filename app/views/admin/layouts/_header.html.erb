@@ -29,7 +29,7 @@
       </a>
     <% end %>
     <% if can? :read, User %>
-      <a href="<%= admin_photos_path %>" class="item <%= 'active' if controller_name == 'photos' %>">
+      <a href="<%= admin_photo_albums_path %>" class="item <%= 'active' if controller_name == 'photos' %>">
         <%= semantic_icon('photo') %> Photos
       </a>
     <% end %>
