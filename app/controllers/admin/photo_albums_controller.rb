@@ -58,7 +58,7 @@ class Admin::PhotoAlbumsController < Admin::AdminController
     authorize! :create, Image
 
     @image = Image.new(image_params)
-    @image.user = current_user
+    @image.user_id = current_user.id
     @image.create_thumbnail(200, 200, params[:filename], params[:unique_id])
     @album.images << @image
   end
