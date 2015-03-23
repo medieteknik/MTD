@@ -13,6 +13,7 @@ sv:
     new: ny
     news: nyheter
     page: sida
+    photos: bilder
     previous-years: 'tidigare-ar'
     sponsorship: sponsor
     studentexpo: studentexpo
@@ -44,6 +45,7 @@ en:
     new: new
     news: news
     page: page
+    photos: photos
     previous-years: 'previous-years'
     sponsorship: sponsorship
     studentexpo: studentexpo

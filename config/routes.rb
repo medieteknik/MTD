@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   end
 
   localized do
+    get '/' => 'static_pages#home', :as => :home
+
     as :user do
       patch 'user/confirmation' => 'users/confirmations#update', :via => :patch, :as => :update_user_confirmation
     end
@@ -44,7 +46,7 @@ Rails.application.routes.draw do
     resources :hosts, only: [:new, :create], path: 'host', path_names: {new: 'apply'}
     get '/host/:id/:liuid' => 'hosts#show', as: :show_host
 
-    get '/' => 'static_pages#home', :as => :home
+    get '/photos' => 'photo_albums#index'
 
     # in order to have translated routes, these are needed
     get '/sponsorship' => 'static_pages#show', :page => 'sponsor/sponsor'

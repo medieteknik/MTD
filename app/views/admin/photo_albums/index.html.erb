@@ -3,7 +3,7 @@
   <h2>
     All photos
   </h2>
-  <%= link_to_if can?(:create, PhotoAlbum), semantic_icon('plus') + 'Create new photo album', new_admin_photo_album_path, class: 'ui green labeled icon button' %>
+  <%= link_to semantic_icon('plus') + 'Create new photo album', new_admin_photo_album_path, class: 'ui green labeled icon button' if can?(:create, PhotoAlbum) %>
 
   <% @albums.each do |album| %>
     <h3>

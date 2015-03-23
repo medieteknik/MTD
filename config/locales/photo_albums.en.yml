@@ -1,0 +1,7 @@
+en:
+  photo_albums:
+    index:
+      title: 'Photos'
+      lead: 'All the photos from the fair.'
+
+      view_big: 'Show big photo'

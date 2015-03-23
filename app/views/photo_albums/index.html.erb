@@ -1,0 +1,27 @@
+<div class="container">
+  <section class="info limit-width">
+    <h1>
+      <%= t('.title') %>
+    </h1>
+    <p class="lead">
+      <%= t('.lead') %>
+    </p>
+  </section>
+
+  <% @albums.each do |album| %>
+    <% if album.images.any? %>
+      <section class="album info">
+        <h2>
+          <%= album.title %>
+        </h2>
+        <div class="images">
+          <% album.images.each do |image| %>
+            <article>
+              <%= link_to image_tag(image.public_thumb_url, alt: t('.view_big')), image.public_url, title: album.title %>
+            </article>
+          <% end %>
+        </div>
+      </section>
+    <% end %>
+  <% end %>
+</div>

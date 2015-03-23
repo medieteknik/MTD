@@ -1,0 +1,17 @@
+// Place all the styles related to the photo_albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.album .images {
+  @include make-row();
+
+  article {
+    margin-bottom: 15px;
+    @include make-sm-column(2);
+    @include make-xs-column(6);
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

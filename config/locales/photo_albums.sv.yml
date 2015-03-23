@@ -1,0 +1,7 @@
+sv:
+  photo_albums:
+    index:
+      title: 'Bilder'
+      lead: 'Här samlas alla bilder från dagarna.'
+
+      view_big: 'Visa stor bild'
