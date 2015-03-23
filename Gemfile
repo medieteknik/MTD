@@ -64,6 +64,7 @@ gem 'cancancan', '~> 1.9'
 
 # International urls
 gem 'route_translator'
+
 # setup simple sitemap handeling
 gem 'sitemap_generator'
 gem 'fog'
@@ -80,6 +81,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'aws-sdk', '< 2'
 # direct upload form helper and assets
 gem 's3_direct_upload'
+
+# image manipulation
+gem 'mini_magick'
 
 ## DEVELOPMENT TOOLS
 group :development do

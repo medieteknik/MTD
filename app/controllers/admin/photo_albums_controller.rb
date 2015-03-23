@@ -57,10 +57,9 @@ class Admin::PhotoAlbumsController < Admin::AdminController
     # make sure user are allowed to create photo
     authorize! :create, Image
 
-    logger.debug 'saving image'
     @image = Image.new(image_params)
-    logger.debug @image
     @image.user = current_user
+    @image.create_thumbnail(200, 200, params[:filename], params[:unique_id])
     @album.images << @image
   end
 

@@ -23,7 +23,7 @@
       </div>
       </script>
 
-      <%= s3_uploader_form callback_url: admin_photo_album_image_path(@album),
+      <%= s3_uploader_form callback_url: admin_photo_album_image_callback_path(@album),
         id: "s3_uploader",
         callback_param: "document[direct_upload_url]",
         expiration: 24.hours.from_now.utc.iso8601,
@@ -45,11 +45,12 @@
       <div class="column">
         <div class="ui fluid card">
           <div class="image">
-            <%= image_tag image.url, alt: 'Photo' %>
+            <%= image_tag image.public_thumb_url, alt: 'Photo' %>
           </div>
           <div class="content">
             <p>
               Uploaded <%= l(image.created_at, format: '%A %e %B %H:%M') %><%= ' by ' + image.user.name if image.user %>.
+              <%= link_to semantic_icon('trash') + 'Delete', admin_photo_album_image_path(@album, image), data: {confirm: "Are you sure?"}, method: :delete if can?(:destroy, image) %>
             </p>
           </div>
         </div>
