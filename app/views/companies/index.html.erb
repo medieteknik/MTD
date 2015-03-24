@@ -133,4 +133,27 @@
       </div>
     </section>
   <% end %>
+
+  <% if @thanks_companies.any? %>
+    <section class="info">
+      <h3 class="text-center"><%= t('.sponsor.thanks') %></h3>
+      <div class="companies-row fair">
+        <% @thanks_companies.each_with_index do |company, index| %>
+          <article class="company">
+            <div class="wrap">
+              <%= image_tag(company.image.url, alt: company.name) if company.image %>
+            </div>
+            <h4 class="text-center">
+              <%= company.name %>
+            </h4>
+            <p><%= company.description %></p>
+          </article>
+          <% if (index+1)%4 == 0 %>
+            <!-- semi-ugly way to solve this, yes -->
+            </div><div class="companies-row fair">
+          <% end %>
+        <% end %>
+      </div>
+    </section>
+  <% end %>
 </div>
