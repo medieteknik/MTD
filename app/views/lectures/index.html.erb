@@ -20,7 +20,7 @@
               <article class="<%= 'image' if lecture.image_id? %>">
                 <%= image_tag lecture.image.url, alt: lecture.name if lecture.image_id? %>
                 <h3>
-                  <%= link_to lecture.title, lecture_path(lecture.slug) %>
+                  <%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug) %>
                 </h3>
                 <h4>
                   <span class="time">
@@ -46,7 +46,7 @@
               <article class="<%= 'image' if lecture.image_id? %>">
                 <%= image_tag lecture.image.url, alt: lecture.name if lecture.image_id? %>
                 <h3>
-                  <%= link_to lecture.title, lecture_path(lecture.slug) %>
+                  <%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug) %>
                 </h3>
                 <h4>
                   <span class="time">

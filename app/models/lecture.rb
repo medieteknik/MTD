@@ -6,6 +6,6 @@ class Lecture < ActiveRecord::Base
   globalize_accessors
 
   # validations
-  validates :slug, :name, :start, :stop, presence: true
-  validates :slug, uniqueness: true, allow_nil: true
+  validates :name, :start, :stop, presence: true
+  validates :slug, uniqueness: true, allow_nil: true, allow_blank: true
 end
