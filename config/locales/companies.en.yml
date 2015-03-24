@@ -25,6 +25,7 @@ en:
         silver: 'Sponsors'
         bronze:
         fair: 'Fair'
+        thanks: 'Thanks to'
 
     show:
       not_published: 'This company is not yet published!'

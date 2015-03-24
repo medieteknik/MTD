@@ -27,6 +27,7 @@ sv:
         silver: 'Sponsorer'
         bronze:
         fair: 'Mässföretag'
+        thanks: 'Tack till'
 
     show:
       not_published: 'Företaget är ännu inte publicerat!'

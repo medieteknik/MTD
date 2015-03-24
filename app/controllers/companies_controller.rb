@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
     @silver_companies = Company.where(published: true, sponsor: 'silver').order('name asc')
     @bronze_companies = Company.where(published: true, sponsor: 'bronze').order('name asc')
     @fair_companies = Company.where(published: true, sponsor: 'fair').order('name asc')
+    @thanks_companies = Company.where(published: true, sponsor: 'thanks').order('name asc')
   end
 
   def edit
