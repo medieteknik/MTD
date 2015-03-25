@@ -102,3 +102,7 @@ article.show-company {
 .map svg #booth_names text {
   @extend .visible-xs-inline;
 }
+
+svg text {
+  font-family: 'Open Sans', sans-serif;
+}
