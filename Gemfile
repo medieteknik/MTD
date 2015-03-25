@@ -109,7 +109,6 @@ group :production do
   gem 'heroku-deflater'
   # minify dat html
   gem 'htmlcompressor'
+  # use newrelic to measure performance
+  gem 'newrelic_rpm'
 end
-
-# use newrelic to measure performance
-gem 'newrelic_rpm'

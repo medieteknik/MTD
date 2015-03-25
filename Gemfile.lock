@@ -9,7 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.3.0)
+    CFPropertyList (2.3.1)
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
       actionview (= 4.2.0)
@@ -69,7 +69,7 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
-    byebug (4.0.2)
+    byebug (4.0.3)
       columnize (= 0.9.0)
     cancancan (1.10.1)
     chronic (0.10.2)
@@ -148,7 +148,7 @@ GEM
       fog-xml
     fog-json (1.0.0)
       multi_json (~> 1.0)
-    fog-profitbricks (0.0.1)
+    fog-profitbricks (0.0.2)
       fog-core
       fog-xml
       nokogiri
@@ -210,10 +210,10 @@ GEM
     i18n (0.7.0)
     inflecto (0.0.2)
     ipaddress (0.8.0)
-    jbuilder (2.2.11)
+    jbuilder (2.2.12)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jquery-fileupload-rails (0.4.4)
+    jquery-fileupload-rails (0.4.5)
       actionpack (>= 3.1)
       railties (>= 3.1)
       sass (>= 3.2)
@@ -241,7 +241,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
-    newrelic_rpm (3.11.0.283)
+    newrelic_rpm (3.11.1.284)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     nprogress-rails (0.1.6.6)

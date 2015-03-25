@@ -7,7 +7,7 @@ class Admin::PhotoAlbumsController < Admin::AdminController
   skip_authorize_resource only: :image_callback
 
   def index
-    @albums  = PhotoAlbum.all
+    @albums  = PhotoAlbum.all.order(order: :asc)
   end
 
   def new
@@ -70,7 +70,7 @@ class Admin::PhotoAlbumsController < Admin::AdminController
     end
 
     def photo_album_params
-      permitted = PhotoAlbum.globalize_attribute_names
+      permitted = PhotoAlbum.globalize_attribute_names + [:order]
       params.require(:photo_album).permit(*permitted)
     end
 
