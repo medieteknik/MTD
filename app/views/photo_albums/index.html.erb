@@ -17,7 +17,7 @@
         <div class="images">
           <% album.images.each do |image| %>
             <article>
-              <%= link_to image_tag(image.public_thumb_url, alt: t('.view_big')), image.public_url, title: album.title %>
+              <%= link_to image_tag(image.public_thumb_url, alt: t('.view_big')), image.public_url, title: album.title, :'data-photographer' => ' – Foto: '+image.user.name %>
             </article>
           <% end %>
         </div>
