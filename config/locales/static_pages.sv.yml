@@ -5,7 +5,7 @@ sv:
       # route: sv/om
       about:
         title: 'Om MTD'
-        lead: 'Medieteknikdagarna är ett ideellt arrangemang drivet av och för studenter. 2015 går dagarna av stapeln för femtonde gången. Syftet är att knyta kontakter mellan studenter, medietekniker ute i arbetslivet och företagen inom branschen.'
+        lead: 'Medieteknikdagarna är ett ideellt arrangemang drivet av och för studenter. 2016 går dagarna av stapeln för femtonde gången. Syftet är att knyta kontakter mellan studenter, medietekniker ute i arbetslivet och företagen inom branschen.'
         second: 'Under två dagar anordnas det en populär mässa parallellt med inspirerande föreläsningar, och evenemanget avslutas med en stor bankett.'
         third: 'MTD är ett tillfälle för företag och studenter att inspirera, informera och integrera med varandra. Såväl företag som studenter får här en chans att visa det allra senaste inom medieteknik.'
 
@@ -23,8 +23,7 @@ sv:
           lecture: 'Föreläsningsansvarig'
           banquet: 'Bankettansvarig'
           tech: 'Teknikansvarig'
-          pr: 'PR-ansvarig'
-          print: 'Tryckansvarig'
+          pr_print: 'PR- & Tryckansvarig'
           coordinator: 'Koordinator'
           web: 'Webbansvarig'
 
@@ -42,17 +41,17 @@ sv:
       # route: sv/om/kontakt
       contact:
         title: 'Kontakta oss'
-        lead: 'Vi gillar att snacka! Så enkelt är det. Om du har minsta lilla fråga eller fundering, tveka inte alls att höra av dig till oss.'
+        lead: 'Vi gillar att snacka! Om du har minsta lilla fråga eller fundering, tveka inte alls att höra av dig till oss.'
         sponsor: 'Här kan du läsa om hur du blir MTD-sponsor i framtiden.'
 
         business:
           email: 'foretag@medieteknikdagarna.se'
           title: 'Företagskontakt'
-          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Hör av dig till Emma på:'
+          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Kontakta Cristoffer på:'
         fair:
           email: 'massa@medieteknikdagarna.se'
           title: 'Mässan'
-          text: 'Har du någon fråga kring mässan? Kontakta Fredrik på: '
+          text: 'Har du någon fråga kring mässan? Kontakta Albin på: '
         general:
           email: 'kontakt@medieteknikdagarna.se'
           title: 'Generella frågor'
@@ -71,19 +70,19 @@ sv:
         press:
           email: 'pr@medieteknikdagarna.se'
           title: 'Press och media'
-          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av dig till Mattias på:'
+          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av dig till oss på:'
         pressinfo:
           title: 'Pressinformation'
           contact: 'Presskontakt'
         webb:
           email: 'webb@medieteknikdagarna.se'
           title: 'Webb'
-          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Klas på:'
+          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Jonathan på:'
 
       # route: sv/om/tidigare-ar
       previous:
         title: 'Tidigare år'
-        lead: '2015 blir det femtonde året som MTD arrangeras. Här är några höjdpunkter från de gångna åren.'
+        lead: '2016 blir det femtonde året som MTD arrangeras. Här är några höjdpunkter från de gångna åren.'
         video: 'Videosammanfattning från vår senaste mässa.'
 
         lectures:
@@ -117,7 +116,7 @@ sv:
     # route: sv/vard
     host:
       info: 'Du kommer som värd vara med och skapa ett par fantastiska dagar och som tack för hjälpen så får ni gå på en händelsefull kick-off, få lunch under dagarna ni jobbar och bli bjudna, helt gratis, på den avslutande banketten som ni absolut inte vill missa! Så läs igenom beskrivningen till de olika värdposterna och sök de tre som du tycker verkar roligast. Kom ihåg, MTD är ingenting utan sina värdar!'
-      lead: 'MTD 2015 är snart här och för att genomföra dessa två spännande dagar behöver vi din hjälp!'
+      lead: 'MTD 2016 är snart här och för att genomföra dessa två spännande dagar behöver vi din hjälp!'
       title: 'Bli MTD-värd'
 
       apply:
@@ -186,7 +185,7 @@ sv:
 
       # route: sv/sponsor
       sponsor:
-        title: 'Bli sponsor för MTD2015'
+        title: 'Bli sponsor för MTD2016'
         lead: 'Vill du komma i kontakt med studenter från en av Sveriges bästa utbildningar? Bli en av våra sponsorer!'
         second: 'Som en utav våra sponsorer ser du till att göra MTD möjligt, och ditt företag hamnar i en unik och nära position till studenterna. Vi har här satt ihop ett antal attraktiva paket att välja från.'
 
