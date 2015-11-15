@@ -66,11 +66,11 @@ ActiveRecord::Schema.define(version: 20150325200350) do
   add_index "company_translations", ["locale"], name: "index_company_translations_on_locale", using: :btree
 
   create_table "host_position_translations", force: :cascade do |t|
-    t.integer  "host_position_id",             null: false
-    t.string   "locale",           limit: 255, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "position",         limit: 255
+    t.integer  "host_position_id", null: false
+    t.string   "locale",           null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "position"
   end
 
   add_index "host_position_translations", ["host_position_id"], name: "index_host_position_translations_on_host_position_id", using: :btree
@@ -83,22 +83,22 @@ ActiveRecord::Schema.define(version: 20150325200350) do
   end
 
   create_table "hosts", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "liuid",      limit: 255
-    t.string   "phone",      limit: 255
+    t.string   "name"
+    t.string   "liuid"
+    t.string   "phone"
     t.integer  "year"
     t.text     "reason"
-    t.string   "size",       limit: 255
+    t.string   "size"
     t.boolean  "member"
     t.boolean  "banquet"
-    t.string   "allergies",  limit: 255
+    t.string   "allergies"
     t.text     "other"
     t.integer  "first"
     t.integer  "second"
     t.integer  "third"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "position",               default: 0
+    t.integer  "position",   default: 0
   end
 
   create_table "images", force: :cascade do |t|
@@ -157,18 +157,18 @@ ActiveRecord::Schema.define(version: 20150325200350) do
   add_index "links", ["company_id"], name: "index_links_on_company_id", using: :btree
 
   create_table "news", force: :cascade do |t|
-    t.string   "status",       limit: 255
+    t.string   "status"
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "news_translations", force: :cascade do |t|
-    t.integer  "news_id",                null: false
-    t.string   "locale",     limit: 255, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title",      limit: 255
+    t.integer  "news_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
     t.text     "content"
   end
 
@@ -199,7 +199,7 @@ ActiveRecord::Schema.define(version: 20150325200350) do
   end
 
   create_table "roles", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -210,12 +210,12 @@ ActiveRecord::Schema.define(version: 20150325200350) do
   end
 
   create_table "studentexpos", force: :cascade do |t|
-    t.string   "title",         limit: 255
+    t.string   "title"
     t.text     "description"
-    t.string   "members",       limit: 255
-    t.string   "liuid",         limit: 255
-    t.string   "name",          limit: 255
-    t.string   "course",        limit: 255
+    t.string   "members"
+    t.string   "liuid"
+    t.string   "name"
+    t.string   "course"
     t.boolean  "need_computer"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -223,29 +223,29 @@ ActiveRecord::Schema.define(version: 20150325200350) do
 
   create_table "suggestions", force: :cascade do |t|
     t.text     "content"
-    t.string   "email",      limit: 255
+    t.string   "email"
     t.boolean  "seen"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.string   "confirmation_token",     limit: 255
+    t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",                   limit: 255
+    t.string   "name"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
@@ -253,13 +253,13 @@ ActiveRecord::Schema.define(version: 20150325200350) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "versions", force: :cascade do |t|
-    t.string   "item_type",  limit: 255, null: false
-    t.integer  "item_id",                null: false
-    t.string   "event",      limit: 255, null: false
-    t.string   "whodunnit",  limit: 255
+    t.string   "item_type",  null: false
+    t.integer  "item_id",    null: false
+    t.string   "event",      null: false
+    t.string   "whodunnit"
     t.text     "object"
     t.datetime "created_at"
-    t.string   "locale",     limit: 255
+    t.string   "locale"
   end
 
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
