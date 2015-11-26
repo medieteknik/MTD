@@ -42,12 +42,12 @@ en:
       contact:
         title: 'Contact us'
         lead: 'We''d love to talk to you! No matter what it is, please share your questions and wonderings with us.'
-        sponsor: 'Read about beeing a sponsor for MTD.'
+        sponsor: 'Read about beeing a partner for MTD.'
 
         business:
           email: 'businesscontact@medieteknikdagarna.se'
           title: 'Business contact'
-          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our sponsors? Contact Cristoffer at:'
+          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Cristoffer at:'
         fair:
           email: 'fair@medieteknikdagarna.se'
           title: 'Fair information'
@@ -101,8 +101,8 @@ en:
       teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
       quote: 'Media Technology in Norrköping is one of Sweden''s best programming educations'
       welcome: 'Welcome'
-      main_sponsors: 'Main Sponsors'
-      sponsors: 'Sponsors'
+      main_sponsors: 'Main Partners'
+      sponsors: 'Partners'
       stream: 'View stream'
 
       contacts:
@@ -129,7 +129,7 @@ en:
     sponsor:
       # route: en/sponsorship/compare
       compare:
-        title: 'Compare our sponsorship packages'
+        title: 'Compare our partnership packages'
         lead: 'See what''s included in all of our packages.'
 
         bronze: 'Bronze'
@@ -185,9 +185,9 @@ en:
 
       # route: sv/sponsor
       sponsor:
-        title: 'Become a sponsor'
-        lead: 'Do you want to get in touch with students from one of the best educations in Sweden? Become one of our sponsors!'
-        second: 'As one of our sponsors, you''l be part of making MTD possible. You''ll also have an unique position close to the students.'
+        title: 'Become a partner'
+        lead: 'Do you want to get in touch with students from one of the best educations in Sweden? Become one of our partners!'
+        second: 'As one of our partners, you''l be part of making MTD possible. You''ll also have an unique position close to the students.'
 
         common: 'All of the packages include a fair booth both of the days, we''ll advertise you on medieteknikdagarna.se and lots of other things. If you''ve got an idea on how you would like to cooporate, that isn''t listed here? Do not hesitate to contact us, and we''ll come up with a sollution that''s good for the both of us.'
 
@@ -228,15 +228,15 @@ en:
 
       # route: sv/sponsor/jamfor/brons
       bronze:
-        lead: 'Our bronze sponsor package is perfect if you want more than an ordinary fair booth.'
-        title: 'Bronze sponsor'
+        lead: 'Our bronze package is perfect if you want more than an ordinary fair booth.'
+        title: 'Bronze partner'
 
       # route: sv/sponsor/jamfor/silver
       silver:
-        lead: 'As a silver sponsor you will have an important position in making MTD come true. You''ll get a prominent position close to the students.'
-        title: 'Silver sponsor'
+        lead: 'As a silver partner you will have an important position in making MTD come true. You''ll get a prominent position close to the students.'
+        title: 'Silver partner'
 
       # route: sv/sponsor/jamfor/guld
       gold:
-        lead: 'As a gold sponsor you''ll be one of our main partners. We''ll make sure that your company is one of the most seen, and you''ll have exclusive advantages over the other companies.'
-        title: 'Gold sponsor'
+        lead: 'As a gold partner you''ll be one of our main partners. We''ll make sure that your company is one of the most seen, and you''ll have exclusive advantages over the other companies.'
+        title: 'Gold partner'
