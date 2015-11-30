@@ -24,58 +24,18 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-sm-4 col-sm-push-8">
-      <div class="info gray-box">
-        <%= content_tag :h3, t('.welcome') + '!' %>
-        <%= content_tag :p, t('.lead') %>
+    <div class="info">
+      <div class="col-sm-6">
+          <%= content_tag :h4, t('.welcome') + '!' %>
+          <%= content_tag :p, t('.lead') %>
       </div>
 
-      <section class="sponsors">
-        <h4 class="text-center"><%= t('.main_sponsors') %></h4>
-        <% @gold_sponsors.each do |company| %>
-          <article class="large-company">
-            <h3>
-              <%= link_to company.name, company_path(company.slug) %>
-            </h3>
-            <p>
-              <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 100, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %>
-            </p>
-          </article>
-        <% end %>
-
-        <h4 class="text-center"><%= t('.sponsors') %></h4>
-        <% @silver_sponsors.each do |company| %>
-          <article class="silver-sponsor">
-            <%= link_to company_path(company.slug) do %>
-              <%= image_tag(company.image.url, alt: company.name, class: 'img-responsive') if company.image %>
-            <% end %>
-          </article>
-        <% end %>
-      </section>
-
-      <div class="info gray-box">
-        <h5><%= t('suggestions.home.title') %></h5>
-        <p>
-          <%= t('suggestions.home.info') %>
-          <%= link_to t('suggestions.home.link'), new_suggestion_path %>
-        </p>
-      </div>
-    </div>
-    <div class="col-sm-8 col-sm-pull-4">
-      <% @news.each do |n| %>
-        <div class="info">
-          <%= content_tag :h2, link_to(n.title, n) %>
+      <div class="col-sm-6">
+          <h4><%= t('suggestions.home.title') %></h4>
           <p>
-            <%= l(n.published_at, format: '%e %B, %Y') %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
-            <%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
+            <%= t('suggestions.home.info') %>
+            <%= link_to t('suggestions.home.link'), new_suggestion_path %>
           </p>
-          <p>
-            <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), n } %>
-          </p>
-        </div>
-      <% end %>
-      <div class="info">
-        <%= link_to t('.all_news'), news_index_path %>
       </div>
     </div>
   </div>
