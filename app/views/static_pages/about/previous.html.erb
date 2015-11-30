@@ -4,12 +4,6 @@
     <%= content_tag :h1, t('.title')%>
     <%= content_tag :p, t('.lead'), class: 'lead' %>
   </section>
-  <div class="info limit-width">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe src="//www.youtube.com/embed/p8F5gmww2TA?theme=light&showinfo=0&rel=0" frameborder="0" class="embed-responsive-item" allowfullscreen></iframe>
-    </div>
-    <%= content_tag :p, t('.video') %>
-  </div>
 
   <section class="info">
     <div class="limit-width">
@@ -37,6 +31,13 @@
     </div>
 
   </section>
+
+  <div class="info limit-width">
+    <%= content_tag :h3, t('.video') %>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe src="//www.youtube.com/embed/p8F5gmww2TA?theme=light&showinfo=0&rel=0" frameborder="0" class="embed-responsive-item" allowfullscreen></iframe>
+    </div>
+  </div>
 <!--
   <section class="info">
     <div class="limit-width">
