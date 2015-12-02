@@ -23,15 +23,15 @@
   </footer>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="info">
+  <div class="info info--large">
+    <div class="row">
       <div class="col-sm-6">
-          <%= content_tag :h4, t('.welcome') + '!' %>
+          <%= content_tag :h2, t('.welcome') + '!' %>
           <%= content_tag :p, t('.lead') %>
       </div>
 
       <div class="col-sm-6">
-          <h4><%= t('suggestions.home.title') %></h4>
+          <h2><%= t('suggestions.home.title') %></h2>
           <p>
             <%= t('suggestions.home.info') %>
             <%= link_to t('suggestions.home.link'), new_suggestion_path %>
