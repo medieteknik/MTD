@@ -101,9 +101,9 @@ sv:
       # teaser: 'För sextonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
       quote: 'Medieteknik i Norrköping är en utav de bästa programeringsutbildningarna som finns i Sverige'
       welcome: 'Välkommen'
-      main_sponsors: 'Huvudsponsorer'
-      sponsors: 'Sponsorer'
-      stream: 'Visa stream'
+      main_sponsors: 'Huvudpartners'
+      sponsors: 'Partners'
+      stream: 'Vi har ingen stream i år'
 
       contacts:
         title: 'Knyt kontakter'
@@ -136,52 +136,58 @@ sv:
         silver: 'Silver'
         gold: 'Guld'
 
-        logo:
-          title: 'Er logotyp kommer synas på...'
-          perk_1: 'Broschyrer'
-          perk_2: 'Marknadsföringsaffischer'
-          perk_3: 'Bildspel'
-          perk_4: 'Marknadsföringsflyers'
-          perk_5: 'Förstasidan av medieteknikdagarna.se'
-          perk_6: 'Goodiebags'
-          perk_7: 'Header på medieteknikdagarna.se'
-          perk_8: 'Vårt Cover Photo på Facebook'
-          perk_9: 'Bumper i videomaterial'
-          perk_10: 'Våra rollups under mässan'
-          perk_11: 'Värdtröjor'
-
-        information:
-          title: 'Information om ert företag kommer synas på..'
-          perk_1: 'Prioriterad plats på medieteknikdagarna.se'
-          perk_2: 'Startsidan av medieteknikdagarna.se'
+        services:
+          title: 'På mässan får ni..'
+          perk_1: 'Mässplats 2 dagar'
+          perk_2: 'Välja mässplats'
+          perk_3:
+            title: 'Synas på TV-skärmarna'
+            gold: 'Reklamfilm<br><small>Upp till två min</small>'
+            silver: 'Bildmaterial<br><small>Upp till 30 sek</small>'
+            bronze: 'egen bild'
+          perk_4: 'Bidra med material till goodiebags'
+          perk_5: 'Utökad mässplats (3x2 m)'
+          perk_6:
+            title: 'Logotyp på MTD:s rollups'
+            gold: 'Prioriterad plats'
+          perk_7: 'Logotyp på goodiebags'
+          perk_8: 'Personlig företagsvärd'
+          perk_9: 'Logotyp på värdtröjor'
+          perk_10: '15 min presentation i samband med föreläsning'
 
         benefits:
-          title: 'Ni kommer också få..'
-          perk_1: 'Välja mässplats'
+          title: 'Utöver mässan kommer ni få...'
+          perk_1: 'Stöd och marknadsföring vid era event'
           perk_2:
-            title: 'Synas på livestream'
-            gold: 'Reklamfilm<br><small>Max två minuter</small>'
-            silver: 'Bildmaterial<br><small>Max 30 s</small>'
-            bronze: 'Egen bild'
-          perk_3:
             title: 'MTD-intervju som publiceras på våra sociala flöden'
-            gold: 'hemma hos'
-            silver: 'e-mailintervju'
-            bronze: 'tre snabba frågor'
-          perk_4:
+            gold: 'längre reportage'
+            silver: 'videointervju'
+            bronze: 'skriftlig intervju'
+          perk_3:
             title: 'En hälsning via våra sociala flöden'
             gold: '1 gång/mån'
             silver: '1 gång'
-          perk_5: 'Publicera innehåll på medieteknikdagarna.se'
-          perk_6: 'Egna rollups med på MTD-event'
+          perk_4: 'Publicera innehåll på medieteknikdagarna.se'
+          perk_5: 'Egna rollups med på MTD-event'
 
-        services:
-          title: 'Väl framme får ni..'
-          perk_1: 'Mässplats 2 dagar'
-          perk_2: 'Bidra till goodiebags'
-          perk_3: 'Stöd & marknadsföring vid era event'
-          perk_4: 'Företagsvärd'
-          perk_5: 'En presentation i samband med föreläsning'
+        logo:
+          title: 'Er logotyp i/på...'
+          perk_1: 'Appen'
+          perk_2: 'Marknadsföringsaffischer'
+          perk_3: 'Marknadsföringsflyers'
+          perk_4: 'Förstasidan av medieteknikdagarna.se'
+          perk_5: 'Bumper i videomaterial'
+          perk_6: 'Headerbilden på medieteknikdagarna.se'
+          perk_7: 'Omslagsbild på MTD:s Facebooksida'
+          perk_8: 'MTD:s vepa'
+
+        information:
+          title: 'Information om Er i/på'
+          perk_1: 'Prioriterad plats på medieteknikdagarna.se'
+          perk_2: 'Prioriterad plats i appen'
+          perk_3: 'Startsidan av medieteknikdagarna.se'
+
+
 
       # route: sv/sponsor
       sponsor:
@@ -201,41 +207,42 @@ sv:
             price: '10 000 SEK'
 
             one: 'Logotyp på affischer, skärmar och i appen'
-            two: 'Prioriterad plats på hemsidan'
+            two: 'Prioriterad plats över mässföretag på hemsidan'
             three: 'Företräde till att välja mässplats'
-            four: 'Intervju på hemsidan'
+            four: 'Skriftlig intervju på sociala flöden'
 
           silver:
             title: 'Mer – Silver'
             price: '20 000 SEK'
 
-            one: 'Brons-paketet inklusive'
-            two: 'Logotyp på flyers och på startsidan'
-            three: 'Film på streamen'
+            one: 'Brons-avtalet inklusive'
+            two: 'Logotyp på flyers och på förstasidan'
+            three: 'Videointervju istället för skriftlig'
             four: 'Utökad info på MTDs hemsida'
 
           gold:
             title: 'Mest – Guld'
             price: '30 000 SEK'
 
-            one: 'Silver-paketet inklusive'
-            two: 'Logotyp på Goodiebags, Facebook och värdtröjor'
-            three: 'Hemma hos-reportage'
+            one: 'Silver-avtalet inklusive'
+            two: 'Logotyp på Goodiebags, Facebook, vepan, värdtröjor, hemsidans header'
+            three: 'Längre reportage istället för kortare videointervju'
             four: 'Först att välja mässplats'
+
           fair:
             title: 'Mässplats'
 
       # route: sv/sponsor/jamfor/brons
       bronze:
-        lead: 'Vårt bronssponsorpaket är utmärkt för dig som vill ha lite mer än en vanlig mässplats.'
-        title: 'Bli bronssponsor'
+        lead: 'Vårt bronsavtal är utmärkt för dig som vill ha lite mer än en vanlig mässplats.'
+        title: 'Bli bronspartner'
 
       # route: sv/sponsor/jamfor/silver
       silver:
-        lead: 'Som silversponsor blir du en av nyckelkomponenterna i det som verkliggör MTD. Du får en tydligt framträdande roll och kommer nära studenterna.'
-        title: 'Bli silversponsor'
+        lead: 'Som silverpartner blir du en av nyckelkomponenterna i det som verkliggör MTD. Du får en tydligt framträdande roll och kommer nära studenterna.'
+        title: 'Bli silverpartner'
 
       # route: sv/sponsor/jamfor/guld
       gold:
-        lead: 'Som guldsponsor blir du en av våra huvudsponsorer. Vi ser till att ni är några av de som syns mest och ni får flera fördelar över de andra företagen.'
-        title: 'Bli guldsponsor'
+        lead: 'Som guldpartner blir du en av våra huvudsponsorer. Vi ser till att ni är några av de som syns mest och ni får flera fördelar över de andra företagen.'
+        title: 'Bli guldpartner'
