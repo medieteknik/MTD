@@ -9,7 +9,6 @@
       <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
     <% else %>
       <%= content_tag :h2, t('media_technology_days') + ' 2016, ' + t('the_date') %>
-      <%= content_tag :h1, link_to(icon('play-circle-o') + ' ' + t('.stream'), ENV['STREAM_URL'], class: 'popup-iframe'), class: 'stream' %>
       <%= content_tag :h2, 'Färgeriet, Kåkenhus, Campus Norrköping' %>
     <% end %>
   </div>
