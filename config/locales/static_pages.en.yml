@@ -164,10 +164,7 @@ en:
             gold: 'Longer reportage'
             silver: 'Video interview'
             bronze: 'Written interview'
-          perk_3:
-            title: 'Say Hi to the studens through our social media'
-            gold: 'once/month'
-            silver: 'once'
+          perk_3: 'Say Hi to the studens through our social media'
           perk_4: 'Publish your own material at medieteknikdagarna.se'
           perk_5: 'You own rollups at MTD events leading up to the fair'
 

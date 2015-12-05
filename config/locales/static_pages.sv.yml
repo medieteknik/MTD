@@ -144,7 +144,7 @@ sv:
             title: 'Synas på TV-skärmarna'
             gold: 'Reklamfilm<br><small>Upp till två min</small>'
             silver: 'Bildmaterial<br><small>Upp till 30 sek</small>'
-            bronze: 'egen bild'
+            bronze: 'Egen bild'
           perk_4: 'Bidra med material till goodiebags'
           perk_5: 'Utökad mässplats (3x2 m)'
           perk_6:
@@ -160,13 +160,10 @@ sv:
           perk_1: 'Stöd och marknadsföring vid era event'
           perk_2:
             title: 'MTD-intervju som publiceras på våra sociala flöden'
-            gold: 'längre reportage'
-            silver: 'videointervju'
-            bronze: 'skriftlig intervju'
-          perk_3:
-            title: 'En hälsning via våra sociala flöden'
-            gold: '1 gång/mån'
-            silver: '1 gång'
+            gold: 'Längre reportage'
+            silver: 'Videointervju'
+            bronze: 'Skriftlig intervju'
+          perk_3: 'En hälsning via våra sociala flöden'
           perk_4: 'Publicera innehåll på medieteknikdagarna.se'
           perk_5: 'Egna rollups med på MTD-event'
 
