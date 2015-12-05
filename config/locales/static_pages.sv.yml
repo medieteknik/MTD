@@ -137,7 +137,7 @@ sv:
         gold: 'Guld'
 
         services:
-          title: 'På mässan får ni..'
+          title: 'På mässan får ni...'
           perk_1: 'Mässplats 2 dagar'
           perk_2: 'Välja mässplats'
           perk_3:
@@ -182,7 +182,7 @@ sv:
           perk_8: 'MTD:s vepa'
 
         information:
-          title: 'Information om Er i/på'
+          title: 'Information om Er i/på...'
           perk_1: 'Prioriterad plats på medieteknikdagarna.se'
           perk_2: 'Prioriterad plats i appen'
           perk_3: 'Startsidan av medieteknikdagarna.se'
