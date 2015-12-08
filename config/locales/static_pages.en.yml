@@ -143,7 +143,7 @@ en:
           perk_2: 'To choose booth location'
           perk_3:
             title: 'Coverage on TV-screens'
-            gold: 'Commercial movie<br><small>Up to 2 min</small>'
+            gold: 'Promo movie<br><small>Up to 2 min</small>'
             silver: 'Slideshow<br><small>Up to 30 sec</small>'
             bronze: 'Fullscreen image'
           perk_4: 'To contribute material to goodiebags'
@@ -161,7 +161,7 @@ en:
           perk_1: 'Support and advertising for your own events'
           perk_2:
             title: 'Interview of you published on our social media'
-            gold: 'Longer reportage'
+            gold: 'Extended video reportage'
             silver: 'Video interview'
             bronze: 'Written interview'
           perk_3: 'Say Hi to the studens through our social media'
