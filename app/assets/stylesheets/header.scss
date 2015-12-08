@@ -60,24 +60,6 @@
       @include background-img('header/logo', contain);
     }
   }
-
-  .sponsor {
-    @extend .hidden-xs;
-    float: right;
-    width: 16%;
-    height: $header-logo-height;
-    margin: 0 0 0 15px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &.ge {
-      background-image: image-url('sponsors/ge.png');
-    }
-    &.autodesk {
-      background-image: image-url('sponsors/autodesk.png');
-    }
-  }
 }
 
 // nav

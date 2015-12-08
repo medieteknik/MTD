@@ -29,6 +29,183 @@
         <% end %>
       </div>
     </article>
+    <%= content_tag :h3, t('.services.title') %>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_1') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_2') %>
+      </div>
+      <div class="cross">
+        <%= t('first').titleize %>
+      </div>
+      <div class="cross">
+        <%= t('second').titleize %>
+      </div>
+      <div class="cross">
+        <%= t('third').titleize %>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_3.title') %>
+      </div>
+      <div class="cross">
+        <%= raw t('.services.perk_3.gold') %>
+      </div>
+      <div class="cross">
+        <%= raw t('.services.perk_3.silver') %>
+      </div>
+      <div class="cross">
+        <%= raw t('.services.perk_3.bronze') %>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_4') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_5') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_6.title') %>
+      </div>
+      <div class="cross">
+        <%= t('.services.perk_6.gold') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_7') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_8') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_9') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+    <article class="perk">
+      <div class="text">
+        <%= t('.services.perk_10') %>
+      </div>
+      <div class="cross">
+        <div class="marked"></div>
+      </div>
+    </article>
+
+    <section class="info">
+      <%= content_tag :h3, t('.benefits.title') %>
+      <article class="perk">
+        <div class="text">
+          <%= t('.benefits.perk_1') %>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+      </article>
+      <article class="perk">
+        <div class="text">
+          <%= t('.benefits.perk_2.title') %>
+        </div>
+        <div class="cross">
+          <%= raw t('.benefits.perk_2.gold') %>
+        </div>
+        <div class="cross">
+          <%= raw t('.benefits.perk_2.silver') %>
+        </div>
+        <div class="cross">
+          <%= raw t('.benefits.perk_2.bronze') %>
+        </div>
+      </article>
+      <article class="perk">
+        <div class="text">
+          <%= t('.benefits.perk_3') %>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+
+      </article>
+      <article class="perk">
+        <div class="text">
+          <%= t('.benefits.perk_4') %>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+        <div class="cross">
+        </div>
+      </article>
+      <article class="perk">
+        <div class="text">
+          <%= t('.benefits.perk_5') %>
+        </div>
+        <div class="cross">
+          <div class="marked"></div>
+        </div>
+      </article>
+    </section>
+
     <%= content_tag :h4, t('.logo.title') %>
     <article class="perk">
       <div class="text">
@@ -61,9 +238,6 @@
     <article class="perk">
       <div class="text">
         <%= t('.logo.perk_3') %>
-      </div>
-      <div class="cross">
-        <div class="marked"></div>
       </div>
       <div class="cross">
         <div class="marked"></div>
@@ -118,30 +292,6 @@
         <div class="marked"></div>
       </div>
     </article>
-    <article class="perk">
-      <div class="text">
-        <%= t('.logo.perk_9') %>
-      </div>
-      <div class="cross">
-        <div class="marked"></div>
-      </div>
-    </article>
-    <article class="perk">
-      <div class="text">
-        <%= t('.logo.perk_10') %>
-      </div>
-      <div class="cross">
-        <div class="marked"></div>
-      </div>
-    </article>
-    <article class="perk">
-      <div class="text">
-        <%= t('.logo.perk_11') %>
-      </div>
-      <div class="cross">
-        <div class="marked"></div>
-      </div>
-    </article>
 
     <section class="info">
       <%= content_tag :h4, t('.information.title') %>
@@ -166,70 +316,6 @@
         <div class="cross">
           <div class="marked"></div>
         </div>
-      </article>
-    </section>
-
-    <section class="info">
-      <%= content_tag :h4, t('.benefits.title') %>
-      <article class="perk">
-        <div class="text">
-          <%= t('.benefits.perk_1') %>
-        </div>
-        <div class="cross">
-          <%= t('first').titleize %>
-        </div>
-        <div class="cross">
-          <%= t('second').titleize %>
-        </div>
-        <div class="cross">
-          <%= t('third').titleize %>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.benefits.perk_2.title') %>
-        </div>
-        <div class="cross">
-          <%= raw t('.benefits.perk_2.gold') %>
-        </div>
-        <div class="cross">
-          <%= raw t('.benefits.perk_2.silver') %>
-        </div>
-        <div class="cross">
-          <%= raw t('.benefits.perk_2.bronze') %>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.benefits.perk_3.title') %>
-        </div>
-        <div class="cross">
-          <%= t('.benefits.perk_3.gold') %>
-        </div>
-        <div class="cross">
-          <%= t('.benefits.perk_3.silver') %>
-        </div>
-        <div class="cross">
-          <%= t('.benefits.perk_3.bronze') %>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.benefits.perk_4.title') %>
-        </div>
-        <div class="cross">
-          <%= t('.benefits.perk_4.gold') %>
-        </div>
-        <div class="cross">
-          <%= t('.benefits.perk_4.silver') %>
-        </div>
-        <div class="cross">
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.benefits.perk_5') %>
-        </div>
         <div class="cross">
           <div class="marked"></div>
         </div>
@@ -239,75 +325,10 @@
       </article>
       <article class="perk">
         <div class="text">
-          <%= t('.benefits.perk_6') %>
+          <%= t('.information.perk_3') %>
         </div>
         <div class="cross">
           <div class="marked"></div>
-        </div>
-      </article>
-    </section>
-
-    <section class="info">
-      <%= content_tag :h4, t('.services.title') %>
-      <article class="perk">
-        <div class="text">
-          <%= t('.services.perk_1') %>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.services.perk_2') %>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.services.perk_3') %>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.services.perk_4') %>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-        <div class="cross">
-          <div class="marked"></div>
-        </div>
-      </article>
-      <article class="perk">
-        <div class="text">
-          <%= t('.services.perk_5') %>
-        </div>
-        <div class="cross">
-          15 min
         </div>
       </article>
     </section>

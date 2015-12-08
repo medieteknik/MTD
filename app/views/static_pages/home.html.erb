@@ -4,12 +4,11 @@
 <div class="beamer">
   <div class="content header-scroll-target">
     <% if ENV['STREAM_URL'].blank? %>
-      <%= content_tag :h2, t('media_technology_days') + ' 2015' %>
+      <%= content_tag :h2, t('media_technology_days') + ' 2016' %>
       <%= content_tag :h1, t('the_date') %>
       <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
     <% else %>
-      <%= content_tag :h2, t('media_technology_days') + ' 2015, ' + t('the_date') %>
-      <%= content_tag :h1, link_to(icon('play-circle-o') + ' ' + t('.stream'), ENV['STREAM_URL'], class: 'popup-iframe'), class: 'stream' %>
+      <%= content_tag :h2, t('media_technology_days') + ' 2016, ' + t('the_date') %>
       <%= content_tag :h2, 'Färgeriet, Kåkenhus, Campus Norrköping' %>
     <% end %>
   </div>
@@ -19,63 +18,24 @@
       <%= content_tag :li, link_to(icon('facebook', '', class: 'fa-lg') + ' Facebook', 'https://facebook.com/medieteknikdagarna') %>
       <%= content_tag :li, link_to(icon('twitter', '', class: 'fa-lg') + ' Twitter', 'https://twitter.com/mtdagarna') %>
       <%= content_tag :li, link_to(icon('youtube', '', class: 'fa-lg') + ' YouTube', 'https://youtube.com/mtdagarna') %>
+      <%= content_tag :li, link_to(icon('instagram', '', class: 'fa-lg') + ' Instagram', 'https://www.instagram.com/medieteknikdagarna/') %>
     </ul>
   </footer>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4 col-sm-push-8">
-      <div class="info gray-box">
-        <%= content_tag :h3, t('.welcome') + '!' %>
-        <%= content_tag :p, t('.lead') %>
+  <div class="info info--large">
+    <div class="row">
+      <div class="col-sm-6">
+          <%= content_tag :h2, t('.welcome') + '!' %>
+          <%= content_tag :p, t('.lead') %>
       </div>
 
-      <section class="sponsors">
-        <h4 class="text-center"><%= t('.main_sponsors') %></h4>
-        <% @gold_sponsors.each do |company| %>
-          <article class="large-company">
-            <h3>
-              <%= link_to company.name, company_path(company.slug) %>
-            </h3>
-            <p>
-              <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 100, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %>
-            </p>
-          </article>
-        <% end %>
-
-        <h4 class="text-center"><%= t('.sponsors') %></h4>
-        <% @silver_sponsors.each do |company| %>
-          <article class="silver-sponsor">
-            <%= link_to company_path(company.slug) do %>
-              <%= image_tag(company.image.url, alt: company.name, class: 'img-responsive') if company.image %>
-            <% end %>
-          </article>
-        <% end %>
-      </section>
-
-      <div class="info gray-box">
-        <h5><%= t('suggestions.home.title') %></h5>
-        <p>
-          <%= t('suggestions.home.info') %>
-          <%= link_to t('suggestions.home.link'), new_suggestion_path %>
-        </p>
-      </div>
-    </div>
-    <div class="col-sm-8 col-sm-pull-4">
-      <% @news.each do |n| %>
-        <div class="info">
-          <%= content_tag :h2, link_to(n.title, n) %>
+      <div class="col-sm-6">
+          <h2><%= t('suggestions.home.title') %></h2>
           <p>
-            <%= l(n.published_at, format: '%e %B, %Y') %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
-            <%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
+            <%= t('suggestions.home.info') %>
+            <%= link_to t('suggestions.home.link'), new_suggestion_path %>
           </p>
-          <p>
-            <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), n } %>
-          </p>
-        </div>
-      <% end %>
-      <div class="info">
-        <%= link_to t('.all_news'), news_index_path %>
       </div>
     </div>
   </div>

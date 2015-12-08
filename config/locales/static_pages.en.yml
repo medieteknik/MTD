@@ -5,7 +5,7 @@ en:
       # route: en/about
       about:
         title: 'About MTD'
-        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2015 the event is held for the 15th time.'
+        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2016 the event is held for the 16th time.'
         second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event ends with a grand banquet.'
         third: 'MTD is an oportunity for companies and students to inspire, inform and interact with eachother. Both students and companies are given the chance to show the latest within media technology.'
 
@@ -23,8 +23,7 @@ en:
           lecture: 'Lecture coordinator'
           banquet: 'Banquet manager'
           tech: 'Technical coordinator'
-          pr: 'PR manager'
-          print: 'Print manager'
+          pr_print: 'PR & Print manager'
           coordinator: 'Coordinator'
           web: 'Web manager'
 
@@ -43,16 +42,17 @@ en:
       contact:
         title: 'Contact us'
         lead: 'We''d love to talk to you! No matter what it is, please share your questions and wonderings with us.'
-        sponsor: 'Read about beeing a sponsor for MTD.'
+        sponsor: 'Read about beeing a partner for MTD.'
 
         business:
           email: 'businesscontact@medieteknikdagarna.se'
           title: 'Business contact'
-          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our sponsors? Contact:'
+          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Cristoffer at:'
+
         fair:
           email: 'fair@medieteknikdagarna.se'
           title: 'Fair information'
-          text: 'Do you have any questions about the fair? Contact Fredrik at: '
+          text: 'Do you have any questions about the fair? Contact Albin at: '
         general:
           email: 'contact@medieteknikdagarna.se'
           title: 'General inquiries'
@@ -71,20 +71,20 @@ en:
         press:
           email: 'pr@medieteknikdagarna.se'
           title: 'Press and media'
-          text: 'Are you representing press or other media, and want to know something about MTD? Contact Mattias at:'
+          text: 'Are you representing press or other media, and want to know something about MTD? Contact:'
         pressinfo:
           title: 'Press information'
           contact: 'Press contact'
         webb:
           email: 'web@medieteknikdagarna.se'
           title: 'Web'
-          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Klas at:'
+          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Jonathan at:'
 
       # route: en/about/previous
       previous:
         title: 'Previous years'
-        lead: '2015 will be the 15th year the days are arranged. Here are some highlights from the previous years.'
-        video: 'Video summary in Swedish from our last fair.'
+        lead: '2016 will be the 16th year the days are arranged. Here are some highlights from the previous years.'
+        video: 'Video summary in Swedish from the fair 2014.'
 
         lectures:
           title: 'Lectures'
@@ -99,11 +99,11 @@ en:
     home:
       all_news: 'Show all news'
       lead: 'The Media Technology Days are two days with inspiration, a fair, hundreds of students and companies from the industry. Here, you''ll find everything you need to know about the days.'
-      teaser: 'For the 15th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
+      teaser: 'For the 16th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
       quote: 'Media Technology in Norrköping is one of Sweden''s best programming educations'
       welcome: 'Welcome'
-      main_sponsors: 'Main Sponsors'
-      sponsors: 'Sponsors'
+      main_sponsors: 'Main Partners'
+      sponsors: 'Partners'
       stream: 'View stream'
 
       contacts:
@@ -117,7 +117,7 @@ en:
     # route: en/host
     host:
       info: 'For more information about the different positions, please contact our coordinator at koordinator@medieteknikdagarna.se.'
-      lead: 'MTD 2015 is just around the corner, and to make it as good as it''s ever possible we need your help!'
+      lead: 'MTD 2016 is just around the corner, and to make it as good as it''s ever possible we need your help!'
       title: 'MTD host'
 
       apply:
@@ -130,65 +130,69 @@ en:
     sponsor:
       # route: en/sponsorship/compare
       compare:
-        title: 'Compare our sponsorship packages'
+        title: 'Compare our partnership packages'
         lead: 'See what''s included in all of our packages.'
 
         bronze: 'Bronze'
         silver: 'Silver'
         gold: 'Gold'
 
-        logo:
-          title: 'Your logotype will be shown...'
-          perk_1: 'In folders'
-          perk_2: 'On advertising posters'
-          perk_3: 'On our slideshow'
-          perk_4: 'In advertising flyers'
-          perk_5: 'On the front page of medieteknikdagarna.se'
-          perk_6: 'On our goodiebags'
-          perk_7: 'On the header of medieteknikdagarna.se'
-          perk_8: 'On our cover photo on Facebook'
-          perk_9: 'All our video material'
-          perk_10: 'On our rollups during the fair'
-          perk_11: 'On our volunteers'' shirts during the fair'
-
-        information:
-          title: 'Informatoin about your company will be shown...'
-          perk_1: 'On a prioritized position at medieteknikdagarna.se'
-          perk_2: 'On the front page of medieteknikdagarna.se'
+        services:
+          title: 'Once at the fair you''ll get...'
+          perk_1: 'Fair booth both days'
+          perk_2: 'To choose booth location'
+          perk_3:
+            title: 'Coverage on TV-screens'
+            gold: 'Promo movie<br><small>Up to 2 min</small>'
+            silver: 'Slideshow<br><small>Up to 30 sec</small>'
+            bronze: 'Fullscreen image'
+          perk_4: 'To contribute material to goodiebags'
+          perk_5: 'Extended booth area (3x2 m)'
+          perk_6:
+            title: 'Logo on MTD rollups'
+            gold: 'Prioritized position'
+          perk_7: 'Logo on goodiebags'
+          perk_8: 'Personal host'
+          perk_9: 'Logo on all host shirts'
+          perk_10: 'A 15 min presentation in connection with a lecture'
 
         benefits:
-          title: 'You will allso get to...'
-          perk_1: 'Choose fair booth'
+          title: 'You will also get...'
+          perk_1: 'Support and advertising for your own events'
           perk_2:
-            title: 'Be seen on the live stream'
-            gold: 'Ad<br><small>Maximum two mins</small>'
-            silver: 'Image material<br><small>Maximum 30 seconds</small>'
-            bronze: 'Your own image'
-          perk_3:
-            title: 'Be interviewed by the MTD group'
-            gold: 'at your office'
-            silver: 'by email'
-            bronze: 'three quick questions'
-          perk_4:
-            title: 'Say Hi to the studens through our Facebook/Twitter'
-            gold: 'once/month'
-            silver: 'once'
-          perk_5: 'Publish your own material at medieteknikdagarna.se'
-          perk_6: 'You own rollups at MTD events before the fair'
+            title: 'Interview of you published on our social media'
+            gold: 'Extended video reportage'
+            silver: 'Video interview'
+            bronze: 'Written interview'
+          perk_3: 'Say Hi to the studens through our social media'
+          perk_4: 'Publish your own material at medieteknikdagarna.se'
+          perk_5: 'You own rollups at MTD events leading up to the fair'
 
-        services:
-          title: 'Once at the fair you''l get...'
-          perk_1: 'Fair booth both days'
-          perk_2: 'Contribute to our goodiebags'
-          perk_3: 'Support and advertising for your own events'
-          perk_4: 'Your own host'
-          perk_5: 'A presentation in connection with a lecture'
+        logo:
+          title: 'Your logotype will be shown...'
+          perk_1: 'In the app'
+          perk_2: 'On advertising posters'
+          perk_3: 'In advertising flyers'
+          perk_4: 'On the front page of medieteknikdagarna.se'
+          perk_5: 'Bumper in video material'
+          perk_6: 'On the header of medieteknikdagarna.se'
+          perk_7: 'On our cover image on Facebook'
+          perk_8: 'On our large banner'
+
+        information:
+          title: 'Information about your company will be shown...'
+          perk_1: 'On a prioritized position at medieteknikdagarna.se'
+          perk_2: 'On a prioritized position in the app'
+          perk_3: 'On the front page of medieteknikdagarna.se'
+
+
+
 
       # route: sv/sponsor
       sponsor:
-        title: 'Become a sponsor'
-        lead: 'Do you want to get in touch with students from one of the best educations in Sweden? Become one of our sponsors!'
-        second: 'As one of our sponsors, you''l be part of making MTD possible. You''ll also have an unique position close to the students.'
+        title: 'Become a partner'
+        lead: 'Do you want to get in touch with students from one of the best educations in Sweden? Become one of our partners!'
+        second: 'As one of our partners, you''l be part of making MTD possible. You''ll also have an unique position close to the students.'
 
         common: 'All of the packages include a fair booth both of the days, we''ll advertise you on medieteknikdagarna.se and lots of other things. If you''ve got an idea on how you would like to cooporate, that isn''t listed here? Do not hesitate to contact us, and we''ll come up with a sollution that''s good for the both of us.'
 
@@ -202,42 +206,43 @@ en:
             title: 'A lot – Bronze'
             price: '10 000 SEK'
 
-            one: 'Logotyp on posters, live stream and in folders'
-            two: 'prioritized position on our website'
-            three: 'Early access to choose fair booth'
-            four: 'Interview on our website'
+            one: 'Logotype on posters, screens and in the app'
+            two: 'Prioritized position over non-partner companies on our website'
+            three: 'Early access to choose location of fair booth'
+            four: 'Written interview on our website'
 
           silver:
             title: 'More – Silver'
             price: '20 000 SEK'
 
-            one: 'The bronze package including'
+            one: 'The bronze deal including'
             two: 'Logotype on flyers and on our front page'
-            three: 'Short move on our live stream'
+            three: 'Video interview instead of the written one'
             four: 'Extended information on our website'
 
           gold:
             title: 'The most – Gold'
             price: '30 000 SEK'
 
-            one: 'The Silver package including'
-            two: 'Logotype on goodiebags, Facebook etc'
-            three: 'Exclusive interview'
-            four: 'First access to choose fair both'
+            one: 'The Silver deal including'
+            two: 'Logotype on goodiebags, Facebook, webiste header etc'
+            three: 'Exclusive longer reportage instead of the shorter video interview'
+            four: 'First access to choose fair booth'
+
           fair:
             title: 'Fair booth'
 
       # route: sv/sponsor/jamfor/brons
       bronze:
-        lead: 'Our bronze sponsor package is perfect if you want more than an ordinary fair booth.'
-        title: 'Bronze sponsor'
+        lead: 'Our bronze package is perfect if you want more than an ordinary fair booth.'
+        title: 'Bronze partner'
 
       # route: sv/sponsor/jamfor/silver
       silver:
-        lead: 'As a silver sponsor you will have an important position in making MTD come true. You''ll get a prominent position close to the students.'
-        title: 'Silver sponsor'
+        lead: 'As a silver partner you will have an important position in making MTD come true. You''ll get a prominent position close to the students.'
+        title: 'Silver partner'
 
       # route: sv/sponsor/jamfor/guld
       gold:
-        lead: 'As a gold sponsor you''ll be one of our main partners. We''ll make sure that your company is one of the most seen, and you''ll have exclusive advantages over the other companies.'
-        title: 'Gold sponsor'
+        lead: 'As a gold partner you''ll be one of our main partners. We''ll make sure that your company is one of the most seen, and you''ll have exclusive advantages over the other companies.'
+        title: 'Gold partner'
