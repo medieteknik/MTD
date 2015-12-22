@@ -3,14 +3,9 @@
 <% header_class 'transparent' %>
 <div class="beamer">
   <div class="content header-scroll-target">
-    <% if ENV['STREAM_URL'].blank? %>
-      <%= content_tag :h2, t('media_technology_days') + ' 2016' %>
-      <%= content_tag :h1, t('the_date') %>
-      <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
-    <% else %>
-      <%= content_tag :h2, t('media_technology_days') + ' 2016, ' + t('the_date') %>
-      <%= content_tag :h2, 'Färgeriet, Kåkenhus, Campus Norrköping' %>
-    <% end %>
+    <%= content_tag :h2, t('media_technology_days') + ' 2016' %>
+    <%= content_tag :h1, t('the_date') %>
+    <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
   </div>
   <footer>
     <ul>

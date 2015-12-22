@@ -11,16 +11,6 @@ $(document).ready ->
 
   $('[data-toggle="tooltip"]').tooltip({'container': 'body'})
 
-  # stream setup
-  $('.popup-iframe').magnificPopup(
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false
-  )
-
   $('.album .images').magnificPopup
     delegate: 'a'
     type: 'image'
