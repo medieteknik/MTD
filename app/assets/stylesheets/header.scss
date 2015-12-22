@@ -22,12 +22,9 @@
     .big-brand .logo, &:not(.detached) .brand .logo {
       @include background-img('header/white', contain);
     }
-    .sponsor.ge {
-      background-image: image-url('sponsors/ge_white.png');
-    }
-    .sponsor.autodesk {
-      background-image: image-url('sponsors/autodesk_white.png');
-    }
+    // .sponsor.ge {
+    //   background-image: image-url('sponsors/ge_white.png');
+    // }
   }
 
   @media (min-width: $screen-sm-min) {
@@ -117,7 +114,7 @@
     }
 
     .lang a img {
-      /* don't look at this. just don't. */
+      /* don't look at this. just don't. Oh shit sorry */
       margin-top: -2px;
       height: 17px;
     }
@@ -130,8 +127,9 @@
   left: 0;
   right: 0;
   z-index: 10;
-  background: rgba(#fff, .9);
+  background: #fff;
   border-bottom: 1px solid rgba($gray, .5);
+  box-shadow: 0px 1.5px 1.5px rgba($gray, .3);
   padding: $header-padding 0;
 
   a {
