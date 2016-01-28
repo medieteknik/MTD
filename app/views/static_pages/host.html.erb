@@ -9,7 +9,9 @@
         <%= render 'host_positions' %>
       </div>
     </div>
-    <div class="col-sm-4">
+
+    <%#Uncommented; not using 2016%>
+    <!--<div class="col-sm-4">
       <div class="info gray-box">
         <%= content_tag :h3, t('.apply.title') %>
         <% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
@@ -19,6 +21,6 @@
           <%= content_tag :p, t('.apply.closed') %>
         <% end %>
       </div>
-    </div>
+		</div>-->
   </div>
 </div>
