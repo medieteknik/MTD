@@ -1,5 +1,5 @@
 <header>
-  <%= link_to t('media_technology_days'), home_path, class: 'brand'%>
+G <%= link_to t('media_technology_days'), home_path, class: 'brand'%>
   <%= content_tag :span, '', class: 'togglemenu cross-icon' %>
 </header>
 <nav>
@@ -8,6 +8,9 @@
     <%= content_tag :li, link_to(t('menu_contact'), about_contact_path) %>
     <%= content_tag :li, link_to(t('menu_previous'), about_previous_path) %>
     <%= content_tag :li, link_to(t('menu_sponsor'), sponsorship_path) %>
+		<% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
+			<%= content_tag :li, link_to(t('menu_host'), host_path) %>
+		<% end %>
     <!-- <%= content_tag :li, link_to(t('menu_companies'), companies_path) %>
     <%= content_tag :li, link_to(t('menu_lectures'), lectures_path) %>
     <%= content_tag :li, link_to(t('menu_photos'), photos_path) %>
