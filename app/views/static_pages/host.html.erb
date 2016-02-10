@@ -5,6 +5,7 @@
       <%= content_tag :h1, t('.title') %>
       <%= content_tag :p, t('.lead'), class: 'lead' %>
       <%= content_tag :p, t('.info') %>
+			<%= content_tag :p, link_to(t('.link-info'), ENV["HOST_APPLICATION_EVENT_LINK"]) %>
       <div class="info">
         <%= render 'host_positions' %>
       </div>
