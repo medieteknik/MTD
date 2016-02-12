@@ -127,8 +127,10 @@
 #header .active,
 #header.detached .active {
 	color: $gray;
-	background: url("header/graybar.png") repeat-x 100% 105% !important;
-	background-size: 100% 4px !important;
+	background-position: 100% 105%;
+	@include background-img('header/graybar', contain);
+	background-size: auto 4px;
+	background-repeat: repeat-x;
 }
 
 #header.detached > nav {
