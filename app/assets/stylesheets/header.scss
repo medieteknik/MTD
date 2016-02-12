@@ -2,12 +2,13 @@
   z-index: 10;
   width: 100%;
   padding: $header-padding 0;
+  padding-bottom: 0;
   font-family: $font-family-sans-serif;
   background: rgba(#F5F5F5, .9);
   border-bottom: 1px solid rgba($gray, .5);
 
   &.detached {
-    padding-bottom: $header-height;
+    /*padding-bottom: $header-height;*/
   }
 
   &.transparent {
@@ -98,6 +99,7 @@
     @extend .list-inline;
     @extend .hidden-xs;
     margin-bottom: 0;
+    padding-bottom: 0;
 
     &.right {
       @extend .pull-right;
@@ -108,6 +110,7 @@
     }
     &.left a {
       padding: 2 * $header-padding;
+      padding-bottom: 15px;
     }
     .sponsor {
       font-weight: bold;
@@ -121,6 +124,13 @@
   }
 }
 
+#header .active,
+#header.detached .active {
+	color: $gray;
+	background: url("header/graybar.png") repeat-x 100% 105% !important;
+	background-size: 100% 4px !important;
+}
+
 #header.detached > nav {
   position: fixed;
   top: 0;
@@ -128,12 +138,15 @@
   right: 0;
   z-index: 10;
   background: #fff;
-  border-bottom: 1px solid rgba($gray, .5);
-  box-shadow: 0px 1.5px 1.5px rgba($gray, .3);
+	border-bottom: 1px solid rgba($gray, .5);
+	box-shadow: 0px 1.5px 1.5px rgba($gray, .3);
   padding: $header-padding 0;
-
+  padding-bottom: 0;
+  margin-bottom: 0;
   a {
     color: $orange;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   .togglemenu {
     color: #111;
@@ -147,6 +160,7 @@
   }
   .menu.left {
     margin-left: 2 * $header-padding;
+  	margin-top: 10px; //dirty fix to push down active item bar
   }
 }
 

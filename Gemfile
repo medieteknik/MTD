@@ -41,6 +41,8 @@ gem 'bourbon'
 gem 'font_assets'
 # turbolinks creates the need for a loading indicator
 gem 'nprogress-rails', '~> 0.1.6.3'
+# active links
+gem 'active_link_to'
 
 # add vendor prefixes without hassle
 gem 'autoprefixer-rails'
