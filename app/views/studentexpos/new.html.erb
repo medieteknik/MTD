@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="form-group">
-            <%= f.label :title, t('.proj_title.label') + " *" %>
+            <%= f.label :title, t('.proj_title.label'), class: 'required' %>
             <%= f.text_field :title, placeholder: t('.proj_title.placeholder'), required: true, autofocus: true %>
           </div>
         </div>
@@ -37,14 +37,14 @@
         </div>
       </div>
       <div class="form-group">
-        <%= f.label :description, t('.description.label') + " *" %>
+        <%= f.label :description, t('.description.label'), class: 'required' %>
         <%= f.text_area :description, class: 'form-control', rows: 10, placeholder: t('.description.placeholder'), required: true %>
         <p>
           <%= t('.description.info') %>
         </p>
       </div>
       <div class="form-group">
-        <%= f.label :members, t('.members.label') + " *" %>
+        <%= f.label :members, t('.members.label'), class: 'required' %>
         <%= f.text_area :members, class: 'form-control', rows: 3, placeholder: t('.members.placeholder'), required: true %>
       </div>
     </div>
@@ -55,13 +55,13 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :name, t('.name.label') + " *" %>
+            <%= f.label :name, t('.name.label'), class: 'required' %>
             <%= f.text_field :name, placeholder: t('.name.placeholder'), required: true %>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <%= f.label :liuid, t('.liuid.label') + " *" %>
+            <%= f.label :liuid, t('.liuid.label'), class: 'required' %>
             <%= f.text_field :liuid, placeholder: t('.liuid.placeholder'), required: true %>
           </div>
         </div>

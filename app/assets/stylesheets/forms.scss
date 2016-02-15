@@ -10,3 +10,8 @@ input:not([type="checkbox"]):not([type="radio"]), form button {
 form .form-group input[type="submit"] {
   @extend .btn-success;
 }
+
+label.required:after {
+	content: " *";
+	color: red;
+}
