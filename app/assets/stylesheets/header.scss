@@ -133,6 +133,14 @@
 	background-repeat: repeat-x;
 }
 
+#mobile-nav .active{
+ color: white;
+}
+#mobile-nav .active:before {
+	content: "> ";
+	color: white;
+}
+
 #header.detached > nav {
   position: fixed;
   top: 0;
