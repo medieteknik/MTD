@@ -17,11 +17,14 @@
         <% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
 					<%= content_tag :li, active_link_to(t('.host'), host_path) %>
 				<% end %>
+				<% if Date.today >= Date.parse(ENV["OPEN_EXPO_APPLICATIONS"]) %>
+					<%= content_tag :li, active_link_to(t('.studentexpo'), studentexpos_path) %>
+				<% end %>
+
         <!-- <%= content_tag :li, link_to(t('.companies'), companies_path) if Company.where(published: true).any? %> -->
         <!-- <%= content_tag :li, link_to(t('.lectures'), lectures_path) %> -->
         <!-- <%= content_tag :li, link_to(t('.banquet'), banquet_path) %> -->
         <!-- <%= content_tag :li, link_to(t('.photos'), photos_path) if PhotoAlbum.any? %> -->
-        <!-- <%= content_tag :li, link_to(t('.studentexpo'), studentexpos_path) %> -->
       </ul>
 
       <ul class="menu right">
