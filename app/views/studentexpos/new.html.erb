@@ -79,9 +79,11 @@
     <div class="info">
       <%= content_tag :h3, t('.go') %>
       <%= content_tag :p, t('.double_check') %>
-      <div class="form-group">
-        <%= f.submit t('send'), :disable_with => 'Submiting...' %>
-      </div>
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="form-group">
+					<%= f.submit t('send'), :disable_with => 'Submiting...' %>
+				</div>
+			</div>
     </div>
   <% end %>
 
