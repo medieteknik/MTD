@@ -21,8 +21,8 @@ en:
       count_end: ' companies will be attending the fair at MTD 2015.'
 
       sponsor:
-        gold: 'Main sponsors'
-        silver: 'Sponsors'
+        gold: 'Main partners'
+        silver: 'Partners'
         bronze:
         fair: 'Fair'
         thanks: 'Thanks to'
@@ -42,6 +42,6 @@ en:
         second: 'Will attend the fair on the second day, Thursday.'
 
       sponsor:
-        gold: 'is one of our main sponsors.'
-        sponsor: 'is a sponsor for MTD2015'
+        gold: 'is one of our main partners.'
+        sponsor: 'is a partner for MTD2016'
         fair: 'Fair company.'

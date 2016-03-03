@@ -23,8 +23,8 @@ sv:
       second_day: 'Torsdag 26 mars'
 
       sponsor:
-        gold: 'Huvudsponsorer'
-        silver: 'Sponsorer'
+        gold: 'Huvudpartners'
+        silver: 'Partners'
         bronze:
         fair: 'Mässföretag'
         thanks: 'Tack till'
@@ -44,6 +44,6 @@ sv:
         second: 'Besöker mässan dag två, på torsdagen.'
 
       sponsor:
-        gold: 'är en av våra huvudsponsorer.'
-        sponsor: 'är sponsor för MTD 2015.'
+        gold: 'är en av våra huvudpartners.'
+        sponsor: 'är partner för MTD 2016.'
         fair: 'Mässföretag.'
