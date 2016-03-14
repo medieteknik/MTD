@@ -14,9 +14,9 @@
 		<% if Date.today >= Date.parse(ENV["OPEN_EXPO_APPLICATIONS"]) %>
 			<%= content_tag :li, active_link_to(t('menu_studentexpo'), studentexpos_path) %>
 		<% end %>
+    <%= content_tag :li, active_link_to(t('menu_lectures'), lectures_path) %>
 
     <!-- <%= content_tag :li, link_to(t('menu_companies'), companies_path) %>
-    <%= content_tag :li, link_to(t('menu_lectures'), lectures_path) %>
     <%= content_tag :li, link_to(t('menu_photos'), photos_path) %>
 		<%= content_tag :li, link_to(t('menu_banquet'), banquet_path) %> -->
     <%= content_tag :li, link_to(icon('globe') + ' ' + t('change_lang_opposite'), url_for(locale: i18n_opposite)) %>
