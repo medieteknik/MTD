@@ -2,70 +2,57 @@
 <% if @lectures.any? %>
   <div class="container">
     <section class="info info--large text-center">
-      <h1>
-        <%= t('.title') %>
-      </h1>
-      <p class="lead">
-        <%= t('.lead') %>
-      </p>
+			<!-- <h1> <%= t('.title') %> </h1> -->
+      <p class="lead"> <%= t('.lead') %> </p>
     </section>
-    <section class="info">
-      <div class="lecture">
-        <div class="day">
-          <h2>
-            <%= l(Date.new(2015, 3, 25), format: '%A %e %B').humanize %>
-          </h2>
-          <div class="schedule one">
-            <% @lectures_one.each do |lecture| %>
-              <article class="<%= 'image' if lecture.image_id? %>">
-                <%= image_tag lecture.image.url, alt: lecture.name if lecture.image_id? %>
-                <h3>
-                  <%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug) %>
-                </h3>
-                <h4>
-                  <span class="time">
-                    <%= l(lecture.start, format: '%H:%M') %> &mdash;
-                    <%= l(lecture.stop, format: '%H:%M') %>
-                  </span>
-                  <%= lecture.name if lecture.name? %>
-                </h4>
-                <p>
-                  <%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
-                    length: 100, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
-                </p>
-              </article>
-            <% end %>
-          </div>
-        </div>
-        <div class="day">
-          <h2>
-            <%= l(Date.new(2015, 3, 26), format: '%A %e %B').humanize %>
-          </h2>
-          <div class="schedule two">
-            <% @lectures_two.each do |lecture| %>
-              <article class="<%= 'image' if lecture.image_id? %>">
-                <%= image_tag lecture.image.url, alt: lecture.name if lecture.image_id? %>
-                <h3>
-                  <%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug) %>
-                </h3>
-                <h4>
-                  <span class="time">
-                    <%= l(lecture.start, format: '%H:%M') %> &mdash;
-                    <%= l(lecture.stop, format: '%H:%M') %>
-                  </span>
-                  <%= lecture.name if lecture.name? %>
-                </h4>
-                <p>
-                  <%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
-                    length: 100, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
-                </p>
-              </article>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+		<!--<section class="info">-->
+		<!--</section>-->
+
+		<div class="col-sm-10 col-sm-offset-1">
+			<% @lectures.each_with_index do |lecture, index| %>
+				<div class="row">
+
+					<% if index % 2 == 0 %>
+						<div class="col-sm-4 hidden-xs">	
+							<% if lecture.image_id? %>
+								<%= image_tag lecture.image.url, alt: lecture.name, class: 'img-responsive' %>
+							<% else %>
+								<%= image_tag 'lectures/blank.png', class: 'img-responsive' %>
+							<% end %>
+						</div>
+					<% end %>
+
+					<div class="col-sm-8">
+						<!--info-->
+						<h3 class="<%= 'text-right' if index % 2 != 0 %>"> <%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug) %> </h3>
+						<h4 class="<%= 'text-right' if index % 2 != 0 %>">
+							<!--<span class="time">
+								<%= l(lecture.start, format: '%H:%M') %> &mdash;
+								<%= l(lecture.stop, format: '%H:%M') %>
+								</span>-->
+							<%= lecture.name if lecture.name? %>
+						</h4>
+						<p class="<%= 'text-right' if index % 2 != 0 %>">
+							<%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
+								length: 300, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+						</p>
+					</div>
+
+					<% if index % 2 != 0 %>
+						<div class="col-sm-4 hidden-xs">	
+						<% if lecture.image_id? %>
+							<%= image_tag lecture.image.url, alt: lecture.name, class: 'img-responsive' %>
+						<% else %>
+							<%= image_tag 'lectures/blank.png', class: 'img-responsive' %>
+						<% end %>
+						</div>
+					<% end %>
+
+				</div>
+				<br>
+			<% end %>
+		</div>
+	</div>
 <% else %>
   <!-- no lectures -->
   <div class="info container text-center limit-width info--large">
