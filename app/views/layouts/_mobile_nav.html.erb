@@ -6,8 +6,8 @@
   <ul class="menu">
     <%= content_tag :li, active_link_to(t('menu_about'), about_path, :active => :exclusive) %>
     <%= content_tag :li, active_link_to(t('menu_contact'), about_contact_path) %>
-    <%= content_tag :li, active_link_to(t('menu_previous'), about_previous_path) %>
-    <%= content_tag :li, active_link_to(t('menu_sponsor'), sponsorship_path) %>
+		<!--<%= content_tag :li, active_link_to(t('menu_previous'), about_previous_path) %> -->
+		<!--<%= content_tag :li, active_link_to(t('menu_sponsor'), sponsorship_path) %> -->
 		<% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
 			<%= content_tag :li, active_link_to(t('menu_host'), host_path) %>
 		<% end %>
