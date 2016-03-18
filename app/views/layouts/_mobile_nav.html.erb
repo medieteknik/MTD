@@ -6,6 +6,7 @@
   <ul class="menu">
     <%= content_tag :li, active_link_to(t('menu_about'), about_path, :active => :exclusive) %>
     <%= content_tag :li, active_link_to(t('menu_contact'), about_contact_path) %>
+    <%= content_tag :li, link_to(t('menu_companies'), companies_path) %>
 		<!--<%= content_tag :li, active_link_to(t('menu_previous'), about_previous_path) %> -->
 		<!--<%= content_tag :li, active_link_to(t('menu_sponsor'), sponsorship_path) %> -->
 		<% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
@@ -17,8 +18,7 @@
     <%= content_tag :li, active_link_to(t('menu_lectures'), lectures_path) %>
 		<%= content_tag :li, active_link_to(t('menu_banquet'), banquet_path) %>
 
-    <!-- <%= content_tag :li, link_to(t('menu_companies'), companies_path) %>
-    <%= content_tag :li, link_to(t('menu_photos'), photos_path) %>
+    <!-- <%= content_tag :li, link_to(t('menu_photos'), photos_path) %>
 		<%= content_tag :li, link_to(icon('globe') + ' ' + t('change_lang_opposite'), url_for(locale: i18n_opposite)) %> -->
   </ul>
 </nav>
