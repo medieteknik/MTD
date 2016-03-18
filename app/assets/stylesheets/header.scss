@@ -8,7 +8,7 @@
   border-bottom: 1px solid rgba($gray, .5);
 
   &.detached {
-    /*padding-bottom: $header-height;*/
+		padding-bottom: $header-height;
   }
 
   &.transparent {
@@ -23,9 +23,18 @@
     .big-brand .logo, &:not(.detached) .brand .logo {
       @include background-img('header/white', contain);
     }
-    // .sponsor.ge {
-    //   background-image: image-url('sponsors/ge_white.png');
-    // }
+			.sponsor {
+				margin-left: 3%;
+			}
+		 .sponsor.gaia {
+			 background-image: image-url('sponsors/gaia_white.png');
+		 }
+		 .sponsor.autodesk {
+			 background-image: image-url('sponsors/autodesk_white.png');
+		 }
+		 .sponsor.mittmedia {
+			 background-image: image-url('sponsors/mittmedia_white.png');
+		 }
   }
 
   @media (min-width: $screen-sm-min) {
@@ -56,6 +65,27 @@
       width: $header-logo-height;
       background-repeat: no-repeat;
       @include background-img('header/logo', contain);
+    }
+  }
+
+	.sponsor {
+    @extend .hidden-xs;
+    float: right;
+    width: 16%;
+    height: $header-logo-height;
+    margin: 0 0 0 3%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.gaia {
+      background-image: image-url('sponsors/gaia_color.png');
+    }
+    &.autodesk {
+      background-image: image-url('sponsors/autodesk.png');
+    }
+    &.mittmedia {
+      background-image: image-url('sponsors/mittmedia_dark.png');
     }
   }
 }
