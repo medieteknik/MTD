@@ -18,7 +18,6 @@ article.show-company {
 
   article.company {
 
-
     img {
       margin: 0 auto;
       display: block;
@@ -29,7 +28,7 @@ article.show-company {
   }
 
   &.gold article.company {
-    @include make-sm-column(6);
+    @include make-sm-column(4); //4 because three. Use 6 if two
 
     img {
       margin-bottom: 15px;
