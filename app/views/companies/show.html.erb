@@ -30,34 +30,6 @@
           </ul>
         <% end %>
       </summary>
-      <summary class="map tabpanel">
-        <ul class="nav nav-tabs" role="tablist">
-          <% if @company.first_day %>
-            <li role="presentation" class="active">
-              <a href="#day_one" aria-controls="day_one" role="tab" data-toggle="tab"><%= t('.first_day') %></a>
-            </li>
-          <% end %>
-          <% if @company.second_day %>
-            <li role="presentation" <%= @company.first_day ? '' : 'class="active"'%>>
-              <a href="#day_two" aria-controls="day_two" role="tab" data-toggle="tab"><%= t('.second_day') %></a>
-            </li>
-          <% end %>
-        </ul>
-        <div class="tab-content">
-          <% if @company.first_day %>
-            <div role="tabpanel" class="tab-pane active" id="day_one">
-              <% @day = "first"; %>
-              <%= render 'single_map' %>
-            </div>
-          <% end %>
-          <% if @company.second_day %>
-            <div role="tabpanel" class="tab-pane <%= @company.first_day ? '' : 'active'%>" id="day_two">
-              <% @day = "second";  %>
-              <%= render 'single_map' %>
-            </div>
-          <% end %>
-        </div>
-      </summary>
     </aside>
     <div class="company-body">
       <header class="info hidden-xs">
