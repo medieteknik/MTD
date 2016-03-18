@@ -1,5 +1,5 @@
 <% title '– ' + @company.name %>
-<% description truncate(strip_tags(GitHub::Markdown.render_gfm(@company.description).html_safe), length: 100, separator: ' ') %>
+<% description truncate(strip_tags(GitHub::Markdown.render_gfm(@company.description).to_s.html_safe), length: 100, separator: ' ') %>
 <% social_image @company.image.url if @company.image %>
 <div class="container">
   <% unless @company.published %>
@@ -64,7 +64,7 @@
         <%= content_tag :h1, @company.name %>
       </header>
       <main class="info">
-        <%= GitHub::Markdown.render_gfm(@company.description).html_safe if @company.description.present? %>
+        <%= GitHub::Markdown.render_gfm(@company.description).to_s.html_safe if @company.description.present? %>
       </main>
     </div>
   </article>
