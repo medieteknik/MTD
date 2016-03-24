@@ -20,37 +20,72 @@
 <div class="container">
   <div class="info info--large">
     <div class="row">
-      <div class="col-sm-6">
-          <%= content_tag :h2, t('.welcome') + '!' %>
-          <%= content_tag :p, t('.lead') %>
-      </div>
+      <div class="col-sm-7">
+				<%= content_tag :h2, t('.welcome') + '!' %>
+				<%= content_tag :p, t('.lead') %>
+				<br>
 
-      <div class="col-sm-6">
-          <h2><%= t('suggestions.home.title') %></h2>
-          <p>
-            <%= t('suggestions.home.info') %>
-            <%= link_to t('suggestions.home.link'), new_suggestion_path %>
-          </p>
+				<div class="sponsors">
+					<h2><%= t('.main_sponsors') %></h4>
+					<% @gold_sponsors.each do |company| %>
+						<article class="large-company">
+							<h3> <%= link_to company.name, company_path(company.slug) %> </h3>
+							<p> <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %> </p>
+						</article>
+					<% end %>
+				</div>
       </div>
+			<div class="col-sm-5">
+				<% @news.each do |n| %>
+					<%= content_tag :h3, link_to(n.title, n) %>
+					<p>
+						<%= l(n.published_at, format: '%e %B, %Y') %> <%= t('by') %> <%= n.users.to_a.map(&:name).join(', ') %>.
+						<%= link_to_if(can?(:update, n), t('edit').titleize, edit_news_path(n)){} %>
+					</p>
+					<p> <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).to_s.html_safe), length: 150, separator: ' ') { link_to t('continue_read'), n } %> </p>
+				<% end %>
+			</div>
+
     </div>
   </div>
 </div>
 
-<section class="ribbon">
-  <div class="container">
-    <div class="info text-center">
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2">
-          <%= icon 'comments', '', class: 'fa-7x' %>
-          <%= content_tag :h4, t('.contacts.title') %>
-          <%= content_tag :p, t('.contacts.text') %>
-        </div>
-        <div class="col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-2">
-          <%= icon 'lightbulb-o', '', class: 'fa-7x' %>
-          <%= content_tag :h4, t('.inspiration.title') %>
-          <%= content_tag :p, t('.inspiration.text') %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="ribbon">
+	<div class="container">
+		<div class="info">
+			<div class="row">
+				<div class="sponsors text-center">
+					<h3 class="text-center"><%= t('.sponsors') %></h4>
+					<!-- hard coded for 5 entries -->
+					<div class="col-sm-1"></div> <!--push-->
+					<% @silver_sponsors.each do |company| %>
+						<div class="col-sm-2">
+							<article class="silver-sponsor">
+								<%= link_to company_path(company.slug) do %>
+									<%= image_tag(company.image.url, alt: company.name, class: 'img-responsive') if company.image %>
+								<% end %>
+							</article>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="info text-center">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2">
+				<%= icon 'comments', '', class: 'fa-7x' %>
+				<%= content_tag :h4, t('.contacts.title') %>
+				<%= content_tag :p, t('.contacts.text') %>
+			</div>
+			<div class="col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-2">
+				<%= icon 'lightbulb-o', '', class: 'fa-7x' %>
+				<%= content_tag :h4, t('.inspiration.title') %>
+				<%= content_tag :p, t('.inspiration.text') %>
+			</div>
+		</div>
+	</div>
+</div>

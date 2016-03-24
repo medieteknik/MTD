@@ -97,6 +97,7 @@ sv:
 
     # route: sv/
     home:
+      news: 'Nyheter'
       all_news: 'Visa alla nyheter'
       lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet. För sextonde året i rad förenar vi hundratals studenter och företag i industrin. Här hittar du all information och alla kontaktuppgifter du kan tänkas behöva.'
       # teaser: 'För sextonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'

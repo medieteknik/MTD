@@ -113,9 +113,9 @@
   padding: 40px 0;
   background: $gray-light;
 
-  h3 {
-    border-bottom: 1px solid lighten($gray, 10%);
-  }
+  //h3 {
+  //  border-bottom: 1px solid lighten($gray, 10%);
+  //}
 }
 
 .gray-box {
@@ -227,7 +227,6 @@
 
 // silver sponsors on home
 .silver-sponsor img {
-  max-width: 200px;
   width: 100%;
-  margin: 20px auto;
+  margin: 10px auto;
 }
