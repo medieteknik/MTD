@@ -54,7 +54,7 @@
 	<div class="container">
 		<div class="info">
 			<div class="row">
-				<div class="sponsors text-center">
+				<div class="sponsors silver-sponsors-container text-center">
 					<h3 class="text-center"><%= t('.sponsors') %></h4>
 					<!-- hard coded for 5 entries -->
 					<div class="col-sm-1"></div> <!--push-->
@@ -63,6 +63,7 @@
 							<article class="silver-sponsor">
 								<%= link_to company_path(company.slug) do %>
 									<%= image_tag(company.image.url, alt: company.name, class: 'img-responsive') if company.image %>
+									<%= image_tag("previous/lectures/mihai.jpg", alt: company.name, class: 'img-responsive') if !company.image %>
 								<% end %>
 							</article>
 						</div>
