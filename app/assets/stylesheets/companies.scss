@@ -78,7 +78,15 @@ article.show-company {
       height: 200px;
     }
   }
+  
+  @media screen and (max-width: $screen-sm-min) {
+		.wrap {
+			margin-bottom: 50px;
+		}
+	}
 }
+
+  
 
 // booth selecting
 .booth-img {
