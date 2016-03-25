@@ -22,7 +22,7 @@ class StudentexposController < ApplicationController
 
   private
     def studentexpo_params
-      params.require(:studentexpo).permit(:title, :name, :liuid, :description, :need_computer, :members)
+      params.require(:studentexpo).permit(:title, :name, :liuid, :description, :need_computer, :members, :course)
     end
 
 end
