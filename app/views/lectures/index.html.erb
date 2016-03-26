@@ -5,75 +5,73 @@
 			<h1> <%= t('.title') %> </h1>
       <p class="lead"> <%= t('.lead') %> </p>
     </section>
-		<!--<section class="info">-->
-		<!--</section>-->
-	<section class="info">
-		<div class="lecture">
-			<div class="day">
-				<h3 class="day-header">
-					<%= l(Date.new(2016, 4, 06), format: '%A %e %B').humanize %>
-				</h3>
-				<div class="ui middle aligned divided very relaxed list">
-					<% @lectures_one.each do |lecture| %>
-						<div class="item">
-							<div class="left floated content">
-							<% if lecture.image_id %>
-								<%= image_tag lecture.image.url, class: "ui small image", alt: lecture.name %>
-							<% end %>
-							</div>
+		<section class="info">
+			<div class="lecture">
+				<div class="day">
+					<h3 class="day-header">
+						<%= l(Date.new(2016, 4, 06), format: '%A %e %B').humanize %>
+					</h3>
+					<div class="ui middle aligned divided very relaxed list">
+						<% @lectures_one.each do |lecture| %>
+							<div class="item">
+								<div class="left floated content">
+									<% if lecture.image_id %>
+										<%= image_tag lecture.image.url, class: "ui small image", alt: lecture.name %>
+									<% end %>
+								</div>
 
-							<div clas="content">
-								<h4 class="lecture-header">
-									<%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug), class: "header" %>
-								</h4>
+								<div clas="content">
+									<h4 class="lecture-header">
+										<%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug), class: "header" %>
+									</h4>
 									<strong>
 										<%= l(lecture.start, format: '%H:%M') %> &mdash;
 										<%= l(lecture.stop, format: '%H:%M') %>
 										<%= lecture.name if lecture.name? %>
 									</strong>
-								<div class="description">
-									<%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
-										length: 250, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+									<div class="description">
+										<%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
+											length: 250, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+									</div>
 								</div>
 							</div>
-						</div>
-					<% end %>
+						<% end %>
+					</div>
 				</div>
-			</div>
-			<div class="day">
-				<h3 class="day-header">
-					<%= l(Date.new(2016, 4, 07), format: '%A %e %B').humanize %>
-				</h3>
-				<div class="ui middle aligned divided very relaxed list">
-					<% @lectures_two.each do |lecture| %>
-						<div class="item">
-							<div class="left floated content">
-							<% if lecture.image_id %>
-								<%= image_tag lecture.image.url, class: "ui small image", alt: lecture.name %>
-							<% end %>
-							</div>
+				<div class="day">
+					<h3 class="day-header">
+						<%= l(Date.new(2016, 4, 07), format: '%A %e %B').humanize %>
+					</h3>
+					<div class="ui middle aligned divided very relaxed list">
+						<% @lectures_two.each do |lecture| %>
+							<div class="item">
+								<div class="left floated content">
+									<% if lecture.image_id %>
+										<%= image_tag lecture.image.url, class: "ui small image", alt: lecture.name %>
+									<% end %>
+								</div>
 
-							<div clas="content">
-								<h4 class="lecture-header">
-									<%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug), class: "header" %>
-								</h4>
-									<strong>
-										<%= l(lecture.start, format: '%H:%M') %> &mdash;
-										<%= l(lecture.stop, format: '%H:%M') %>
-										<%= lecture.name if lecture.name? %>
-									</strong>
-								<div class="description">
-									<%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
-										length: 250, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+								<div clas="content">
+									<h4 class="lecture-header">
+										<%= link_to_if lecture.slug?, lecture.title, lecture_path(lecture.slug), class: "header" %>
+									</h4>
+										<strong>
+											<%= l(lecture.start, format: '%H:%M') %> &mdash;
+											<%= l(lecture.stop, format: '%H:%M') %>
+											<%= lecture.name if lecture.name? %>
+										</strong>
+									<div class="description">
+										<%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
+											length: 250, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
+									</div>
 								</div>
 							</div>
-						</div>
-					<% end %>
+						<% end %>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-</div>
+		</section>
+	</div>
 <% else %>
   <!-- no lectures -->
   <div class="info container text-center limit-width info--large">
