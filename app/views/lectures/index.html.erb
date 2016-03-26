@@ -29,8 +29,8 @@
 									<strong>
 										<%= l(lecture.start, format: '%H:%M') %> &mdash;
 										<%= l(lecture.stop, format: '%H:%M') %>
-									</strong>
 									<%= lecture.name if lecture.name? %>
+									</strong>
 								<div class="description">
 									<%= truncate(strip_tags(GitHub::Markdown.render_gfm(lecture.description).html_safe),
 										length: 250, separator: ' ') { link_to t('continue_read'), lecture_path(lecture.slug)} %>
