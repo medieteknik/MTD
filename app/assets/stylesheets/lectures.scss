@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $image-width: 100px;
+// Don't want entire library because it gets applied everywhere
+@import "semantic-ui/elements/list";
+@import "semantic-ui/elements/image";
 
 .lecture {
   @include make-row();
@@ -15,12 +18,13 @@ $image-width: 100px;
       @include clearfix;
     }
   }
-  h2 {
+  .day-header {
     text-align: center;
     margin-bottom: 50px;
   }
 }
 
+// 2015
 .schedule article {
   width: 100%;
   margin: 40px 0;
