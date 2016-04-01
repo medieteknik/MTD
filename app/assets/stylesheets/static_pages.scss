@@ -225,19 +225,26 @@
   }
 }
 
-// silver sponsors on home
-.silver-sponsors-container {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	float:none; 
+.sponsors {
+
+	.push-down {
+		@media screen and (min-width: $screen-xs-max) {
+			margin-top: 35%;
+		}
+	}
+		
+  img {
+    @extend .img-responsive;
+	
+		@media screen and (max-width: $screen-xs-max) {
+			margin-top: 5%;
+			width: 80%;
+		}	
+	}
 }
 
-.silver-sponsor {
-	
-	img {
-		width: 100%;
-		margin: 20px auto;
-	}
+// needs text-center
+.sponsor-h-center {
+	display: inline-block !important;
 }
 

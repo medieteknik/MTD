@@ -50,24 +50,27 @@
   </div>
 </div>
 
+<!-- static content -->
 <div class="ribbon">
-	<div class="container">
-		<div class="info">
-			<div class="row">
-				<div class="sponsors silver-sponsors-container text-center">
-					<h3 class="text-center"><%= t('.sponsors') %></h4>
-					<!-- hard coded for 5 entries -->
-					<div class="col-sm-1"></div> <!--push-->
-					<% @silver_sponsors.each do |company| %>
-						<div class="col-sm-2">
-							<article class="silver-sponsor">
-								<%= link_to company_path(company.slug) do %>
-									<%= image_tag(company.image.url, alt: company.name, class: 'img-responsive') if company.image %>
-									<%= image_tag("previous/lectures/mihai.jpg", alt: company.name, class: 'img-responsive') if !company.image %>
-								<% end %>
-							</article>
-						</div>
-					<% end %>
+	<div class="info">
+		<h3 class="text-center"><%= t('.sponsors') %></h4>
+		<div class="row">
+			<div class="sponsors text-center">
+				<div class="col-sm-1"></div> <!--push-->
+				<div class="col-sm-2">
+					<%= image_tag 'sponsors/combitech.png', class: 'sponsor-h-center push-down'%>
+				</div>
+				<div class="col-sm-2">
+					<%= image_tag 'sponsors/cygni.png', class: 'sponsor-h-center push-down' %>
+				</div>
+				<div class="col-sm-2">
+					<%= image_tag 'sponsors/skill.png', class: 'sponsor-h-center'%>
+				</div>
+				<div class="col-sm-2">
+					<%= image_tag 'sponsors/dice.jpg', class: 'sponsor-h-center push-down' %>
+				</div>
+				<div class="col-sm-2">
+					<%= image_tag 'sponsors/sogeti.png', class: 'sponsor-h-center push-down' %>
 				</div>
 			</div>
 		</div>
