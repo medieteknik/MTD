@@ -36,6 +36,7 @@
 				</div>
       </div>
 			<div class="col-sm-5">
+				<h2><%= t('.news') %></h2>
 				<% @news.each do |n| %>
 					<%= content_tag :h3, link_to(n.title, n) %>
 					<p>
