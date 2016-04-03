@@ -45,6 +45,7 @@
 					</p>
 					<p> <%= truncate(strip_tags(GitHub::Markdown.render_gfm(n.content).to_s.html_safe), length: 150, separator: ' ') { link_to t('continue_read'), n } %> </p>
 				<% end %>
+				<p> <%= link_to t('.all_news'), news_index_path %> </p>
 			</div>
 
     </div>
