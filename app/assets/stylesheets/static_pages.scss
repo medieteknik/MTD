@@ -8,7 +8,7 @@
   .home & {
     background: $gray;
     color: #fff;
-    @include background-photo('beamer/fair-2', cover);
+    @include background-photo('beamer/vepa', cover);
 
     h2 {
       font-size: floor($font-size-base * 1.6);
