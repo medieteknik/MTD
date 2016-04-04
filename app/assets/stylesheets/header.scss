@@ -47,6 +47,13 @@
     }
   }
 
+  
+  @media (max-width: $screen-lg-min) {
+  	.container {
+  		width: 100%;
+		}
+	}
+
   .big-brand {
     @extend .hidden-xs;
     float: left;
@@ -113,7 +120,7 @@
     .logo {
       display: inline-block;
       float: left;
-      height: $header-height - 2*$header-padding;
+			height: $header-height - 2*$header-padding;
       width: $header-height - 2*$header-padding;
       background-repeat: no-repeat;
       @include background-img('header/logo', contain);
@@ -132,14 +139,14 @@
     padding-bottom: 0;
 
     &.right {
-      @extend .pull-right;
+			@extend .pull-right;
     }
 
     &.left {
-      @extend .pull-left;
+			@extend .pull-left;
     }
     &.left a {
-      padding: 2 * $header-padding;
+			padding: 2 * $header-padding;
       padding-bottom: 15px;
     }
     .sponsor {
@@ -191,12 +198,20 @@
   .togglemenu {
     color: #111;
   }
+
+
   .brand {
+
     display: block;
 
     .name {
       @extend .visible-xs-block;
     }
+
+		@media (min-width: $screen-sm-min) and (max-width: 1000px) {
+			// hide small brand to make room for header items
+      display: none;
+		}
   }
   .menu.left {
     margin-left: 2 * $header-padding;
@@ -253,3 +268,4 @@
     padding: 15px;
   }
 }
+

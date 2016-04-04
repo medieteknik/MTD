@@ -1,5 +1,5 @@
 <header id="header" class="<%= yield :header_class %>">
-  <div class="container">
+  <div class="container header">
     <%= link_to(content_tag(:div, '', class: 'logo') + 'MTD<span class="year">2016</span>'.html_safe,
           home_path, class: 'big-brand') %>
 		<div class="sponsor mittmedia"></div>
@@ -9,7 +9,17 @@
 
   <nav id="main-nav">
     <div class="container">
-      <%= link_to(content_tag(:div, '', class: 'logo') + content_tag(:span, t('short_name'), class: 'name') + ' ' + content_tag(:span, t('the_date'), class: 'visible-xs-inline'),
+      
+			<ul class="menu right">
+        <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'),
+          url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
+        <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-lg'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
+        <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-lg'), 'https://twitter.com/mtdagarna', target: 'blank') %>
+        <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-lg'), 'https://youtube.com/mtdagarna', target: 'blank') %>
+        <%= content_tag :li, link_to(icon('instagram', '', class: 'fa-lg'), 'https://www.instagram.com/medieteknikdagarna/', target: 'blank') %>
+      </ul>
+
+			<%= link_to(content_tag(:div, '', class: 'logo') + content_tag(:span, t('short_name'), class: 'name') + ' ' + content_tag(:span, t('the_date'), class: 'visible-xs-inline'),
         home_path, class: 'brand') %>
 
       <ul class="menu left">
@@ -31,15 +41,7 @@
         <!-- <%= content_tag :li, link_to(t('.photos'), photos_path) if PhotoAlbum.any? %> -->
       </ul>
 
-      <ul class="menu right">
-        <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'),
-          url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
-        <%= content_tag :li, link_to(icon('facebook-square', '', class: 'fa-lg'), 'https://facebook.com/medieteknikdagarna', target: 'blank') %>
-        <%= content_tag :li, link_to(icon('twitter-square', '', class: 'fa-lg'), 'https://twitter.com/mtdagarna', target: 'blank') %>
-        <%= content_tag :li, link_to(icon('youtube-square', '', class: 'fa-lg'), 'https://youtube.com/mtdagarna', target: 'blank') %>
-        <%= content_tag :li, link_to(icon('instagram', '', class: 'fa-lg'), 'https://www.instagram.com/medieteknikdagarna/', target: 'blank') %>
-      </ul>
-
+      
       <%= icon 'bars', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
     </div>
   </nav>
