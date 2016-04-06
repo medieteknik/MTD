@@ -23,4 +23,4 @@ $(document).ready ->
     image:
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
       titleSrc: (item) ->
-        item.el.attr('title') + '<small>MTD 2015 '+item.el.attr('data-photographer')+'</small>'
+        item.el.attr('title') + '<small>MTD 2016 '+item.el.attr('data-photographer')+'</small>'
