@@ -1,15 +1,12 @@
 <header id="header" class="<%= yield :header_class %>">
   <div class="container header">
-    <%= link_to(content_tag(:div, '', class: 'logo') + 'MTD<span class="year">2016</span>'.html_safe,
+    <%= link_to(content_tag(:div, '', class: 'logo') + 'MTD<span class="year">2017</span>'.html_safe,
           home_path, class: 'big-brand') %>
-		<div class="sponsor mittmedia"></div>
-    <div class="sponsor gaia"></div>
-		<div class="sponsor autodesk"></div>
   </div>
 
   <nav id="main-nav">
     <div class="container">
-      
+
 			<ul class="menu right">
         <%= content_tag(:li, link_to(image_tag('flags/' + i18n_opposite + '.png'),
           url_for(locale: i18n_opposite), title: t('change_lang_opposite')), class: 'lang') %>
@@ -25,22 +22,21 @@
       <ul class="menu left">
         <%= content_tag :li, active_link_to(t('.about'), about_path, :active => :exclusive) %>
         <%= content_tag :li, active_link_to(t('.contact'), about_contact_path) %>
-        <%= content_tag :li, active_link_to(t('.companies'), companies_path) if Company.where(published: true).any? %>
 
-				<!--<%= content_tag :li, active_link_to(t('.previous'), about_previous_path) %> -->
-				<!--<%= content_tag :li, active_link_to(t('.sponsor'), sponsorship_path) %> -->
-        <% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
+
+				<%= content_tag :li, active_link_to(t('.previous'), about_previous_path) %>
+				<!--<%= content_tag :li, active_link_to(t('.sponsor'), sponsorship_path) %>-->
+        <% if Date.today >= Date.parse('2016-10-31') and Date.today <= Date.parse('2016-11-01') %>
 					<%= content_tag :li, active_link_to(t('.host'), host_path) %>
 				<% end %>
-				<% if Date.today >= Date.parse(ENV["OPEN_EXPO_APPLICATIONS"]) %>
+				<% if Date.today >= Date.parse('2018-02-03') %>
 					<%= content_tag :li, active_link_to(t('.studentexpo'), studentexpos_path) %>
 				<% end %>
-				<%= content_tag :li, active_link_to(t('.lectures'), lectures_path) %> 
-        <%= content_tag :li, active_link_to(t('.photos'), photos_path) %>
+
 				<!--<%= content_tag :li, active_link_to(t('.banquet'), banquet_path) %> -->
       </ul>
 
-      
+
       <%= icon 'bars', '', class: 'fa-2x pull-right visible-xs-inline togglemenu' %>
     </div>
   </nav>

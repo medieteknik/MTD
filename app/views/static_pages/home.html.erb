@@ -3,7 +3,7 @@
 <% header_class 'transparent' %>
 <div class="beamer">
   <div class="content header-scroll-target">
-    <%= content_tag :h2, t('media_technology_days') + ' 2016' %>
+    <%= content_tag :h2, t('media_technology_days') + ' 2017' %>
     <%= content_tag :h1, t('the_date') %>
     <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
   </div>
@@ -25,15 +25,7 @@
 				<%= content_tag :p, t('.lead') %>
 				<br>
 
-				<div class="sponsors">
-					<h2><%= t('.main_sponsors') %></h4>
-					<% @gold_sponsors.each do |company| %>
-						<article class="large-company">
-							<h3> <%= link_to company.name, company_path(company.slug) %> </h3>
-							<p> <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %> </p>
-						</article>
-					<% end %>
-				</div>
+
       </div>
 			<div class="col-sm-5">
 				<h2><%= t('.news') %></h2>
@@ -52,32 +44,7 @@
   </div>
 </div>
 
-<!-- static content -->
-<div class="ribbon">
-	<div class="info">
-		<h3 class="text-center"><%= t('.sponsors') %></h4>
-		<div class="row">
-			<div class="sponsors text-center">
-				<div class="col-sm-1"></div> <!--push-->
-				<div class="col-sm-2">
-					<%= image_tag 'sponsors/combitech.png', class: 'sponsor-h-center push-down'%>
-				</div>
-				<div class="col-sm-2">
-					<%= image_tag 'sponsors/cygni.png', class: 'sponsor-h-center push-down' %>
-				</div>
-				<div class="col-sm-2">
-					<%= image_tag 'sponsors/skill.png', class: 'sponsor-h-center'%>
-				</div>
-				<div class="col-sm-2">
-					<%= image_tag 'sponsors/dice.jpg', class: 'sponsor-h-center push-down' %>
-				</div>
-				<div class="col-sm-2">
-					<%= image_tag 'sponsors/sogeti.png', class: 'sponsor-h-center push-down' %>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+
 
 <div class="container">
 	<div class="info text-center">

@@ -5,7 +5,7 @@ sv:
       # route: sv/om
       about:
         title: 'Om MTD'
-        lead: 'Medieteknikdagarna är ett ideellt arrangemang drivet av och för studenter. 2016 går dagarna av stapeln för sextonde gången. Syftet är att knyta kontakter mellan studenter, medietekniker ute i arbetslivet och företagen inom branschen.'
+        lead: 'Medieteknikdagarna är ett ideellt arrangemang drivet av och för studenter. 2017 går dagarna av stapeln för sjutonde gången. Syftet är att knyta kontakter mellan studenter, medietekniker ute i arbetslivet och företagen inom branschen.'
         second: 'Under två dagar anordnas det en populär mässa parallellt med inspirerande föreläsningar, och evenemanget avslutas med en stor bankett.'
         third: 'MTD är ett tillfälle för företag och studenter att inspirera, informera och integrera med varandra. Såväl företag som studenter får här en chans att visa det allra senaste inom medieteknik.'
 
@@ -13,7 +13,7 @@ sv:
 
         group:
           title: 'Gruppen'
-          text: 'Dagarna arrangeras utav elva ideellt arbetande studenter på Medieteknikprogrammet som ligger bakom hela evenemanget. Hör jättegärna av dig till oss, vi gillar att snacka!'
+          text: 'Dagarna arrangeras utav tolv ideellt arbetande studenter på Medieteknikprogrammet som ligger bakom hela evenemanget. Hör jättegärna av dig till oss, vi gillar att snacka!'
 
           manager: 'Projektledare'
           economy: 'Kassör'
@@ -23,7 +23,8 @@ sv:
           lecture: 'Föreläsningsansvarig'
           banquet: 'Bankettansvarig'
           tech: 'Teknikansvarig'
-          pr_print: 'PR- & Tryckansvarig'
+          pr: 'PR-ansvarig'
+          print:  'Tryckansvarig'
           coordinator: 'Koordinator'
           web: 'Webbansvarig'
 
@@ -47,11 +48,11 @@ sv:
         business:
           email: 'foretag@medieteknikdagarna.se'
           title: 'Företagskontakt'
-          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Kontakta Cristoffer på:'
+          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Kontakta Emil på:'
         fair:
           email: 'massa@medieteknikdagarna.se'
           title: 'Mässan'
-          text: 'Har du någon fråga kring mässan? Kontakta Albin på: '
+          text: 'Har du någon fråga kring mässan? Kontakta Fanny på: '
         general:
           email: 'kontakt@medieteknikdagarna.se'
           title: 'Generella frågor'
@@ -77,13 +78,13 @@ sv:
         webb:
           email: 'webb@medieteknikdagarna.se'
           title: 'Webb'
-          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Jonathan på:'
+          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Ola på:'
 
       # route: sv/om/tidigare-ar
       previous:
         title: 'Tidigare år'
-        lead: '2016 blir det sextonde året som MTD arrangeras. Här är några höjdpunkter från de gångna åren.'
-        video: 'Videosammanfattning mässan 2014'
+        lead: '2017 blir det sjutonde året som MTD arrangeras. Här är några höjdpunkter från de gångna åren.'
+        video: 'Videosammanfattning mässan 2016'
 
         lectures:
           title: 'Föreläsningar'
@@ -99,7 +100,7 @@ sv:
     home:
       news: 'Nyheter'
       all_news: 'Visa alla nyheter'
-      lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet. För sextonde året i rad förenar vi hundratals studenter och företag i industrin. Här hittar du all information och alla kontaktuppgifter du kan tänkas behöva.'
+      lead: 'Medieteknikdagarna är arbetsmarknadsdagarna för medieteknikprogrammet på Linköpings universitet. För sjutonde året i rad förenar vi hundratals studenter och företag i industrin. Här hittar du all information och alla kontaktuppgifter du kan tänkas behöva.'
       # teaser: 'För sextonde gången arrangeras Medieteknikdagarna i Norrköping. Vi förenar hundratals studenter och medietekniker redan ute i industrin.'
       quote: 'Medieteknik i Norrköping är en utav de bästa programeringsutbildningarna som finns i Sverige'
       welcome: 'Välkommen'
@@ -117,7 +118,7 @@ sv:
     # route: sv/vard
     host:
       info: 'Du kommer som värd vara med och skapa ett par fantastiska dagar och som tack för hjälpen så får ni gå på en händelsefull kick-off, få lunch under dagarna ni jobbar och bli bjudna, helt gratis, på den avslutande banketten som ni absolut inte vill missa! Så läs igenom beskrivningen till de olika värdposterna och sök de tre som du tycker verkar roligast. MTD är ingenting utan sina värdar!'
-      lead: 'MTD 2016 är snart här och för att genomföra dessa två spännande dagar behöver vi din hjälp!'
+      lead: 'MTD 2017 är snart här och för att genomföra dessa två spännande dagar behöver vi din hjälp!'
       link-info: 'Klicka här för att söka!'
       title: 'Bli MTD-värd'
 
@@ -190,7 +191,7 @@ sv:
 
       # route: sv/sponsor
       sponsor:
-        title: 'Bli partner till MTD2016'
+        title: 'Bli partner till MTD2017'
         lead: 'Vill du komma i kontakt med studenter från en av Sveriges bästa utbildningar? Bli en av våra partners!'
         second: 'Som en utav våra partners ser du till att göra MTD möjligt, och ditt företag hamnar i en unik och nära position till studenterna. Vi har här satt ihop ett antal samarbetsförslag att välja från.'
         common: 'Samtliga avtal innehåller bland annat mässplats båda dagarna, företagsprofil på hemsidan mm. Har du någon idé om hur vi kan samarbeta, som inte tas upp här? Tveka inte att höra av dig! Vi hjälper er gärna komma fram till något som passar er.'

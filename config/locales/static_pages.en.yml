@@ -5,7 +5,7 @@ en:
       # route: en/about
       about:
         title: 'About MTD'
-        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2016 the event is held for the 16th time.'
+        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2017 the event is held for the 17th time.'
         second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event ends with a grand banquet.'
         third: 'MTD is an oportunity for companies and students to inspire, inform and interact with eachother. Both students and companies are given the chance to show the latest within media technology.'
 
@@ -13,7 +13,7 @@ en:
 
         group:
           title: 'The group'
-          text: 'The days are arranged by eleven media technology students working as volunteers. We''d love to talk to you, so give us a call or drop us an email!'
+          text: 'The days are arranged by twelve media technology students working as volunteers. We''d love to talk to you, so give us a call or drop us an email!'
 
           manager: 'Project manager'
           economy: 'Economy manager'
@@ -23,7 +23,8 @@ en:
           lecture: 'Lecture coordinator'
           banquet: 'Banquet manager'
           tech: 'Technical coordinator'
-          pr_print: 'PR & Print manager'
+          pr: 'PR manager'
+          print: 'Print manager'
           coordinator: 'Coordinator'
           web: 'Web manager'
 
@@ -47,12 +48,12 @@ en:
         business:
           email: 'businesscontact@medieteknikdagarna.se'
           title: 'Business contact'
-          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Cristoffer at:'
+          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Emil at:'
 
         fair:
           email: 'fair@medieteknikdagarna.se'
           title: 'Fair information'
-          text: 'Do you have any questions about the fair? Contact Albin at: '
+          text: 'Do you have any questions about the fair? Contact Fanny at: '
         general:
           email: 'contact@medieteknikdagarna.se'
           title: 'General inquiries'
@@ -78,13 +79,13 @@ en:
         webb:
           email: 'web@medieteknikdagarna.se'
           title: 'Web'
-          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Jonathan at:'
+          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Ola at:'
 
       # route: en/about/previous
       previous:
         title: 'Previous years'
-        lead: '2016 will be the 16th year the days are arranged. Here are some highlights from the previous years.'
-        video: 'Video summary in Swedish from the fair 2014.'
+        lead: '2017 will be the 17th year the days are arranged. Here are some highlights from the previous years.'
+        video: 'Video summary in Swedish from the fair 2016.'
 
         lectures:
           title: 'Lectures'
@@ -101,7 +102,7 @@ en:
       news: 'News'
       all_news: 'Show all news'
       lead: 'The Media Technology Days are two days with inspiration, a fair, hundreds of students and companies from the industry. Here, you''ll find everything you need to know about the days.'
-      teaser: 'For the 16th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
+      teaser: 'For the 17th time, the Media Technology Days will be held in Norrköping, bringing hundreds of students closer to the industry.'
       quote: 'Media Technology in Norrköping is one of Sweden''s best programming educations'
       welcome: 'Welcome'
       main_sponsors: 'Main Partners'
@@ -118,7 +119,7 @@ en:
     # route: en/host
     host:
       info: 'For more information about the different positions, please contact our coordinator at koordinator@medieteknikdagarna.se.'
-      lead: 'MTD 2016 is just around the corner, and to make it as good as it''s ever possible we need your help!'
+      lead: 'MTD 2017 is just around the corner, and to make it as good as it''s ever possible we need your help!'
       title: 'MTD host'
 
       apply:

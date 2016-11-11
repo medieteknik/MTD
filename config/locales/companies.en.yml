@@ -4,8 +4,8 @@ en:
       title: 'Edit company information'
 
       booth: 'Fair booth'
-      first_day: 'Day one, Wednesday 25th of March'
-      second_day: 'Day two, Thursday 26th of March'
+      first_day: 'Day one, Wednesday 29th of March'
+      second_day: 'Day two, Thursday 30th of March'
       select: 'Välj vilken mässplats ni vill ha i listan eller genom att klicka på den i kartan. Gråmarkerade platser går ej att välja.'
       select: 'Choose a booth by selecting it in the dropdown menu or by clicking on it in the map. Unavailable options are marked with a gray color.'
       map: 'Choose a booth my clicking it on the map.'
@@ -18,7 +18,7 @@ en:
       title: 'Visiting Companies'
       lead: 'Without its fair, MTD wouldn''t be anything. Here are all the companies that will be attending the days.'
       count_begin: ''
-      count_end: ' companies will be attending the fair at MTD 2016.'
+      count_end: ' companies will be attending the fair at MTD 2017.'
       map-link: 'Click here to see the companies booth placements on the fair.'
 
       sponsor:
@@ -34,8 +34,8 @@ en:
 
       looking_for: 'Offers'
       links: 'More information'
-      first_day: 'Wednesday 25th March'
-      second_day: 'Thursday 26th March'
+      first_day: 'Wednesday 29th March'
+      second_day: 'Thursday 30th March'
 
       attending:
         both: 'Will be attending the fair both days.'
@@ -44,5 +44,5 @@ en:
 
       sponsor:
         gold: 'is one of our main partners.'
-        sponsor: 'is a partner for MTD2016'
+        sponsor: 'is a partner for MTD2017'
         fair: 'Fair company.'
