@@ -9,22 +9,18 @@
 <div class="ribbon">
   <div class="container">
     <section class="info text-center">
-      <h2>
-        <%= t('.deals.title') %> &ndash; <%= link_to t('.deals.compare'), sponsorship_compare_path%>
-      </h2>
-      <%= content_tag :p, t('.deals.intro'), class: 'lead' %>
 
       <div class="deals">
-        <div class="deal bronze">
-          <%= content_tag :h3, t('.deals.bronze.title') %>
-          <%= content_tag :h4, t('.deals.bronze.price') %>
+        <div class="deal gold">
+          <%= content_tag :h3, t('.deals.gold.title') %>
+          <%= content_tag :h4, t('.deals.gold.price') %>
           <ul>
-            <%= content_tag :li, t('.deals.bronze.one') %>
-            <%= content_tag :li, t('.deals.bronze.two') %>
-            <%= content_tag :li, t('.deals.bronze.three') %>
-            <%= content_tag :li, t('.deals.bronze.four') %>
+            <%= content_tag :li, t('.deals.gold.one'), class: 'strong' %>
+            <%= content_tag :li, t('.deals.gold.two') %>
+            <%= content_tag :li, t('.deals.gold.three') %>
+            <%= content_tag :li, t('.deals.gold.four') %>
           </ul>
-          <%= link_to icon('arrow-circle-right', '') + ' ' + t('.deals.readmore'), sponsorship_bronze_path, class: 'button' %>
+          <%= link_to icon('arrow-circle-right', '') + ' ' + t('.deals.readmore'), sponsorship_gold_path, class: 'button' %>
         </div>
         <div class="deal silver">
           <%= content_tag :h3, t('.deals.silver.title') %>
@@ -37,20 +33,24 @@
           </ul>
           <%= link_to icon('arrow-circle-right', '') + ' ' + t('.deals.readmore'), sponsorship_silver_path, class: 'button' %>
         </div>
-        <div class="deal gold">
-          <%= content_tag :h3, t('.deals.gold.title') %>
-          <%= content_tag :h4, t('.deals.gold.price') %>
+        <div class="deal bronze">
+          <%= content_tag :h3, t('.deals.bronze.title') %>
+          <%= content_tag :h4, t('.deals.bronze.price') %>
           <ul>
-            <%= content_tag :li, t('.deals.gold.one'), class: 'strong' %>
-            <%= content_tag :li, t('.deals.gold.two') %>
-            <%= content_tag :li, t('.deals.gold.three') %>
-            <%= content_tag :li, t('.deals.gold.four') %>
+            <%= content_tag :li, t('.deals.bronze.one') %>
+            <%= content_tag :li, t('.deals.bronze.two') %>
+            <%= content_tag :li, t('.deals.bronze.three') %>
+            <%= content_tag :li, t('.deals.bronze.four') %>
           </ul>
-          <%= link_to icon('arrow-circle-right', '') + ' ' + t('.deals.readmore'), sponsorship_gold_path, class: 'button' %>
+          <%= link_to icon('arrow-circle-right', '') + ' ' + t('.deals.readmore'), sponsorship_bronze_path, class: 'button' %>
         </div>
       </div>
 
       <%= content_tag :p, t('.common') %>
+
+      <h2>
+        <%= link_to t('.deals.compare'), sponsorship_compare_path%>
+      </h2>
     </section>
   </div>
 </div>

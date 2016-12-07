@@ -146,40 +146,37 @@ sv:
           perk_3:
             title: 'Synas på TV-skärmarna'
             gold: 'Reklamfilm<br><small>Upp till två min</small>'
-            silver: 'Bildmaterial<br><small>Upp till 30 sek</small>'
+            silver: 'Bildmaterial<br><small>Upp till 20 sek</small>'
             bronze: 'Egen bild'
           perk_4: 'Bidra med material till goodiebags'
           perk_5: 'Utökad mässplats (3x2 m)'
-          perk_6:
+          perk_6: 'Marknadsföring vid företagets event med push-notis genom MTD appen'
+          perk_7:
             title: 'Logotyp på MTD:s rollups'
             gold: 'Prioriterad plats'
-          perk_7: 'Logotyp på goodiebags'
-          perk_8: 'Personlig företagsvärd'
-          perk_9: 'Logotyp på värdtröjor'
-          perk_10: '15 min presentation i samband med föreläsning'
+          perk_8: 'Logotyp på goodiebags'
+          perk_9: 'Personlig företagsvärd'
+          perk_10: 'Logotyp på värdtröjor'
+          perk_11: 'Egen föreläsning dagarna innan MTD'
 
         benefits:
           title: 'Utöver mässan kommer ni få...'
           perk_1: 'Stöd och marknadsföring vid era event'
-          perk_2:
-            title: 'MTD-intervju som publiceras på våra sociala flöden'
-            gold: 'Längre videoreportage'
-            silver: 'Videointervju'
-            bronze: 'Skriftlig intervju'
-          perk_3: 'En hälsning via våra sociala flöden'
-          perk_4: 'Publicera innehåll på medieteknikdagarna.se'
-          perk_5: 'Egna rollups med på MTD-event'
+          perk_2: 'Publicera innehåll på medieteknikdagarna.se'
+          perk_3: 'Egna rollups med på MTD-event'
+          perk_4: 'Medverkan i filmer som pucliceras på våra sociala flöden'
 
         logo:
           title: 'Er logotyp i/på...'
           perk_1: 'Appen'
           perk_2: 'Marknadsföringsaffischer'
-          perk_3: 'Marknadsföringsflyers'
-          perk_4: 'Förstasidan av medieteknikdagarna.se'
-          perk_5: 'Bumper i videomaterial'
-          perk_6: 'Headerbilden på medieteknikdagarna.se'
-          perk_7: 'Omslagsbild på MTD:s Facebooksida'
-          perk_8: 'MTD:s vepa'
+          perk_3: 'Fotovägg på banketten'
+          perk_4: 'Marknadsföringsflyers'
+          perk_5: 'Förstasidan av medieteknikdagarna.se'
+          perk_6: 'Bumper i videomaterial'
+          perk_7: 'Headerbilden på medieteknikdagarna.se'
+          perk_8: 'Omslagsbild på MTD:s Facebooksida'
+          perk_9: 'MTD:s vepa'
 
         information:
           title: 'Information om Er i/på...'
@@ -197,13 +194,13 @@ sv:
         common: 'Samtliga avtal innehåller bland annat mässplats båda dagarna, företagsprofil på hemsidan mm. Har du någon idé om hur vi kan samarbeta, som inte tas upp här? Tveka inte att höra av dig! Vi hjälper er gärna komma fram till något som passar er.'
 
         deals:
-          compare: 'Jämför'
+          compare: 'Jämför våra paket'
           title: 'Våra avtal'
           intro: 'För dig som vill synas...'
           readmore: 'Läs mer!'
 
           bronze:
-            title: 'Mycket – Brons'
+            title: 'Brons'
             price: '10 000 SEK'
 
             one: 'Logotyp på affischer, skärmar och i appen'
@@ -212,7 +209,7 @@ sv:
             four: 'Skriftlig intervju på sociala flöden'
 
           silver:
-            title: 'Mer – Silver'
+            title: 'Silver'
             price: '20 000 SEK'
 
             one: 'Brons-avtalet inklusive'
@@ -221,7 +218,7 @@ sv:
             four: 'Utökad info på MTDs hemsida'
 
           gold:
-            title: 'Mest – Guld'
+            title: 'Guld'
             price: '30 000 SEK'
 
             one: 'Silver-avtalet inklusive'

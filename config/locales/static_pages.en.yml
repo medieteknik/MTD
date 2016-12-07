@@ -7,7 +7,7 @@ en:
         title: 'About MTD'
         lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2017 the event is held for the 17th time.'
         second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event ends with a grand banquet.'
-        third: 'MTD is an oportunity for companies and students to inspire, inform and interact with eachother. Both students and companies are given the chance to show the latest within media technology.'
+        third: 'MTD is an oportunity for companies and students to inspire, inform and interact with each other. Both students and companies are given the chance to show the latest within media technology.'
 
         previous: 'Read about MTD''s previous years.'
 
@@ -146,40 +146,37 @@ en:
           perk_3:
             title: 'Coverage on TV-screens'
             gold: 'Promo movie<br><small>Up to 2 min</small>'
-            silver: 'Slideshow<br><small>Up to 30 sec</small>'
+            silver: 'Slideshow<br><small>Up to 20 sec</small>'
             bronze: 'Fullscreen image'
-          perk_4: 'To contribute material to goodiebags'
+          perk_4: 'To contribute material to goodie bags'
           perk_5: 'Extended booth area (3x2 m)'
-          perk_6:
+          perk_6: 'Ability to send notification via the MTD app when hosting an event'
+          perk_7:
             title: 'Logo on MTD rollups'
             gold: 'Prioritized position'
-          perk_7: 'Logo on goodiebags'
-          perk_8: 'Personal host'
-          perk_9: 'Logo on all host shirts'
-          perk_10: 'A 15 min presentation in connection with a lecture'
+          perk_8: 'Logo on goodiebags'
+          perk_9: 'Personal host'
+          perk_10: 'Logo on all host shirts'
+          perk_11: 'Your own lecture in the days leading up to MTD'
 
         benefits:
           title: 'You will also get...'
           perk_1: 'Support and advertising for your own events'
-          perk_2:
-            title: 'Interview of you published on our social media'
-            gold: 'Extended video reportage'
-            silver: 'Video interview'
-            bronze: 'Written interview'
-          perk_3: 'Say Hi to the studens through our social media'
-          perk_4: 'Publish your own material at medieteknikdagarna.se'
-          perk_5: 'You own rollups at MTD events leading up to the fair'
+          perk_2: 'Publish your own material at medieteknikdagarna.se'
+          perk_3: 'You own rollups at MTD events leading up to the fair'
+          perk_4: 'Apperance in videos posted on our social media platforms'
 
         logo:
           title: 'Your logotype will be shown...'
           perk_1: 'In the app'
           perk_2: 'On advertising posters'
-          perk_3: 'In advertising flyers'
-          perk_4: 'On the front page of medieteknikdagarna.se'
-          perk_5: 'Bumper in video material'
-          perk_6: 'On the header of medieteknikdagarna.se'
-          perk_7: 'On our cover image on Facebook'
-          perk_8: 'On our large banner'
+          perk_3: 'On backdropp wall at the banquet'
+          perk_4: 'In advertising flyers'
+          perk_5: 'On the front page of medieteknikdagarna.se'
+          perk_6: 'Bumper in video material'
+          perk_7: 'On the header of medieteknikdagarna.se'
+          perk_8: 'On our cover image on Facebook'
+          perk_9: 'On our large banner'
 
         information:
           title: 'Information about your company will be shown...'
@@ -199,13 +196,13 @@ en:
         common: 'All of the packages include a fair booth both of the days, we''ll advertise you on medieteknikdagarna.se and lots of other things. If you''ve got an idea on how you would like to cooporate, that isn''t listed here? Do not hesitate to contact us, and we''ll come up with a sollution that''s good for the both of us.'
 
         deals:
-          compare: 'Compare'
+          compare: 'Compare our packages'
           title: 'Our packages'
           intro: 'If you want to be seen...'
           readmore: 'Read more'
 
           bronze:
-            title: 'A lot – Bronze'
+            title: 'Bronze'
             price: '10 000 SEK'
 
             one: 'Logotype on posters, screens and in the app'
@@ -214,7 +211,7 @@ en:
             four: 'Written interview on our website'
 
           silver:
-            title: 'More – Silver'
+            title: 'Silver'
             price: '20 000 SEK'
 
             one: 'The bronze deal including'
@@ -223,7 +220,7 @@ en:
             four: 'Extended information on our website'
 
           gold:
-            title: 'The most – Gold'
+            title: 'Gold'
             price: '30 000 SEK'
 
             one: 'The Silver deal including'
