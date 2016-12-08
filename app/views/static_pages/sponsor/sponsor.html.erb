@@ -40,7 +40,6 @@
             <%= content_tag :li, t('.deals.bronze.one') %>
             <%= content_tag :li, t('.deals.bronze.two') %>
             <%= content_tag :li, t('.deals.bronze.three') %>
-            <%= content_tag :li, t('.deals.bronze.four') %>
           </ul>
           <%= link_to icon('arrow-circle-right', '') + ' ' + t('.deals.readmore'), sponsorship_bronze_path, class: 'button' %>
         </div>
@@ -48,9 +47,6 @@
 
       <%= content_tag :p, t('.common') %>
 
-      <h2>
-        <%= link_to t('.deals.compare'), sponsorship_compare_path%>
-      </h2>
     </section>
   </div>
 </div>
@@ -59,6 +55,8 @@
     <%= content_tag :h4, t('.deals.fair.title') %>
     <%= render 'static_pages/sponsor/fair' %>
   </section>
+
+  <%= render 'static_pages/sponsor/compare'%>
 
   <section class="info limit-width">
     <%= render 'static_pages/sponsor/contact' %>

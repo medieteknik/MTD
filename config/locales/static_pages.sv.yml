@@ -201,29 +201,28 @@ sv:
 
           bronze:
             title: 'Brons'
-            price: '10 000 SEK'
+            price: '12 000 SEK'
 
             one: 'Logotyp på affischer, skärmar och i appen'
             two: 'Prioriterad plats över mässföretag på hemsidan'
             three: 'Företräde till att välja mässplats'
-            four: 'Skriftlig intervju på sociala flöden'
 
           silver:
             title: 'Silver'
-            price: '20 000 SEK'
+            price: '24 000 SEK'
 
             one: 'Brons-avtalet inklusive'
             two: 'Logotyp på flyers och på förstasidan'
-            three: 'Videointervju istället för skriftlig'
+            three: 'Skicka push-notiser via MTD-appen'
             four: 'Utökad info på MTDs hemsida'
 
           gold:
             title: 'Guld'
-            price: '30 000 SEK'
+            price: '36 000 SEK'
 
             one: 'Silver-avtalet inklusive'
             two: 'Logotyp på Goodiebags, Facebook, vepan, värdtröjor, hemsidans header'
-            three: 'Längre reportage istället för kortare videointervju'
+            three: 'Medverkan i filmer som publiceras på våra sociala flöden'
             four: 'Först att välja mässplats'
 
           fair:

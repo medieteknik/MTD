@@ -203,29 +203,28 @@ en:
 
           bronze:
             title: 'Bronze'
-            price: '10 000 SEK'
+            price: '12 000 SEK'
 
             one: 'Logotype on posters, screens and in the app'
             two: 'Prioritized position over non-partner companies on our website'
             three: 'Early access to choose location of fair booth'
-            four: 'Written interview on our website'
 
           silver:
             title: 'Silver'
-            price: '20 000 SEK'
+            price: '24 000 SEK'
 
             one: 'The bronze deal including'
             two: 'Logotype on flyers and on our front page'
-            three: 'Video interview instead of the written one'
+            three: 'Send push notifications via the MTD app'
             four: 'Extended information on our website'
 
           gold:
             title: 'Gold'
-            price: '30 000 SEK'
+            price: '36 000 SEK'
 
             one: 'The Silver deal including'
             two: 'Logotype on goodiebags, Facebook, webiste header etc'
-            three: 'Exclusive longer reportage instead of the shorter video interview'
+            three: 'Apperance in videos posted on our social media platforms'
             four: 'First access to choose fair booth'
 
           fair:
