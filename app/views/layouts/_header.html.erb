@@ -25,7 +25,7 @@
 
 
 				<%= content_tag :li, active_link_to(t('.previous'), about_previous_path) %>
-				<!--<%= content_tag :li, active_link_to(t('.sponsor'), sponsorship_path) %>-->
+				<%= content_tag :li, active_link_to(t('.sponsor'), sponsorship_path) %>
         <% if Date.today >= Date.parse('2016-10-31') and Date.today <= Date.parse('2016-11-01') %>
 					<%= content_tag :li, active_link_to(t('.host'), host_path) %>
 				<% end %>
