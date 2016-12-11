@@ -151,7 +151,7 @@ sv:
             bronze: 'Egen bild'
           perk_4: 'Bidra med material till goodiebags'
           perk_5: 'Utökad mässplats (3x2 m)'
-          perk_6: 'Marknadsföring vid företagets event med push-notis genom MTD appen'
+          perk_6: 'Marknadsföring vid företagets genom push-notiser genom MTD-appen'
           perk_7:
             title: 'Logotyp på MTD:s rollups'
             gold: 'Prioriterad plats'
@@ -163,9 +163,8 @@ sv:
         benefits:
           title: 'Utöver mässan kommer ni få...'
           perk_1: 'Stöd och marknadsföring vid era event'
-          perk_2: 'Publicera innehåll på medieteknikdagarna.se'
-          perk_3: 'Egna rollups med på MTD-event'
-          perk_4: 'Medverkan i filmer som publiceras på våra sociala flöden'
+          perk_2: 'Egna rollups med på MTD-event'
+          perk_3: 'Medverkan i filmer som publiceras på våra sociala flöden'
 
         logo:
           title: 'Er logotyp i/på...'
