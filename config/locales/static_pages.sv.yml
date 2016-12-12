@@ -149,13 +149,13 @@ sv:
             gold: 'Reklamfilm<br><small>Upp till två min</small>'
             silver: 'Bildmaterial<br><small>Upp till 20 sek</small>'
             bronze: 'Egen bild'
-          perk_4: 'Bidra med material till goodiebags'
+          perk_4: 'Bidra med material till goodie bags'
           perk_5: 'Utökad mässplats (3x2 m)'
           perk_6: 'Marknadsföring vid företagets genom push-notiser genom MTD-appen'
           perk_7:
             title: 'Logotyp på MTD:s rollups'
             gold: 'Prioriterad plats'
-          perk_8: 'Logotyp på goodiebags'
+          perk_8: 'Logotyp på goodie bags'
           perk_9: 'Personlig företagsvärd'
           perk_10: 'Logotyp på värdtröjor'
           perk_11: 'Egen föreläsning dagarna innan MTD'
@@ -172,7 +172,7 @@ sv:
           perk_2: 'Marknadsföringsaffischer'
           perk_3: 'Fotovägg på banketten'
           perk_4: 'Marknadsföringsflyers'
-          perk_5: 'Förstasidan av medieteknikdagarna.se'
+          perk_5: 'Startsidan av medieteknikdagarna.se'
           perk_6: 'Bumper i videomaterial'
           perk_7: 'Headerbilden på medieteknikdagarna.se'
           perk_8: 'Omslagsbild på MTD:s Facebooksida'
@@ -212,7 +212,7 @@ sv:
             price: '24 000 SEK'
 
             one: 'Brons-avtalet inklusive'
-            two: 'Logotyp på flyers och på förstasidan'
+            two: 'Logotyp på flyers och på startsidan'
             three: 'Skicka push-notiser via MTD-appen'
             four: 'Utökad info på MTDs hemsida'
 
@@ -221,7 +221,7 @@ sv:
             price: '36 000 SEK'
 
             one: 'Silver-avtalet inklusive'
-            two: 'Logotyp på Goodiebags, Facebook, vepan, värdtröjor, hemsidans header'
+            two: 'Logotyp på goodie bags, Facebook, vepan, värdtröjor, hemsidans header'
             three: 'Medverkan i filmer som publiceras på våra sociala flöden'
             four: 'Först att välja mässplats'
 
