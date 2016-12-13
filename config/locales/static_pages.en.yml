@@ -7,7 +7,7 @@ en:
         title: 'About MTD'
         lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2017 the event is held for the 17th time.'
         second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event ends with a grand banquet.'
-        third: 'MTD is an oportunity for companies and students to inspire, inform and interact with each other. Both students and companies are given the chance to show the latest within media technology.'
+        third: 'MTD is an opportunity for companies and students to inspire, inform and interact with each other. Both students and companies are given the chance to show the latest within media technology.'
 
         previous: 'Read about MTD''s previous years.'
 
@@ -141,48 +141,48 @@ en:
         gold: 'Gold'
 
         services:
-          title: 'Once at the fair you''ll get...'
-          perk_1: 'Fair booth both days'
-          perk_2: 'To choose booth location'
+          title: 'At the fair you will get...'
+          perk_1: 'Fair spot for two days'
+          perk_2: 'To choose fair spot'
           perk_3:
-            title: 'Coverage on TV-screens'
-            gold: 'Promo movie<br><small>Up to 2 min</small>'
-            silver: 'Slideshow<br><small>Up to 20 sec</small>'
-            bronze: 'Fullscreen image'
-          perk_4: 'To contribute material to goodie bags'
-          perk_5: 'Extended booth area (3x2 m)'
-          perk_6: 'Ability to send notification via the MTD app when hosting an event'
+            title: 'To be featured on the TV screens'
+            gold: 'Promo video<br><small>Up to 2 minutes long</small>'
+            silver: 'Slideshow<br><small>Up to 20 seconds long</small>'
+            bronze: 'Image'
+          perk_4: 'To contribute with merch to the goodie bags'
+          perk_5: 'Expanded fair spot (3x2 m)'
+          perk_6: 'Marketing by push notifications via the MTD app (in case of an event)'
           perk_7:
-            title: 'Logo on MTD rollups'
+            title: 'Your logo on our roll ups during the fair'
             gold: 'Prioritized position'
-          perk_8: 'Logo on goodie bags'
-          perk_9: 'Personal host'
-          perk_10: 'Logo on all host shirts'
-          perk_11: 'Your own lecture in the days leading up to MTD'
+          perk_8: 'Your logo on the goodie bags'
+          perk_9: 'A dedicated crew member'
+          perk_10: 'Your logo on the crew T-shirts'
+          perk_11: 'Give a talk the week before MTD'
 
         benefits:
-          title: 'You will also get...'
-          perk_1: 'Support and advertising for your own events'
-          perk_2: 'You own rollups at MTD events leading up to the fair'
-          perk_3: 'Apperance in videos posted on our social media platforms'
+          title: 'Beyond the fair you will get...'
+          perk_1: 'Support and marketing help pn your events'
+          perk_2: "To display your own roll ups at MTD\'s event"
+          perk_3: 'Participate in a video published via our social media'
 
         logo:
-          title: 'Your logotype will be shown...'
-          perk_1: 'In the app'
-          perk_2: 'On advertising posters'
-          perk_3: 'On backdropp wall at the banquet'
-          perk_4: 'In advertising flyers'
-          perk_5: 'On the front page of medieteknikdagarna.se'
-          perk_6: 'Bumper in video material'
-          perk_7: 'On the header of medieteknikdagarna.se'
-          perk_8: 'On our cover image on Facebook'
-          perk_9: 'On our large banner'
+          title: 'Your logo will appear in/on...'
+          perk_1: 'The app'
+          perk_2: 'Marketing posters'
+          perk_3: 'The sponsor wall during banquet'
+          perk_4: 'Marketing flyers'
+          perk_5: 'The homepage of medieteknikdagarna.se'
+          perk_6: 'The Bumper in the video material'
+          perk_7: 'The header of medieteknikdagarna.se'
+          perk_8: 'The cover photo on our Facebook page'
+          perk_9: 'Our banner'
 
         information:
-          title: 'Information about your company will be shown...'
-          perk_1: 'On a prioritized position at medieteknikdagarna.se'
-          perk_2: 'On a prioritized position in the app'
-          perk_3: 'On the front page of medieteknikdagarna.se'
+          title: 'Information about you will appear in/on...'
+          perk_1: 'A prioritized spot in the app'
+          perk_2: 'A prioritized spot on medieteknikdagarna.se'
+          perk_3: 'The homepage of medieteknikdagarna.se'
 
 
 

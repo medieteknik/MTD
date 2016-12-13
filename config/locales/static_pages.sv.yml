@@ -148,40 +148,40 @@ sv:
             title: 'Synas på TV-skärmarna'
             gold: 'Reklamfilm<br><small>Upp till två min</small>'
             silver: 'Bildmaterial<br><small>Upp till 20 sek</small>'
-            bronze: 'Egen bild'
-          perk_4: 'Bidra med material till goodie bags'
+            bronze: 'En bild'
+          perk_4: "Bidra med material till  \'goodie bags\'"
           perk_5: 'Utökad mässplats (3x2 m)'
-          perk_6: 'Marknadsföring vid företagets genom push-notiser genom MTD-appen'
+          perk_6: 'Marknadsföring vid företagsevent genom push-notiser via MTD-appen'
           perk_7:
             title: 'Logotyp på MTD:s rollups'
             gold: 'Prioriterad plats'
-          perk_8: 'Logotyp på goodie bags'
+          perk_8: "Logotyp på \'goodie bags\'"
           perk_9: 'Personlig företagsvärd'
           perk_10: 'Logotyp på värdtröjor'
           perk_11: 'Egen föreläsning dagarna innan MTD'
 
         benefits:
-          title: 'Utöver mässan kommer ni få...'
+          title: 'Utöver mässan får ni...'
           perk_1: 'Stöd och marknadsföring vid era event'
-          perk_2: 'Egna rollups med på MTD-event'
-          perk_3: 'Medverkan i filmer som publiceras på våra sociala flöden'
+          perk_2: 'Ta med egna rollups på MTD-event'
+          perk_3: 'Medverka i en film som publiceras i våra sociala flöden'
 
         logo:
-          title: 'Er logotyp i/på...'
+          title: 'Er logotyp på/i...'
           perk_1: 'Appen'
           perk_2: 'Marknadsföringsaffischer'
-          perk_3: 'Fotovägg på banketten'
+          perk_3: 'Fotoväggen på banketten'
           perk_4: 'Marknadsföringsflyers'
           perk_5: 'Startsidan av medieteknikdagarna.se'
           perk_6: 'Bumper i videomaterial'
-          perk_7: 'Headerbilden på medieteknikdagarna.se'
-          perk_8: 'Omslagsbild på MTD:s Facebooksida'
+          perk_7: 'Headerbild på medieteknikdagarna.se'
+          perk_8: 'Omslagsbilden på MTD:s Facebooksida'
           perk_9: 'MTD:s vepa'
 
         information:
-          title: 'Information om Er i/på...'
-          perk_1: 'Prioriterad plats på medieteknikdagarna.se'
-          perk_2: 'Prioriterad plats i appen'
+          title: 'Information om Er på/i...'
+          perk_1: 'En prioriterad plats på medieteknikdagarna.se'
+          perk_2: 'En prioriterad plats i appen'
           perk_3: 'Startsidan av medieteknikdagarna.se'
 
 
@@ -221,7 +221,7 @@ sv:
             price: '36 000 SEK'
 
             one: 'Silver-avtalet inklusive'
-            two: 'Logotyp på goodie bags, Facebook, vepan, värdtröjor, hemsidans header'
+            two: "Logotyp på \'goodie bags\', Facebook, vepan, värdtröjor, hemsidans header"
             three: 'Medverkan i filmer som publiceras på våra sociala flöden'
             four: 'Först att välja mässplats'
 
