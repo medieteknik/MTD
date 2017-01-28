@@ -5,23 +5,12 @@
       <%= content_tag :h1, t('.title') %>
       <%= content_tag :p, t('.lead'), class: 'lead' %>
       <%= content_tag :p, t('.info') %>
-			<%= content_tag :p, link_to(t('.link-info'), ENV["HOST_APPLICATION_EVENT_LINK"]) %>
+
       <div class="info">
         <%= render 'host_positions' %>
       </div>
     </div>
 
-    <%#Uncommented; not using 2016%>
-    <!--<div class="col-sm-4">
-      <div class="info gray-box">
-        <%= content_tag :h3, t('.apply.title') %>
-        <% if Date.today >= Date.parse(ENV["OPEN_HOST_APPLICATIONS"]) and Date.today <= Date.parse(ENV["CLOSE_HOST_APPLICATIONS"]) %>
-          <%= content_tag :p, t('.apply.open') %>
-          <%= link_to t('.apply.link'), new_host_path %>
-        <% else %>
-          <%= content_tag :p, t('.apply.closed') %>
-        <% end %>
-      </div>
-		</div>-->
+
   </div>
 </div>
