@@ -8,7 +8,7 @@
     <%= content_tag :li, active_link_to(t('menu_contact'), about_contact_path) %>
 		<%= content_tag :li, active_link_to(t('menu_previous'), about_previous_path) %>
 		<%= content_tag :li, active_link_to(t('menu_sponsor'), sponsorship_path) %>
-		<% if Date.today >= Date.parse('2017-01-29')%>
+		<% if Date.today >= Date.parse('2017-01-29') and Date.today <= Date.parse('2017-02-12')%>
 			<%= content_tag :li, active_link_to(t('menu_host'), host_path) %>
 		<% end %>
 		<% if Date.today >= Date.parse('2018-02-03') %>
