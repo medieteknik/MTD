@@ -22,6 +22,8 @@
       <ul class="menu left">
         <%= content_tag :li, active_link_to(t('.about'), about_path, :active => :exclusive) %>
         <%= content_tag :li, active_link_to(t('.contact'), about_contact_path) %>
+        <%= content_tag :li, active_link_to(t('.companies'), companies_path) if Company.where(published: true).any? %>
+
 
 
 				<%= content_tag :li, active_link_to(t('.previous'), about_previous_path) %>
