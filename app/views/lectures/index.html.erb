@@ -5,13 +5,13 @@
 			<h1> <%= t('.title') %> </h1>
       <p class="lead"> <%= t('.lead') %> </p>
 			<p class="lead"> <%= t('.extra') %> </p>
-			<%= link_to t('.schedule-full-link'), image_url('lectures/schema.pdf') %>
+			<!--<%= link_to t('.schedule-full-link'), image_url('lectures/schema.pdf') %>-->
     </section>
 		<section class="info">
 			<div class="lecture">
 				<div class="day">
 					<h3 class="day-header">
-						<%= l(Date.new(2016, 4, 06), format: '%A %e %B').humanize %>
+						<%= l(Date.new(2017, 3, 29), format: '%A %e %B').humanize %>
 					</h3>
 					<div class="ui middle aligned divided very relaxed list">
 						<% @lectures_one.each do |lecture| %>
@@ -42,7 +42,7 @@
 				</div>
 				<div class="day">
 					<h3 class="day-header">
-						<%= l(Date.new(2016, 4, 07), format: '%A %e %B').humanize %>
+						<%= l(Date.new(2017, 3, 30), format: '%A %e %B').humanize %>
 					</h3>
 					<div class="ui middle aligned divided very relaxed list">
 						<% @lectures_two.each do |lecture| %>
