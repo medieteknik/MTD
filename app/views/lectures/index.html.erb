@@ -16,7 +16,7 @@
 					<div class="ui middle aligned divided very relaxed list">
 						<% @lectures_one.each do |lecture| %>
 							<div class="item">
-								<div class="floated content">
+								<div class="left floated content">
 									<% if lecture.image_id %>
 										<%= image_tag lecture.image.url, class: "ui small image", alt: lecture.name %>
 									<% end %>
