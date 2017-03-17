@@ -25,6 +25,16 @@
 				<%= content_tag :p, t('.lead') %>
 				<br>
 
+        <div class="sponsors">
+					<h2><%= t('.main_sponsors') %></h4>
+					<% @gold_sponsors.each do |company| %>
+						<article class="large-company">
+							<h3> <%= link_to company.name, company_path(company.slug) %> </h3>
+							<p> <%= truncate(strip_tags(GitHub::Markdown.render_gfm(company.description).html_safe), length: 200, separator: ' ') { link_to t('continue_read'), company_path(company.slug)} %> </p>
+						</article>
+					<% end %>
+				</div>
+
 
       </div>
       <!--
@@ -43,6 +53,27 @@
     -->
     </div>
   </div>
+</div>
+
+<!-- static content -->
+<div class="ribbon">
+	<div class="info">
+		<h3 class="text-center"><%= t('.sponsors') %></h4>
+		<div class="row">
+			<div class="sponsors text-center">
+				<div class="col-sm-2"></div> <!--push-->
+				<div class="col-sm-3">
+					<%= image_tag 'sponsors/skill.png', class: 'sponsor-h-center'%>
+				</div>
+				<div class="col-sm-3">
+					<%= image_tag 'sponsors/dice.png', class: 'sponsor-h-center push-down'%>
+				</div>
+				<div class="col-sm-3">
+					<%= image_tag 'sponsors/tobii.png', class: 'sponsor-h-center push-down'%>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 

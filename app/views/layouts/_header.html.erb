@@ -2,6 +2,7 @@
   <div class="container header">
     <%= link_to(content_tag(:div, '', class: 'logo') + 'MTD<span class="year">2017</span>'.html_safe,
           home_path, class: 'big-brand') %>
+          <div class="sponsor cygni"></div>
   </div>
 
   <nav id="main-nav">
@@ -34,7 +35,7 @@
 				<% if Date.today >= Date.parse('2017-02-25') %>
 					<%= content_tag :li, active_link_to(t('.studentexpo'), studentexpos_path) %>
 				<% end %>
-        <%= content_tag :li, active_link_to(t('.lectures'), lectures_path) %> 
+        <%= content_tag :li, active_link_to(t('.lectures'), lectures_path) %>
 
 				<!--<%= content_tag :li, active_link_to(t('.banquet'), banquet_path) %> -->
       </ul>

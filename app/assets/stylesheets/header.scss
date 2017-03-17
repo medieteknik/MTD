@@ -26,14 +26,8 @@
 			.sponsor {
 				margin-left: 3%;
 			}
-		 .sponsor.gaia {
-			 background-image: image-url('sponsors/gaia_white.png');
-		 }
-		 .sponsor.autodesk {
-			 background-image: image-url('sponsors/autodesk_white.png');
-		 }
-		 .sponsor.mittmedia {
-			 background-image: image-url('sponsors/MittMedia_vit.svg');
+		 .sponsor.cygni {
+			 background-image: image-url('sponsors/cygni_white.png');
 		 }
   }
 
@@ -47,7 +41,7 @@
     }
   }
 
-  
+
   @media (max-width: $screen-lg-min) {
   	.container {
   		width: 100%;
@@ -85,14 +79,8 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    &.gaia {
-      background-image: image-url('sponsors/gaia_color.png');
-    }
-    &.autodesk {
-      background-image: image-url('sponsors/autodesk.png');
-    }
-    &.mittmedia {
-      background-image: image-url('sponsors/MittMedia.svg');
+    &.cygni {
+      background-image: image-url('sponsors/cygni.png');
     }
   }
 }
@@ -268,4 +256,3 @@
     padding: 15px;
   }
 }
-
