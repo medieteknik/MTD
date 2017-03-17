@@ -28,7 +28,7 @@ article.show-company {
   }
 
   &.gold article.company {
-    @include make-sm-column(4); //4 because three. Use 6 if two
+    @include make-sm-column(12); //4 because three. Use 6 if two
 
     img {
       margin-bottom: 15px;
@@ -78,7 +78,7 @@ article.show-company {
       height: 200px;
     }
   }
-  
+
   @media screen and (max-width: $screen-sm-min) {
 		.wrap {
 			margin-bottom: 50px;
@@ -86,7 +86,7 @@ article.show-company {
 	}
 }
 
-  
+
 
 // booth selecting
 .booth-img {
