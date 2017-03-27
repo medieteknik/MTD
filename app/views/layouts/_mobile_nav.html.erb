@@ -12,7 +12,7 @@
 		<% if Date.today >= Date.parse('2017-01-29') and Date.today <= Date.parse('2017-02-12')%>
 			<%= content_tag :li, active_link_to(t('menu_host'), host_path) %>
 		<% end %>
-		<% if Date.today >= Date.parse('2017-02-25') %>
+		<% if Date.today <= Date.parse('2017-02-25') %>
 			<%= content_tag :li, active_link_to(t('menu_studentexpo'), studentexpos_path) %>
 		<% end %>
     <%= content_tag :li, active_link_to(t('menu_lectures'), lectures_path) %>
