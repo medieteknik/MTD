@@ -3,7 +3,7 @@
 <% header_class 'transparent' %>
 <div class="beamer">
   <div class="content header-scroll-target">
-    <%= content_tag :h2, t('media_technology_days') + ' 2017' %>
+    <%= content_tag :h2, t('media_technology_days') + ' 2018' %>
     <%= content_tag :h1, t('the_date') %>
     <%= content_tag :h2, 'Färgeriet, Kåkenhus' %>
   </div>
@@ -11,7 +11,7 @@
     <ul>
       <li><a href="https://itunes.apple.com/se/app/mtd-medieteknikdagarna/id1217982310?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/sv-se/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a></li>
       <li><a href='https://play.google.com/store/apps/details?id=com.medieteknikdagarna.mtd&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="display:inline-block;overflow:hidden;">
-        <%= image_tag 'icons/Gplay.png', with:'135', height: '40'%>
+        <%= image_tag 'icons/Gplay.png', with:'135', height: '40' %>
       </a></li>
     </ul>
     <ul>
@@ -30,9 +30,9 @@
 				<%= content_tag :h2, t('.welcome') + '!' %>
 				<%= content_tag :p, t('.lead') %>
 				<br>
-
+				
         <div class="sponsors">
-					<h2><%= t('.main_sponsors') %></h4>
+					<%# <h2><%= t('.main_sponsors') %></h4> 
 					<% @gold_sponsors.each do |company| %>
 						<article class="large-company">
 							<h3> <%= link_to company.name, company_path(company.slug) %> </h3>
@@ -40,8 +40,7 @@
 						</article>
 					<% end %>
 				</div>
-
-
+					
       </div>
       <!--
 			<div class="col-sm-5">
@@ -61,7 +60,8 @@
   </div>
 </div>
 
-<!-- static content -->
+<!-- static content --> <%# BORT-KOMMENTERAD TEMPORÄRT %>
+<% if false %>
 <div class="ribbon">
 	<div class="info">
 		<h3 class="text-center"><%= t('.sponsors') %></h4>
@@ -87,6 +87,7 @@
 		</div>
 	</div>
 </div>
+<% end %>
 
 
 

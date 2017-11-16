@@ -17,7 +17,7 @@ sv:
       title: 'Besökande företag'
       lead: 'MTD vore ingenting utan sin stora mässa. Här är företagen som kommer och besöker oss.'
       count_begin: 'Det är nu '
-      count_end: ' företag som kommer till MTD2017. Du kan träffa dem på mässan klockan 10-16.'
+      count_end: ' företag som kommer till MTD2018. Du kan träffa dem på mässan klockan 10-16.'
       map-link: 'Klicka här för att se företagens placering på mässan'
 
       first_day: 'Onsdag 29 mars'
@@ -46,5 +46,5 @@ sv:
 
       sponsor:
         gold: 'är en av våra huvudpartners.'
-        sponsor: 'är partner för MTD 2017.'
+        sponsor: 'är partner för MTD 2018.'
         fair: 'Mässföretag.'
