@@ -47,18 +47,18 @@ en:
         sponsor: 'Read about beeing a partner for MTD.'
 
         business:
-          email: 'businesscontact@medieteknikdagarna.se'
+          email: 'gustaf.liljegren@medieteknikdagarna.se'
           title: 'Business contact'
           text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Gustaf at:'
 
         fair:
-          email: 'fair@medieteknikdagarna.se'
+          email: 'anna.haagg@medieteknikdagarna.se'
           title: 'Fair information'
           text: 'Do you have any questions about the fair? Contact Anna at: '
         general:
-          email: 'contact@medieteknikdagarna.se'
+          email: 'rebecca.cedermalm@medieteknikdagarna.se'
           title: 'General inquiries'
-          text: 'For general inquiries, contact: '
+          text: 'For general inquiries, contact Rebecca at: '
         gymn:
           title: 'High School'
           contact: 'Contact'
@@ -71,14 +71,14 @@ en:
           visit: 'Visiting address'
           visit_text: 'This is where MTD will be held!'
         press:
-          email: 'pr@medieteknikdagarna.se'
+          email: 'emma.nilsson@medieteknikdagarna.se'
           title: 'Press and media'
-          text: 'Are you representing press or other media, and want to know something about MTD? Contact:'
+          text: 'Are you representing press or other media, and want to know something about MTD? Contact Emma at:'
         pressinfo:
           title: 'Press information'
           contact: 'Press contact'
         webb:
-          email: 'web@medieteknikdagarna.se'
+          email: 'jesper.lund@medieteknikdagarna.se'
           title: 'Web'
           text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Jesper at:'
 
@@ -86,7 +86,7 @@ en:
       previous:
         title: 'Previous years'
         lead: '2018 will be the 18th year the days are arranged. Here are some highlights from the previous years.'
-        video: 'Video summary in Swedish from the fair 2016.'
+        video: 'Video summary of the fair 2017'
 
         lectures:
           title: 'Lectures'
@@ -98,6 +98,7 @@ en:
           nafees: 'Nafees from Dreamworks Animations visited us 2014. He talked about the change in VFX during the last ten years, and how the trend is heading towards more advanced physical simulations.'
           iris: 'Iris from Dotnet Mentor visited us in 2013. She talked about how equality in IT matters, how equality in the industry has changed over the years and how she got into C#.'
           anton: 'Anton, who founded Osom, Alltid.se and Headler, visited us in 2013. He talked about trends in IT and the factors that determine what will be a future success.'
+          ebbe: 'The MT-alumnus Ebbe from Tobii visited us in 2017. Ebbe talked about applications for eye tracking, including PC gaming and Virtual Reality. He also talked about interesting areas of work for newly graduated MT-students.'
 
     # route: /en
     home:

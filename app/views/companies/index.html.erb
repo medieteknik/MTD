@@ -5,7 +5,9 @@
       <%= content_tag :h1, t('.title') %>
       <%= content_tag :p, t('.lead'), class: 'lead' %>
       <%= content_tag :p, t('.count_begin') + Company.where(published: true).count.to_s + t('.count_end'), class: 'lead' %>
-			<%= link_to t('.map-link'), image_url('kartplatser.pdf') %>
+      <% if false %>
+      <%= link_to t('.map-link'), image_url('kartplatser.pdf') %>
+      <% end %>
 		<!--</div>-->
   </section>
 </div>

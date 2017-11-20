@@ -14,6 +14,11 @@
 
     <div class="row">
       <div class="col-sm-6 col-md-3">
+        <%= image_tag 'previous/lectures/ebbe.jpg', alt: 'Ebbe Strandell', class: 'img-responsive' %>
+        <%= content_tag :h3, 'Ebbe Strandell' %>
+        <%= content_tag :p, t('.lectures.ebbe') %>
+      </div>
+      <div class="col-sm-6 col-md-3">
         <%= image_tag 'previous/lectures/per.jpg', alt: 'Per Karlsson', class: 'img-responsive' %>
         <%= content_tag :h3, 'Per Karlsson' %>
         <%= content_tag :p, t('.lectures.per') %>
@@ -28,11 +33,13 @@
         <%= content_tag :h3, 'Nafees Bin Zafar' %>
         <%= content_tag :p, t('.lectures.nafees') %>
       </div>
+      <% if false %>
       <div class="col-sm-6 col-md-3">
         <%= image_tag 'previous/lectures/iris.jpg', alt: 'Iris Classon', class: 'img-responsive' %>
         <%= content_tag :h3, 'Iris Classon' %>
         <%= content_tag :p, t('.lectures.iris') %>
       </div>
+      <% end %>
     </div>
 
   </section>
@@ -40,7 +47,7 @@
   <div class="info limit-width">
     <%= content_tag :h3, t('.video') %>
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe src="//www.youtube.com/embed/tPc6Rm6njaA?theme=light&showinfo=0&rel=0" frameborder="0" class="embed-responsive-item" allowfullscreen></iframe>
+    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmedieteknikdagarna%2Fvideos%2F1325673820803224%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
     </div>
   </div>
 <!--

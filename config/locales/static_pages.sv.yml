@@ -47,17 +47,17 @@ sv:
         sponsor: 'Här kan du läsa om hur du blir MTD-partner i framtiden.'
 
         business:
-          email: 'foretag@medieteknikdagarna.se'
+          email: 'gustaf.liljegren@medieteknikdagarna.se'
           title: 'Företagskontakt'
           text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Kontakta Gustaf på:'
         fair:
-          email: 'massa@medieteknikdagarna.se'
+          email: 'anna.haagg@medieteknikdagarna.se'
           title: 'Mässan'
           text: 'Har du någon fråga kring mässan? Kontakta Anna på: '
         general:
-          email: 'kontakt@medieteknikdagarna.se'
+          email: 'rebecca.cedermalm@medieteknikdagarna.se'
           title: 'Generella frågor'
-          text: 'Vid generella frågor, om vad som helst, kontakta oss på:'
+          text: 'Vid generella frågor, om vad som helst, kontakta Rebecca på:'
         gymn:
           title: 'Gymnasie'
           contact: 'Gymnasiekontakt'
@@ -70,14 +70,14 @@ sv:
           visit: 'Besöksadress'
           visit_text: 'Platsen där det händer!'
         press:
-          email: 'pr@medieteknikdagarna.se'
+          email: 'emma.nilsson@medieteknikdagarna.se'
           title: 'Press och media'
-          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av dig till oss på:'
+          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av dig till Emma på:'
         pressinfo:
           title: 'Pressinformation'
           contact: 'Presskontakt'
         webb:
-          email: 'webb@medieteknikdagarna.se'
+          email: 'jesper.lund@medieteknikdagarna.se'
           title: 'Webb'
           text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Jesper på:'
 
@@ -85,7 +85,7 @@ sv:
       previous:
         title: 'Tidigare år'
         lead: '2018 blir det artonde året som MTD arrangeras. Här är några höjdpunkter från de gångna åren.'
-        video: 'Videosammanfattning mässan 2016'
+        video: 'Videosammanfattning av mässan 2017'
 
         lectures:
           title: 'Föreläsningar'
@@ -97,6 +97,7 @@ sv:
           nafees: 'Nafees från Dreamworks Animations besökte oss 2014. Han pratade om hur de tio senaste åren inom visuella effekter förändrats, och hur utveckligen går mer mot avancerade fysiska simuleringar.'
           iris: 'Iris från Dotnet Mentor besökte oss 2013. Hon pratade om på vilket sätt jämnstäldhet inom IT-branschen spelar roll, hur jämnställdhet sett ut historiskt sett inom branschen samt hur hon fastnade för C#.'
           anton: 'Anton som grundat Osom, Alltid.se och Headler besökte oss 2013. Han pratade om trender inom IT och vad som avgör vad som blir nästa stora grej. Anton talade även lite om hur han vid 23 års ålder varit med och grundat flera lyckade företag.'
+          ebbe: 'MT-alumnen Ebbe från Tobii besökte oss 2017. Ebbe berättade om intressanta tillämpningar av ögon-tracking inom bland annat PC-spel och Virtual Reality. Han gav även inspirerande exempel på olika områden nyexaminerade MT-studenter kan arbeta inom.'
 
     # route: sv/
     home:
