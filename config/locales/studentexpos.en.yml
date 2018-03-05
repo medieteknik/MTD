@@ -1,3 +1,63 @@
 en:
   studentexpos:
+    created: 'Tack för din ansökan! Vi hör av oss.'
+    new:
+      closed: 'Ansökan är stängd. Kom tillbaka den 26 januari!'
+      double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg det! * markerar obligatoriska fält.'
+      info: 'Interested in showcasing your project in the Student Expo? Awesome! Here you can submit your application. '
+      go: 'Skicka'
+      title: 'Apply to Student Expo'
 
+      error: 'Kunde inte spara ansökan, prova igen'
+
+      project: 'Om projektet'
+      you: 'Om dig'
+      you_info: 'Du kommer agera kontaktperson mellan MTD-gruppen och din projektgrupp. Vi kontaktar dig om vi vill att ni ställer ut eller om vi t.ex behöver något mer av er. Kryssa i rutan om du inte har möjlighet att ställa ut din egna dator (som vi såklart håller stenkoll på).'
+
+      proj_title:
+        label: 'Projektets namn'
+        placeholder: 'Tex Supersidan, Cool-filmen, Nice App™'
+      course:
+        label: 'Kurskod'
+        placeholder: 'Tex TNMK30, TNM040'
+      description:
+        label: 'Beskrivning'
+        placeholder: '...'
+        info: 'Här vill vi att du skriver en beskrivning om ert projekt och gärna en länk till en film eller ert kort på projektet. Detta material ska gärna kunnas skrivas ut och finnas som komplement till projektet under utställningen.'
+      members:
+        label: 'Gruppmedlemmar'
+        placeholder: 'Knatte, Fnatte, Tjatte...'
+      name:
+        label: 'Ditt namn'
+        placeholder: '...'
+      liuid:
+        label: 'Ditt LiU-ID'
+        placeholder: 'jambo007'
+      need_computer:
+        label: 'Behöver du låna dator?'
+        placeholder:
+    show:
+      title: Ansökan till Student Expo
+      info: Här kan du se er ansökan till Student Expo. Kontakta oss direkt om något ser fel ut!
+
+      project: Om projektet
+      proj_title: Projektets titel
+      course: Kurs
+      description: Beskrivning
+      members: Gruppmedlemmar
+      you: Kontaktperson
+      name: Namn
+      liuid: LiU-ID
+      need_computer: Behöver låna dator
+
+
+  activerecord:
+    attributes:
+      studentexpo:
+        title: Projekttitel
+        course: Kurskod
+        description: Beskrivning
+        members: Gruppmedlemmar
+        name: Ditt namn
+        liuid: Ditt LiU-id
+        need_computer: '"Behöver låna dator?"'

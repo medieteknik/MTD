@@ -4,7 +4,7 @@ sv:
     new:
       closed: 'Ansökan är stängd. Kom tillbaka den 26 januari!'
       double_check: 'Dubbelkolla att allt stämmer, och skicka sedan iväg det! * markerar obligatoriska fält.'
-      info: 'Sugen på att ställa ut projekt på Student Expo? Jättekul! Här kan du skicka in din ansökan.'
+      info: 'Sugen på att ställa ut ditt projekt på Student Expo? Vad kul! Här kan du skicka in din ansökan.'
       go: 'Skicka'
       title: 'Sök till Student Expo'
 
