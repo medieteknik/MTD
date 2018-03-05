@@ -23,8 +23,8 @@ en:
 
       sponsor:
         gold: 'Main partner'
-        silver: 'Partners'
-        bronze:
+        silver: 'Silver partners'
+        bronze: 'Bronze partners'
         fair: 'Fair'
         thanks: 'Thanks to'
 

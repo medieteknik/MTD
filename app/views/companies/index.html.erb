@@ -67,6 +67,7 @@
   <% end %>
 
   <% if @bronze_companies.any? %>
+    <h3 class="info text-center"><%= t('.sponsor.bronze') %></h3>
     <section class="info">
       <div class="companies-row bronze">
         <% @bronze_companies.each_with_index do |company, index| %>
