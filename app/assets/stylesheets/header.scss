@@ -27,7 +27,7 @@
 				margin-left: 3%;
 			}
 		 .sponsor.cygni {
-			 background-image: image-url('sponsors/cygni_white.png');
+			 background-image: image-url('logos/cygni_miljomarkt.png');
 		 }
   }
 
@@ -72,7 +72,7 @@
 	.sponsor {
     @extend .hidden-xs;
     float: right;
-    width: 16%;
+    width: 25%;
     height: $header-logo-height;
     margin: 0 0 0 3%;
     background-size: contain;
@@ -80,7 +80,7 @@
     background-position: center;
 
     &.cygni {
-      background-image: image-url('sponsors/cygni.png');
+      background-image: image-url('logos/cygni_miljomarkt_black.png');
     }
   }
 }
