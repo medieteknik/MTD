@@ -1,14 +1,14 @@
-# Medieteknikdagarna 2015
+# Medieteknikdagarna 
 
-English: The Media Technology Days 2015
+English: The Media Technology Days
 
 ## Setup
 
-Install [Ruby](https://www.ruby-lang.org/en/), [Rails](http://rubyonrails.org/), [Foreman](https://github.com/ddollar/foreman) and [PostgreSQL](http://www.postgresql.org/). If you're on a Mac, [Heroku's *Postgres.app*](http://postgresapp.com/) is nice.
+Install [Ruby](https://www.ruby-lang.org/en/), [Rails](http://rubyonrails.org/), [Foreman](https://github.com/ddollar/foreman), [Heroku Command Line Interface](https://devcenter.heroku.com/articles/heroku-cli) and [PostgreSQL](http://www.postgresql.org/). If you're on a Mac, [Heroku's *Postgres.app*](http://postgresapp.com/) is nice.
 
 ### Running
 
-To start the app, run `foreman start` in your terminal. This does what the [`Procfile`](Procfile) tells it to do.
+To start the app, run `foreman start -p <port number>` in your terminal. This does what the [`Procfile`](Procfile) tells it to do.
 
 If it is the first time you're running this app, you'll probably want to run all these commands:
 
@@ -42,19 +42,41 @@ Our roles are in [`db/seeds.rb`](db/seeds.rb), and to install them simply run `r
 
 Without a role, an user can't do anything but edit their own information.
 
-#### Adding an user
+#### Adding a user to development environment
 
-To add an user for development purposes and give it super admin rights, do this:
+To add a user for development (local) purposes and give it super admin rights, do this:
 
 1. When in the root of this app, run `rake db:migrate` and `rake db:seed` to make sure you have the latest version of the database and the seeds.
-2. Enter the Rails console by typing `rails console` into your console when in the root of this app.
+2. Enter the Rails console by typing `heroku run rails console` into your console when in the root of this app.
 3. Create the admin by typing `my_admin = User.create(:email => 'admin@localhost', :name => 'Name Nameson')`. This should pop open a [Letter Opener](https://rubygems.org/gems/letter_opener) email. You can replace the email with whatever you want.
 4. Then, append the `SuperAdmin` role to the user by typing `my_admin.roles.append(Role.find_by(name: 'SuperAdmin'))`. The `append` method is an alias to the `<<` method of the [ActiveRecord `CollectionProxy`](http://edgeapi.rubyonrails.org/classes/ActiveRecord/Associations/CollectionProxy.html) class.
 5. Done!
 
+
+#### Adding a user to production environment
+
+This is done to be able to log in to the admin interface at *medieteknikdagarna.se/admin*.
+
+1. Enter the Rails console by typing `heroku run rails console` into your console when in the root of this app.
+2. Create the admin by typing `my_admin = User.create(:email => '<your email>', :name => '<your name>')`. This should pop open a [Letter Opener](https://rubygems.org/gems/letter_opener) email. Replace the email with your email.
+3. Then, append the `SuperAdmin` role to the user by typing `my_admin.roles.append(Role.find_by(name: 'SuperAdmin'))`. The `append` method is an alias to the `<<` method of the [ActiveRecord `CollectionProxy`](http://edgeapi.rubyonrails.org/classes/ActiveRecord/Associations/CollectionProxy.html) class.
+4. Save the changes by typing `my_admin.save`.
+5. An email is delivered to the email address that was specified above. Confirm and choose a password. 
+6. Done!
+
+
+
 ## Deploying
 
-To deploy to Heroku, simply add the remote reference, and enter `git push heroku master` into your terminal. This will push the the local master branch to the corresponding remote branch.
+To deploy to Heroku, add Heroku as remote reference (if it doesn't already exists, check with `git remote -v`) and push the changes to the remote reference using git:
+
+ ```
+ git add .
+ git commit -m "<some commit message>"
+ git push heroku master
+ ```
+
+This will push the the local master branch to the corresponding remote branch.
 
 When deployed, you might want to create the sitemap, since we don't wan't that tracked by git. So, with Heroku toolbelt installed, run `heroku run rake sitemap:refresh`. (This should be done automatically each night at 5:00 am, but you can never be sure enough, can you?)
 
