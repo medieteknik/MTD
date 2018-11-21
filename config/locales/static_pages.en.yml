@@ -49,18 +49,18 @@ en:
         sponsor: 'Read about beeing a partner for MTD.'
 
         business:
-          email: 'gustaf.liljegren@medieteknikdagarna.se'
+          email: 'ronja.faltin@medieteknikdagarna.se'
           title: 'Business contact'
-          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Gustaf at:'
+          text: 'Do you want to talk about collaborating with MTD? Do you want your company to be one of our partners? Contact Ronja at:'
 
         fair:
-          email: 'anna.haagg@medieteknikdagarna.se'
+          email: 'amanda.tyden@medieteknikdagarna.se'
           title: 'Fair information'
-          text: 'Do you have any questions about the fair? Contact Anna at: '
+          text: 'Do you have any questions about the fair? Contact Amanda at: '
         general:
-          email: 'rebecca.cedermalm@medieteknikdagarna.se'
+          email: 'aniisa.bihi@medieteknikdagarna.se'
           title: 'General inquiries'
-          text: 'For general inquiries, contact Rebecca at: '
+          text: 'For general inquiries, contact Aniisa at: '
         gymn:
           title: 'High School'
           contact: 'Contact'
@@ -73,16 +73,16 @@ en:
           visit: 'Visiting address'
           visit_text: 'This is where MTD will be held!'
         press:
-          email: 'emma.nilsson@medieteknikdagarna.se'
+          email: 'adam.moren@medieteknikdagarna.se'
           title: 'Press and media'
-          text: 'Are you representing press or other media, and want to know something about MTD? Contact Emma at:'
+          text: 'Are you representing press or other media, and want to know something about MTD? Contact Adam at:'
         pressinfo:
           title: 'Press information'
           contact: 'Press contact'
         webb:
-          email: 'jesper.lund@medieteknikdagarna.se'
+          email: 'frans.johansson@medieteknikdagarna.se'
           title: 'Web'
-          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Jesper at:'
+          text: 'Do you have any questions about the content of this page? Have you found something that looks a bit weird? Contact Frans at:'
 
       # route: en/about/previous
       previous:

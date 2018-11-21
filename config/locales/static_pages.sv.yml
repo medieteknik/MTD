@@ -48,17 +48,17 @@ sv:
         sponsor: 'Här kan du läsa om hur du blir MTD-partner i framtiden.'
 
         business:
-          email: 'gustaf.liljegren@medieteknikdagarna.se'
+          email: 'ronja.faltin@medieteknikdagarna.se'
           title: 'Företagskontakt'
-          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Kontakta Gustaf på:'
+          text: 'Vill du snacka om samarbeten mellan MTD och ditt företag? Vill ditt företag sponsra MTD? Kontakta Ronja på:'
         fair:
-          email: 'anna.haagg@medieteknikdagarna.se'
+          email: 'amanda.tyden@medieteknikdagarna.se'
           title: 'Mässan'
-          text: 'Har du någon fråga kring mässan? Kontakta Anna på: '
+          text: 'Har du någon fråga kring mässan? Kontakta Amanda på: '
         general:
-          email: 'rebecca.cedermalm@medieteknikdagarna.se'
+          email: 'aniisa.bihi@medieteknikdagarna.se'
           title: 'Generella frågor'
-          text: 'Vid generella frågor, om vad som helst, kontakta Rebecca på:'
+          text: 'Vid generella frågor, om vad som helst, kontakta Aniisa på:'
         gymn:
           title: 'Gymnasie'
           contact: 'Gymnasiekontakt'
@@ -71,16 +71,16 @@ sv:
           visit: 'Besöksadress'
           visit_text: 'Platsen där det händer!'
         press:
-          email: 'emma.nilsson@medieteknikdagarna.se'
+          email: 'adam.moren@medieteknikdagarna.se'
           title: 'Press och media'
-          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av dig till Emma på:'
+          text: 'Representerar du press eller övrig media och är lite nyfiken på MTD? Hör av dig till Adam på:'
         pressinfo:
           title: 'Pressinformation'
           contact: 'Presskontakt'
         webb:
-          email: 'jesper.lund@medieteknikdagarna.se'
+          email: 'frans.johansson@medieteknikdagarna.se'
           title: 'Webb'
-          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Jesper på:'
+          text: 'Har du frågor över innehållet på sidan? Hittat något som ser knasigt ut? Kontakta Frans på:'
 
       # route: sv/om/tidigare-ar
       previous:
