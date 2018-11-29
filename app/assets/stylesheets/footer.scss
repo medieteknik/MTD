@@ -2,7 +2,7 @@
   padding: 30px 0;
   background: $footer-background;
   font-family: $font-family-sans-serif;
-  color: lighten($footer-background, 50%);
+  color: $gray-light;
 
   ul {
     @extend .list-unstyled;

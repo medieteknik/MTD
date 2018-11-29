@@ -52,12 +52,13 @@
     @extend .hidden-xs;
     float: left;
     line-height: $header-logo-height;
-    font-size: 37px;
+    font-family: $headings-font-family;
+    font-size: 40px;
     font-weight: 800;
     color: #000;
 
     .year {
-      font-weight: 700;
+      font-weight: 600;
     }
     .logo {
       display: inline-block;
@@ -65,7 +66,7 @@
       height: $header-logo-height;
       width: $header-logo-height;
       background-repeat: no-repeat;
-      @include background-img('header/logo', contain);
+      @include background-img('assets/header/logo', contain);
     }
   }
 
@@ -111,7 +112,7 @@
 			height: $header-height - 2*$header-padding;
       width: $header-height - 2*$header-padding;
       background-repeat: no-repeat;
-      @include background-img('header/logo', contain);
+      @include background-img('assets/header/logo', contain);
     }
     .name {
       margin-right: 5px;

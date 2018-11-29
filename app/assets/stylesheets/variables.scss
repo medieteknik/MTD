@@ -1,13 +1,13 @@
 // colors
-$black: #2E2B28;
-$gray: #7b8994;
+$black: #13283c;
+$gray: #3b484f;
 $gray-light: #EFEFEF;
-$gray-dark: darken($gray, 30%);
-$orange: #F58223;
+$gray-dark: $black;
+$orange: #EC6610;
 
-$footer-background: #323133;
+$footer-background: $black;
 
-$nprogress-color: darken($orange, 20%);
+$nprogress-color: $orange;
 
 // metrics
 $header-height: 60px;
@@ -20,7 +20,10 @@ $border-radius-base: 0;
 $border-radius-large: 0;
 $border-radius-small: 0;
 
-$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Barlow:600,700|Lato&subset=latin-ext');
+
+$font-family-sans-serif: "Lato" ,"Open Sans", Helvetica, Arial, sans-serif;
 $font-family-serif: "Bitter", Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-sans-serif;
 
@@ -28,7 +31,7 @@ $line-height-base: 1.6;
 
 $font-size-base: 15px;
 
-$headings-font-family: $font-family-sans-serif;
+$headings-font-family: "Barlow";
 $headings-font-weight: bold;
 
 $link-color: $orange;
