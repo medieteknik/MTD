@@ -10,9 +10,13 @@
     color: #fff;
     @include background-photo('beamer/fair-3', cover);
 
+    h1 {
+      font-size: floor($font-size-base * 4.5);
+    }
+
     h2 {
       font-size: floor($font-size-base * 1.6);
-      font-weight: 300;
+      font-weight: 600;
       letter-spacing: .06em;
       text-transform: uppercase;
     }
@@ -227,6 +231,8 @@
 
 .sponsors {
 
+  display: none;
+
 	.push-down {
 		@media screen and (min-width: $screen-xs-max) {
 			margin-top: 35%;
@@ -245,6 +251,7 @@
 
 // needs text-center
 .sponsor-h-center {
-	display: inline-block !important;
+  display: none;
+	//display: inline-block !important;
 }
 
