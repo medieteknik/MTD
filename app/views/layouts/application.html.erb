@@ -7,17 +7,17 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <title><%= t('media_technology_days') %> 2018 <%= yield(:title) %></title>
+  <title><%= t('media_technology_days') %> 2019 <%= yield(:title) %></title>
 
   <%= csrf_meta_tags %>
 
-  <meta name="keywords" content="MTD2016, MTD, Medieteknikdagarna 2018, Media Technology Days 2018, Norrköping, Medieteknik, Linköpings Universitet, LiU">
+  <meta name="keywords" content="MTD2019, MTD, Medieteknikdagarna 2019, Media Technology Days 2019, Norrköping, Medieteknik, Linköpings Universitet, LiU">
   <meta name="description" content="<%= t('meta_description') %>">
   <meta name="author" content="<%= t('media_technology_days') %>">
   <link rel="icon" href="<%= image_url 'favicon.png' %>">
 
   <!-- social/og meta -->
-  <meta property="og:title" content="<%= t('media_technology_days') %> 2018 <%= yield(:title) %>" />
+  <meta property="og:title" content="<%= t('media_technology_days') %> 2019 <%= yield(:title) %>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%= request.original_url %>" />
   <meta property="og:description" content="<%= yield(:description).blank? ? t('meta_description') : yield(:description) %>" />
@@ -27,7 +27,7 @@
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@mtdagarna" />
-  <meta name="twitter:title" content="<%= t('media_technology_days') %> 2018 <%= yield(:title) %>" />
+  <meta name="twitter:title" content="<%= t('media_technology_days') %> 2019 <%= yield(:title) %>" />
   <meta name="twitter:description" content="<%= yield(:description).blank? ? t('meta_description') : yield(:description) %>" />
   <meta name="twitter:image" content="<%= yield(:social_image).blank? ? image_url('favicon.png') : yield(:social_image) %>" />
   <meta name="twitter:url" content="<%= request.original_url %>" />
