@@ -5,13 +5,13 @@ en:
       # route: en/about
       about:
         title: 'About MTD'
-        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2018 the event is held for the 18th time.'
+        lead: 'The Media Technology Days is a non-profit event arranged by students, connecting students, working media technicians and companies in the industry. In 2019 the event is held for the 18th time.'
         second: 'During two days, Campus Norrköping is filled with a popular fair and inspiring lectures. The event ends with a grand banquet.'
         third: 'MTD is an opportunity for companies and students to inspire, inform and interact with each other. Both students and companies are given the chance to show the latest within media technology.'
 
         previous: 'Read about MTD''s previous years.'
 
-        info-link: 'Companies: Information about MTD 2018 (Partnerships, fair layout) [PDF]'
+        info-link: 'Companies: Information about MTD 2019 (Partnerships, fair layout) [PDF]'
 
         group:
           title: 'The group'
@@ -87,7 +87,7 @@ en:
       # route: en/about/previous
       previous:
         title: 'Previous years'
-        lead: '2018 will be the 18th year the days are arranged. Here are some highlights from the previous years.'
+        lead: '2019 will be the 18th year the days are arranged. Here are some highlights from the previous years.'
         video: 'Video summary of the fair 2017'
 
         lectures:
@@ -124,7 +124,7 @@ en:
     # route: en/host
     host:
       info: 'For more information about the different positions, please contact our coordinator at koordinator@medieteknikdagarna.se.'
-      lead: 'MTD 2018 is just around the corner, and to make it as good as it''s ever possible we need your help!'
+      lead: 'MTD 2019 is just around the corner, and to make it as good as it''s ever possible we need your help!'
       title: 'MTD host'
 
       apply:
